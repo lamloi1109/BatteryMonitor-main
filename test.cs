@@ -995,7 +995,11 @@ namespace BatteryMonitor
                 throw new FormatException("Insufficient data received.");
             }
         }
-                    
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            modbustcp.WriteSingleRegister(107, 1);
+        }
     } 
 }
 

@@ -47,6 +47,7 @@
             this.button12 = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.button14 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -233,11 +234,22 @@
             this.label1.TabIndex = 29;
             this.label1.Text = "label1";
             // 
+            // button14
+            // 
+            this.button14.Location = new System.Drawing.Point(220, 328);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(124, 57);
+            this.button14.TabIndex = 30;
+            this.button14.Text = "Start Timer";
+            this.button14.UseVisualStyleBackColor = true;
+            this.button14.Click += new System.EventHandler(this.button14_Click);
+            // 
             // test
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(874, 487);
+            this.Controls.Add(this.button14);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button13);
             this.Controls.Add(this.button12);
@@ -288,5 +300,6 @@
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button14;
     }
 }

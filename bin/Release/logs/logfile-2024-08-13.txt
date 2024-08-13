@@ -1,0 +1,4 @@
+2024-08-13 09:26:51.5992|ERROR|BatteryMonitor.MenuForm|無法載入檔案或組件 'Keyence.AutoID.SDK, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null' 或其相依性的其中之一。 試圖載入格式錯誤的程式。
+2024-08-13 09:27:13.8767|ERROR|BatteryMonitor.MenuForm|無法載入檔案或組件 'Keyence.AutoID.SDK, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null' 或其相依性的其中之一。 試圖載入格式錯誤的程式。
+2024-08-13 09:27:14.7477|ERROR|BatteryMonitor.MenuForm|無法載入檔案或組件 'Keyence.AutoID.SDK, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null' 或其相依性的其中之一。 試圖載入格式錯誤的程式。
+2024-08-13 09:27:15.8213|ERROR|BatteryMonitor.MenuForm|無法載入檔案或組件 'Keyence.AutoID.SDK, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null' 或其相依性的其中之一。 試圖載入格式錯誤的程式。

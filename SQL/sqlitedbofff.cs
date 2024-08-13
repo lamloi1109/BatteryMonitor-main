@@ -17,6 +17,7 @@ using NPOI.XSSF.UserModel;
 using System.IO;
 using Org.BouncyCastle.Asn1.Mozilla;
 using System.Xml.Linq;
+using DocumentFormat.OpenXml.Wordprocessing;
 
 namespace BatteryMonitor.SQLlite
 {
@@ -430,8 +431,8 @@ namespace BatteryMonitor.SQLlite
         std_V = $std_V,
         ave_R = $ave_R,
         ave_V = $ave_V
-    WHERE " + condition + ";";
-
+    WHERE  date = (SELECT MAX(date) FROM batteryList WHERE " + condition + ") AND "+ condition +";";
+                
                 command.Parameters.AddWithValue("$shipmentId", battery.ShipmentId);
                 command.Parameters.AddWithValue("$specs", battery.Specs);
                 command.Parameters.AddWithValue("$r", Convert.ToDouble(battery.R));
