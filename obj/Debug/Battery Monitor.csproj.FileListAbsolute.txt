@@ -1,0 +1,6 @@
+D:\test_Loi_H34071\C#\test\obj\Debug\Battery Monitor.csproj.AssemblyReference.cache
+D:\test_Loi_H34071\C#\test\obj\Debug\BatteryMonitor.Form1.resources
+D:\test_Loi_H34071\C#\test\obj\Debug\BatteryMonitor.Login.resources
+D:\test_Loi_H34071\C#\test\obj\Debug\test.Properties.Resources.resources
+D:\test_Loi_H34071\C#\test\obj\Debug\Battery Monitor.csproj.GenerateResource.cache
+D:\test_Loi_H34071\C#\test\obj\Debug\Battery Monitor.csproj.CoreCompileInputs.cache

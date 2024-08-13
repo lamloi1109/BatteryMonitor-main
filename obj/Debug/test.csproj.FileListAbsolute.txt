@@ -1,0 +1,15 @@
+D:\test_Loi_H34071\C#\test\bin\Debug\test.exe.config
+D:\test_Loi_H34071\C#\test\bin\Debug\test.exe
+D:\test_Loi_H34071\C#\test\bin\Debug\test.pdb
+D:\test_Loi_H34071\C#\test\bin\Debug\EasyModbus.dll
+D:\test_Loi_H34071\C#\test\bin\Debug\System.CodeDom.dll
+D:\test_Loi_H34071\C#\test\bin\Debug\EasyModbus.xml
+D:\test_Loi_H34071\C#\test\bin\Debug\System.CodeDom.xml
+D:\test_Loi_H34071\C#\test\obj\Debug\test.csproj.AssemblyReference.cache
+D:\test_Loi_H34071\C#\test\obj\Debug\test.Properties.Resources.resources
+D:\test_Loi_H34071\C#\test\obj\Debug\test.csproj.GenerateResource.cache
+D:\test_Loi_H34071\C#\test\obj\Debug\test.csproj.CoreCompileInputs.cache
+D:\test_Loi_H34071\C#\test\obj\Debug\test.csproj.Up2Date
+D:\test_Loi_H34071\C#\test\obj\Debug\test.exe
+D:\test_Loi_H34071\C#\test\obj\Debug\test.pdb
+D:\test_Loi_H34071\C#\test\obj\Debug\test.Form1.resources
