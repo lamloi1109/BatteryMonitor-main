@@ -3,10 +3,10 @@
   <Profiles />
   <Settings>
     <Setting Name="keyGenceIP" Type="System.String" Scope="User">
-      <Value Profile="(Default)">192.168.100.2</Value>
+      <Value Profile="(Default)">192.168.1.3</Value>
     </Setting>
     <Setting Name="modbustIP" Type="System.String" Scope="User">
-      <Value Profile="(Default)">192.168.1.57</Value>
+      <Value Profile="(Default)">192.168.1.33</Value>
     </Setting>
     <Setting Name="hiokiIP" Type="System.String" Scope="User">
       <Value Profile="(Default)">192.168.1.1</Value>

@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="BatteryMonitor.exe" size="1093560">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="BatteryMonitor.exe" size="1092536">
       <assemblyIdentity name="BatteryMonitor" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>lWMzxHhvNjAp06esyeETZ7jwiUUlzcqskJY/6qgl11Q=</dsig:DigestValue>
+        <dsig:DigestValue>ubUMuvHpuviqAa38xraTaDi72CnCgZ+YzL//Zzkqgt8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -543,13 +543,13 @@
       <dsig:DigestValue>4cRo+Z6QrxV3+ydgLpNqbNEX8LlSSmlKCBUeeS4LY08=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="BatteryMonitor.exe.config" size="5532">
+  <file name="BatteryMonitor.exe.config" size="5530">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>YMJkA4V0rFQS2mkdJ/fwEsdkZnjsvk90VH80i0I/xYk=</dsig:DigestValue>
+      <dsig:DigestValue>m66P0a4QdqHSdGxkIFFSwdS5+UsAOq2gqd/vjx9j5qE=</dsig:DigestValue>
     </hash>
   </file>
   <file name="research.ico" size="1150">

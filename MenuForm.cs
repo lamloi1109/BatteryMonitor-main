@@ -104,8 +104,8 @@ namespace BatteryMonitor
             {
                 // chuyển sang form main
                 Main main = new Main();
-                main.FormClosed += new FormClosedEventHandler(MenuFormClosed); // Đăng ký sự kiện FormClosed
-                this.Hide();
+                //main.FormClosed += new FormClosedEventHandler(MenuFormClosed); // Đăng ký sự kiện FormClosed
+                //this.Hide();
                 main.Show();
             }
             catch (Exception ex)

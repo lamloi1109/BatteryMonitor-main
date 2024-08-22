@@ -25,7 +25,7 @@ namespace BatteryMonitor.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("192.168.100.2")]
+        [global::System.Configuration.DefaultSettingValueAttribute("192.168.1.3")]
         public string keyGenceIP {
             get {
                 return ((string)(this["keyGenceIP"]));
@@ -37,7 +37,7 @@ namespace BatteryMonitor.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("192.168.1.57")]
+        [global::System.Configuration.DefaultSettingValueAttribute("192.168.1.33")]
         public string modbustIP {
             get {
                 return ((string)(this["modbustIP"]));

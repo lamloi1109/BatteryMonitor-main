@@ -86,10 +86,10 @@ namespace BatteryMonitor
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            ConfigIP_PORT cfg = new ConfigIP_PORT();
+            //ConfigIP_PORT cfg = new ConfigIP_PORT();
             //cfg.FormClosed += new FormClosedEventHandler(MenuFormClosed); // Đăng ký sự kiện FormClosed
             //this.Hide();
-            cfg.Show();
+            //cfg.Show();
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)

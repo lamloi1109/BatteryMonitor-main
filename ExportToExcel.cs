@@ -36,7 +36,28 @@ namespace BatteryMonitor
                 {
                     for (int j = 0; j < dataGridView.Columns.Count; j++)
                     {
-                        worksheet.Cell(i + 2, j + 1).Value = dataGridView.Rows[i].Cells[j].Value;
+                        if (dataGridView.Rows[i].Cells[j].Value != null )
+                        {
+
+                            if (double.TryParse(dataGridView.Rows[i].Cells[j].Value.ToString(), out double result) )
+                            {
+                                if(double.IsInfinity(result))
+                                {
+                                    result = 0;
+                                }
+                                worksheet.Cell(i + 2, j + 1).Value = result;
+                            }
+                            else
+                            {
+                                worksheet.Cell(i + 2, j + 1).Value = dataGridView.Rows[i].Cells[j].Value;
+                            }
+                        }
+                        else
+                        {
+                            // Handle case when value is null
+                            worksheet.Cell(i + 2, j + 1).Value = "NULL";
+                        }
+
                     }
                 }
 

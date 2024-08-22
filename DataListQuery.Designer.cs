@@ -57,6 +57,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dtp_begin = new System.Windows.Forms.DateTimePicker();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cb_maslh = new System.Windows.Forms.ComboBox();
             this.btn_export = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.cb_CaLamViec = new System.Windows.Forms.ComboBox();
@@ -64,8 +66,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dtp_end = new System.Windows.Forms.DateTimePicker();
-            this.cb_maslh = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -318,8 +318,30 @@
             this.panel1.Size = new System.Drawing.Size(1144, 39);
             this.panel1.TabIndex = 5;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(570, 14);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(74, 13);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "Mã số lô hàng";
+            // 
+            // cb_maslh
+            // 
+            this.cb_maslh.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_maslh.FormattingEnabled = true;
+            this.cb_maslh.Items.AddRange(new object[] {
+            "ALL"});
+            this.cb_maslh.Location = new System.Drawing.Point(650, 9);
+            this.cb_maslh.Name = "cb_maslh";
+            this.cb_maslh.Size = new System.Drawing.Size(183, 21);
+            this.cb_maslh.TabIndex = 10;
+            // 
             // btn_export
             // 
+            this.btn_export.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_export.Image = ((System.Drawing.Image)(resources.GetObject("btn_export.Image")));
             this.btn_export.Location = new System.Drawing.Point(1083, 1);
             this.btn_export.Name = "btn_export";
@@ -330,6 +352,8 @@
             // 
             // button1
             // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.Location = new System.Drawing.Point(1030, 2);
             this.button1.Name = "button1";
@@ -387,26 +411,6 @@
             this.dtp_end.Size = new System.Drawing.Size(142, 20);
             this.dtp_end.TabIndex = 4;
             this.dtp_end.ValueChanged += new System.EventHandler(this.dtp_end_ValueChanged);
-            // 
-            // cb_maslh
-            // 
-            this.cb_maslh.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cb_maslh.FormattingEnabled = true;
-            this.cb_maslh.Items.AddRange(new object[] {
-            "ALL"});
-            this.cb_maslh.Location = new System.Drawing.Point(650, 9);
-            this.cb_maslh.Name = "cb_maslh";
-            this.cb_maslh.Size = new System.Drawing.Size(183, 21);
-            this.cb_maslh.TabIndex = 10;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(570, 14);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(74, 13);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "Mã số lô hàng";
             // 
             // DataListQuery
             // 
