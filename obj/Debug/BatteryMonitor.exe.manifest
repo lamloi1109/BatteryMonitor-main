@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="BatteryMonitor.exe" size="1092536">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="BatteryMonitor.exe" size="1093048">
       <assemblyIdentity name="BatteryMonitor" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>ubUMuvHpuviqAa38xraTaDi72CnCgZ+YzL//Zzkqgt8=</dsig:DigestValue>
+        <dsig:DigestValue>jEDkoRIeCeRQ6vkQN6+/gvPTShR4f+MVNe4fSRvbF/E=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

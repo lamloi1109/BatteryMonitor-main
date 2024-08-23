@@ -50,25 +50,7 @@ namespace BatteryMonitor
     public partial class Main : Form
     {
 
-        //ActUtlType plc = new ActUtlType();
 
-        //OPCServer MyServer;
-        //OPCGroup MyGroup;
-        //OPCItem MyItem;
-        //Array MySerVerHandles;
-        //Array MyValue;
-        //Array MyErrors;
-
-
-        //List<string> itemsList = new List<string>();
-        //List<OPCItem> itemsToRead = new List<OPCItem>();
-        //List<OPCItem> itemsToWrite = new List<OPCItem>();
-        //List<double> opcValues = new List<double>();
-
-        object[] writeValues = null;
-
-        int numberChartR = 1;
-        int numberChartV = 1;
 
         private ReaderAccessor m_reader = new ReaderAccessor();
 
@@ -80,12 +62,6 @@ namespace BatteryMonitor
 
         // QUEUE UI
         Queue<BatteryMonitor.Data.battery> queueUI = new Queue<BatteryMonitor.Data.battery>();
-
-        // QUEUE ERROR
-        Queue<BatteryMonitor.Data.battery> queueError = new Queue<BatteryMonitor.Data.battery>();
-
-        // QUEUE CHART    
-        Queue<BatteryMonitor.Data.battery> queueChart = new Queue<BatteryMonitor.Data.battery>();
 
         // tạo một mảng đổi tượng battery
         List<BatteryMonitor.Data.battery> batteryList = new List<BatteryMonitor.Data.battery>();
@@ -108,9 +84,12 @@ namespace BatteryMonitor
         //// Timer ghi giá trị lên modbust
         TimersTimer writeToModbustTimer = new TimersTimer();
 
+        //// Timer xuất báo cáo
+        TimersTimer exportExcelTimer = new TimersTimer();
+
         // timer dùng để ghi nhận các biến trên thanh ghi của modbus
         System.Windows.Forms.Timer monitorModbusTimer = new System.Windows.Forms.Timer();
-        System.Windows.Forms.Timer monitorModbusTimer_Test = new System.Windows.Forms.Timer();
+        System.Windows.Forms.Timer timerShowText = new System.Windows.Forms.Timer();
 
 
         // timer kiểm tra xem đã đo bình xong chưa để đưa các bình trong hàng đợi lên UI
@@ -120,21 +99,21 @@ namespace BatteryMonitor
         System.Windows.Forms.Timer chartTimer = new System.Windows.Forms.Timer();
 
         // timer dùng để cập nhật các UI của chart
-        System.Windows.Forms.Timer chartTimer_V = new System.Windows.Forms.Timer();
+        //System.Windows.Forms.Timer chartTimer_V = new System.Windows.Forms.Timer();
 
 
 
         // timer dùng để cập nhật các UI của chart
         System.Windows.Forms.Timer pinGroupUITimer = new System.Windows.Forms.Timer();
 
-        // timer giả lập quét qrcode
-        System.Windows.Forms.Timer scanQrcodeTimer = new System.Windows.Forms.Timer();
+         //timer giả lập quét qrcode
+        //System.Windows.Forms.Timer scanQrcodeTimer = new System.Windows.Forms.Timer();
 
         // Timer reset đồ thị khi hết ca
         System.Windows.Forms.Timer resetChartTimer = new System.Windows.Forms.Timer();
 
         // BackgroundWorker
-        BackgroundWorker bgwork_check_keygence_connect, bgwork_check_modbust_connect, bgwork_check_hioki_connect, bgwork_light, bgwork_getMeasurementValueHioki, bgwork_writeToModbust;
+        BackgroundWorker bgwork_check_keygence_connect, bgwork_check_modbust_connect, bgwork_check_hioki_connect, bgwork_light, bgwork_getMeasurementValueHioki, bgwork_writeToModbust, bgwork_exportExcelTimer;
 
         // Kiểm tra xem đã nhận được biến bằng 1 hãy chưa
         public bool isMeasureMentSucceed = false;
@@ -168,7 +147,7 @@ namespace BatteryMonitor
         // status 
         Boolean onLineStatus, SetScannerStatus, chkprtconnted;
 
-        List<string> uiListPrepare = new List<string>();
+        //List<string> uiListPrepare = new List<string>();
 
         //
         Nofitication nofiticationForm = new Nofitication("");
@@ -184,22 +163,11 @@ namespace BatteryMonitor
 
         bool isConnectedToModbust = false;
 
-        string receivedData = "";
+        //string receivedData = "";
 
         public Main()
         {
             InitializeComponent();
-            //itemsList.Add("GP4000_1.#INTERNAL.Sheet2.myGroup.USR00124");
-            //itemsList.Add("GP4000_1.#INTERNAL.Sheet2.myGroup.USR00126");
-            //itemsList.Add("GP4000_1.#INTERNAL.Sheet2.myGroup.USR00128");
-            //itemsList.Add("GP4000_1.#INTERNAL.Sheet2.myGroup.USR00130");
-            //itemsList.Add("GP4000_1.#INTERNAL.Sheet2.myGroup.USR00132");
-            //itemsList.Add("GP4000_1.#INTERNAL.Sheet2.myGroup.USR00134");
-
-            //MySerVerHandles = new int[itemsList.Count + 1];
-            //MyValue = new object[itemsList.Count + 1];
-            //MyErrors = new int[itemsList.Count + 1];
-
         }
         public static ChartValues<MeasureModel> ChartValuesR { get; set; } = new ChartValues<MeasureModel>();
         public static ChartValues<MeasureModel> ChartValuesV { get; set; } = new ChartValues<MeasureModel>();
@@ -269,14 +237,14 @@ namespace BatteryMonitor
         }
         };
 
-        public Random R { get; set; }
+        //public Random R { get; set; }
 
         //ModbusClient MenuForm.modbustMainForm = new ModbusClient();
         
         // Giá trị đọc R đọc từ HIOKI
-        double rHioki = 0.0;
+        //double rHioki = 0.0;
         // Giá trị đọc V đọc từ HIOKI
-        double vHioki = 0.0;
+        //double vHioki = 0.0;
 
         // Mã số lô hàng
         string batchString = "";
@@ -387,6 +355,7 @@ namespace BatteryMonitor
         // Danh sách chứa các chuỗi đọc được từ mắt quét
         List<List<string>> stringScanList = new List<List<string>>();
 
+        ModbusClient modbustReadValue = new ModbusClient();
         ModbusClient modbustMainForm = new ModbusClient();
         ModbusClient modbustWrite = new ModbusClient();
 
@@ -713,6 +682,10 @@ namespace BatteryMonitor
 
 
                 //TEST
+                //modbustReadValue.IPAddress = Properties.Settings.Default.modbustIP;
+                //modbustReadValue.Port = Properties.Settings.Default.modbustPort;
+                //modbustReadValue.Connect();
+
                 modbustMainForm.IPAddress = Properties.Settings.Default.modbustIP;
                 modbustMainForm.Port = Properties.Settings.Default.modbustPort;
                 modbustMainForm.Connect();
@@ -722,8 +695,10 @@ namespace BatteryMonitor
                 modbustWrite.Connect();
 
                 //TEST
-                if (!modbustMainForm.Connected)
+                if (!modbustMainForm.Connected || !modbustWrite.Connected)
                 {
+                    modbustWrite.WriteSingleRegister(97, 1);
+
                     (new Nofitication("Kết nối tới proface thất bại!")).ShowDialog();
                     return;
                 }
@@ -734,6 +709,7 @@ namespace BatteryMonitor
                 // Kết nối đến HIOKI
                 if (!isConnectedToHioki)
                 {
+                    modbustWrite.WriteSingleRegister(95, 1);
 
                     (new Nofitication("Kết nối tới thiết bị đo thất bại!")).ShowDialog();
 
@@ -753,6 +729,10 @@ namespace BatteryMonitor
                 writeToModbustTimer.Interval = 50;
                 writeToModbustTimer.Elapsed += new System.Timers.ElapsedEventHandler(_writeToModbust_Elapsed);
 
+
+
+
+
                 // Thiết lập kết nối máy quét
                 //TEST
                 setscanner();
@@ -766,27 +746,6 @@ namespace BatteryMonitor
                     m_reader.ExecCommand("WP,250,8");
                 }
                 
-
-
-
-
-                // OPC Server 
-                //int itemcount = 0;
-                //MyServer = new OPCServer();
-                //MyServer.Connect("Pro-face.OPCEx.1", "127.0.0.1");
-
-                //MyGroup = MyServer.OPCGroups.Add("myGroup");
-                //MyGroup.IsActive = true;
-                //MyGroup.IsSubscribed = true;
-                //MyGroup.DataChange += MyGroup_DataChange;
-
-                //foreach (string item in itemsList)
-                //{
-                //    itemcount++;
-                //    MyItem = MyGroup.OPCItems.AddItem(item, itemcount);
-                //    MySerVerHandles.SetValue(MyItem.ServerHandle, itemcount);
-                //}
-
                 uiTimer.Interval = 50;
                 uiTimer.Tick += uiTimer_Tick;
                 uiTimer.Start();
@@ -794,6 +753,10 @@ namespace BatteryMonitor
                 monitorModbusTimer.Interval = 50;
                 monitorModbusTimer.Tick += MonitorModbusTimer_Tick;
                 monitorModbusTimer.Start();
+
+                timerShowText.Interval = 50;
+                timerShowText.Tick += timerShowText_Tick;
+                timerShowText.Start();
 
                 ChartConfig(cartesianChart1);
                 ChartConfig(cartesianChart2);
@@ -808,6 +771,13 @@ namespace BatteryMonitor
 
                 bgwork_light = new BackgroundWorker();
                 bgwork_light.DoWork += new DoWorkEventHandler(bgwork_light_DoWork);
+
+                // Timer Export Excel
+                bgwork_exportExcelTimer = new BackgroundWorker();
+                bgwork_exportExcelTimer.DoWork += new DoWorkEventHandler(bgwork_exportExcelTimer_DoWork);
+                exportExcelTimer.Interval = 50;
+                exportExcelTimer.Elapsed += new System.Timers.ElapsedEventHandler(_exportExcelTimer_Elapsed);
+
 
                 ////Timer đèn
                 _LightTimer.Interval = 1000;
@@ -825,6 +795,9 @@ namespace BatteryMonitor
                 resetChartTimer.Interval = 50;
                 resetChartTimer.Tick += ResetChartTimer_Tick;
                 resetChartTimer.Start();
+
+
+
 
             }
             catch (Exception ex)
@@ -1057,6 +1030,78 @@ namespace BatteryMonitor
                 logger.Error(ex);
             }
         }
+        
+        private void timerShowText_Tick(object sender, EventArgs e)
+        {
+            try
+            {
+                // batch
+                UpdateLabelText(batchNumber, batchString.ToString());
+
+                // specs
+                UpdateLabelText(specs, specsString.ToString());
+
+                // user
+                UpdateLabelText(userLabel  , userString.ToString());
+
+                UpdateLabelText(rMaxLabel, rMax.ToString());
+                UpdateLabelText(rMinLabel, rMin.ToString());
+                UpdateLabelText(vMinLabel, vMin.ToString());
+                UpdateLabelText(vMaxLabel, vMin.ToString());
+                UpdateLabelText(currentRLabel, currentR.ToString("N2"));
+                UpdateLabelText(currentVLabel, currentV.ToString("N2"));
+
+                // Số ca
+                UpdateLabelText(currentWorkShift, currentShiftString);
+
+                UpdateLabelText(totalBatteryShift1Label, totalBatteryShift1.ToString());
+
+                UpdateLabelText(totalBatteryShift2Label, totalBatteryShift2.ToString());
+
+                // Tổng bình R đạt ca 1
+
+                UpdateLabelText(rGoodShift1Label, totalGoodRBatteryShift1.ToString());
+
+                // Tổng bình R thấp ca 1
+                UpdateLabelText(rLowShift1Label, totalLowRBatteryShift1.ToString());
+
+                // Tổng bình R cao ca 1
+                UpdateLabelText(rHightShift1Label, totalHightRBatteryShift1.ToString());
+
+                // Tổng bình R đật ca 2
+                UpdateLabelText(rGoodShift2Label, totalGoodRBatteryShift2.ToString());
+
+                // Tổng bình R thấp ca 2  
+                UpdateLabelText(rLowShift2Label, totalLowRBatteryShift2.ToString());
+
+                // Tổng bình R cao ca 2
+                UpdateLabelText(rHightShift2Label, totalHightRBatteryShift2.ToString());
+
+                // Tổng bình V Đạt ca 1
+                UpdateLabelText(vGoodShift1Label, totalGoodVBatteryShift1.ToString());
+
+                // Tổng bình V thấp ca 1
+                UpdateLabelText(vLowShift1Label, totalLowVBatteryShift1.ToString());
+
+                // Tổng bình V cao ca 1
+                UpdateLabelText(vHightShift1Label, totalHightVBatteryShift1.ToString());
+
+                // Tổng bình V đạt ca 2
+                UpdateLabelText(vHightShift2Label, totalGoodVBatteryShift2.ToString());
+
+                // Tổng bình V thấp ca 2
+                UpdateLabelText(vLowShift2Label, totalLowVBatteryShift2.ToString());
+
+                // Tổng bình V cao ca 2 
+                UpdateLabelText(vHightShift2Label, totalHightVBatteryShift2.ToString());
+            } catch( Exception ex )
+            {
+                
+            }
+        }
+
+
+
         private void MonitorModbusTimer_Tick(object sender, EventArgs e)
         {
 
@@ -1065,9 +1110,6 @@ namespace BatteryMonitor
 
                 if (modbustMainForm.Connected)
                 {
-
-
-
                     string asciiString = "";
 
                     //// Kiểm tra kết nối tới modbus
@@ -1080,12 +1122,13 @@ namespace BatteryMonitor
 
                     // Timer dùng để ghi nhận thông tin của modbus
 
-                    //TEST
                     int[] numArray = modbustMainForm.ReadHoldingRegisters(0, 122);
 
                     // Số pin quét 
-                    pinCountSetting = numArray[120];
-
+                    if( numArray[120] < 5 && numArray[120] > 0)
+                    {
+                        pinCountSetting = numArray[120];
+                    }
 
                     // Mã số lô hàng
                     asciiString = "";
@@ -1098,8 +1141,7 @@ namespace BatteryMonitor
                         }
                     }
 
-                    //batchString = getInfo(numArray, 0, 9);
-                    UpdateLabelText(batchNumber, asciiString);
+                    batchString = asciiString;
 
                     // Quy cách
 
@@ -1113,7 +1155,7 @@ namespace BatteryMonitor
                         }
                     }
 
-                    UpdateLabelText(specs, asciiString);
+                    specsString = asciiString;
 
                     // Người thao tác
                     asciiString = "";
@@ -1124,9 +1166,7 @@ namespace BatteryMonitor
                             asciiString += READHODINGREGISTER_to_ASCII(numArray[i]);
                         }
                     }
-
-                    UpdateLabelText(userLabel, asciiString);
-
+                    userString = asciiString;
 
                     // Số ca
                     currentShiftString = numArray[33].ToString();
@@ -1136,95 +1176,52 @@ namespace BatteryMonitor
                     // Lấy tổng bình
 
                     totalBatteryShift1 = numArray[47];
-
-                    this.totalBatteryShift1Label.Text = totalBatteryShift1.ToString();
-
-                    // totalBatteryShift1Label
-
                     totalBatteryShift2 = numArray[55];
-
-                    this.totalBatteryShift2Label.Text = totalBatteryShift2.ToString();
 
                     MenuForm.endShift1 = numArray[71];
                     MenuForm.endShift2 = numArray[73];
 
                     // số ca hiện tại
                     currentShift = numArray[33];
-
                     // Tổng bình R đạt ca 1
                     totalGoodRBatteryShift1 = numArray[49];
-                    this.rGoodShift1Label.Text = totalGoodRBatteryShift1.ToString();
-
-                    // Viết command cho các biến bên dưới
                     // Tổng bình R thấp ca 1
                     totalLowRBatteryShift1 = numArray[51];
-
                     // Tổng bình R cao ca 1
                     totalHightRBatteryShift1 = numArray[53];
-
                     // Tổng bình R đật ca 2
-
                     totalGoodRBatteryShift2 = numArray[57];
-
                     // Tổng bình R thấp ca 2  
                     totalLowRBatteryShift2 = numArray[59];
-
-
                     // Tổng bình R cao ca 2
                     totalHightVBatteryShift2 = numArray[61];
-
-
                     // Tổng bình V Đạt ca 1
                     totalGoodVBatteryShift1 = numArray[77];
-
                     // Tổng bình V thấp ca 1
                     totalLowVBatteryShift1 = numArray[79];
-
                     // Tổng bình V cao ca 1
                     totalHightVBatteryShift1 = numArray[81];
-
                     // Tổng bình V đạt ca 2
                     totalGoodVBatteryShift2 = numArray[83];
-
                     // Tổng bình V thấp ca 2
                     totalLowVBatteryShift2 = numArray[85];
-
-
                     // Tổng bình V cao ca 2 
                     totalHightVBatteryShift2 = numArray[87];
 
                     //get rMax
                     rMax = getRMaxFromModbus(modbustMainForm);
-                    UpdateLabelText(rMaxLabel, rMax.ToString());
-
-
-                    int[] register = modbustMainForm.ReadHoldingRegisters(37, 2);
-                    double num = (double)ModbusClient.ConvertRegistersToInt(register);
-                    Console.WriteLine(num);
-
-                    rMin = Math.Round(num / 100.0, 2);
-
-                    this.rMinLabel.Text = rMin.ToString();
+                    rMin = getRMinFromModbus(modbustMainForm);
 
                     // get vMin
                     vMin = getVminFromModbus(modbustMainForm);
-                    UpdateLabelText(vMinLabel, vMin.ToString());
-
-
                     // get vMax
                     vMax = getVMaxFromModbus(modbustMainForm);
-                    UpdateLabelText(vMaxLabel, vMax.ToString());
-
 
                     //TEST demo mark
                     currentR = Twoint16ConverttoFloat(numArray[99], numArray[100]);
-                    this.currentRLabel.Text = currentR.ToString("N2");
 
                     //// currentV demo mark
                     currentV = Twoint16ConverttoFloat(numArray[103], numArray[104]);
-                    this.currentVLabel.Text = currentV.ToString("N2");
-
-                    //TEST
 
                     // Báo cáo
                     isExportDataReport = numArray[93];
@@ -1245,13 +1242,16 @@ namespace BatteryMonitor
                     endShift2 = numArray[73];
 
                     // Đo đầu vào hoàn thành
-                    hiokiMeasureMentSuceed = numArray[75];//demo
+                    hiokiMeasureMentSuceed = numArray[75];
 
                     // Kiểm tra xem có thể thêm dữ liệu vào đồ thị hay chưa
-                    isAddDataToChart = numArray[113];//demo
+                    isAddDataToChart = numArray[113];
 
                     if (hiokiMeasureMentSuceed == 1 && !isMeasureMentSucceed && isShowedUIList && !isShowedChart && queueBattery.Count > 0)
                     {
+                        modbustWrite.WriteSingleRegister(106, 0);
+                        modbustWrite.WriteSingleRegister(108, 0);
+
 
                         Properties.Settings.Default.totalPinShift1 = totalBatteryShift1 + 1;
                         Properties.Settings.Default.totalPinShift2 = totalBatteryShift2 + 1;
@@ -1269,16 +1269,6 @@ namespace BatteryMonitor
                         batteryList.Add(battery);
                         isDeQueue = true;
 
-                        totalR += currentR;
-                        totalV += currentV;
-
-                        // demo mark
-                        double AVE_R = calc_AVE(totalR, totalMeasurement);
-                        double AVE_V = calc_AVE(totalV, totalMeasurement);
-                        ZI_R = ZI_R + Math.Pow((currentR - AVE_R), 2);
-                        ZI_V = ZI_V + Math.Pow((currentV - AVE_V), 2);
-                        double std_R = calc_STD(totalR, totalMeasurement);
-                        double std_V = calc_STD(totalV, totalMeasurement);
 
                         // Lấy các thông số từ OPC SERVER
                         // USR124 <= A <= vMax
@@ -1301,15 +1291,31 @@ namespace BatteryMonitor
                         battery.UserId = this.userLabel.Text;
                         battery.MeasureMentStatus = numArray[39] == 0 && numArray[40] == 0 ? "WrongMeasurement" : "Measured";
                         battery.QUALITY = "";
-                        battery.TYPE_R = ClassifyR(numArray);
-                        battery.TYPE_V = ClassifyV(numArray);
+                        battery.TYPE_R = ClassifyR(currentR, rMax, rMin);
+                        battery.TYPE_V = ClassifyV(currentR, vMax, vMin);
+
+                        if (battery.TYPE_R == "FAULT")
+                        {
+                            currentR = 0;
+                            currentV = 0;
+                        }
+
+                        totalR += currentR;
+                        totalV += currentV;
+
+                        // demo mark
+                        double AVE_R = calc_AVE(totalR, totalMeasurement);
+                        double AVE_V = calc_AVE(totalV, totalMeasurement);
+                        ZI_R = ZI_R + Math.Pow((currentR - AVE_R), 2);
+                        ZI_V = ZI_V + Math.Pow((currentV - AVE_V), 2);
+                        double std_R = calc_STD(totalR, totalMeasurement);
+                        double std_V = calc_STD(totalV, totalMeasurement);
+
                         // demo mark
                         battery.AVE_R = AVE_R;
                         battery.AVE_V = AVE_V;
                         battery.STD_R = std_R;
                         battery.STD_V = std_V;
-
-
 
                         // demo mark
                         battery.CPK_R = calc_CPK(totalR, totalMeasurement, currentR, rMin, rMax, ZI_R, AVE_R, std_R);
@@ -1328,7 +1334,11 @@ namespace BatteryMonitor
                             _LightTimer.Start();
                         }
 
+                        // reset
                         isMeasureMentSucceed = true;
+
+                        //currentR = 0;
+                        //currentV = 0;
                     }
 
                     // nếu việc cân đầu vào hoàn thành
@@ -1837,7 +1847,7 @@ namespace BatteryMonitor
             return rMax;
         }
 
-        public double getRminFromModbus(ModbusClient modbus)
+        public double getRMinFromModbus(ModbusClient modbus)
         {
             try
             {
@@ -2058,8 +2068,6 @@ namespace BatteryMonitor
             }
 
             // Clear các timer
-            //MyServer.Disconnect();
-            //plc.Close();
             chartTimer.Stop();
             monitorModbusTimer.Stop();
             resetChartTimer.Stop();
@@ -2067,6 +2075,8 @@ namespace BatteryMonitor
             uiTimer.Stop();
             checkKeygenceConnectTimer.Stop();
             writeToModbustTimer.Stop();
+            exportExcelTimer.Stop();
+            timerShowText.Stop();
 
             if (nofiticationForm.InvokeRequired)
             {
@@ -2873,6 +2883,23 @@ namespace BatteryMonitor
         }
 
 
+        void _exportExcelTimer_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
+        {
+            try
+            {
+                if (!bgwork_exportExcelTimer.IsBusy)
+                {
+                    bgwork_exportExcelTimer.RunWorkerAsync();
+                }
+            }
+            catch (Exception ex)
+            {
+                logger.Error(ex);
+            }
+
+        }
+
+
         void _writeToModbust_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
         {
             try
@@ -2947,8 +2974,8 @@ namespace BatteryMonitor
                     // thông báo
                     nofiticationForm.setMessage("Mất kết nối với scanner!!!");
                     nofiticationForm.ShowDialog();
-                    modbustMainForm.WriteSingleRegister(97, 0);
-                    modbustMainForm.WriteSingleRegister(95, 0);
+                    modbustMainForm.WriteSingleRegister(97, 1);
+                    modbustMainForm.WriteSingleRegister(95, 1);
                     checkKeygenceConnectTimer.Stop();
                     m_reader.Disconnect();
                     Thread.Sleep(10000);
@@ -2962,8 +2989,8 @@ namespace BatteryMonitor
                 if (modbustMainForm != null && !modbustMainForm.Connected)
                 {
                     isConnectedToModbust = false;
-                    modbustMainForm.WriteSingleRegister(97, 0);
-                    modbustMainForm.WriteSingleRegister(95, 0);
+                    modbustMainForm.WriteSingleRegister(97, 1);
+                    modbustMainForm.WriteSingleRegister(95, 1);
                     // thông báo
                     nofiticationForm.setMessage("Mất kết nối với proface!!!");
                     nofiticationForm.ShowDialog();
@@ -2986,8 +3013,8 @@ namespace BatteryMonitor
 
                 if (hiokiSocket != null && !hiokiSocket.IsTcpSocketConnected())
                 {
-                    modbustMainForm.WriteSingleRegister(97, 0);
-                    modbustMainForm.WriteSingleRegister(95, 0);
+                    modbustMainForm.WriteSingleRegister(97, 1);
+                    modbustMainForm.WriteSingleRegister(95, 1);
                     // thông báo
                     nofiticationForm.setMessage("Mất kết nối với thiết bị đo!!!");
                     nofiticationForm.ShowDialog();
@@ -3114,56 +3141,60 @@ namespace BatteryMonitor
 
         }
 
-        private string ClassifyR(int[] registerValues)
+        private string ClassifyR(double registerDisplay, double resistanceMax, double resistanceMin)
         {
             try
             {
-                if (registerValues.Length == 0)
-                {
-                    // Báo lỗi
-                    return "ERROR";
-                }
-                double num = (double)ModbusClient.ConvertRegistersToInt(modbustMainForm.ReadHoldingRegisters(35, 2));
-                double resistanceMax = Convert.ToDouble(string.Format("{0:0.00}", num / 100));
-                double num1 = (double)ModbusClient.ConvertRegistersToInt(modbustMainForm.ReadHoldingRegisters(37, 2));
-                double resistanceMin = Convert.ToDouble(string.Format("{0:0.00}", num1 / 100));
+                //if (registerValues.Length == 0)
+                //{
+                //    // Báo lỗi
+                //    return "ERROR";
+                //}
+                
+                //double num = (double)ModbusClient.ConvertRegistersToInt(modbustMainForm.ReadHoldingRegisters(35, 2));
+                //double resistanceMax = Convert.ToDouble(string.Format("{0:0.00}", num / 100));
+                //double num1 = (double)ModbusClient.ConvertRegistersToInt(modbustMainForm.ReadHoldingRegisters(37, 2));
+                //double resistanceMin = Convert.ToDouble(string.Format("{0:0.00}", num1 / 100));
 
                 //Convert the register values to float for comparison
 
-                float registerDisplay = Twoint16ConverttoFloat(registerValues[99], registerValues[100]);
+                //float registerDisplay = Twoint16ConverttoFloat(registerValues[99], registerValues[100]);
 
                 // Classify register display value
                 if (registerDisplay <= 0f)
                 {
-                    modbustMainForm.WriteSingleRegister(106, 1);
+                    modbustWrite.WriteSingleRegister(106, 1);
                     UpdateLabelText(rCompare, "FAULT");
                     return "FAULT";
                 }
-                else if (registerDisplay >= resistanceMin && registerDisplay <= resistanceMax)
+                
+                if (registerDisplay >= resistanceMin && registerDisplay <= resistanceMax)
                 {
-
-
-                    modbustMainForm.WriteSingleRegister(106, 2);
+                    modbustWrite.WriteSingleRegister(106, 2);
                     UpdateLabelText(rCompare, "OK");
                     return "OK";
-
-
                 }
-                else if (registerDisplay < resistanceMin)
+                
+                if (registerDisplay < resistanceMin)
                 {
-                    modbustMainForm.WriteSingleRegister(106, 3);
+                    modbustWrite.WriteSingleRegister(106, 3);
                     UpdateLabelText(rCompare, "LOW");
                     return "LOW";
                 }
-                else if (registerDisplay > resistanceMax)
+
+                if (registerDisplay > resistanceMax)
                 {
-                    modbustMainForm.WriteSingleRegister(106, 4);
+                    modbustWrite.WriteSingleRegister(106, 4);
                     UpdateLabelText(rCompare, "HIGH");
                     return "HIGH";
                 }
+
+
+
                 // Tính phân loại A B C D
                 // ...
             }
+
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
@@ -3173,34 +3204,36 @@ namespace BatteryMonitor
 
         }
 
-        private string ClassifyV(int[] registerValues)
+        private string ClassifyV(double voltageDisplay, double voltageMax, double voltageMin)
         {
             try
             {
-                if (registerValues.Length == 0)
-                {
-                    // Báo lỗi
-                    return "ERROR";
-                }
 
-                double num2 = (double)ModbusClient.ConvertRegistersToInt(modbustMainForm.ReadHoldingRegisters(41, 2));
-                double voltageMax = Convert.ToDouble(string.Format("{0:0.00}", num2 / 100));
-                double num3 = (double)ModbusClient.ConvertRegistersToInt(modbustMainForm.ReadHoldingRegisters(43, 2));
-                double voltageMin = Convert.ToDouble(string.Format("{0:0.00}", num3 / 100));
+                //if (registerValues.Length == 0)
+                //{
+                //    // Báo lỗi
+                //    return "ERROR";
+                //}
 
-                float voltageDisplay = Twoint16ConverttoFloat(registerValues[103], registerValues[104]);
+                //double num2 = (double)ModbusClient.ConvertRegistersToInt(modbustMainForm.ReadHoldingRegisters(41, 2));
+                //double voltageMax = Convert.ToDouble(string.Format("{0:0.00}", num2 / 100));
+                //double num3 = (double)ModbusClient.ConvertRegistersToInt(modbustMainForm.ReadHoldingRegisters(43, 2));
+                //double voltageMin = Convert.ToDouble(string.Format("{0:0.00}", num3 / 100));
+
+                //float voltageDisplay = Twoint16ConverttoFloat(registerValues[103], registerValues[104]);
 
                 if (voltageDisplay <= 0f)
                 {
-                    modbustMainForm.WriteSingleRegister(108, 1);
+                    modbustWrite.WriteSingleRegister(108, 1);
                     UpdateLabelText(vCompare, "FAULT");
                     return "FAULT";
 
                 }
-                else if (voltageDisplay >= voltageMin && voltageDisplay <= voltageMax)
+                
+                if (voltageDisplay >= voltageMin && voltageDisplay <= voltageMax)
                 {
                     // Tính ra vị trí hiện tại của pin trong khuôn
-                    List<int> lightList = new List<int> { 101, 102, 103, 104 };
+                    //List<int> lightList = new List<int> { 101, 102, 103, 104 };
 
                     int batteryIndex = Math.Abs(pinCountSetting - (queueBattery.Count));
                     int lightIndex = batteryIndex == 0 ? 0 : batteryIndex - 1;
@@ -3213,12 +3246,12 @@ namespace BatteryMonitor
                     double USR132 = getUSR(modbustMainForm, 130);
                     double USR134 = getUSR(modbustMainForm, 132);
 
-                    //modbustMainForm.WriteSingleRegister(108, 2);
+                    modbustWrite.WriteSingleRegister(108, 2);
 
                     string quality = getQuality(currentV, vMax, vMin, USR124, USR126, USR130, USR132, USR134);
 
                     // Cụm đèn cần bật
-                    int turnOnLight = lightList[lightIndex];
+                    //int turnOnLight = lightList[lightIndex];
 
                     int lightColor = getLightColor(quality); 
 
@@ -3230,22 +3263,24 @@ namespace BatteryMonitor
                     
 
 
-                    modbustMainForm.WriteSingleRegister(turnOnLight, lightColor);
+                    //modbustMainForm.WriteSingleRegister(107, lightColor);
 
                     UpdateLabelText(vCompare, quality);
                     return quality;
 
                 }
-                else if (voltageDisplay < voltageMin)
+               
+                if (voltageDisplay < voltageMin)
                 {
-                    modbustMainForm.WriteSingleRegister(108, 3);
+                    modbustWrite.WriteSingleRegister(108, 3);
                     UpdateLabelText(vCompare, "Low");
                     return "Low";
 
                 }
-                else if (voltageDisplay > voltageMax)
+                
+                if (voltageDisplay > voltageMax)
                 {
-                    modbustMainForm.WriteSingleRegister(108, 4);
+                    modbustWrite.WriteSingleRegister(108, 4);
                     UpdateLabelText(vCompare, "HIGH");
                     return "HIGH";
 
@@ -3292,8 +3327,8 @@ namespace BatteryMonitor
         private void totalBatteryShift1Label_Click(object sender, EventArgs e)
         {
 
-            // Tạo forder
-                string shipmentId = "LITHIUM";
+                // Tạo forder
+                string shipmentId = this.batchNumber.Text;
                 string forder = createForder(shipmentId);
                 // Xuất báo cáo
                 string dateCondition = System.DateTime.Now.ToString("yyyy/mm/dd");
@@ -3435,7 +3470,34 @@ namespace BatteryMonitor
         // maxV
         // minV
 
-        private string getQuality(double Value, double vMax, double vMin, double USR124, double USR126, double USR130, double USR132, double USR134)
+        private void bgwork_exportExcelTimer_DoWork(object sender, DoWorkEventArgs e)
+        {
+            if( modbustMainForm.Connected )
+            {
+                int [] array = modbustMainForm.ReadHoldingRegisters(0,124);
+                isExportDataReport = array[93];
+
+                if( isExportDataReport == 1 && !isExportDataFlag )
+                {
+                    string shipmentId = this.batchNumber.Text;
+                    string forder = createForder(shipmentId);
+                    // Xuất báo cáo
+                    string dateCondition = System.DateTime.Now.ToString("yyyy/mm/dd");
+                    string condition = " workShift = " + currentShift.ToString() + " AND shipmentId = '" + shipmentId + "' AND date LIKE '%" + dateCondition + "%' ;";
+                    sqlLite.ExportSqliteDataToExcel(forder, condition);
+                    // reset flag
+                    isExportDataFlag = true;
+                }
+
+                if (isExportDataReport == 0)
+                {
+                    isExportDataFlag = false;
+                }
+
+            }
+        }
+
+            private string getQuality(double Value, double vMax, double vMin, double USR124, double USR126, double USR130, double USR132, double USR134)
         {
             //// A
             if (Value > vMax || Value < USR134)

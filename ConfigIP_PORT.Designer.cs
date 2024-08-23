@@ -186,6 +186,7 @@
             // pinModes
             // 
             this.pinModes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.pinModes.Enabled = false;
             this.pinModes.FormattingEnabled = true;
             this.pinModes.Items.AddRange(new object[] {
             "1",
