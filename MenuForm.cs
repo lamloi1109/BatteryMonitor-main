@@ -310,6 +310,15 @@ namespace BatteryMonitor
             this.Close();
         }
 
+        private void kryptonButton2_Click(object sender, EventArgs e)
+        {
+            // chuyển sang form main
+            test main = new test();
+            //main.FormClosed += new FormClosedEventHandler(MenuFormClosed); // Đăng ký sự kiện FormClosed
+            //this.Hide();
+            main.Show();
+        }
+
         void _check_hioki_connect_DoWork_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
         {
             if (!bgwork_check_hioki_connect.IsBusy)

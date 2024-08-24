@@ -1,3 +1,17 @@
-2024-08-23 08:08:30.0090|ERROR|BatteryMonitor.Main|EasyModbus.Exceptions.ConnectionException: connection timed out
-   at EasyModbus.ModbusClient.Connect()
-   at BatteryMonitor.Main.Form1_Load(Object sender, EventArgs e) in D:\test_Loi_H34071\C#\BatteryMonitor-main\Main.cs:line 726
+2024-08-23 14:35:36.6049|ERROR|BatteryMonitor.Main|code = Constraint (19), message = System.Data.SQLite.SQLiteException (0x87AF202F): constraint failed
+UNIQUE constraint failed: errorScanQrList.batteryCodeList
+   at System.Data.SQLite.SQLite3.Step(SQLiteStatement stmt)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   at BatteryMonitor.SQLlite.sqlitedbofff.insertErrorScanQrList(String batteryCodeList, String date) in C:\Users\IT\Desktop\BatteryMonitor-main\SQL\sqlitedbofff.cs:line 206
+   at BatteryMonitor.Main.ReceivedDataWrite(String receivedData) in C:\Users\IT\Desktop\BatteryMonitor-main\Main.cs:line 2732
+2024-08-23 14:56:25.1564|ERROR|BatteryMonitor.Main|System.IO.IOException: Unable to read data from the transport connection: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond. ---> System.Net.Sockets.SocketException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   at EasyModbus.ModbusClient.WriteSingleRegister(Int32 startingAddress, Int32 value)
+   at BatteryMonitor.Main.bgwork_writeToModbust_DoWork(Object sender, DoWorkEventArgs e) in C:\Users\IT\Desktop\BatteryMonitor-main\Main.cs:line 3581

@@ -82,12 +82,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.userLabel = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
-            this.totalBatteryShift1Label = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.totalBatteryShift2Label = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.numPin = new System.Windows.Forms.Label();
             this.currentWorkShift = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
@@ -146,6 +141,13 @@
             this.label24 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.totalBatteryShift2Label = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.totalBatteryShift1Label = new System.Windows.Forms.Label();
+            this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tableLayoutPanel34.SuspendLayout();
@@ -168,7 +170,6 @@
             this.pinGroup1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
-            this.tableLayoutPanel8.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel27.SuspendLayout();
@@ -181,6 +182,7 @@
             this.tableLayoutPanel17.SuspendLayout();
             this.tableLayoutPanel9.SuspendLayout();
             this.tableLayoutPanel26.SuspendLayout();
+            this.tableLayoutPanel8.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel2
@@ -393,7 +395,7 @@
             this.tableLayoutPanel10.Controls.Add(this.pinGroup2, 1, 0);
             this.tableLayoutPanel10.Controls.Add(this.pinGroup1, 0, 0);
             this.tableLayoutPanel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel10.Font = new System.Drawing.Font("LCDMono2", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tableLayoutPanel10.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tableLayoutPanel10.ForeColor = System.Drawing.Color.Black;
             this.tableLayoutPanel10.Location = new System.Drawing.Point(0, 19);
             this.tableLayoutPanel10.Name = "tableLayoutPanel10";
@@ -440,7 +442,7 @@
             this.pinLabelV8.AutoSize = true;
             this.pinLabelV8.BackColor = System.Drawing.Color.Transparent;
             this.pinLabelV8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pinLabelV8.Font = new System.Drawing.Font("LCDMono2", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pinLabelV8.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pinLabelV8.ForeColor = System.Drawing.Color.Black;
             this.pinLabelV8.Location = new System.Drawing.Point(3, 25);
             this.pinLabelV8.Name = "pinLabelV8";
@@ -453,7 +455,7 @@
             this.pinLabelR8.AutoSize = true;
             this.pinLabelR8.BackColor = System.Drawing.Color.Transparent;
             this.pinLabelR8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pinLabelR8.Font = new System.Drawing.Font("LCDMono2", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pinLabelR8.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pinLabelR8.ForeColor = System.Drawing.Color.Black;
             this.pinLabelR8.Location = new System.Drawing.Point(3, 0);
             this.pinLabelR8.Name = "pinLabelR8";
@@ -495,7 +497,7 @@
             // 
             this.pinLabelV7.AutoSize = true;
             this.pinLabelV7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pinLabelV7.Font = new System.Drawing.Font("LCDMono2", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pinLabelV7.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pinLabelV7.ForeColor = System.Drawing.Color.Black;
             this.pinLabelV7.Location = new System.Drawing.Point(3, 25);
             this.pinLabelV7.Name = "pinLabelV7";
@@ -507,7 +509,7 @@
             // 
             this.pinLabelR7.AutoSize = true;
             this.pinLabelR7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pinLabelR7.Font = new System.Drawing.Font("LCDMono2", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pinLabelR7.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pinLabelR7.ForeColor = System.Drawing.Color.Black;
             this.pinLabelR7.Location = new System.Drawing.Point(3, 0);
             this.pinLabelR7.Name = "pinLabelR7";
@@ -549,7 +551,7 @@
             // 
             this.pinLabelV6.AutoSize = true;
             this.pinLabelV6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pinLabelV6.Font = new System.Drawing.Font("LCDMono2", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pinLabelV6.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pinLabelV6.ForeColor = System.Drawing.Color.Black;
             this.pinLabelV6.Location = new System.Drawing.Point(3, 25);
             this.pinLabelV6.Name = "pinLabelV6";
@@ -561,7 +563,7 @@
             // 
             this.pinLabelR6.AutoSize = true;
             this.pinLabelR6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pinLabelR6.Font = new System.Drawing.Font("LCDMono2", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pinLabelR6.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pinLabelR6.ForeColor = System.Drawing.Color.Black;
             this.pinLabelR6.Location = new System.Drawing.Point(3, 0);
             this.pinLabelR6.Name = "pinLabelR6";
@@ -603,7 +605,7 @@
             // 
             this.pinLabelV5.AutoSize = true;
             this.pinLabelV5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pinLabelV5.Font = new System.Drawing.Font("LCDMono2", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pinLabelV5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pinLabelV5.ForeColor = System.Drawing.Color.Black;
             this.pinLabelV5.Location = new System.Drawing.Point(3, 25);
             this.pinLabelV5.Name = "pinLabelV5";
@@ -615,7 +617,7 @@
             // 
             this.pinLabelR5.AutoSize = true;
             this.pinLabelR5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pinLabelR5.Font = new System.Drawing.Font("LCDMono2", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pinLabelR5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pinLabelR5.ForeColor = System.Drawing.Color.Black;
             this.pinLabelR5.Location = new System.Drawing.Point(3, 0);
             this.pinLabelR5.Name = "pinLabelR5";
@@ -658,7 +660,7 @@
             // 
             this.pinLabelV4.AutoSize = true;
             this.pinLabelV4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pinLabelV4.Font = new System.Drawing.Font("LCDMono2", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pinLabelV4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pinLabelV4.ForeColor = System.Drawing.Color.Black;
             this.pinLabelV4.Location = new System.Drawing.Point(3, 25);
             this.pinLabelV4.Name = "pinLabelV4";
@@ -670,7 +672,7 @@
             // 
             this.pinLabelR4.AutoSize = true;
             this.pinLabelR4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pinLabelR4.Font = new System.Drawing.Font("LCDMono2", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pinLabelR4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pinLabelR4.ForeColor = System.Drawing.Color.Black;
             this.pinLabelR4.Location = new System.Drawing.Point(3, 0);
             this.pinLabelR4.Name = "pinLabelR4";
@@ -713,7 +715,7 @@
             // 
             this.pinLabelV3.AutoSize = true;
             this.pinLabelV3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pinLabelV3.Font = new System.Drawing.Font("LCDMono2", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pinLabelV3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pinLabelV3.ForeColor = System.Drawing.Color.Black;
             this.pinLabelV3.Location = new System.Drawing.Point(3, 25);
             this.pinLabelV3.Name = "pinLabelV3";
@@ -725,7 +727,7 @@
             // 
             this.pinLabelR3.AutoSize = true;
             this.pinLabelR3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pinLabelR3.Font = new System.Drawing.Font("LCDMono2", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pinLabelR3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pinLabelR3.ForeColor = System.Drawing.Color.Black;
             this.pinLabelR3.Location = new System.Drawing.Point(3, 0);
             this.pinLabelR3.Name = "pinLabelR3";
@@ -767,7 +769,7 @@
             // 
             this.pinLabelV2.AutoSize = true;
             this.pinLabelV2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pinLabelV2.Font = new System.Drawing.Font("LCDMono2", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pinLabelV2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pinLabelV2.ForeColor = System.Drawing.Color.Black;
             this.pinLabelV2.Location = new System.Drawing.Point(3, 25);
             this.pinLabelV2.Name = "pinLabelV2";
@@ -779,7 +781,7 @@
             // 
             this.pinLabelR2.AutoSize = true;
             this.pinLabelR2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pinLabelR2.Font = new System.Drawing.Font("LCDMono2", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pinLabelR2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pinLabelR2.ForeColor = System.Drawing.Color.Black;
             this.pinLabelR2.Location = new System.Drawing.Point(3, 0);
             this.pinLabelR2.Name = "pinLabelR2";
@@ -809,7 +811,7 @@
             this.tableLayoutPanel3.Controls.Add(this.pinLabelR1, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.pinLabelV1, 0, 1);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Font = new System.Drawing.Font("LCDMono2", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tableLayoutPanel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 23);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 2;
@@ -822,7 +824,7 @@
             // 
             this.pinLabelR1.AutoSize = true;
             this.pinLabelR1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pinLabelR1.Font = new System.Drawing.Font("LCDMono2", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pinLabelR1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pinLabelR1.ForeColor = System.Drawing.Color.Black;
             this.pinLabelR1.Location = new System.Drawing.Point(3, 0);
             this.pinLabelR1.Name = "pinLabelR1";
@@ -834,7 +836,7 @@
             // 
             this.pinLabelV1.AutoSize = true;
             this.pinLabelV1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pinLabelV1.Font = new System.Drawing.Font("LCDMono2", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pinLabelV1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pinLabelV1.ForeColor = System.Drawing.Color.Black;
             this.pinLabelV1.Location = new System.Drawing.Point(3, 25);
             this.pinLabelV1.Name = "pinLabelV1";
@@ -844,21 +846,24 @@
             // 
             // tableLayoutPanel7
             // 
-            this.tableLayoutPanel7.ColumnCount = 5;
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 48.97025F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 51.02975F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 185F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 161F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 439F));
+            this.tableLayoutPanel7.ColumnCount = 6;
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 21.28498F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.91998F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.40165F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.44541F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.065825F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.88214F));
             this.tableLayoutPanel7.Controls.Add(this.batchNumber, 0, 1);
             this.tableLayoutPanel7.Controls.Add(this.specs, 0, 1);
             this.tableLayoutPanel7.Controls.Add(this.lblx_mslh, 0, 0);
             this.tableLayoutPanel7.Controls.Add(this.label123, 1, 0);
             this.tableLayoutPanel7.Controls.Add(this.label3, 2, 0);
+            this.tableLayoutPanel7.Controls.Add(this.numPin, 3, 1);
             this.tableLayoutPanel7.Controls.Add(this.userLabel, 2, 1);
-            this.tableLayoutPanel7.Controls.Add(this.label5, 3, 0);
-            this.tableLayoutPanel7.Controls.Add(this.tableLayoutPanel8, 4, 0);
-            this.tableLayoutPanel7.Controls.Add(this.currentWorkShift, 3, 1);
+            this.tableLayoutPanel7.Controls.Add(this.label10, 3, 0);
+            this.tableLayoutPanel7.Controls.Add(this.label5, 4, 0);
+            this.tableLayoutPanel7.Controls.Add(this.tableLayoutPanel8, 5, 0);
+            this.tableLayoutPanel7.Controls.Add(this.currentWorkShift, 4, 1);
             this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel7.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel7.Margin = new System.Windows.Forms.Padding(0);
@@ -866,7 +871,6 @@
             this.tableLayoutPanel7.RowCount = 2;
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 44.77612F));
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 55.22388F));
-            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel7.Size = new System.Drawing.Size(1364, 55);
             this.tableLayoutPanel7.TabIndex = 0;
             // 
@@ -877,10 +881,10 @@
             this.batchNumber.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.batchNumber.Dock = System.Windows.Forms.DockStyle.Fill;
             this.batchNumber.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.batchNumber.Location = new System.Drawing.Point(283, 24);
+            this.batchNumber.Location = new System.Drawing.Point(290, 24);
             this.batchNumber.Margin = new System.Windows.Forms.Padding(0);
             this.batchNumber.Name = "batchNumber";
-            this.batchNumber.Size = new System.Drawing.Size(295, 31);
+            this.batchNumber.Size = new System.Drawing.Size(258, 31);
             this.batchNumber.TabIndex = 612;
             this.batchNumber.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.batchNumber.Click += new System.EventHandler(this.batchNumber_Click);
@@ -895,7 +899,7 @@
             this.specs.Location = new System.Drawing.Point(0, 24);
             this.specs.Margin = new System.Windows.Forms.Padding(0);
             this.specs.Name = "specs";
-            this.specs.Size = new System.Drawing.Size(283, 31);
+            this.specs.Size = new System.Drawing.Size(290, 31);
             this.specs.TabIndex = 610;
             this.specs.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.specs.Click += new System.EventHandler(this.specs_Click);
@@ -910,7 +914,7 @@
             this.lblx_mslh.Location = new System.Drawing.Point(0, 0);
             this.lblx_mslh.Margin = new System.Windows.Forms.Padding(0);
             this.lblx_mslh.Name = "lblx_mslh";
-            this.lblx_mslh.Size = new System.Drawing.Size(283, 24);
+            this.lblx_mslh.Size = new System.Drawing.Size(290, 24);
             this.lblx_mslh.TabIndex = 602;
             this.lblx_mslh.Text = "Mã Số Lô Hàng 批號";
             this.lblx_mslh.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -922,10 +926,10 @@
             this.label123.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label123.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label123.ForeColor = System.Drawing.Color.Black;
-            this.label123.Location = new System.Drawing.Point(283, 0);
+            this.label123.Location = new System.Drawing.Point(290, 0);
             this.label123.Margin = new System.Windows.Forms.Padding(0);
             this.label123.Name = "label123";
-            this.label123.Size = new System.Drawing.Size(295, 24);
+            this.label123.Size = new System.Drawing.Size(258, 24);
             this.label123.TabIndex = 608;
             this.label123.Text = "Quy Cách 规格";
             this.label123.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -937,10 +941,10 @@
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(578, 0);
+            this.label3.Location = new System.Drawing.Point(548, 0);
             this.label3.Margin = new System.Windows.Forms.Padding(0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(185, 24);
+            this.label3.Size = new System.Drawing.Size(182, 24);
             this.label3.TabIndex = 609;
             this.label3.Text = "Mã NV 员工编号";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -953,10 +957,10 @@
             this.userLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.userLabel.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.userLabel.ForeColor = System.Drawing.Color.Black;
-            this.userLabel.Location = new System.Drawing.Point(578, 24);
+            this.userLabel.Location = new System.Drawing.Point(548, 24);
             this.userLabel.Margin = new System.Windows.Forms.Padding(0);
             this.userLabel.Name = "userLabel";
-            this.userLabel.Size = new System.Drawing.Size(185, 31);
+            this.userLabel.Size = new System.Drawing.Size(182, 31);
             this.userLabel.TabIndex = 606;
             this.userLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.userLabel.Click += new System.EventHandler(this.userLabel_Click);
@@ -968,112 +972,26 @@
             this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(763, 0);
+            this.label5.Location = new System.Drawing.Point(872, 0);
             this.label5.Margin = new System.Windows.Forms.Padding(0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(161, 24);
+            this.label5.Size = new System.Drawing.Size(123, 24);
             this.label5.TabIndex = 611;
             this.label5.Text = "Ca 工作班次";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // tableLayoutPanel8
+            // numPin
             // 
-            this.tableLayoutPanel8.ColumnCount = 3;
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.72915F));
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34.01693F));
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.25391F));
-            this.tableLayoutPanel8.Controls.Add(this.totalBatteryShift1Label, 0, 1);
-            this.tableLayoutPanel8.Controls.Add(this.label2, 0, 0);
-            this.tableLayoutPanel8.Controls.Add(this.label9, 1, 0);
-            this.tableLayoutPanel8.Controls.Add(this.totalBatteryShift2Label, 2, 1);
-            this.tableLayoutPanel8.Controls.Add(this.label6, 2, 0);
-            this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel8.Location = new System.Drawing.Point(924, 0);
-            this.tableLayoutPanel8.Margin = new System.Windows.Forms.Padding(0);
-            this.tableLayoutPanel8.Name = "tableLayoutPanel8";
-            this.tableLayoutPanel8.RowCount = 2;
-            this.tableLayoutPanel7.SetRowSpan(this.tableLayoutPanel8, 2);
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 44.70588F));
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 55.29412F));
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel8.Size = new System.Drawing.Size(440, 55);
-            this.tableLayoutPanel8.TabIndex = 613;
-            // 
-            // totalBatteryShift1Label
-            // 
-            this.totalBatteryShift1Label.BackColor = System.Drawing.Color.White;
-            this.totalBatteryShift1Label.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.totalBatteryShift1Label.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.totalBatteryShift1Label.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalBatteryShift1Label.ForeColor = System.Drawing.Color.Black;
-            this.totalBatteryShift1Label.Location = new System.Drawing.Point(135, 24);
-            this.totalBatteryShift1Label.Margin = new System.Windows.Forms.Padding(0);
-            this.totalBatteryShift1Label.Name = "totalBatteryShift1Label";
-            this.totalBatteryShift1Label.Size = new System.Drawing.Size(149, 31);
-            this.totalBatteryShift1Label.TabIndex = 619;
-            this.totalBatteryShift1Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.totalBatteryShift1Label.Click += new System.EventHandler(this.totalBatteryShift1Label_Click);
-            // 
-            // label2
-            // 
-            this.label2.BackColor = System.Drawing.Color.PowderBlue;
-            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(0, 0);
-            this.label2.Margin = new System.Windows.Forms.Padding(0);
-            this.label2.Name = "label2";
-            this.tableLayoutPanel8.SetRowSpan(this.label2, 2);
-            this.label2.Size = new System.Drawing.Size(135, 55);
-            this.label2.TabIndex = 612;
-            this.label2.Text = "Tổng SL đã đo \r\n电池已测量";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // label9
-            // 
-            this.label9.BackColor = System.Drawing.Color.PowderBlue;
-            this.label9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label9.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(135, 0);
-            this.label9.Margin = new System.Windows.Forms.Padding(0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(149, 24);
-            this.label9.TabIndex = 617;
-            this.label9.Text = "Ca 1 工作班次1";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // totalBatteryShift2Label
-            // 
-            this.totalBatteryShift2Label.BackColor = System.Drawing.Color.White;
-            this.totalBatteryShift2Label.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.totalBatteryShift2Label.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.totalBatteryShift2Label.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalBatteryShift2Label.ForeColor = System.Drawing.Color.Black;
-            this.totalBatteryShift2Label.Location = new System.Drawing.Point(284, 24);
-            this.totalBatteryShift2Label.Margin = new System.Windows.Forms.Padding(0);
-            this.totalBatteryShift2Label.Name = "totalBatteryShift2Label";
-            this.totalBatteryShift2Label.Size = new System.Drawing.Size(156, 31);
-            this.totalBatteryShift2Label.TabIndex = 615;
-            this.totalBatteryShift2Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label6
-            // 
-            this.label6.BackColor = System.Drawing.Color.PowderBlue;
-            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label6.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(284, 0);
-            this.label6.Margin = new System.Windows.Forms.Padding(0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(156, 24);
-            this.label6.TabIndex = 614;
-            this.label6.Text = "Ca 2  工作班次2";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.numPin.AutoSize = true;
+            this.numPin.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.numPin.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.numPin.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold);
+            this.numPin.Location = new System.Drawing.Point(733, 24);
+            this.numPin.Name = "numPin";
+            this.numPin.Size = new System.Drawing.Size(136, 31);
+            this.numPin.TabIndex = 620;
+            this.numPin.Text = "1";
+            this.numPin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // currentWorkShift
             // 
@@ -1082,10 +1000,10 @@
             this.currentWorkShift.Dock = System.Windows.Forms.DockStyle.Fill;
             this.currentWorkShift.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.currentWorkShift.ForeColor = System.Drawing.Color.Black;
-            this.currentWorkShift.Location = new System.Drawing.Point(763, 24);
+            this.currentWorkShift.Location = new System.Drawing.Point(872, 24);
             this.currentWorkShift.Margin = new System.Windows.Forms.Padding(0);
             this.currentWorkShift.Name = "currentWorkShift";
-            this.currentWorkShift.Size = new System.Drawing.Size(161, 31);
+            this.currentWorkShift.Size = new System.Drawing.Size(123, 31);
             this.currentWorkShift.TabIndex = 614;
             this.currentWorkShift.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.currentWorkShift.Click += new System.EventHandler(this.currentWorkShift_Click);
@@ -1168,8 +1086,8 @@
             this.tableLayoutPanel19.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel19.Name = "tableLayoutPanel19";
             this.tableLayoutPanel19.RowCount = 2;
-            this.tableLayoutPanel19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40.54054F));
-            this.tableLayoutPanel19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 59.45946F));
+            this.tableLayoutPanel19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 52.85714F));
+            this.tableLayoutPanel19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 47.14286F));
             this.tableLayoutPanel19.Size = new System.Drawing.Size(394, 70);
             this.tableLayoutPanel19.TabIndex = 3;
             // 
@@ -1180,10 +1098,10 @@
             this.vMaxLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.vMaxLabel.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.vMaxLabel.ForeColor = System.Drawing.Color.Black;
-            this.vMaxLabel.Location = new System.Drawing.Point(0, 28);
+            this.vMaxLabel.Location = new System.Drawing.Point(0, 37);
             this.vMaxLabel.Margin = new System.Windows.Forms.Padding(0);
             this.vMaxLabel.Name = "vMaxLabel";
-            this.vMaxLabel.Size = new System.Drawing.Size(128, 42);
+            this.vMaxLabel.Size = new System.Drawing.Size(128, 33);
             this.vMaxLabel.TabIndex = 606;
             this.vMaxLabel.Text = "0";
             this.vMaxLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1193,12 +1111,12 @@
             this.label33.BackColor = System.Drawing.Color.NavajoWhite;
             this.label33.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label33.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label33.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label33.ForeColor = System.Drawing.Color.Black;
             this.label33.Location = new System.Drawing.Point(0, 0);
             this.label33.Margin = new System.Windows.Forms.Padding(0);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(128, 28);
+            this.label33.Size = new System.Drawing.Size(128, 37);
             this.label33.TabIndex = 603;
             this.label33.Text = "Điện áp (電壓) MAX";
             this.label33.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1208,12 +1126,12 @@
             this.label34.BackColor = System.Drawing.Color.NavajoWhite;
             this.label34.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label34.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label34.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label34.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label34.ForeColor = System.Drawing.Color.Black;
             this.label34.Location = new System.Drawing.Point(128, 0);
             this.label34.Margin = new System.Windows.Forms.Padding(0);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(128, 28);
+            this.label34.Size = new System.Drawing.Size(128, 37);
             this.label34.TabIndex = 604;
             this.label34.Text = "Điện áp (電壓) MIN";
             this.label34.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1225,10 +1143,10 @@
             this.vMinLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.vMinLabel.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.vMinLabel.ForeColor = System.Drawing.Color.Black;
-            this.vMinLabel.Location = new System.Drawing.Point(128, 28);
+            this.vMinLabel.Location = new System.Drawing.Point(128, 37);
             this.vMinLabel.Margin = new System.Windows.Forms.Padding(0);
             this.vMinLabel.Name = "vMinLabel";
-            this.vMinLabel.Size = new System.Drawing.Size(128, 42);
+            this.vMinLabel.Size = new System.Drawing.Size(128, 33);
             this.vMinLabel.TabIndex = 607;
             this.vMinLabel.Text = "0";
             this.vMinLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1241,10 +1159,10 @@
             this.currentVLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.currentVLabel.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.currentVLabel.ForeColor = System.Drawing.Color.Black;
-            this.currentVLabel.Location = new System.Drawing.Point(256, 28);
+            this.currentVLabel.Location = new System.Drawing.Point(256, 37);
             this.currentVLabel.Margin = new System.Windows.Forms.Padding(0);
             this.currentVLabel.Name = "currentVLabel";
-            this.currentVLabel.Size = new System.Drawing.Size(138, 42);
+            this.currentVLabel.Size = new System.Drawing.Size(138, 33);
             this.currentVLabel.TabIndex = 609;
             this.currentVLabel.Text = "0";
             this.currentVLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1255,12 +1173,12 @@
             this.label51.BackColor = System.Drawing.Color.NavajoWhite;
             this.label51.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label51.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label51.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label51.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label51.ForeColor = System.Drawing.Color.Black;
             this.label51.Location = new System.Drawing.Point(256, 0);
             this.label51.Margin = new System.Windows.Forms.Padding(0);
             this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(138, 28);
+            this.label51.Size = new System.Drawing.Size(138, 37);
             this.label51.TabIndex = 608;
             this.label51.Text = "Điện áp (電壓)";
             this.label51.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1602,7 +1520,7 @@
             this.tableLayoutPanel9.ColumnCount = 3;
             this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.40322F));
             this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.59678F));
-            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 147F));
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 149F));
             this.tableLayoutPanel9.Controls.Add(this.label12, 0, 0);
             this.tableLayoutPanel9.Controls.Add(this.label19, 1, 0);
             this.tableLayoutPanel9.Controls.Add(this.currentRLabel, 2, 1);
@@ -1624,12 +1542,12 @@
             this.label12.BackColor = System.Drawing.Color.Aquamarine;
             this.label12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label12.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.Black;
             this.label12.Location = new System.Drawing.Point(0, 0);
             this.label12.Margin = new System.Windows.Forms.Padding(0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(124, 36);
+            this.label12.Size = new System.Drawing.Size(123, 36);
             this.label12.TabIndex = 603;
             this.label12.Text = "Điện trở (電阻) MAX";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1639,12 +1557,12 @@
             this.label19.BackColor = System.Drawing.Color.Aquamarine;
             this.label19.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label19.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label19.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.Color.Black;
-            this.label19.Location = new System.Drawing.Point(124, 0);
+            this.label19.Location = new System.Drawing.Point(123, 0);
             this.label19.Margin = new System.Windows.Forms.Padding(0);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(122, 36);
+            this.label19.Size = new System.Drawing.Size(121, 36);
             this.label19.TabIndex = 604;
             this.label19.Text = "Điện trở (電阻) MIN";
             this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1656,10 +1574,10 @@
             this.currentRLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.currentRLabel.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.currentRLabel.ForeColor = System.Drawing.Color.Black;
-            this.currentRLabel.Location = new System.Drawing.Point(246, 36);
+            this.currentRLabel.Location = new System.Drawing.Point(244, 36);
             this.currentRLabel.Margin = new System.Windows.Forms.Padding(0);
             this.currentRLabel.Name = "currentRLabel";
-            this.currentRLabel.Size = new System.Drawing.Size(148, 34);
+            this.currentRLabel.Size = new System.Drawing.Size(150, 34);
             this.currentRLabel.TabIndex = 609;
             this.currentRLabel.Text = "0";
             this.currentRLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1669,12 +1587,12 @@
             this.label45.BackColor = System.Drawing.Color.Aquamarine;
             this.label45.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label45.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label45.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label45.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label45.ForeColor = System.Drawing.Color.Black;
-            this.label45.Location = new System.Drawing.Point(246, 0);
+            this.label45.Location = new System.Drawing.Point(244, 0);
             this.label45.Margin = new System.Windows.Forms.Padding(0);
             this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(148, 36);
+            this.label45.Size = new System.Drawing.Size(150, 36);
             this.label45.TabIndex = 608;
             this.label45.Text = "Điện trở (電阻)";
             this.label45.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1684,10 +1602,10 @@
             this.rMinLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.rMinLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rMinLabel.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rMinLabel.Location = new System.Drawing.Point(124, 36);
+            this.rMinLabel.Location = new System.Drawing.Point(123, 36);
             this.rMinLabel.Margin = new System.Windows.Forms.Padding(0);
             this.rMinLabel.Name = "rMinLabel";
-            this.rMinLabel.Size = new System.Drawing.Size(122, 34);
+            this.rMinLabel.Size = new System.Drawing.Size(121, 34);
             this.rMinLabel.TabIndex = 612;
             this.rMinLabel.Text = "0";
             this.rMinLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1701,7 +1619,7 @@
             this.rMaxLabel.Location = new System.Drawing.Point(0, 36);
             this.rMaxLabel.Margin = new System.Windows.Forms.Padding(0);
             this.rMaxLabel.Name = "rMaxLabel";
-            this.rMaxLabel.Size = new System.Drawing.Size(124, 34);
+            this.rMaxLabel.Size = new System.Drawing.Size(123, 34);
             this.rMaxLabel.TabIndex = 613;
             this.rMaxLabel.Text = "0";
             this.rMaxLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1971,6 +1889,119 @@
             this.panel3.Size = new System.Drawing.Size(1364, 4);
             this.panel3.TabIndex = 4;
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.MediumSpringGreen;
+            this.label10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label10.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold);
+            this.label10.Location = new System.Drawing.Point(733, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(136, 24);
+            this.label10.TabIndex = 621;
+            this.label10.Text = "Số PIN";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label6
+            // 
+            this.label6.BackColor = System.Drawing.Color.PowderBlue;
+            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label6.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Black;
+            this.label6.Location = new System.Drawing.Point(238, 0);
+            this.label6.Margin = new System.Windows.Forms.Padding(0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(131, 24);
+            this.label6.TabIndex = 614;
+            this.label6.Text = "Ca 2  工作班次2";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // totalBatteryShift2Label
+            // 
+            this.totalBatteryShift2Label.BackColor = System.Drawing.Color.White;
+            this.totalBatteryShift2Label.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.totalBatteryShift2Label.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.totalBatteryShift2Label.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalBatteryShift2Label.ForeColor = System.Drawing.Color.Black;
+            this.totalBatteryShift2Label.Location = new System.Drawing.Point(238, 24);
+            this.totalBatteryShift2Label.Margin = new System.Windows.Forms.Padding(0);
+            this.totalBatteryShift2Label.Name = "totalBatteryShift2Label";
+            this.totalBatteryShift2Label.Size = new System.Drawing.Size(131, 31);
+            this.totalBatteryShift2Label.TabIndex = 615;
+            this.totalBatteryShift2Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label9
+            // 
+            this.label9.BackColor = System.Drawing.Color.PowderBlue;
+            this.label9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label9.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Black;
+            this.label9.Location = new System.Drawing.Point(113, 0);
+            this.label9.Margin = new System.Windows.Forms.Padding(0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(125, 24);
+            this.label9.TabIndex = 617;
+            this.label9.Text = "Ca 1 工作班次1";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.Color.PowderBlue;
+            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(0, 0);
+            this.label2.Margin = new System.Windows.Forms.Padding(0);
+            this.label2.Name = "label2";
+            this.tableLayoutPanel8.SetRowSpan(this.label2, 2);
+            this.label2.Size = new System.Drawing.Size(113, 55);
+            this.label2.TabIndex = 612;
+            this.label2.Text = "Tổng SL đã đo \r\n电池已测量";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // totalBatteryShift1Label
+            // 
+            this.totalBatteryShift1Label.BackColor = System.Drawing.Color.White;
+            this.totalBatteryShift1Label.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.totalBatteryShift1Label.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.totalBatteryShift1Label.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalBatteryShift1Label.ForeColor = System.Drawing.Color.Black;
+            this.totalBatteryShift1Label.Location = new System.Drawing.Point(113, 24);
+            this.totalBatteryShift1Label.Margin = new System.Windows.Forms.Padding(0);
+            this.totalBatteryShift1Label.Name = "totalBatteryShift1Label";
+            this.totalBatteryShift1Label.Size = new System.Drawing.Size(125, 31);
+            this.totalBatteryShift1Label.TabIndex = 619;
+            this.totalBatteryShift1Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.totalBatteryShift1Label.Click += new System.EventHandler(this.totalBatteryShift1Label_Click);
+            // 
+            // tableLayoutPanel8
+            // 
+            this.tableLayoutPanel8.ColumnCount = 3;
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.72915F));
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34.01693F));
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.25391F));
+            this.tableLayoutPanel8.Controls.Add(this.totalBatteryShift1Label, 0, 1);
+            this.tableLayoutPanel8.Controls.Add(this.label2, 0, 0);
+            this.tableLayoutPanel8.Controls.Add(this.label9, 1, 0);
+            this.tableLayoutPanel8.Controls.Add(this.totalBatteryShift2Label, 2, 1);
+            this.tableLayoutPanel8.Controls.Add(this.label6, 2, 0);
+            this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel8.Location = new System.Drawing.Point(995, 0);
+            this.tableLayoutPanel8.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel8.Name = "tableLayoutPanel8";
+            this.tableLayoutPanel8.RowCount = 2;
+            this.tableLayoutPanel7.SetRowSpan(this.tableLayoutPanel8, 2);
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 44.70588F));
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 55.29412F));
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(369, 55);
+            this.tableLayoutPanel8.TabIndex = 613;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2016,7 +2047,6 @@
             this.tableLayoutPanel3.PerformLayout();
             this.tableLayoutPanel7.ResumeLayout(false);
             this.tableLayoutPanel7.PerformLayout();
-            this.tableLayoutPanel8.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel27.ResumeLayout(false);
@@ -2032,6 +2062,7 @@
             this.tableLayoutPanel9.ResumeLayout(false);
             this.tableLayoutPanel9.PerformLayout();
             this.tableLayoutPanel26.ResumeLayout(false);
+            this.tableLayoutPanel8.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -2090,12 +2121,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label userLabel;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
-        private System.Windows.Forms.Label totalBatteryShift1Label;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label totalBatteryShift2Label;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label currentWorkShift;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
@@ -2155,5 +2180,13 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Label pinLabelR1;
         private System.Windows.Forms.Label pinLabelV1;
+        private System.Windows.Forms.Label numPin;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
+        private System.Windows.Forms.Label totalBatteryShift1Label;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label totalBatteryShift2Label;
+        private System.Windows.Forms.Label label6;
     }
 }

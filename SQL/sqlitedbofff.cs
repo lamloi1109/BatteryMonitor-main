@@ -85,7 +85,7 @@ namespace BatteryMonitor.SQLlite
                 batteryCodeList TEXT ,
                 date TEXT,
 
-                CONSTRAINT constraint_errorScanQrList_pk PRIMARY KEY (batteryCodeList));";
+                CONSTRAINT constraint_errorScanQrList_pk PRIMARY KEY (batteryCodeList, date));";
                 command.ExecuteNonQuery();
 
 

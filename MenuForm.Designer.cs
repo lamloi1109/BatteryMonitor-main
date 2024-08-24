@@ -39,6 +39,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.userLabel = new Krypton.Toolkit.KryptonLabel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.kryptonButton2 = new Krypton.Toolkit.KryptonButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -152,11 +153,28 @@
             this.pictureBox2.TabIndex = 16;
             this.pictureBox2.TabStop = false;
             // 
+            // kryptonButton2
+            // 
+            this.kryptonButton2.Location = new System.Drawing.Point(242, 111);
+            this.kryptonButton2.Name = "kryptonButton2";
+            this.kryptonButton2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.kryptonButton2.Size = new System.Drawing.Size(121, 36);
+            this.kryptonButton2.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButton2.StateCommon.Border.Rounding = 5F;
+            this.kryptonButton2.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonButton2.TabIndex = 22;
+            this.kryptonButton2.Values.Image = ((System.Drawing.Image)(resources.GetObject("kryptonButton2.Values.Image")));
+            this.kryptonButton2.Values.Text = "TEST";
+            this.kryptonButton2.Click += new System.EventHandler(this.kryptonButton2_Click);
+            // 
             // MenuForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(701, 237);
+            this.Controls.Add(this.kryptonButton2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.kryptonButton1);
             this.Controls.Add(this.pictureBox2);
@@ -187,5 +205,6 @@
         private Krypton.Toolkit.KryptonButton kryptonButton1;
         private System.Windows.Forms.Panel panel1;
         private Krypton.Toolkit.KryptonLabel userLabel;
+        private Krypton.Toolkit.KryptonButton kryptonButton2;
     }
 }
