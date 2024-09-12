@@ -40,43 +40,48 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 51);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(21, 94);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 13);
+            this.label2.Size = new System.Drawing.Size(109, 29);
             this.label2.TabIndex = 4;
             this.label2.Text = "Mật khẩu";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 9);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(26, 24);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(72, 13);
+            this.label3.Size = new System.Drawing.Size(154, 29);
             this.label3.TabIndex = 5;
             this.label3.Text = "Mã nhân viên";
             // 
             // userId
             // 
-            this.userId.Location = new System.Drawing.Point(15, 28);
+            this.userId.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userId.Location = new System.Drawing.Point(26, 56);
             this.userId.Name = "userId";
-            this.userId.Size = new System.Drawing.Size(163, 20);
+            this.userId.Size = new System.Drawing.Size(232, 35);
             this.userId.TabIndex = 6;
             this.userId.TextChanged += new System.EventHandler(this.userId_TextChanged);
             // 
             // password
             // 
-            this.password.Location = new System.Drawing.Point(16, 67);
+            this.password.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.password.Location = new System.Drawing.Point(26, 126);
             this.password.Name = "password";
             this.password.PasswordChar = '*';
-            this.password.Size = new System.Drawing.Size(163, 20);
+            this.password.Size = new System.Drawing.Size(232, 35);
             this.password.TabIndex = 7;
             this.password.TextChanged += new System.EventHandler(this.password_TextChanged);
             // 
             // loginButton
             // 
-            this.loginButton.Location = new System.Drawing.Point(15, 122);
+            this.loginButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loginButton.Location = new System.Drawing.Point(26, 229);
             this.loginButton.Name = "loginButton";
-            this.loginButton.Size = new System.Drawing.Size(163, 23);
+            this.loginButton.Size = new System.Drawing.Size(232, 50);
             this.loginButton.TabIndex = 8;
             this.loginButton.Text = "Đăng nhập";
             this.loginButton.UseVisualStyleBackColor = true;
@@ -85,9 +90,10 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(15, 99);
+            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox1.Location = new System.Drawing.Point(26, 199);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(110, 17);
+            this.checkBox1.Size = new System.Drawing.Size(154, 24);
             this.checkBox1.TabIndex = 9;
             this.checkBox1.Text = "Ghi nhớ mật khẩu";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -96,7 +102,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(186, 150);
+            this.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.ClientSize = new System.Drawing.Size(283, 345);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.loginButton);
             this.Controls.Add(this.password);

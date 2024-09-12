@@ -1,0 +1,110 @@
+2024-09-10 09:06:38.5024|ERROR|BatteryMonitor.Main|EasyModbus.Exceptions.ConnectionException: connection timed out
+   at EasyModbus.ModbusClient.Connect()
+   at BatteryMonitor.Main.Form1_Load(Object sender, EventArgs e) in C:\Users\IT\Desktop\BatteryMonitor-main\Main.cs:line 853
+2024-09-10 09:32:26.8330|ERROR|BatteryMonitor.Main|EasyModbus.Exceptions.ConnectionException: connection timed out
+   at EasyModbus.ModbusClient.Connect()
+   at BatteryMonitor.Main.Form1_Load(Object sender, EventArgs e) in C:\Users\IT\Desktop\BatteryMonitor-main\Main.cs:line 853
+2024-09-10 09:35:00.6209|ERROR|BatteryMonitor.Main|EasyModbus.Exceptions.ConnectionException: connection timed out
+   at EasyModbus.ModbusClient.Connect()
+   at BatteryMonitor.Main.Form1_Load(Object sender, EventArgs e) in C:\Users\IT\Desktop\BatteryMonitor-main\Main.cs:line 853
+2024-09-10 09:35:46.9986|ERROR|BatteryMonitor.Main|EasyModbus.Exceptions.ConnectionException: connection timed out
+   at EasyModbus.ModbusClient.Connect()
+   at BatteryMonitor.Main.Form1_Load(Object sender, EventArgs e) in C:\Users\IT\Desktop\BatteryMonitor-main\Main.cs:line 853
+2024-09-10 09:36:27.8942|ERROR|BatteryMonitor.Main|EasyModbus.Exceptions.ConnectionException: connection timed out
+   at EasyModbus.ModbusClient.Connect()
+   at BatteryMonitor.Main.Form1_Load(Object sender, EventArgs e) in C:\Users\IT\Desktop\BatteryMonitor-main\Main.cs:line 853
+2024-09-10 09:37:39.3920|ERROR|BatteryMonitor.Main|EasyModbus.Exceptions.ConnectionException: connection timed out
+   at EasyModbus.ModbusClient.Connect()
+   at BatteryMonitor.Main.Form1_Load(Object sender, EventArgs e) in C:\Users\IT\Desktop\BatteryMonitor-main\Main.cs:line 853
+2024-09-10 09:40:13.0488|ERROR|BatteryMonitor.Main|EasyModbus.Exceptions.ConnectionException: connection timed out
+   at EasyModbus.ModbusClient.Connect()
+   at BatteryMonitor.Main.Form1_Load(Object sender, EventArgs e) in C:\Users\IT\Desktop\BatteryMonitor-main\Main.cs:line 853
+2024-09-10 09:41:51.0002|ERROR|BatteryMonitor.Main|EasyModbus.Exceptions.ConnectionException: connection timed out
+   at EasyModbus.ModbusClient.Connect()
+   at BatteryMonitor.Main.Form1_Load(Object sender, EventArgs e) in C:\Users\IT\Desktop\BatteryMonitor-main\Main.cs:line 853
+2024-09-10 09:43:48.7517|ERROR|BatteryMonitor.Main|EasyModbus.Exceptions.ConnectionException: connection timed out
+   at EasyModbus.ModbusClient.Connect()
+   at BatteryMonitor.Main.Form1_Load(Object sender, EventArgs e) in C:\Users\IT\Desktop\BatteryMonitor-main\Main.cs:line 853
+2024-09-10 09:44:07.7704|ERROR|BatteryMonitor.Main|EasyModbus.Exceptions.ConnectionException: connection timed out
+   at EasyModbus.ModbusClient.Connect()
+   at BatteryMonitor.Main.Form1_Load(Object sender, EventArgs e) in C:\Users\IT\Desktop\BatteryMonitor-main\Main.cs:line 853
+2024-09-10 09:51:51.1426|ERROR|BatteryMonitor.Main|EasyModbus.Exceptions.ConnectionException: connection timed out
+   at EasyModbus.ModbusClient.Connect()
+   at BatteryMonitor.Main.Form1_Load(Object sender, EventArgs e) in C:\Users\IT\Desktop\BatteryMonitor-main\Main.cs:line 853
+2024-09-10 10:50:34.8726|ERROR|BatteryMonitor.Main|EasyModbus.Exceptions.ConnectionException: connection timed out
+   at EasyModbus.ModbusClient.Connect()
+   at BatteryMonitor.Main.Form1_Load(Object sender, EventArgs e) in C:\Users\IT\Desktop\BatteryMonitor-main\Main.cs:line 853
+2024-09-10 11:24:11.4448|ERROR|BatteryMonitor.Main|EasyModbus.Exceptions.ConnectionException: connection timed out
+   at EasyModbus.ModbusClient.Connect()
+   at BatteryMonitor.Main.Form1_Load(Object sender, EventArgs e) in C:\Users\IT\Desktop\BatteryMonitor-main\Main.cs:line 853
+2024-09-10 11:27:33.8339|ERROR|BatteryMonitor.Main|EasyModbus.Exceptions.ConnectionException: connection timed out
+   at EasyModbus.ModbusClient.Connect()
+   at BatteryMonitor.Main.Form1_Load(Object sender, EventArgs e) in C:\Users\IT\Desktop\BatteryMonitor-main\Main.cs:line 857
+2024-09-10 11:47:13.6307|ERROR|BatteryMonitor.Main|EasyModbus.Exceptions.ConnectionException: connection timed out
+   at EasyModbus.ModbusClient.Connect()
+   at BatteryMonitor.Main.Form1_Load(Object sender, EventArgs e) in C:\Users\IT\Desktop\BatteryMonitor-main\Main.cs:line 857
+2024-09-10 11:49:02.0099|ERROR|BatteryMonitor.Main|EasyModbus.Exceptions.ConnectionException: connection timed out
+   at EasyModbus.ModbusClient.Connect()
+   at BatteryMonitor.Main.Form1_Load(Object sender, EventArgs e) in C:\Users\IT\Desktop\BatteryMonitor-main\Main.cs:line 857
+2024-09-10 11:49:05.7843|ERROR|BatteryMonitor.Main|System.NullReferenceException: Object reference not set to an instance of an object.
+   at BatteryMonitor.Main.SetAxisLimits(CartesianChart chart, Int32 number) in C:\Users\IT\Desktop\BatteryMonitor-main\Main.cs:line 409
+   at BatteryMonitor.Main.<>c__DisplayClass178_0.<AddDataInChartAsync>b__0() in C:\Users\IT\Desktop\BatteryMonitor-main\Main.cs:line 2361
+2024-09-10 11:49:08.7656|ERROR|BatteryMonitor.Main|System.NullReferenceException: Object reference not set to an instance of an object.
+   at BatteryMonitor.Main.SetAxisLimits(CartesianChart chart, Int32 number) in C:\Users\IT\Desktop\BatteryMonitor-main\Main.cs:line 409
+   at BatteryMonitor.Main.<>c__DisplayClass178_0.<AddDataInChartAsync>b__0() in C:\Users\IT\Desktop\BatteryMonitor-main\Main.cs:line 2361
+2024-09-10 11:49:10.1664|ERROR|BatteryMonitor.Main|System.NullReferenceException: Object reference not set to an instance of an object.
+   at BatteryMonitor.Main.SetAxisLimits(CartesianChart chart, Int32 number) in C:\Users\IT\Desktop\BatteryMonitor-main\Main.cs:line 409
+   at BatteryMonitor.Main.<>c__DisplayClass178_0.<AddDataInChartAsync>b__0() in C:\Users\IT\Desktop\BatteryMonitor-main\Main.cs:line 2361
+2024-09-10 11:49:10.7208|ERROR|BatteryMonitor.Main|System.NullReferenceException: Object reference not set to an instance of an object.
+   at BatteryMonitor.Main.SetAxisLimits(CartesianChart chart, Int32 number) in C:\Users\IT\Desktop\BatteryMonitor-main\Main.cs:line 409
+   at BatteryMonitor.Main.<>c__DisplayClass178_0.<AddDataInChartAsync>b__0() in C:\Users\IT\Desktop\BatteryMonitor-main\Main.cs:line 2361
+2024-09-10 11:49:24.0653|ERROR|BatteryMonitor.Main|System.NullReferenceException: Object reference not set to an instance of an object.
+   at BatteryMonitor.Main.SetAxisLimits(CartesianChart chart, Int32 number) in C:\Users\IT\Desktop\BatteryMonitor-main\Main.cs:line 409
+   at BatteryMonitor.Main.<>c__DisplayClass178_0.<AddDataInChartAsync>b__0() in C:\Users\IT\Desktop\BatteryMonitor-main\Main.cs:line 2361
+2024-09-10 11:49:25.8050|ERROR|BatteryMonitor.Main|System.NullReferenceException: Object reference not set to an instance of an object.
+   at BatteryMonitor.Main.SetAxisLimits(CartesianChart chart, Int32 number) in C:\Users\IT\Desktop\BatteryMonitor-main\Main.cs:line 409
+   at BatteryMonitor.Main.<>c__DisplayClass178_0.<AddDataInChartAsync>b__0() in C:\Users\IT\Desktop\BatteryMonitor-main\Main.cs:line 2361
+2024-09-10 11:49:26.3902|ERROR|BatteryMonitor.Main|System.NullReferenceException: Object reference not set to an instance of an object.
+   at BatteryMonitor.Main.SetAxisLimits(CartesianChart chart, Int32 number) in C:\Users\IT\Desktop\BatteryMonitor-main\Main.cs:line 409
+   at BatteryMonitor.Main.<>c__DisplayClass178_0.<AddDataInChartAsync>b__0() in C:\Users\IT\Desktop\BatteryMonitor-main\Main.cs:line 2361
+2024-09-10 11:49:26.7219|ERROR|BatteryMonitor.Main|System.NullReferenceException: Object reference not set to an instance of an object.
+   at BatteryMonitor.Main.SetAxisLimits(CartesianChart chart, Int32 number) in C:\Users\IT\Desktop\BatteryMonitor-main\Main.cs:line 409
+   at BatteryMonitor.Main.<>c__DisplayClass178_0.<AddDataInChartAsync>b__0() in C:\Users\IT\Desktop\BatteryMonitor-main\Main.cs:line 2361
+2024-09-10 11:53:48.5996|ERROR|BatteryMonitor.Main|EasyModbus.Exceptions.ConnectionException: connection timed out
+   at EasyModbus.ModbusClient.Connect()
+   at BatteryMonitor.Main.Form1_Load(Object sender, EventArgs e) in C:\Users\IT\Desktop\BatteryMonitor-main\Main.cs:line 857
+2024-09-10 11:53:50.9872|ERROR|BatteryMonitor.Main|System.NullReferenceException: Object reference not set to an instance of an object.
+   at BatteryMonitor.Main.SetAxisLimits(CartesianChart chart, Int32 number) in C:\Users\IT\Desktop\BatteryMonitor-main\Main.cs:line 409
+   at BatteryMonitor.Main.<>c__DisplayClass178_0.<AddDataInChartAsync>b__0() in C:\Users\IT\Desktop\BatteryMonitor-main\Main.cs:line 2361
+2024-09-10 11:57:57.0800|ERROR|BatteryMonitor.Main|EasyModbus.Exceptions.ConnectionException: connection timed out
+   at EasyModbus.ModbusClient.Connect()
+   at BatteryMonitor.Main.Form1_Load(Object sender, EventArgs e) in C:\Users\IT\Desktop\BatteryMonitor-main\Main.cs:line 857
+2024-09-10 12:01:01.8844|ERROR|BatteryMonitor.Main|EasyModbus.Exceptions.ConnectionException: connection timed out
+   at EasyModbus.ModbusClient.Connect()
+   at BatteryMonitor.Main.Form1_Load(Object sender, EventArgs e) in C:\Users\IT\Desktop\BatteryMonitor-main\Main.cs:line 857
+2024-09-10 13:42:09.5647|ERROR|BatteryMonitor.Main|An error occurred while attempting to retrieve Hioki measurement: This BackgroundWorker is currently busy and cannot run multiple tasks concurrently.
+2024-09-10 14:03:01.2305|ERROR|BatteryMonitor.Main|System.IO.IOException: Unable to write data to the transport connection: An established connection was aborted by the software in your host machine. ---> System.Net.Sockets.SocketException: An established connection was aborted by the software in your host machine
+   at System.Net.Sockets.Socket.Send(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.NetworkStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at EasyModbus.ModbusClient.ReadHoldingRegisters(Int32 startingAddress, Int32 quantity)
+   at BatteryMonitor.Main.MonitorModbusTimer_Tick(Object sender, EventArgs e) in C:\Users\IT\Desktop\BatteryMonitor-main\Main.cs:line 1296
+2024-09-10 14:03:01.2305|ERROR|BatteryMonitor.Main|System.IO.IOException: Unable to write data to the transport connection: An established connection was aborted by the software in your host machine. ---> System.Net.Sockets.SocketException: An established connection was aborted by the software in your host machine
+   at System.Net.Sockets.Socket.Send(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.NetworkStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at EasyModbus.ModbusClient.WriteSingleRegister(Int32 startingAddress, Int32 value)
+   at BatteryMonitor.Main.bgwork_writeToModbust_DoWork(Object sender, DoWorkEventArgs e) in C:\Users\IT\Desktop\BatteryMonitor-main\Main.cs:line 3761
+2024-09-10 14:03:02.2984|ERROR|BatteryMonitor.Main|System.InvalidOperationException: Cross-thread operation not valid: Control 'Main' accessed from a thread other than the thread it was created on.
+   at System.Windows.Forms.Control.get_Handle()
+   at System.Windows.Forms.Form.FillInCreateParamsStartPosition(CreateParams cp)
+   at System.Windows.Forms.Form.get_CreateParams()
+   at System.Windows.Forms.Control.CreateHandle()
+   at System.Windows.Forms.Form.CreateHandle()
+   at System.Windows.Forms.Control.get_Handle()
+   at System.Windows.Forms.Control.SetVisibleCore(Boolean value)
+   at System.Windows.Forms.Form.SetVisibleCore(Boolean value)
+   at System.Windows.Forms.Control.Show()
+   at BatteryMonitor.Main.checkConnectDevices(Object sender, DoWorkEventArgs e) in C:\Users\IT\Desktop\BatteryMonitor-main\Main.cs:line 3225

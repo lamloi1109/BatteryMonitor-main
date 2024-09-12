@@ -319,6 +319,26 @@ namespace BatteryMonitor
             main.Show();
         }
 
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            lastPoint = e.Location;
+        }
+        private Point lastPoint;
+        private void panel1_MouseMove(object sender, MouseEventArgs e)
+        {
+
+            if (e.Button == MouseButtons.Left)
+            {
+
+                int deltaX = e.X - lastPoint.X;
+                int deltaY = e.Y - lastPoint.Y;
+
+                this.Left += deltaX;
+                this.Top += deltaY;
+            }
+
+        }
+
         void _check_hioki_connect_DoWork_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
         {
             if (!bgwork_check_hioki_connect.IsBusy)

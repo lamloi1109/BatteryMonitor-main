@@ -1,0 +1,98 @@
+2024-09-09 13:45:59.5153|ERROR|BatteryMonitor.Main|EasyModbus.Exceptions.ConnectionException: connection timed out
+   at EasyModbus.ModbusClient.Connect()
+   at BatteryMonitor.Main.Form1_Load(Object sender, EventArgs e) in C:\Users\IT\Desktop\BatteryMonitor-main\Main.cs:line 851
+2024-09-09 15:14:15.2244|ERROR|BatteryMonitor.Main|System.IO.IOException: Unable to write data to the transport connection: An established connection was aborted by the software in your host machine. ---> System.Net.Sockets.SocketException: An established connection was aborted by the software in your host machine
+   at System.Net.Sockets.Socket.Send(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.NetworkStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at EasyModbus.ModbusClient.ReadHoldingRegisters(Int32 startingAddress, Int32 quantity)
+   at BatteryMonitor.Main.MonitorModbusTimer_Tick(Object sender, EventArgs e) in C:\Users\IT\Desktop\BatteryMonitor-main\Main.cs:line 1289
+2024-09-09 15:14:15.2244|ERROR|BatteryMonitor.Main|System.IO.IOException: Unable to write data to the transport connection: An established connection was aborted by the software in your host machine. ---> System.Net.Sockets.SocketException: An established connection was aborted by the software in your host machine
+   at System.Net.Sockets.Socket.Send(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.NetworkStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at EasyModbus.ModbusClient.WriteSingleRegister(Int32 startingAddress, Int32 value)
+   at BatteryMonitor.Main.bgwork_writeToModbust_DoWork(Object sender, DoWorkEventArgs e) in C:\Users\IT\Desktop\BatteryMonitor-main\Main.cs:line 3727
+2024-09-09 15:28:07.8319|ERROR|BatteryMonitor.Main|System.IO.IOException: Unable to write data to the transport connection: An established connection was aborted by the software in your host machine. ---> System.Net.Sockets.SocketException: An established connection was aborted by the software in your host machine
+   at System.Net.Sockets.Socket.Send(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.NetworkStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at EasyModbus.ModbusClient.WriteSingleRegister(Int32 startingAddress, Int32 value)
+   at BatteryMonitor.Main.bgwork_writeToModbust_DoWork(Object sender, DoWorkEventArgs e) in C:\Users\IT\Desktop\BatteryMonitor-main\Main.cs:line 3728
+2024-09-09 15:28:07.8319|ERROR|BatteryMonitor.Main|System.IO.IOException: Unable to write data to the transport connection: An established connection was aborted by the software in your host machine. ---> System.Net.Sockets.SocketException: An established connection was aborted by the software in your host machine
+   at System.Net.Sockets.Socket.Send(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.NetworkStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at EasyModbus.ModbusClient.ReadHoldingRegisters(Int32 startingAddress, Int32 quantity)
+   at BatteryMonitor.Main.MonitorModbusTimer_Tick(Object sender, EventArgs e) in C:\Users\IT\Desktop\BatteryMonitor-main\Main.cs:line 1289
+2024-09-09 15:51:53.2848|ERROR|BatteryMonitor.Main|System.IO.IOException: Unable to write data to the transport connection: An established connection was aborted by the software in your host machine. ---> System.Net.Sockets.SocketException: An established connection was aborted by the software in your host machine
+   at System.Net.Sockets.Socket.Send(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.NetworkStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at EasyModbus.ModbusClient.ReadHoldingRegisters(Int32 startingAddress, Int32 quantity)
+   at BatteryMonitor.Main.getRMaxFromModbus(ModbusClient modbus) in C:\Users\IT\Desktop\BatteryMonitor-main\Main.cs:line 2036
+   at BatteryMonitor.Main.MonitorModbusTimer_Tick(Object sender, EventArgs e) in C:\Users\IT\Desktop\BatteryMonitor-main\Main.cs:line 1377
+2024-09-09 15:51:53.2848|ERROR|BatteryMonitor.Main|System.IO.IOException: Unable to write data to the transport connection: An established connection was aborted by the software in your host machine. ---> System.Net.Sockets.SocketException: An established connection was aborted by the software in your host machine
+   at System.Net.Sockets.Socket.Send(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.NetworkStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at EasyModbus.ModbusClient.WriteSingleRegister(Int32 startingAddress, Int32 value)
+   at BatteryMonitor.Main.bgwork_writeToModbust_DoWork(Object sender, DoWorkEventArgs e) in C:\Users\IT\Desktop\BatteryMonitor-main\Main.cs:line 3729
+2024-09-09 15:55:25.8697|ERROR|BatteryMonitor.Main|System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at BatteryMonitor.Main.MonitorModbusTimer_Tick(Object sender, EventArgs e) in C:\Users\IT\Desktop\BatteryMonitor-main\Main.cs:line 1417
+2024-09-09 15:55:46.9596|ERROR|BatteryMonitor.Main|System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at BatteryMonitor.Main.MonitorModbusTimer_Tick(Object sender, EventArgs e) in C:\Users\IT\Desktop\BatteryMonitor-main\Main.cs:line 1417
+2024-09-09 15:59:42.1582|ERROR|BatteryMonitor.Main|System.ArgumentException: Starting address must be 0 - 65535; quantity must be 0 - 125
+   at EasyModbus.ModbusClient.ReadHoldingRegisters(Int32 startingAddress, Int32 quantity)
+   at BatteryMonitor.Main.MonitorModbusTimer_Tick(Object sender, EventArgs e) in C:\Users\IT\Desktop\BatteryMonitor-main\Main.cs:line 1291
+2024-09-09 16:06:54.1205|ERROR|BatteryMonitor.Main|System.IO.IOException: Unable to read data from the transport connection: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond. ---> System.Net.Sockets.SocketException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   at EasyModbus.ModbusClient.WriteSingleRegister(Int32 startingAddress, Int32 value)
+   at BatteryMonitor.Main.bgwork_writeToModbust_DoWork(Object sender, DoWorkEventArgs e) in C:\Users\IT\Desktop\BatteryMonitor-main\Main.cs:line 3735
+2024-09-09 16:08:06.5756|ERROR|BatteryMonitor.Main|System.IO.IOException: Unable to read data from the transport connection: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond. ---> System.Net.Sockets.SocketException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   at EasyModbus.ModbusClient.WriteSingleRegister(Int32 startingAddress, Int32 value)
+   at BatteryMonitor.Main.bgwork_writeToModbust_DoWork(Object sender, DoWorkEventArgs e) in C:\Users\IT\Desktop\BatteryMonitor-main\Main.cs:line 3754
+2024-09-09 16:10:09.2660|ERROR|BatteryMonitor.Main|System.IO.IOException: Unable to read data from the transport connection: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond. ---> System.Net.Sockets.SocketException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   at EasyModbus.ModbusClient.WriteSingleRegister(Int32 startingAddress, Int32 value)
+   at BatteryMonitor.Main.bgwork_writeToModbust_DoWork(Object sender, DoWorkEventArgs e) in C:\Users\IT\Desktop\BatteryMonitor-main\Main.cs:line 3754
+2024-09-09 16:10:30.9381|ERROR|BatteryMonitor.Main|System.IO.IOException: Unable to read data from the transport connection: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond. ---> System.Net.Sockets.SocketException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   at EasyModbus.ModbusClient.WriteSingleRegister(Int32 startingAddress, Int32 value)
+   at BatteryMonitor.Main.bgwork_writeToModbust_DoWork(Object sender, DoWorkEventArgs e) in C:\Users\IT\Desktop\BatteryMonitor-main\Main.cs:line 3754
+2024-09-09 16:20:43.2148|ERROR|BatteryMonitor.HIOKI.hioki|Unable to read data from the transport connection: An established connection was aborted by the software in your host machine.
+2024-09-09 16:20:43.2418|ERROR|BatteryMonitor.HIOKI.hioki|Unable to read data from the transport connection: An established connection was aborted by the software in your host machine.
+2024-09-09 16:20:43.2617|ERROR|BatteryMonitor.Main|System.IO.IOException: Unable to read data from the transport connection: An established connection was aborted by the software in your host machine. ---> System.Net.Sockets.SocketException: An established connection was aborted by the software in your host machine
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   at EasyModbus.ModbusClient.ReadHoldingRegisters(Int32 startingAddress, Int32 quantity)
+   at BatteryMonitor.Main.getRMaxFromModbus(ModbusClient modbus) in C:\Users\IT\Desktop\BatteryMonitor-main\Main.cs:line 2041
+   at BatteryMonitor.Main.MonitorModbusTimer_Tick(Object sender, EventArgs e) in C:\Users\IT\Desktop\BatteryMonitor-main\Main.cs:line 1378
+2024-09-09 16:20:43.2148|ERROR|BatteryMonitor.Main|System.IO.IOException: Unable to read data from the transport connection: An established connection was aborted by the software in your host machine. ---> System.Net.Sockets.SocketException: An established connection was aborted by the software in your host machine
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   at EasyModbus.ModbusClient.WriteSingleRegister(Int32 startingAddress, Int32 value)
+   at BatteryMonitor.Main.bgwork_writeToModbust_DoWork(Object sender, DoWorkEventArgs e) in C:\Users\IT\Desktop\BatteryMonitor-main\Main.cs:line 3736

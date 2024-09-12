@@ -155,7 +155,7 @@ namespace BatteryMonitor
                 this.dataGridView1.Columns[1].Name = "Địa chỉ thanh ghi";
                 this.dataGridView1.Columns[2].Name = "Giá trị";
 
-
+                
   
 
                 //if (vedt == 1 && !isMeasured)

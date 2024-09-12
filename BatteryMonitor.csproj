@@ -381,6 +381,10 @@
   <ItemGroup>
     <Content Include="AnyConv.com__Remove-bg.ai_1716878612256.ico" />
     <Content Include="research.ico" />
+    <None Include="Resources\Untitled-removebg-preview.png" />
+    <None Include="Resources\qr-code %281%29.png" />
+    <None Include="Resources\multimeter %281%29.png" />
+    <None Include="Resources\multimeter.png" />
     <None Include="Resources\empty-battery.png" />
     <None Include="Resources\lithium_cion.png" />
     <None Include="Resources\user32bit.png" />
