@@ -1,0 +1,18 @@
+2024-09-12 12:04:14.2186|ERROR|BatteryMonitor.Main|EasyModbus.Exceptions.ConnectionException: connection timed out
+   at EasyModbus.ModbusClient.Connect()
+   at BatteryMonitor.Main.Form1_Load(Object sender, EventArgs e) in C:\Users\IT_SOFTWARE\Source\Repos\BatteryMonitor-main\Main.cs:line 873
+2024-09-12 13:19:29.6220|ERROR|BatteryMonitor.Main|EasyModbus.Exceptions.ConnectionException: connection timed out
+   at EasyModbus.ModbusClient.Connect()
+   at BatteryMonitor.Main.Form1_Load(Object sender, EventArgs e) in C:\Users\IT_SOFTWARE\Source\Repos\BatteryMonitor-main\Main.cs:line 873
+2024-09-12 13:22:55.1481|ERROR|BatteryMonitor.Main|EasyModbus.Exceptions.ConnectionException: connection timed out
+   at EasyModbus.ModbusClient.Connect()
+   at BatteryMonitor.Main.Form1_Load(Object sender, EventArgs e) in C:\Users\IT_SOFTWARE\Source\Repos\BatteryMonitor-main\Main.cs:line 873
+2024-09-12 13:29:56.4093|ERROR|BatteryMonitor.Main|EasyModbus.Exceptions.ConnectionException: connection timed out
+   at EasyModbus.ModbusClient.Connect()
+   at BatteryMonitor.Main.Form1_Load(Object sender, EventArgs e) in C:\Users\IT_SOFTWARE\source\repos\BatteryMonitor-main\Main.cs:line 873
+2024-09-12 13:30:45.8325|ERROR|BatteryMonitor.Main|EasyModbus.Exceptions.ConnectionException: connection timed out
+   at EasyModbus.ModbusClient.Connect()
+   at BatteryMonitor.Main.Form1_Load(Object sender, EventArgs e) in C:\Users\IT_SOFTWARE\source\repos\BatteryMonitor-main\Main.cs:line 873
+2024-09-12 13:32:11.3336|ERROR|BatteryMonitor.Main|EasyModbus.Exceptions.ConnectionException: connection timed out
+   at EasyModbus.ModbusClient.Connect()
+   at BatteryMonitor.Main.Form1_Load(Object sender, EventArgs e) in C:\Users\IT_SOFTWARE\source\repos\BatteryMonitor-main\Main.cs:line 873

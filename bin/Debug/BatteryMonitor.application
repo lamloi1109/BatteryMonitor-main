@@ -4,17 +4,17 @@
   <description asmv2:publisher="BatteryMonitor" asmv2:product="BatteryMonitor" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <deployment install="true" mapFileExtensions="true" minimumRequiredVersion="1.0.0.8" />
   <compatibleFrameworks xmlns="urn:schemas-microsoft-com:clickonce.v2">
-    <framework targetVersion="4.6.2" profile="Full" supportedRuntime="4.0.30319" />
+    <framework targetVersion="4.8" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="BatteryMonitor.exe.manifest" size="31932">
+    <dependentAssembly dependencyType="install" codebase="BatteryMonitor.exe.manifest" size="28321">
       <assemblyIdentity name="BatteryMonitor.exe" version="1.0.0.9" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>8KzC01EFZm7EW+NB2FgwsbZiS3Nj/SufA8Wo08+hTus=</dsig:DigestValue>
+        <dsig:DigestValue>zvNz34z3Uf6OMDVxmoUtZQurgUxUAzEmSfTQAYc8J2g=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

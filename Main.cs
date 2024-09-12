@@ -727,14 +727,10 @@ namespace BatteryMonitor
 
         }
 
+        private void view_data()
+        {
 
-
-
-
-
-
-
-
+        }
 
 
         private void UpdateChart(LiveCharts.WinForms.CartesianChart chart, LineSeries maxSeries, LineSeries minSeries, double max, double min)
