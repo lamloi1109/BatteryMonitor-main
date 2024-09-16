@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.tableLayoutPanel34 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayout_QR = new System.Windows.Forms.TableLayoutPanel();
             this.pinGroupQR8 = new System.Windows.Forms.GroupBox();
             this.pinGroupQR7 = new System.Windows.Forms.GroupBox();
             this.pinGroupQR6 = new System.Windows.Forms.GroupBox();
@@ -41,7 +41,7 @@
             this.pinGroupQR2 = new System.Windows.Forms.GroupBox();
             this.pinGroupQR1 = new System.Windows.Forms.GroupBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayout_measure = new System.Windows.Forms.TableLayoutPanel();
             this.pinGroup8 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel33 = new System.Windows.Forms.TableLayoutPanel();
             this.pinLabelV8 = new System.Windows.Forms.Label();
@@ -93,6 +93,7 @@
             this.lb_isResetLamp = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.currentWorkShift = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.cartesianChart2 = new LiveCharts.WinForms.CartesianChart();
@@ -160,9 +161,9 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.tableLayoutPanel34.SuspendLayout();
+            this.tableLayout_QR.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.tableLayoutPanel10.SuspendLayout();
+            this.tableLayout_measure.SuspendLayout();
             this.pinGroup8.SuspendLayout();
             this.tableLayoutPanel33.SuspendLayout();
             this.pinGroup7.SuspendLayout();
@@ -199,66 +200,68 @@
             // 
             this.tableLayoutPanel2.ColumnCount = 1;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Controls.Add(this.groupBox2, 0, 2);
+            this.tableLayoutPanel2.Controls.Add(this.groupBox2, 0, 3);
             this.tableLayoutPanel2.Controls.Add(this.groupBox1, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel7, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.panel4, 0, 2);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(4, 4);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 3;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 26.13458F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 42.06642F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 32.10332F));
+            this.tableLayoutPanel2.RowCount = 4;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 26.05529F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 41.93879F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 9F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 32.00592F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(1819, 271);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // groupBox2
             // 
-            this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.groupBox2.Controls.Add(this.tableLayoutPanel34);
+            this.groupBox2.BackColor = System.Drawing.Color.Gray;
+            this.groupBox2.Controls.Add(this.tableLayout_QR);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox2.Location = new System.Drawing.Point(0, 183);
+            this.groupBox2.Location = new System.Drawing.Point(0, 186);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(0);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(0);
-            this.groupBox2.Size = new System.Drawing.Size(1819, 88);
+            this.groupBox2.Size = new System.Drawing.Size(1819, 85);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Hàng đợi quét 掃描佇列";
             // 
-            // tableLayoutPanel34
+            // tableLayout_QR
             // 
-            this.tableLayoutPanel34.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.tableLayoutPanel34.ColumnCount = 8;
-            this.tableLayoutPanel34.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.33362F));
-            this.tableLayoutPanel34.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.48044F));
-            this.tableLayoutPanel34.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.53099F));
-            this.tableLayoutPanel34.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.53099F));
-            this.tableLayoutPanel34.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.53099F));
-            this.tableLayoutPanel34.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.53099F));
-            this.tableLayoutPanel34.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.53099F));
-            this.tableLayoutPanel34.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.53099F));
-            this.tableLayoutPanel34.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel34.Controls.Add(this.pinGroupQR8, 7, 0);
-            this.tableLayoutPanel34.Controls.Add(this.pinGroupQR7, 6, 0);
-            this.tableLayoutPanel34.Controls.Add(this.pinGroupQR6, 5, 0);
-            this.tableLayoutPanel34.Controls.Add(this.pinGroupQR5, 4, 0);
-            this.tableLayoutPanel34.Controls.Add(this.pinGroupQR4, 3, 0);
-            this.tableLayoutPanel34.Controls.Add(this.pinGroupQR3, 2, 0);
-            this.tableLayoutPanel34.Controls.Add(this.pinGroupQR2, 1, 0);
-            this.tableLayoutPanel34.Controls.Add(this.pinGroupQR1, 0, 0);
-            this.tableLayoutPanel34.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel34.Location = new System.Drawing.Point(0, 23);
-            this.tableLayoutPanel34.Margin = new System.Windows.Forms.Padding(4);
-            this.tableLayoutPanel34.Name = "tableLayoutPanel34";
-            this.tableLayoutPanel34.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.tableLayoutPanel34.RowCount = 1;
-            this.tableLayoutPanel34.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel34.Size = new System.Drawing.Size(1819, 65);
-            this.tableLayoutPanel34.TabIndex = 1;
+            this.tableLayout_QR.BackColor = System.Drawing.Color.Gray;
+            this.tableLayout_QR.ColumnCount = 8;
+            this.tableLayout_QR.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.33362F));
+            this.tableLayout_QR.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.48044F));
+            this.tableLayout_QR.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.53099F));
+            this.tableLayout_QR.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.53099F));
+            this.tableLayout_QR.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.53099F));
+            this.tableLayout_QR.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.53099F));
+            this.tableLayout_QR.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.53099F));
+            this.tableLayout_QR.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.53099F));
+            this.tableLayout_QR.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayout_QR.Controls.Add(this.pinGroupQR8, 7, 0);
+            this.tableLayout_QR.Controls.Add(this.pinGroupQR7, 6, 0);
+            this.tableLayout_QR.Controls.Add(this.pinGroupQR6, 5, 0);
+            this.tableLayout_QR.Controls.Add(this.pinGroupQR5, 4, 0);
+            this.tableLayout_QR.Controls.Add(this.pinGroupQR4, 3, 0);
+            this.tableLayout_QR.Controls.Add(this.pinGroupQR3, 2, 0);
+            this.tableLayout_QR.Controls.Add(this.pinGroupQR2, 1, 0);
+            this.tableLayout_QR.Controls.Add(this.pinGroupQR1, 0, 0);
+            this.tableLayout_QR.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayout_QR.Location = new System.Drawing.Point(0, 23);
+            this.tableLayout_QR.Margin = new System.Windows.Forms.Padding(4);
+            this.tableLayout_QR.Name = "tableLayout_QR";
+            this.tableLayout_QR.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.tableLayout_QR.RowCount = 1;
+            this.tableLayout_QR.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayout_QR.Size = new System.Drawing.Size(1819, 62);
+            this.tableLayout_QR.TabIndex = 1;
             // 
             // pinGroupQR8
             // 
@@ -269,7 +272,7 @@
             this.pinGroupQR8.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.pinGroupQR8.Name = "pinGroupQR8";
             this.pinGroupQR8.Padding = new System.Windows.Forms.Padding(4);
-            this.pinGroupQR8.Size = new System.Drawing.Size(231, 65);
+            this.pinGroupQR8.Size = new System.Drawing.Size(231, 62);
             this.pinGroupQR8.TabIndex = 7;
             this.pinGroupQR8.TabStop = false;
             this.pinGroupQR8.Text = "Pin (电池) 8";
@@ -283,7 +286,7 @@
             this.pinGroupQR7.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.pinGroupQR7.Name = "pinGroupQR7";
             this.pinGroupQR7.Padding = new System.Windows.Forms.Padding(4);
-            this.pinGroupQR7.Size = new System.Drawing.Size(225, 65);
+            this.pinGroupQR7.Size = new System.Drawing.Size(225, 62);
             this.pinGroupQR7.TabIndex = 6;
             this.pinGroupQR7.TabStop = false;
             this.pinGroupQR7.Text = "Pin (电池) 7";
@@ -297,7 +300,7 @@
             this.pinGroupQR6.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.pinGroupQR6.Name = "pinGroupQR6";
             this.pinGroupQR6.Padding = new System.Windows.Forms.Padding(4);
-            this.pinGroupQR6.Size = new System.Drawing.Size(225, 65);
+            this.pinGroupQR6.Size = new System.Drawing.Size(225, 62);
             this.pinGroupQR6.TabIndex = 5;
             this.pinGroupQR6.TabStop = false;
             this.pinGroupQR6.Text = "Pin (电池) 6";
@@ -308,10 +311,10 @@
             this.pinGroupQR5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pinGroupQR5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pinGroupQR5.Location = new System.Drawing.Point(688, 0);
-            this.pinGroupQR5.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.pinGroupQR5.Margin = new System.Windows.Forms.Padding(3, 0, 1, 4);
             this.pinGroupQR5.Name = "pinGroupQR5";
             this.pinGroupQR5.Padding = new System.Windows.Forms.Padding(4);
-            this.pinGroupQR5.Size = new System.Drawing.Size(225, 65);
+            this.pinGroupQR5.Size = new System.Drawing.Size(223, 58);
             this.pinGroupQR5.TabIndex = 4;
             this.pinGroupQR5.TabStop = false;
             this.pinGroupQR5.Text = "Pin (电池) 5";
@@ -322,10 +325,10 @@
             this.pinGroupQR4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pinGroupQR4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pinGroupQR4.Location = new System.Drawing.Point(915, 0);
-            this.pinGroupQR4.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.pinGroupQR4.Margin = new System.Windows.Forms.Padding(3, 0, 1, 4);
             this.pinGroupQR4.Name = "pinGroupQR4";
             this.pinGroupQR4.Padding = new System.Windows.Forms.Padding(4);
-            this.pinGroupQR4.Size = new System.Drawing.Size(225, 65);
+            this.pinGroupQR4.Size = new System.Drawing.Size(223, 58);
             this.pinGroupQR4.TabIndex = 3;
             this.pinGroupQR4.TabStop = false;
             this.pinGroupQR4.Text = "Pin (电池) 4";
@@ -336,10 +339,10 @@
             this.pinGroupQR3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pinGroupQR3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pinGroupQR3.Location = new System.Drawing.Point(1142, 0);
-            this.pinGroupQR3.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.pinGroupQR3.Margin = new System.Windows.Forms.Padding(3, 0, 1, 4);
             this.pinGroupQR3.Name = "pinGroupQR3";
             this.pinGroupQR3.Padding = new System.Windows.Forms.Padding(4);
-            this.pinGroupQR3.Size = new System.Drawing.Size(225, 65);
+            this.pinGroupQR3.Size = new System.Drawing.Size(223, 58);
             this.pinGroupQR3.TabIndex = 2;
             this.pinGroupQR3.TabStop = false;
             this.pinGroupQR3.Text = "Pin (电池) 3";
@@ -351,10 +354,10 @@
             this.pinGroupQR2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pinGroupQR2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pinGroupQR2.Location = new System.Drawing.Point(1369, 0);
-            this.pinGroupQR2.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.pinGroupQR2.Margin = new System.Windows.Forms.Padding(3, 0, 1, 4);
             this.pinGroupQR2.Name = "pinGroupQR2";
             this.pinGroupQR2.Padding = new System.Windows.Forms.Padding(4);
-            this.pinGroupQR2.Size = new System.Drawing.Size(225, 65);
+            this.pinGroupQR2.Size = new System.Drawing.Size(223, 58);
             this.pinGroupQR2.TabIndex = 1;
             this.pinGroupQR2.TabStop = false;
             this.pinGroupQR2.Text = "Pin (电池) 2";
@@ -365,11 +368,11 @@
             this.pinGroupQR1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.pinGroupQR1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pinGroupQR1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pinGroupQR1.Location = new System.Drawing.Point(1599, 0);
-            this.pinGroupQR1.Margin = new System.Windows.Forms.Padding(1, 0, 4, 0);
+            this.pinGroupQR1.Location = new System.Drawing.Point(1595, 0);
+            this.pinGroupQR1.Margin = new System.Windows.Forms.Padding(3, 0, 0, 4);
             this.pinGroupQR1.Name = "pinGroupQR1";
             this.pinGroupQR1.Padding = new System.Windows.Forms.Padding(4);
-            this.pinGroupQR1.Size = new System.Drawing.Size(219, 65);
+            this.pinGroupQR1.Size = new System.Drawing.Size(221, 58);
             this.pinGroupQR1.TabIndex = 0;
             this.pinGroupQR1.TabStop = false;
             this.pinGroupQR1.Text = "Pin (电池) 1";
@@ -377,53 +380,51 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.groupBox1.Controls.Add(this.tableLayoutPanel10);
+            this.groupBox1.BackColor = System.Drawing.Color.Gray;
+            this.groupBox1.Controls.Add(this.tableLayout_measure);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(4, 74);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Location = new System.Drawing.Point(0, 68);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(0);
-            this.groupBox1.Size = new System.Drawing.Size(1811, 105);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(1);
+            this.groupBox1.Size = new System.Drawing.Size(1819, 109);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Hàng đợi đo 測量隊列";
             // 
-            // tableLayoutPanel10
+            // tableLayout_measure
             // 
-            this.tableLayoutPanel10.BackColor = System.Drawing.Color.White;
-            this.tableLayoutPanel10.ColumnCount = 8;
-            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.95415F));
-            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.99365F));
-            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5087F));
-            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5087F));
-            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5087F));
-            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5087F));
-            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5087F));
-            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5087F));
-            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel10.Controls.Add(this.pinGroup8, 7, 0);
-            this.tableLayoutPanel10.Controls.Add(this.pinGroup7, 6, 0);
-            this.tableLayoutPanel10.Controls.Add(this.pinGroup6, 5, 0);
-            this.tableLayoutPanel10.Controls.Add(this.pinGroup5, 4, 0);
-            this.tableLayoutPanel10.Controls.Add(this.pinGroup4, 3, 0);
-            this.tableLayoutPanel10.Controls.Add(this.pinGroup3, 2, 0);
-            this.tableLayoutPanel10.Controls.Add(this.pinGroup2, 1, 0);
-            this.tableLayoutPanel10.Controls.Add(this.pinGroup1, 0, 0);
-            this.tableLayoutPanel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel10.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tableLayoutPanel10.ForeColor = System.Drawing.Color.Black;
-            this.tableLayoutPanel10.Location = new System.Drawing.Point(0, 23);
-            this.tableLayoutPanel10.Margin = new System.Windows.Forms.Padding(0);
-            this.tableLayoutPanel10.Name = "tableLayoutPanel10";
-            this.tableLayoutPanel10.Padding = new System.Windows.Forms.Padding(7, 6, 7, 6);
-            this.tableLayoutPanel10.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.tableLayoutPanel10.RowCount = 1;
-            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel10.Size = new System.Drawing.Size(1811, 82);
-            this.tableLayoutPanel10.TabIndex = 0;
+            this.tableLayout_measure.BackColor = System.Drawing.Color.Gray;
+            this.tableLayout_measure.ColumnCount = 8;
+            this.tableLayout_measure.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.43808F));
+            this.tableLayout_measure.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.43808F));
+            this.tableLayout_measure.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.49312F));
+            this.tableLayout_measure.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.43808F));
+            this.tableLayout_measure.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.67371F));
+            this.tableLayout_measure.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.43708F));
+            this.tableLayout_measure.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.43708F));
+            this.tableLayout_measure.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.43708F));
+            this.tableLayout_measure.Controls.Add(this.pinGroup8, 7, 0);
+            this.tableLayout_measure.Controls.Add(this.pinGroup7, 6, 0);
+            this.tableLayout_measure.Controls.Add(this.pinGroup6, 5, 0);
+            this.tableLayout_measure.Controls.Add(this.pinGroup5, 4, 0);
+            this.tableLayout_measure.Controls.Add(this.pinGroup4, 3, 0);
+            this.tableLayout_measure.Controls.Add(this.pinGroup3, 2, 0);
+            this.tableLayout_measure.Controls.Add(this.pinGroup2, 1, 0);
+            this.tableLayout_measure.Controls.Add(this.pinGroup1, 0, 0);
+            this.tableLayout_measure.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayout_measure.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tableLayout_measure.ForeColor = System.Drawing.Color.Black;
+            this.tableLayout_measure.Location = new System.Drawing.Point(1, 24);
+            this.tableLayout_measure.Margin = new System.Windows.Forms.Padding(4);
+            this.tableLayout_measure.Name = "tableLayout_measure";
+            this.tableLayout_measure.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.tableLayout_measure.RowCount = 1;
+            this.tableLayout_measure.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayout_measure.Size = new System.Drawing.Size(1817, 84);
+            this.tableLayout_measure.TabIndex = 0;
             // 
             // pinGroup8
             // 
@@ -432,11 +433,11 @@
             this.pinGroup8.Controls.Add(this.tableLayoutPanel33);
             this.pinGroup8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pinGroup8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pinGroup8.Location = new System.Drawing.Point(8, 6);
+            this.pinGroup8.Location = new System.Drawing.Point(1, 0);
             this.pinGroup8.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.pinGroup8.Name = "pinGroup8";
             this.pinGroup8.Padding = new System.Windows.Forms.Padding(0);
-            this.pinGroup8.Size = new System.Drawing.Size(228, 70);
+            this.pinGroup8.Size = new System.Drawing.Size(228, 84);
             this.pinGroup8.TabIndex = 7;
             this.pinGroup8.TabStop = false;
             this.pinGroup8.Text = "Pin (电池) 8";
@@ -455,7 +456,7 @@
             this.tableLayoutPanel33.RowCount = 2;
             this.tableLayoutPanel33.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel33.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel33.Size = new System.Drawing.Size(228, 41);
+            this.tableLayoutPanel33.Size = new System.Drawing.Size(228, 55);
             this.tableLayoutPanel33.TabIndex = 0;
             // 
             // pinLabelV8
@@ -465,10 +466,10 @@
             this.pinLabelV8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pinLabelV8.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pinLabelV8.ForeColor = System.Drawing.Color.Black;
-            this.pinLabelV8.Location = new System.Drawing.Point(4, 20);
+            this.pinLabelV8.Location = new System.Drawing.Point(4, 27);
             this.pinLabelV8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.pinLabelV8.Name = "pinLabelV8";
-            this.pinLabelV8.Size = new System.Drawing.Size(220, 21);
+            this.pinLabelV8.Size = new System.Drawing.Size(220, 28);
             this.pinLabelV8.TabIndex = 3;
             this.pinLabelV8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -482,7 +483,7 @@
             this.pinLabelR8.Location = new System.Drawing.Point(4, 0);
             this.pinLabelR8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.pinLabelR8.Name = "pinLabelR8";
-            this.pinLabelR8.Size = new System.Drawing.Size(220, 20);
+            this.pinLabelR8.Size = new System.Drawing.Size(220, 27);
             this.pinLabelR8.TabIndex = 2;
             this.pinLabelR8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -492,11 +493,11 @@
             this.pinGroup7.Controls.Add(this.tableLayoutPanel32);
             this.pinGroup7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pinGroup7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pinGroup7.Location = new System.Drawing.Point(238, 6);
+            this.pinGroup7.Location = new System.Drawing.Point(231, 0);
             this.pinGroup7.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.pinGroup7.Name = "pinGroup7";
             this.pinGroup7.Padding = new System.Windows.Forms.Padding(0);
-            this.pinGroup7.Size = new System.Drawing.Size(222, 70);
+            this.pinGroup7.Size = new System.Drawing.Size(224, 84);
             this.pinGroup7.TabIndex = 6;
             this.pinGroup7.TabStop = false;
             this.pinGroup7.Text = "Pin (电池) 7";
@@ -514,7 +515,7 @@
             this.tableLayoutPanel32.RowCount = 2;
             this.tableLayoutPanel32.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel32.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel32.Size = new System.Drawing.Size(222, 41);
+            this.tableLayoutPanel32.Size = new System.Drawing.Size(224, 55);
             this.tableLayoutPanel32.TabIndex = 0;
             // 
             // pinLabelV7
@@ -523,10 +524,10 @@
             this.pinLabelV7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pinLabelV7.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pinLabelV7.ForeColor = System.Drawing.Color.Black;
-            this.pinLabelV7.Location = new System.Drawing.Point(4, 20);
+            this.pinLabelV7.Location = new System.Drawing.Point(4, 27);
             this.pinLabelV7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.pinLabelV7.Name = "pinLabelV7";
-            this.pinLabelV7.Size = new System.Drawing.Size(214, 21);
+            this.pinLabelV7.Size = new System.Drawing.Size(216, 28);
             this.pinLabelV7.TabIndex = 3;
             this.pinLabelV7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -539,7 +540,7 @@
             this.pinLabelR7.Location = new System.Drawing.Point(4, 0);
             this.pinLabelR7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.pinLabelR7.Name = "pinLabelR7";
-            this.pinLabelR7.Size = new System.Drawing.Size(214, 20);
+            this.pinLabelR7.Size = new System.Drawing.Size(216, 27);
             this.pinLabelR7.TabIndex = 2;
             this.pinLabelR7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -549,11 +550,11 @@
             this.pinGroup6.Controls.Add(this.tableLayoutPanel16);
             this.pinGroup6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pinGroup6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pinGroup6.Location = new System.Drawing.Point(462, 6);
+            this.pinGroup6.Location = new System.Drawing.Point(457, 0);
             this.pinGroup6.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.pinGroup6.Name = "pinGroup6";
             this.pinGroup6.Padding = new System.Windows.Forms.Padding(0);
-            this.pinGroup6.Size = new System.Drawing.Size(222, 70);
+            this.pinGroup6.Size = new System.Drawing.Size(224, 84);
             this.pinGroup6.TabIndex = 5;
             this.pinGroup6.TabStop = false;
             this.pinGroup6.Text = " Pin (电池) 6";
@@ -571,7 +572,7 @@
             this.tableLayoutPanel16.RowCount = 2;
             this.tableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel16.Size = new System.Drawing.Size(222, 41);
+            this.tableLayoutPanel16.Size = new System.Drawing.Size(224, 55);
             this.tableLayoutPanel16.TabIndex = 0;
             // 
             // pinLabelV6
@@ -580,10 +581,10 @@
             this.pinLabelV6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pinLabelV6.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pinLabelV6.ForeColor = System.Drawing.Color.Black;
-            this.pinLabelV6.Location = new System.Drawing.Point(4, 20);
+            this.pinLabelV6.Location = new System.Drawing.Point(4, 27);
             this.pinLabelV6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.pinLabelV6.Name = "pinLabelV6";
-            this.pinLabelV6.Size = new System.Drawing.Size(214, 21);
+            this.pinLabelV6.Size = new System.Drawing.Size(216, 28);
             this.pinLabelV6.TabIndex = 3;
             this.pinLabelV6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -596,7 +597,7 @@
             this.pinLabelR6.Location = new System.Drawing.Point(4, 0);
             this.pinLabelR6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.pinLabelR6.Name = "pinLabelR6";
-            this.pinLabelR6.Size = new System.Drawing.Size(214, 20);
+            this.pinLabelR6.Size = new System.Drawing.Size(216, 27);
             this.pinLabelR6.TabIndex = 2;
             this.pinLabelR6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -606,11 +607,11 @@
             this.pinGroup5.Controls.Add(this.tableLayoutPanel15);
             this.pinGroup5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pinGroup5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pinGroup5.Location = new System.Drawing.Point(686, 6);
+            this.pinGroup5.Location = new System.Drawing.Point(683, 0);
             this.pinGroup5.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.pinGroup5.Name = "pinGroup5";
             this.pinGroup5.Padding = new System.Windows.Forms.Padding(0);
-            this.pinGroup5.Size = new System.Drawing.Size(222, 70);
+            this.pinGroup5.Size = new System.Drawing.Size(228, 84);
             this.pinGroup5.TabIndex = 4;
             this.pinGroup5.TabStop = false;
             this.pinGroup5.Text = "Pin (电池) 5";
@@ -628,7 +629,7 @@
             this.tableLayoutPanel15.RowCount = 2;
             this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel15.Size = new System.Drawing.Size(222, 41);
+            this.tableLayoutPanel15.Size = new System.Drawing.Size(228, 55);
             this.tableLayoutPanel15.TabIndex = 0;
             // 
             // pinLabelV5
@@ -637,10 +638,10 @@
             this.pinLabelV5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pinLabelV5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pinLabelV5.ForeColor = System.Drawing.Color.Black;
-            this.pinLabelV5.Location = new System.Drawing.Point(4, 20);
+            this.pinLabelV5.Location = new System.Drawing.Point(4, 27);
             this.pinLabelV5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.pinLabelV5.Name = "pinLabelV5";
-            this.pinLabelV5.Size = new System.Drawing.Size(214, 21);
+            this.pinLabelV5.Size = new System.Drawing.Size(220, 28);
             this.pinLabelV5.TabIndex = 3;
             this.pinLabelV5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -653,7 +654,7 @@
             this.pinLabelR5.Location = new System.Drawing.Point(4, 0);
             this.pinLabelR5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.pinLabelR5.Name = "pinLabelR5";
-            this.pinLabelR5.Size = new System.Drawing.Size(214, 20);
+            this.pinLabelR5.Size = new System.Drawing.Size(220, 27);
             this.pinLabelR5.TabIndex = 2;
             this.pinLabelR5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -663,11 +664,11 @@
             this.pinGroup4.Controls.Add(this.tableLayoutPanel14);
             this.pinGroup4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pinGroup4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pinGroup4.Location = new System.Drawing.Point(910, 6);
-            this.pinGroup4.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.pinGroup4.Location = new System.Drawing.Point(915, 0);
+            this.pinGroup4.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
             this.pinGroup4.Name = "pinGroup4";
             this.pinGroup4.Padding = new System.Windows.Forms.Padding(0);
-            this.pinGroup4.Size = new System.Drawing.Size(222, 70);
+            this.pinGroup4.Size = new System.Drawing.Size(223, 84);
             this.pinGroup4.TabIndex = 3;
             this.pinGroup4.TabStop = false;
             this.pinGroup4.Text = "Pin (电池) 4";
@@ -685,7 +686,7 @@
             this.tableLayoutPanel14.RowCount = 2;
             this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel14.Size = new System.Drawing.Size(222, 41);
+            this.tableLayoutPanel14.Size = new System.Drawing.Size(223, 55);
             this.tableLayoutPanel14.TabIndex = 0;
             // 
             // pinLabelV4
@@ -694,10 +695,10 @@
             this.pinLabelV4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pinLabelV4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pinLabelV4.ForeColor = System.Drawing.Color.Black;
-            this.pinLabelV4.Location = new System.Drawing.Point(4, 20);
+            this.pinLabelV4.Location = new System.Drawing.Point(4, 27);
             this.pinLabelV4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.pinLabelV4.Name = "pinLabelV4";
-            this.pinLabelV4.Size = new System.Drawing.Size(214, 21);
+            this.pinLabelV4.Size = new System.Drawing.Size(215, 28);
             this.pinLabelV4.TabIndex = 3;
             this.pinLabelV4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -710,7 +711,7 @@
             this.pinLabelR4.Location = new System.Drawing.Point(4, 0);
             this.pinLabelR4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.pinLabelR4.Name = "pinLabelR4";
-            this.pinLabelR4.Size = new System.Drawing.Size(214, 20);
+            this.pinLabelR4.Size = new System.Drawing.Size(215, 27);
             this.pinLabelR4.TabIndex = 2;
             this.pinLabelR4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -720,11 +721,11 @@
             this.pinGroup3.Controls.Add(this.tableLayoutPanel13);
             this.pinGroup3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pinGroup3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pinGroup3.Location = new System.Drawing.Point(1134, 6);
-            this.pinGroup3.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.pinGroup3.Location = new System.Drawing.Point(1141, 0);
+            this.pinGroup3.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
             this.pinGroup3.Name = "pinGroup3";
             this.pinGroup3.Padding = new System.Windows.Forms.Padding(0);
-            this.pinGroup3.Size = new System.Drawing.Size(222, 70);
+            this.pinGroup3.Size = new System.Drawing.Size(224, 84);
             this.pinGroup3.TabIndex = 2;
             this.pinGroup3.TabStop = false;
             this.pinGroup3.Text = "Pin (电池) 3";
@@ -737,25 +738,26 @@
             this.tableLayoutPanel13.Controls.Add(this.pinLabelR3, 0, 0);
             this.tableLayoutPanel13.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel13.Location = new System.Drawing.Point(0, 29);
-            this.tableLayoutPanel13.Margin = new System.Windows.Forms.Padding(4);
+            this.tableLayoutPanel13.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
             this.tableLayoutPanel13.Name = "tableLayoutPanel13";
             this.tableLayoutPanel13.RowCount = 2;
             this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel13.Size = new System.Drawing.Size(222, 41);
+            this.tableLayoutPanel13.Size = new System.Drawing.Size(224, 55);
             this.tableLayoutPanel13.TabIndex = 0;
             // 
             // pinLabelV3
             // 
             this.pinLabelV3.AutoSize = true;
+            this.pinLabelV3.BackColor = System.Drawing.Color.Transparent;
             this.pinLabelV3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pinLabelV3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pinLabelV3.ForeColor = System.Drawing.Color.Black;
-            this.pinLabelV3.Location = new System.Drawing.Point(4, 20);
+            this.pinLabelV3.Location = new System.Drawing.Point(4, 27);
             this.pinLabelV3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.pinLabelV3.Name = "pinLabelV3";
-            this.pinLabelV3.Size = new System.Drawing.Size(214, 21);
+            this.pinLabelV3.Size = new System.Drawing.Size(216, 28);
             this.pinLabelV3.TabIndex = 3;
             this.pinLabelV3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -768,21 +770,21 @@
             this.pinLabelR3.Location = new System.Drawing.Point(4, 0);
             this.pinLabelR3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.pinLabelR3.Name = "pinLabelR3";
-            this.pinLabelR3.Size = new System.Drawing.Size(214, 20);
+            this.pinLabelR3.Size = new System.Drawing.Size(216, 27);
             this.pinLabelR3.TabIndex = 2;
             this.pinLabelR3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pinGroup2
             // 
-            this.pinGroup2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pinGroup2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.pinGroup2.Controls.Add(this.tableLayoutPanel12);
             this.pinGroup2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pinGroup2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pinGroup2.Location = new System.Drawing.Point(1358, 6);
-            this.pinGroup2.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.pinGroup2.Location = new System.Drawing.Point(1368, 0);
+            this.pinGroup2.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
             this.pinGroup2.Name = "pinGroup2";
             this.pinGroup2.Padding = new System.Windows.Forms.Padding(0);
-            this.pinGroup2.Size = new System.Drawing.Size(231, 70);
+            this.pinGroup2.Size = new System.Drawing.Size(223, 84);
             this.pinGroup2.TabIndex = 1;
             this.pinGroup2.TabStop = false;
             this.pinGroup2.Text = "Pin (电池) 2";
@@ -800,7 +802,7 @@
             this.tableLayoutPanel12.RowCount = 2;
             this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel12.Size = new System.Drawing.Size(231, 41);
+            this.tableLayoutPanel12.Size = new System.Drawing.Size(223, 55);
             this.tableLayoutPanel12.TabIndex = 0;
             // 
             // pinLabelV2
@@ -809,10 +811,10 @@
             this.pinLabelV2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pinLabelV2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pinLabelV2.ForeColor = System.Drawing.Color.Black;
-            this.pinLabelV2.Location = new System.Drawing.Point(4, 20);
+            this.pinLabelV2.Location = new System.Drawing.Point(4, 27);
             this.pinLabelV2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.pinLabelV2.Name = "pinLabelV2";
-            this.pinLabelV2.Size = new System.Drawing.Size(223, 21);
+            this.pinLabelV2.Size = new System.Drawing.Size(215, 28);
             this.pinLabelV2.TabIndex = 2;
             this.pinLabelV2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -825,7 +827,7 @@
             this.pinLabelR2.Location = new System.Drawing.Point(4, 0);
             this.pinLabelR2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.pinLabelR2.Name = "pinLabelR2";
-            this.pinLabelR2.Size = new System.Drawing.Size(223, 20);
+            this.pinLabelR2.Size = new System.Drawing.Size(215, 27);
             this.pinLabelR2.TabIndex = 1;
             this.pinLabelR2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -835,11 +837,11 @@
             this.pinGroup1.Controls.Add(this.tableLayoutPanel3);
             this.pinGroup1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pinGroup1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pinGroup1.Location = new System.Drawing.Point(1591, 6);
-            this.pinGroup1.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.pinGroup1.Location = new System.Drawing.Point(1594, 0);
+            this.pinGroup1.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
             this.pinGroup1.Name = "pinGroup1";
             this.pinGroup1.Padding = new System.Windows.Forms.Padding(0);
-            this.pinGroup1.Size = new System.Drawing.Size(212, 70);
+            this.pinGroup1.Size = new System.Drawing.Size(223, 84);
             this.pinGroup1.TabIndex = 0;
             this.pinGroup1.TabStop = false;
             this.pinGroup1.Text = "Pin (电池) 1";
@@ -858,7 +860,7 @@
             this.tableLayoutPanel3.RowCount = 2;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(212, 41);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(223, 55);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
             // pinLabelR1
@@ -868,9 +870,9 @@
             this.pinLabelR1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pinLabelR1.ForeColor = System.Drawing.Color.Black;
             this.pinLabelR1.Location = new System.Drawing.Point(4, 0);
-            this.pinLabelR1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.pinLabelR1.Margin = new System.Windows.Forms.Padding(0, 0, 4, 0);
             this.pinLabelR1.Name = "pinLabelR1";
-            this.pinLabelR1.Size = new System.Drawing.Size(204, 20);
+            this.pinLabelR1.Size = new System.Drawing.Size(219, 27);
             this.pinLabelR1.TabIndex = 0;
             this.pinLabelR1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -880,10 +882,10 @@
             this.pinLabelV1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pinLabelV1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pinLabelV1.ForeColor = System.Drawing.Color.Black;
-            this.pinLabelV1.Location = new System.Drawing.Point(4, 20);
-            this.pinLabelV1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.pinLabelV1.Location = new System.Drawing.Point(4, 27);
+            this.pinLabelV1.Margin = new System.Windows.Forms.Padding(0, 0, 4, 0);
             this.pinLabelV1.Name = "pinLabelV1";
-            this.pinLabelV1.Size = new System.Drawing.Size(204, 21);
+            this.pinLabelV1.Size = new System.Drawing.Size(219, 28);
             this.pinLabelV1.TabIndex = 1;
             this.pinLabelV1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -914,7 +916,7 @@
             this.tableLayoutPanel7.RowCount = 2;
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 44.77612F));
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 55.22388F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(1819, 70);
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(1819, 68);
             this.tableLayoutPanel7.TabIndex = 0;
             // 
             // batchNumber
@@ -924,10 +926,10 @@
             this.batchNumber.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.batchNumber.Dock = System.Windows.Forms.DockStyle.Fill;
             this.batchNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.batchNumber.Location = new System.Drawing.Point(387, 31);
+            this.batchNumber.Location = new System.Drawing.Point(387, 30);
             this.batchNumber.Margin = new System.Windows.Forms.Padding(0);
             this.batchNumber.Name = "batchNumber";
-            this.batchNumber.Size = new System.Drawing.Size(344, 39);
+            this.batchNumber.Size = new System.Drawing.Size(344, 38);
             this.batchNumber.TabIndex = 612;
             this.batchNumber.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.batchNumber.Click += new System.EventHandler(this.batchNumber_Click);
@@ -939,10 +941,10 @@
             this.specs.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.specs.Dock = System.Windows.Forms.DockStyle.Fill;
             this.specs.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.specs.Location = new System.Drawing.Point(0, 31);
+            this.specs.Location = new System.Drawing.Point(0, 30);
             this.specs.Margin = new System.Windows.Forms.Padding(0);
             this.specs.Name = "specs";
-            this.specs.Size = new System.Drawing.Size(387, 39);
+            this.specs.Size = new System.Drawing.Size(387, 38);
             this.specs.TabIndex = 610;
             this.specs.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.specs.Click += new System.EventHandler(this.specs_Click);
@@ -957,7 +959,7 @@
             this.lblx_mslh.Location = new System.Drawing.Point(0, 0);
             this.lblx_mslh.Margin = new System.Windows.Forms.Padding(0);
             this.lblx_mslh.Name = "lblx_mslh";
-            this.lblx_mslh.Size = new System.Drawing.Size(387, 31);
+            this.lblx_mslh.Size = new System.Drawing.Size(387, 30);
             this.lblx_mslh.TabIndex = 602;
             this.lblx_mslh.Text = "Mã Số Lô Hàng 批號";
             this.lblx_mslh.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -972,7 +974,7 @@
             this.label123.Location = new System.Drawing.Point(387, 0);
             this.label123.Margin = new System.Windows.Forms.Padding(0);
             this.label123.Name = "label123";
-            this.label123.Size = new System.Drawing.Size(344, 31);
+            this.label123.Size = new System.Drawing.Size(344, 30);
             this.label123.TabIndex = 608;
             this.label123.Text = "Quy Cách 规格";
             this.label123.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -987,7 +989,7 @@
             this.label3.Location = new System.Drawing.Point(731, 0);
             this.label3.Margin = new System.Windows.Forms.Padding(0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(243, 31);
+            this.label3.Size = new System.Drawing.Size(243, 30);
             this.label3.TabIndex = 609;
             this.label3.Text = "Mã NV 员工编号";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -998,10 +1000,10 @@
             this.numPin.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.numPin.Dock = System.Windows.Forms.DockStyle.Fill;
             this.numPin.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numPin.Location = new System.Drawing.Point(978, 31);
+            this.numPin.Location = new System.Drawing.Point(978, 30);
             this.numPin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.numPin.Name = "numPin";
-            this.numPin.Size = new System.Drawing.Size(182, 39);
+            this.numPin.Size = new System.Drawing.Size(182, 38);
             this.numPin.TabIndex = 620;
             this.numPin.Text = "1";
             this.numPin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1014,10 +1016,10 @@
             this.userLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.userLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.userLabel.ForeColor = System.Drawing.Color.Black;
-            this.userLabel.Location = new System.Drawing.Point(731, 31);
+            this.userLabel.Location = new System.Drawing.Point(731, 30);
             this.userLabel.Margin = new System.Windows.Forms.Padding(0);
             this.userLabel.Name = "userLabel";
-            this.userLabel.Size = new System.Drawing.Size(243, 39);
+            this.userLabel.Size = new System.Drawing.Size(243, 38);
             this.userLabel.TabIndex = 606;
             this.userLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.userLabel.Click += new System.EventHandler(this.userLabel_Click);
@@ -1032,7 +1034,7 @@
             this.label10.Location = new System.Drawing.Point(978, 0);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(182, 31);
+            this.label10.Size = new System.Drawing.Size(182, 30);
             this.label10.TabIndex = 621;
             this.label10.Text = "Số PIN";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1047,7 +1049,7 @@
             this.label5.Location = new System.Drawing.Point(1164, 0);
             this.label5.Margin = new System.Windows.Forms.Padding(0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(164, 31);
+            this.label5.Size = new System.Drawing.Size(164, 30);
             this.label5.TabIndex = 611;
             this.label5.Text = "Ca 工作班次";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1058,7 +1060,7 @@
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.72915F));
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34.01693F));
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.25391F));
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 117F));
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
             this.tableLayoutPanel8.Controls.Add(this.totalBatteryShift1Label, 0, 1);
             this.tableLayoutPanel8.Controls.Add(this.label2, 0, 0);
             this.tableLayoutPanel8.Controls.Add(this.label9, 1, 0);
@@ -1075,7 +1077,7 @@
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 44.70588F));
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 55.29412F));
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel8.Size = new System.Drawing.Size(491, 70);
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(491, 68);
             this.tableLayoutPanel8.TabIndex = 613;
             // 
             // totalBatteryShift1Label
@@ -1085,10 +1087,10 @@
             this.totalBatteryShift1Label.Dock = System.Windows.Forms.DockStyle.Fill;
             this.totalBatteryShift1Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.totalBatteryShift1Label.ForeColor = System.Drawing.Color.Black;
-            this.totalBatteryShift1Label.Location = new System.Drawing.Point(114, 31);
+            this.totalBatteryShift1Label.Location = new System.Drawing.Point(114, 30);
             this.totalBatteryShift1Label.Margin = new System.Windows.Forms.Padding(0);
             this.totalBatteryShift1Label.Name = "totalBatteryShift1Label";
-            this.totalBatteryShift1Label.Size = new System.Drawing.Size(127, 39);
+            this.totalBatteryShift1Label.Size = new System.Drawing.Size(126, 38);
             this.totalBatteryShift1Label.TabIndex = 619;
             this.totalBatteryShift1Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.totalBatteryShift1Label.Click += new System.EventHandler(this.totalBatteryShift1Label_Click);
@@ -1104,7 +1106,7 @@
             this.label2.Margin = new System.Windows.Forms.Padding(0);
             this.label2.Name = "label2";
             this.tableLayoutPanel8.SetRowSpan(this.label2, 2);
-            this.label2.Size = new System.Drawing.Size(114, 70);
+            this.label2.Size = new System.Drawing.Size(114, 68);
             this.label2.TabIndex = 612;
             this.label2.Text = "Tổng SL đã đo \r\n电池已测量";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1120,7 +1122,7 @@
             this.label9.Location = new System.Drawing.Point(114, 0);
             this.label9.Margin = new System.Windows.Forms.Padding(0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(127, 31);
+            this.label9.Size = new System.Drawing.Size(126, 30);
             this.label9.TabIndex = 617;
             this.label9.Text = "Ca 1 工作班次1";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1132,10 +1134,10 @@
             this.totalBatteryShift2Label.Dock = System.Windows.Forms.DockStyle.Fill;
             this.totalBatteryShift2Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.totalBatteryShift2Label.ForeColor = System.Drawing.Color.Black;
-            this.totalBatteryShift2Label.Location = new System.Drawing.Point(241, 31);
+            this.totalBatteryShift2Label.Location = new System.Drawing.Point(240, 30);
             this.totalBatteryShift2Label.Margin = new System.Windows.Forms.Padding(0);
             this.totalBatteryShift2Label.Name = "totalBatteryShift2Label";
-            this.totalBatteryShift2Label.Size = new System.Drawing.Size(131, 39);
+            this.totalBatteryShift2Label.Size = new System.Drawing.Size(130, 38);
             this.totalBatteryShift2Label.TabIndex = 615;
             this.totalBatteryShift2Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -1146,10 +1148,10 @@
             this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(241, 0);
+            this.label6.Location = new System.Drawing.Point(240, 0);
             this.label6.Margin = new System.Windows.Forms.Padding(0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(131, 31);
+            this.label6.Size = new System.Drawing.Size(130, 30);
             this.label6.TabIndex = 614;
             this.label6.Text = "Ca 2  工作班次2";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1159,7 +1161,7 @@
             this.lb_isResetLamp.AutoSize = true;
             this.lb_isResetLamp.BackColor = System.Drawing.Color.RosyBrown;
             this.lb_isResetLamp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_isResetLamp.Location = new System.Drawing.Point(376, 0);
+            this.lb_isResetLamp.Location = new System.Drawing.Point(374, 0);
             this.lb_isResetLamp.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lb_isResetLamp.Name = "lb_isResetLamp";
             this.lb_isResetLamp.Size = new System.Drawing.Size(75, 25);
@@ -1171,7 +1173,7 @@
             this.label13.AutoSize = true;
             this.label13.BackColor = System.Drawing.Color.Green;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(376, 31);
+            this.label13.Location = new System.Drawing.Point(374, 30);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(75, 25);
@@ -1186,16 +1188,27 @@
             this.currentWorkShift.Dock = System.Windows.Forms.DockStyle.Fill;
             this.currentWorkShift.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.currentWorkShift.ForeColor = System.Drawing.Color.Black;
-            this.currentWorkShift.Location = new System.Drawing.Point(1164, 31);
+            this.currentWorkShift.Location = new System.Drawing.Point(1164, 30);
             this.currentWorkShift.Margin = new System.Windows.Forms.Padding(0);
             this.currentWorkShift.Name = "currentWorkShift";
-            this.currentWorkShift.Size = new System.Drawing.Size(164, 39);
+            this.currentWorkShift.Size = new System.Drawing.Size(164, 38);
             this.currentWorkShift.TabIndex = 614;
             this.currentWorkShift.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.currentWorkShift.Click += new System.EventHandler(this.currentWorkShift_Click);
             // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.Black;
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Location = new System.Drawing.Point(0, 177);
+            this.panel4.Margin = new System.Windows.Forms.Padding(0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1819, 9);
+            this.panel4.TabIndex = 3;
+            // 
             // tableLayoutPanel1
             // 
+            this.tableLayoutPanel1.BackColor = System.Drawing.Color.Silver;
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel5, 0, 3);
@@ -1268,7 +1281,7 @@
             this.tableLayoutPanel19.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 48.05195F));
             this.tableLayoutPanel19.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 51.94805F));
             this.tableLayoutPanel19.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 192F));
-            this.tableLayoutPanel19.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 165F));
+            this.tableLayoutPanel19.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 171F));
             this.tableLayoutPanel19.Controls.Add(this.label14, 3, 0);
             this.tableLayoutPanel19.Controls.Add(this.vMaxLabel, 0, 1);
             this.tableLayoutPanel19.Controls.Add(this.label33, 0, 0);
@@ -1282,8 +1295,8 @@
             this.tableLayoutPanel19.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel19.Name = "tableLayoutPanel19";
             this.tableLayoutPanel19.RowCount = 2;
-            this.tableLayoutPanel19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 56.38298F));
-            this.tableLayoutPanel19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 43.61702F));
+            this.tableLayoutPanel19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 46.80851F));
+            this.tableLayoutPanel19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 53.19149F));
             this.tableLayoutPanel19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel19.Size = new System.Drawing.Size(663, 96);
             this.tableLayoutPanel19.TabIndex = 3;
@@ -1295,10 +1308,10 @@
             this.label14.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label14.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.Black;
-            this.label14.Location = new System.Drawing.Point(495, 2);
+            this.label14.Location = new System.Drawing.Point(489, 2);
             this.label14.Margin = new System.Windows.Forms.Padding(0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(166, 50);
+            this.label14.Size = new System.Drawing.Size(172, 42);
             this.label14.TabIndex = 617;
             this.label14.Text = "Phân Loại 分类";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1310,10 +1323,10 @@
             this.vMaxLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.vMaxLabel.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.vMaxLabel.ForeColor = System.Drawing.Color.Black;
-            this.vMaxLabel.Location = new System.Drawing.Point(2, 54);
+            this.vMaxLabel.Location = new System.Drawing.Point(2, 46);
             this.vMaxLabel.Margin = new System.Windows.Forms.Padding(0);
             this.vMaxLabel.Name = "vMaxLabel";
-            this.vMaxLabel.Size = new System.Drawing.Size(142, 40);
+            this.vMaxLabel.Size = new System.Drawing.Size(139, 48);
             this.vMaxLabel.TabIndex = 606;
             this.vMaxLabel.Text = "0";
             this.vMaxLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1328,7 +1341,7 @@
             this.label33.Location = new System.Drawing.Point(2, 2);
             this.label33.Margin = new System.Windows.Forms.Padding(0);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(142, 50);
+            this.label33.Size = new System.Drawing.Size(139, 42);
             this.label33.TabIndex = 603;
             this.label33.Text = "Điện áp (電壓)\r\nMAX";
             this.label33.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1340,10 +1353,10 @@
             this.label34.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label34.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label34.ForeColor = System.Drawing.Color.Black;
-            this.label34.Location = new System.Drawing.Point(146, 2);
+            this.label34.Location = new System.Drawing.Point(143, 2);
             this.label34.Margin = new System.Windows.Forms.Padding(0);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(153, 50);
+            this.label34.Size = new System.Drawing.Size(150, 42);
             this.label34.TabIndex = 604;
             this.label34.Text = "Điện áp (電壓) \r\nMIN";
             this.label34.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1355,10 +1368,10 @@
             this.vMinLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.vMinLabel.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.vMinLabel.ForeColor = System.Drawing.Color.Black;
-            this.vMinLabel.Location = new System.Drawing.Point(146, 54);
+            this.vMinLabel.Location = new System.Drawing.Point(143, 46);
             this.vMinLabel.Margin = new System.Windows.Forms.Padding(0);
             this.vMinLabel.Name = "vMinLabel";
-            this.vMinLabel.Size = new System.Drawing.Size(153, 40);
+            this.vMinLabel.Size = new System.Drawing.Size(150, 48);
             this.vMinLabel.TabIndex = 607;
             this.vMinLabel.Text = "0";
             this.vMinLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1371,10 +1384,10 @@
             this.currentVLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.currentVLabel.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.currentVLabel.ForeColor = System.Drawing.Color.Black;
-            this.currentVLabel.Location = new System.Drawing.Point(301, 54);
+            this.currentVLabel.Location = new System.Drawing.Point(295, 46);
             this.currentVLabel.Margin = new System.Windows.Forms.Padding(0);
             this.currentVLabel.Name = "currentVLabel";
-            this.currentVLabel.Size = new System.Drawing.Size(192, 40);
+            this.currentVLabel.Size = new System.Drawing.Size(192, 48);
             this.currentVLabel.TabIndex = 609;
             this.currentVLabel.Text = "0";
             this.currentVLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1387,10 +1400,10 @@
             this.label51.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label51.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label51.ForeColor = System.Drawing.Color.Black;
-            this.label51.Location = new System.Drawing.Point(301, 2);
+            this.label51.Location = new System.Drawing.Point(295, 2);
             this.label51.Margin = new System.Windows.Forms.Padding(0);
             this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(192, 50);
+            this.label51.Size = new System.Drawing.Size(192, 42);
             this.label51.TabIndex = 608;
             this.label51.Text = "Điện áp (電壓)";
             this.label51.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1402,10 +1415,10 @@
             this.vCompare.Dock = System.Windows.Forms.DockStyle.Fill;
             this.vCompare.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.vCompare.ForeColor = System.Drawing.Color.Black;
-            this.vCompare.Location = new System.Drawing.Point(495, 54);
+            this.vCompare.Location = new System.Drawing.Point(489, 46);
             this.vCompare.Margin = new System.Windows.Forms.Padding(0);
             this.vCompare.Name = "vCompare";
-            this.vCompare.Size = new System.Drawing.Size(166, 40);
+            this.vCompare.Size = new System.Drawing.Size(172, 48);
             this.vCompare.TabIndex = 616;
             this.vCompare.Text = "A";
             this.vCompare.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1784,7 +1797,7 @@
             this.tableLayoutPanel6.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Outset;
             this.tableLayoutPanel6.ColumnCount = 2;
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 669F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 673F));
             this.tableLayoutPanel6.Controls.Add(this.cartesianChart1, 0, 0);
             this.tableLayoutPanel6.Controls.Add(this.panel2, 1, 0);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -1803,7 +1816,7 @@
             this.cartesianChart1.Location = new System.Drawing.Point(2, 2);
             this.cartesianChart1.Margin = new System.Windows.Forms.Padding(0);
             this.cartesianChart1.Name = "cartesianChart1";
-            this.cartesianChart1.Size = new System.Drawing.Size(1144, 314);
+            this.cartesianChart1.Size = new System.Drawing.Size(1140, 314);
             this.cartesianChart1.TabIndex = 5;
             this.cartesianChart1.Text = "Biểu đồ điện áp";
             // 
@@ -1811,10 +1824,10 @@
             // 
             this.panel2.Controls.Add(this.tableLayoutPanel17);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(1152, 6);
+            this.panel2.Location = new System.Drawing.Point(1148, 6);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(661, 306);
+            this.panel2.Size = new System.Drawing.Size(665, 306);
             this.panel2.TabIndex = 6;
             // 
             // tableLayoutPanel17
@@ -1833,7 +1846,7 @@
             this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 106F));
             this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel17.Size = new System.Drawing.Size(661, 306);
+            this.tableLayoutPanel17.Size = new System.Drawing.Size(665, 306);
             this.tableLayoutPanel17.TabIndex = 0;
             // 
             // tableLayoutPanel9
@@ -1844,7 +1857,7 @@
             this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 48.86731F));
             this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 51.13269F));
             this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 189F));
-            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 163F));
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 169F));
             this.tableLayoutPanel9.Controls.Add(this.label16, 3, 0);
             this.tableLayoutPanel9.Controls.Add(this.label12, 0, 0);
             this.tableLayoutPanel9.Controls.Add(this.label19, 1, 0);
@@ -1861,7 +1874,7 @@
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 52F));
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel9.Size = new System.Drawing.Size(661, 106);
+            this.tableLayoutPanel9.Size = new System.Drawing.Size(665, 106);
             this.tableLayoutPanel9.TabIndex = 3;
             // 
             // label16
@@ -1871,10 +1884,10 @@
             this.label16.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label16.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label16.Location = new System.Drawing.Point(495, 2);
+            this.label16.Location = new System.Drawing.Point(493, 2);
             this.label16.Margin = new System.Windows.Forms.Padding(0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(164, 52);
+            this.label16.Size = new System.Drawing.Size(170, 52);
             this.label16.TabIndex = 618;
             this.label16.Text = "Phân Loại 分类";
             this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1889,7 +1902,7 @@
             this.label12.Location = new System.Drawing.Point(2, 2);
             this.label12.Margin = new System.Windows.Forms.Padding(0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(146, 52);
+            this.label12.Size = new System.Drawing.Size(145, 52);
             this.label12.TabIndex = 603;
             this.label12.Text = "Điện trở (電阻) \r\nMAX";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1901,10 +1914,10 @@
             this.label19.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label19.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label19.Location = new System.Drawing.Point(150, 2);
+            this.label19.Location = new System.Drawing.Point(149, 2);
             this.label19.Margin = new System.Windows.Forms.Padding(0);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(152, 52);
+            this.label19.Size = new System.Drawing.Size(151, 52);
             this.label19.TabIndex = 604;
             this.label19.Text = "Điện trở (電阻) \r\nMIN";
             this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1916,7 +1929,7 @@
             this.currentRLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.currentRLabel.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.currentRLabel.ForeColor = System.Drawing.Color.Black;
-            this.currentRLabel.Location = new System.Drawing.Point(304, 56);
+            this.currentRLabel.Location = new System.Drawing.Point(302, 56);
             this.currentRLabel.Margin = new System.Windows.Forms.Padding(0);
             this.currentRLabel.Name = "currentRLabel";
             this.currentRLabel.Size = new System.Drawing.Size(189, 48);
@@ -1931,7 +1944,7 @@
             this.label45.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label45.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label45.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label45.Location = new System.Drawing.Point(304, 2);
+            this.label45.Location = new System.Drawing.Point(302, 2);
             this.label45.Margin = new System.Windows.Forms.Padding(0);
             this.label45.Name = "label45";
             this.label45.Size = new System.Drawing.Size(189, 52);
@@ -1945,10 +1958,10 @@
             this.rMinLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.rMinLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rMinLabel.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rMinLabel.Location = new System.Drawing.Point(150, 56);
+            this.rMinLabel.Location = new System.Drawing.Point(149, 56);
             this.rMinLabel.Margin = new System.Windows.Forms.Padding(0);
             this.rMinLabel.Name = "rMinLabel";
-            this.rMinLabel.Size = new System.Drawing.Size(152, 48);
+            this.rMinLabel.Size = new System.Drawing.Size(151, 48);
             this.rMinLabel.TabIndex = 612;
             this.rMinLabel.Text = "0";
             this.rMinLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1963,22 +1976,22 @@
             this.rMaxLabel.Location = new System.Drawing.Point(2, 56);
             this.rMaxLabel.Margin = new System.Windows.Forms.Padding(0);
             this.rMaxLabel.Name = "rMaxLabel";
-            this.rMaxLabel.Size = new System.Drawing.Size(146, 48);
+            this.rMaxLabel.Size = new System.Drawing.Size(145, 48);
             this.rMaxLabel.TabIndex = 613;
             this.rMaxLabel.Text = "0";
             this.rMaxLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // rCompare
             // 
-            this.rCompare.BackColor = System.Drawing.Color.Lime;
+            this.rCompare.BackColor = System.Drawing.Color.White;
             this.rCompare.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.rCompare.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rCompare.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rCompare.ForeColor = System.Drawing.Color.Black;
-            this.rCompare.Location = new System.Drawing.Point(495, 56);
+            this.rCompare.Location = new System.Drawing.Point(493, 56);
             this.rCompare.Margin = new System.Windows.Forms.Padding(0);
             this.rCompare.Name = "rCompare";
-            this.rCompare.Size = new System.Drawing.Size(164, 48);
+            this.rCompare.Size = new System.Drawing.Size(170, 48);
             this.rCompare.TabIndex = 616;
             this.rCompare.Text = "OK";
             this.rCompare.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2013,7 +2026,7 @@
             this.tableLayoutPanel26.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 55F));
             this.tableLayoutPanel26.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 51.16279F));
             this.tableLayoutPanel26.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 48.83721F));
-            this.tableLayoutPanel26.Size = new System.Drawing.Size(661, 175);
+            this.tableLayoutPanel26.Size = new System.Drawing.Size(665, 175);
             this.tableLayoutPanel26.TabIndex = 611;
             // 
             // label42
@@ -2053,7 +2066,7 @@
             this.rHightShift2Label.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rHightShift2Label.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rHightShift2Label.ForeColor = System.Drawing.Color.Black;
-            this.rHightShift2Label.Location = new System.Drawing.Point(448, 135);
+            this.rHightShift2Label.Location = new System.Drawing.Point(452, 135);
             this.rHightShift2Label.Margin = new System.Windows.Forms.Padding(0);
             this.rHightShift2Label.Name = "rHightShift2Label";
             this.rHightShift2Label.Size = new System.Drawing.Size(211, 38);
@@ -2068,10 +2081,10 @@
             this.rLowShift2Label.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rLowShift2Label.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rLowShift2Label.ForeColor = System.Drawing.Color.Black;
-            this.rLowShift2Label.Location = new System.Drawing.Point(258, 135);
+            this.rLowShift2Label.Location = new System.Drawing.Point(260, 135);
             this.rLowShift2Label.Margin = new System.Windows.Forms.Padding(0);
             this.rLowShift2Label.Name = "rLowShift2Label";
-            this.rLowShift2Label.Size = new System.Drawing.Size(188, 38);
+            this.rLowShift2Label.Size = new System.Drawing.Size(190, 38);
             this.rLowShift2Label.TabIndex = 613;
             this.rLowShift2Label.Text = "0";
             this.rLowShift2Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2086,7 +2099,7 @@
             this.rGoodShift2Label.Location = new System.Drawing.Point(68, 135);
             this.rGoodShift2Label.Margin = new System.Windows.Forms.Padding(0);
             this.rGoodShift2Label.Name = "rGoodShift2Label";
-            this.rGoodShift2Label.Size = new System.Drawing.Size(188, 38);
+            this.rGoodShift2Label.Size = new System.Drawing.Size(190, 38);
             this.rGoodShift2Label.TabIndex = 613;
             this.rGoodShift2Label.Text = "0";
             this.rGoodShift2Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2101,7 +2114,7 @@
             this.rGoodShift1Label.Location = new System.Drawing.Point(68, 94);
             this.rGoodShift1Label.Margin = new System.Windows.Forms.Padding(0);
             this.rGoodShift1Label.Name = "rGoodShift1Label";
-            this.rGoodShift1Label.Size = new System.Drawing.Size(188, 39);
+            this.rGoodShift1Label.Size = new System.Drawing.Size(190, 39);
             this.rGoodShift1Label.TabIndex = 612;
             this.rGoodShift1Label.Text = "0";
             this.rGoodShift1Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2116,7 +2129,7 @@
             this.label26.Location = new System.Drawing.Point(68, 37);
             this.label26.Margin = new System.Windows.Forms.Padding(0);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(188, 55);
+            this.label26.Size = new System.Drawing.Size(190, 55);
             this.label26.TabIndex = 609;
             this.label26.Text = "SP Đạt \r\n达到求";
             this.label26.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2128,10 +2141,10 @@
             this.rLowShift1Label.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rLowShift1Label.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rLowShift1Label.ForeColor = System.Drawing.Color.Black;
-            this.rLowShift1Label.Location = new System.Drawing.Point(258, 94);
+            this.rLowShift1Label.Location = new System.Drawing.Point(260, 94);
             this.rLowShift1Label.Margin = new System.Windows.Forms.Padding(0);
             this.rLowShift1Label.Name = "rLowShift1Label";
-            this.rLowShift1Label.Size = new System.Drawing.Size(188, 39);
+            this.rLowShift1Label.Size = new System.Drawing.Size(190, 39);
             this.rLowShift1Label.TabIndex = 612;
             this.rLowShift1Label.Text = "0";
             this.rLowShift1Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2143,7 +2156,7 @@
             this.rHightShift1Label.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rHightShift1Label.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rHightShift1Label.ForeColor = System.Drawing.Color.Black;
-            this.rHightShift1Label.Location = new System.Drawing.Point(448, 94);
+            this.rHightShift1Label.Location = new System.Drawing.Point(452, 94);
             this.rHightShift1Label.Margin = new System.Windows.Forms.Padding(0);
             this.rHightShift1Label.Name = "rHightShift1Label";
             this.rHightShift1Label.Size = new System.Drawing.Size(211, 39);
@@ -2158,7 +2171,7 @@
             this.label22.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label22.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label22.Location = new System.Drawing.Point(448, 37);
+            this.label22.Location = new System.Drawing.Point(452, 37);
             this.label22.Margin = new System.Windows.Forms.Padding(0);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(211, 55);
@@ -2173,10 +2186,10 @@
             this.label24.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label24.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label24.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label24.Location = new System.Drawing.Point(258, 37);
+            this.label24.Location = new System.Drawing.Point(260, 37);
             this.label24.Margin = new System.Windows.Forms.Padding(0);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(188, 55);
+            this.label24.Size = new System.Drawing.Size(190, 55);
             this.label24.TabIndex = 611;
             this.label24.Text = "SP Thấp \r\n低";
             this.label24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2192,7 +2205,7 @@
             this.label23.Location = new System.Drawing.Point(68, 2);
             this.label23.Margin = new System.Windows.Forms.Padding(0);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(591, 33);
+            this.label23.Size = new System.Drawing.Size(595, 33);
             this.label23.TabIndex = 612;
             this.label23.Text = "Phân Loại 分类";
             this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2222,7 +2235,7 @@
             this.label1.Location = new System.Drawing.Point(4, 0);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(653, 25);
+            this.label1.Size = new System.Drawing.Size(657, 25);
             this.label1.TabIndex = 612;
             this.label1.Text = "BIỂU ĐỒ ĐIỆN TRỞ 電阻圖表 (Ω) ";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2254,9 +2267,9 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
-            this.tableLayoutPanel34.ResumeLayout(false);
+            this.tableLayout_QR.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
-            this.tableLayoutPanel10.ResumeLayout(false);
+            this.tableLayout_measure.ResumeLayout(false);
             this.pinGroup8.ResumeLayout(false);
             this.tableLayoutPanel33.ResumeLayout(false);
             this.tableLayoutPanel33.PerformLayout();
@@ -2309,8 +2322,8 @@
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel10;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel34;
+        private System.Windows.Forms.TableLayoutPanel tableLayout_measure;
+        private System.Windows.Forms.TableLayoutPanel tableLayout_QR;
         private System.Windows.Forms.GroupBox pinGroupQR7;
         private System.Windows.Forms.GroupBox pinGroupQR6;
         private System.Windows.Forms.GroupBox pinGroupQR5;
@@ -2436,5 +2449,6 @@
         private System.Windows.Forms.Label V_NGCa2;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Panel panel4;
     }
 }

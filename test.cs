@@ -156,15 +156,16 @@ namespace BatteryMonitor
                 this.dataGridView1.Columns[2].Name = "Giá trị";
 
                 
-  
+                this.dataGridView1.Rows.Add(new object[] { "Điện trở", "(99 , 100)", regsisterdisplay });
+                this.dataGridView1.Rows.Add(new object[] { "Ve", 113, vedt });
+                this.dataGridView1.Rows.Add(new object[] { "Can hoan thanh", 75, vedt });
+                this.dataGridView1.Rows.Add(new object[] { "Dien tro pc", 75, regsisterdisplay });
+                this.dataGridView1.Rows.Add(new object[] { "Dien ap pc", 75, voltdisplay });
 
-                //if (vedt == 1 && !isMeasured)
-                //{
-                    this.dataGridView1.Rows.Add(new object[] { "Điện trở", "(99 , 100)", regsisterdisplay });
-                    this.dataGridView1.Rows.Add(new object[] { "Ve", 113, vedt });
-                    isMeasured = true;
-                //}
 
+
+                isMeasured = true;
+              
                 if (vedt == 0)
                 {
                     isMeasured = false;

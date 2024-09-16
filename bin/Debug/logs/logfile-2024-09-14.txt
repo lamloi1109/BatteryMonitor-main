@@ -1,0 +1,26 @@
+2024-09-14 14:56:02.2662|INFO|BatteryMonitor.Main|002CB70740740MDANA004147,002CB70743744MDAPA003463,002CB70742743MDAPA001939,002CB70742743MDAPA001388Số lượng pin quét được không đúng với số lượng cài đặt!
+2024-09-14 15:22:34.8762|ERROR|BatteryMonitor.Main|System.InvalidCastException: Specified cast is not valid.
+   at System.Data.SQLite.SQLiteDataReader.VerifyType(Int32 i, DbType typ)
+   at System.Data.SQLite.SQLiteDataReader.GetString(Int32 i)
+   at BatteryMonitor.Main.tongtheophanloai() in C:\Users\IT_SOFTWARE\Source\Repos\BatteryMonitor-main\Main.cs:line 747
+   at BatteryMonitor.Main.Form1_Load(Object sender, EventArgs e) in C:\Users\IT_SOFTWARE\Source\Repos\BatteryMonitor-main\Main.cs:line 922
+2024-09-14 15:23:10.7917|ERROR|BatteryMonitor.Main|System.InvalidCastException: Specified cast is not valid.
+   at System.Data.SQLite.SQLiteDataReader.VerifyType(Int32 i, DbType typ)
+   at System.Data.SQLite.SQLiteDataReader.GetString(Int32 i)
+   at BatteryMonitor.Main.tongtheophanloai() in C:\Users\IT_SOFTWARE\Source\Repos\BatteryMonitor-main\Main.cs:line 747
+   at BatteryMonitor.Main.Form1_Load(Object sender, EventArgs e) in C:\Users\IT_SOFTWARE\Source\Repos\BatteryMonitor-main\Main.cs:line 922
+2024-09-14 15:25:05.5939|ERROR|BatteryMonitor.Main|System.InvalidCastException: Specified cast is not valid.
+   at System.Data.SQLite.SQLiteDataReader.VerifyType(Int32 i, DbType typ)
+   at System.Data.SQLite.SQLiteDataReader.GetString(Int32 i)
+   at BatteryMonitor.Main.tongtheophanloai() in C:\Users\IT_SOFTWARE\Source\Repos\BatteryMonitor-main\Main.cs:line 747
+   at BatteryMonitor.Main.Form1_Load(Object sender, EventArgs e) in C:\Users\IT_SOFTWARE\Source\Repos\BatteryMonitor-main\Main.cs:line 922
+2024-09-14 15:25:30.5314|ERROR|BatteryMonitor.Main|System.InvalidCastException: Specified cast is not valid.
+   at System.Data.SQLite.SQLiteDataReader.VerifyType(Int32 i, DbType typ)
+   at System.Data.SQLite.SQLiteDataReader.GetString(Int32 i)
+   at BatteryMonitor.Main.tongtheophanloai() in C:\Users\IT_SOFTWARE\Source\Repos\BatteryMonitor-main\Main.cs:line 747
+   at BatteryMonitor.Main.Form1_Load(Object sender, EventArgs e) in C:\Users\IT_SOFTWARE\Source\Repos\BatteryMonitor-main\Main.cs:line 922
+2024-09-14 15:29:01.2291|ERROR|BatteryMonitor.Main|System.InvalidCastException: Specified cast is not valid.
+   at System.Data.SQLite.SQLiteDataReader.VerifyType(Int32 i, DbType typ)
+   at System.Data.SQLite.SQLiteDataReader.GetString(Int32 i)
+   at BatteryMonitor.Main.tongtheophanloai() in C:\Users\IT_SOFTWARE\Source\Repos\BatteryMonitor-main\Main.cs:line 747
+   at BatteryMonitor.Main.Form1_Load(Object sender, EventArgs e) in C:\Users\IT_SOFTWARE\Source\Repos\BatteryMonitor-main\Main.cs:line 922
