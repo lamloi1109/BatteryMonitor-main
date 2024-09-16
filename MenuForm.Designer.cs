@@ -40,6 +40,7 @@
             this.userLabel = new Krypton.Toolkit.KryptonLabel();
             this.kryptonButton2 = new Krypton.Toolkit.KryptonButton();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.kryptonButton3 = new Krypton.Toolkit.KryptonButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -147,7 +148,7 @@
             // 
             this.userLabel.Location = new System.Drawing.Point(13, 3);
             this.userLabel.Name = "userLabel";
-            this.userLabel.Size = new System.Drawing.Size(112, 43);
+            this.userLabel.Size = new System.Drawing.Size(132, 53);
             this.userLabel.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.userLabel.TabIndex = 20;
             this.userLabel.Values.Image = ((System.Drawing.Image)(resources.GetObject("userLabel.Values.Image")));
@@ -155,7 +156,7 @@
             // 
             // kryptonButton2
             // 
-            this.kryptonButton2.Location = new System.Drawing.Point(369, 132);
+            this.kryptonButton2.Location = new System.Drawing.Point(464, 294);
             this.kryptonButton2.Name = "kryptonButton2";
             this.kryptonButton2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.kryptonButton2.Size = new System.Drawing.Size(197, 55);
@@ -181,11 +182,29 @@
             this.pictureBox2.TabIndex = 16;
             this.pictureBox2.TabStop = false;
             // 
+            // kryptonButton3
+            // 
+            this.kryptonButton3.Location = new System.Drawing.Point(369, 132);
+            this.kryptonButton3.Name = "kryptonButton3";
+            this.kryptonButton3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.kryptonButton3.Size = new System.Drawing.Size(197, 55);
+            this.kryptonButton3.StateCommon.Back.Color1 = System.Drawing.Color.Aqua;
+            this.kryptonButton3.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButton3.StateCommon.Border.Rounding = 5F;
+            this.kryptonButton3.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonButton3.TabIndex = 22;
+            this.kryptonButton3.Values.Image = ((System.Drawing.Image)(resources.GetObject("kryptonButton3.Values.Image")));
+            this.kryptonButton3.Values.Text = "TEST";
+            this.kryptonButton3.Click += new System.EventHandler(this.kryptonButton2_Click);
+            // 
             // MenuForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(904, 357);
+            this.Controls.Add(this.kryptonButton3);
             this.Controls.Add(this.kryptonButton2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.kryptonButton1);
@@ -218,5 +237,6 @@
         private System.Windows.Forms.Panel panel1;
         private Krypton.Toolkit.KryptonLabel userLabel;
         private Krypton.Toolkit.KryptonButton kryptonButton2;
+        private Krypton.Toolkit.KryptonButton kryptonButton3;
     }
 }

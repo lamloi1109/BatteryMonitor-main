@@ -33,6 +33,8 @@ namespace BatteryMonitor
             modbustPort.Text = Properties.Settings.Default.modbustPort.ToString();
             keygenceIp.Text = Properties.Settings.Default.keyGenceIP;
             pinModes.SelectedIndex = Properties.Settings.Default.CountPin;
+            begindate.Value = String.IsNullOrEmpty(Properties.Settings.Default.begindate)?DateTime.Now: DateTime.Parse(Properties.Settings.Default.begindate);
+            enddate.Value = String.IsNullOrEmpty(Properties.Settings.Default.enddate) ? DateTime.Now : DateTime.Parse(Properties.Settings.Default.enddate);
 
         }
 
@@ -79,6 +81,8 @@ namespace BatteryMonitor
 
             Properties.Settings.Default.CountPin = pinModes.SelectedIndex;
 
+            Properties.Settings.Default.begindate = begindate.Value.ToString("yyyy/MM/dd HH:mm:ss");
+            Properties.Settings.Default.enddate = enddate.Value.ToString("yyyy/MM/dd HH:mm:ss");
             Properties.Settings.Default.Save();
             // Restart lại ứng dụng
 

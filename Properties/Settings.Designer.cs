@@ -202,5 +202,29 @@ namespace BatteryMonitor.Properties {
                 this["vMin_setting"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string begindate {
+            get {
+                return ((string)(this["begindate"]));
+            }
+            set {
+                this["begindate"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string enddate {
+            get {
+                return ((string)(this["enddate"]));
+            }
+            set {
+                this["enddate"] = value;
+            }
+        }
     }
 }

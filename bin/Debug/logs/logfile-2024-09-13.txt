@@ -1,0 +1,55 @@
+2024-09-13 08:38:23.5098|ERROR|BatteryMonitor.Main|EasyModbus.Exceptions.ConnectionException: connection timed out
+   at EasyModbus.ModbusClient.Connect()
+   at BatteryMonitor.Main.Form1_Load(Object sender, EventArgs e) in C:\Users\IT_SOFTWARE\Source\Repos\BatteryMonitor-main\Main.cs:line 869
+2024-09-13 08:39:38.5108|ERROR|BatteryMonitor.Main|EasyModbus.Exceptions.ConnectionException: connection timed out
+   at EasyModbus.ModbusClient.Connect()
+   at BatteryMonitor.Main.Form1_Load(Object sender, EventArgs e) in C:\Users\IT_SOFTWARE\Source\Repos\BatteryMonitor-main\Main.cs:line 869
+2024-09-13 10:02:55.9657|ERROR|BatteryMonitor.Main|EasyModbus.Exceptions.ConnectionException: connection timed out
+   at EasyModbus.ModbusClient.Connect()
+   at BatteryMonitor.Main.Form1_Load(Object sender, EventArgs e) in C:\Users\IT_SOFTWARE\Source\Repos\BatteryMonitor-main\Main.cs:line 925
+2024-09-13 10:04:42.3142|ERROR|BatteryMonitor.Main|EasyModbus.Exceptions.ConnectionException: connection timed out
+   at EasyModbus.ModbusClient.Connect()
+   at BatteryMonitor.Main.Form1_Load(Object sender, EventArgs e) in C:\Users\IT_SOFTWARE\Source\Repos\BatteryMonitor-main\Main.cs:line 925
+2024-09-13 10:13:20.4453|ERROR|BatteryMonitor.Main|EasyModbus.Exceptions.ConnectionException: connection timed out
+   at EasyModbus.ModbusClient.Connect()
+   at BatteryMonitor.Main.Form1_Load(Object sender, EventArgs e) in C:\Users\IT_SOFTWARE\Source\Repos\BatteryMonitor-main\Main.cs:line 925
+2024-09-13 10:49:46.9193|ERROR|BatteryMonitor.Main|EasyModbus.Exceptions.ConnectionException: connection timed out
+   at EasyModbus.ModbusClient.Connect()
+   at BatteryMonitor.Main.Form1_Load(Object sender, EventArgs e) in C:\Users\IT_SOFTWARE\Source\Repos\BatteryMonitor-main\Main.cs:line 925
+2024-09-13 10:54:24.6338|ERROR|BatteryMonitor.Main|EasyModbus.Exceptions.ConnectionException: connection timed out
+   at EasyModbus.ModbusClient.Connect()
+   at BatteryMonitor.Main.Form1_Load(Object sender, EventArgs e) in C:\Users\IT_SOFTWARE\Source\Repos\BatteryMonitor-main\Main.cs:line 925
+2024-09-13 10:57:20.9922|ERROR|BatteryMonitor.Main|EasyModbus.Exceptions.ConnectionException: connection timed out
+   at EasyModbus.ModbusClient.Connect()
+   at BatteryMonitor.Main.Form1_Load(Object sender, EventArgs e) in C:\Users\IT_SOFTWARE\Source\Repos\BatteryMonitor-main\Main.cs:line 925
+2024-09-13 11:31:48.1800|ERROR|BatteryMonitor.Main|code = Error (1), message = System.Data.SQLite.SQLiteException (0x87AF001F): SQL logic error
+near ";": syntax error
+   at System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader()
+   at BatteryMonitor.Main.tongtheophanloai(Int32 calamviec) in C:\Users\IT_SOFTWARE\Source\Repos\BatteryMonitor-main\Main.cs:line 758
+   at BatteryMonitor.Main.Form1_Load(Object sender, EventArgs e) in C:\Users\IT_SOFTWARE\Source\Repos\BatteryMonitor-main\Main.cs:line 904
+2024-09-13 13:33:53.2844|ERROR|BatteryMonitor.Main|code = Error (1), message = System.Data.SQLite.SQLiteException (0x87AF001F): SQL logic error
+near ";": syntax error
+   at System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader()
+   at BatteryMonitor.Main.tongtheophanloai(Int32 calamviec) in C:\Users\IT_SOFTWARE\Source\Repos\BatteryMonitor-main\Main.cs:line 758
+   at BatteryMonitor.Main.Form1_Load(Object sender, EventArgs e) in C:\Users\IT_SOFTWARE\Source\Repos\BatteryMonitor-main\Main.cs:line 904
+2024-09-13 15:13:48.8681|ERROR|BatteryMonitor.Main|EasyModbus.Exceptions.ConnectionException: connection timed out
+   at EasyModbus.ModbusClient.Connect()
+   at BatteryMonitor.Main.Form1_Load(Object sender, EventArgs e) in C:\Users\IT_SOFTWARE\Source\Repos\BatteryMonitor-main\Main.cs:line 955
+2024-09-13 15:16:08.4533|ERROR|BatteryMonitor.Main|EasyModbus.Exceptions.ConnectionException: connection timed out
+   at EasyModbus.ModbusClient.Connect()
+   at BatteryMonitor.Main.Form1_Load(Object sender, EventArgs e) in C:\Users\IT_SOFTWARE\Source\Repos\BatteryMonitor-main\Main.cs:line 955
+2024-09-13 15:20:48.8704|ERROR|BatteryMonitor.Main|EasyModbus.Exceptions.ConnectionException: connection timed out
+   at EasyModbus.ModbusClient.Connect()
+   at BatteryMonitor.Main.Form1_Load(Object sender, EventArgs e) in C:\Users\IT_SOFTWARE\Source\Repos\BatteryMonitor-main\Main.cs:line 955
