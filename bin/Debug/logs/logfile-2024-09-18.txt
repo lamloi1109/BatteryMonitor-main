@@ -1,0 +1,41 @@
+2024-09-18 14:59:40.1620|ERROR|BatteryMonitor.Main|System.IO.IOException: Unable to write data to the transport connection: An established connection was aborted by the software in your host machine. ---> System.Net.Sockets.SocketException: An established connection was aborted by the software in your host machine
+   at System.Net.Sockets.Socket.Send(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.NetworkStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at EasyModbus.ModbusClient.ReadHoldingRegisters(Int32 startingAddress, Int32 quantity)
+   at BatteryMonitor.Main.MonitorModbusTimer_Tick(Object sender, EventArgs e) in C:\Users\IT_SOFTWARE\source\repos\BatteryMonitor-main\Main.cs:line 1411
+2024-09-18 14:59:40.2507|ERROR|BatteryMonitor.Main|System.IO.IOException: Unable to write data to the transport connection: An established connection was aborted by the software in your host machine. ---> System.Net.Sockets.SocketException: An established connection was aborted by the software in your host machine
+   at System.Net.Sockets.Socket.Send(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.NetworkStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at EasyModbus.ModbusClient.WriteSingleRegister(Int32 startingAddress, Int32 value)
+   at BatteryMonitor.Main.bgwork_writeToModbust_DoWork(Object sender, DoWorkEventArgs e) in C:\Users\IT_SOFTWARE\source\repos\BatteryMonitor-main\Main.cs:line 4006
+2024-09-18 14:59:40.5644|ERROR|BatteryMonitor.Main|System.InvalidOperationException: Cross-thread operation not valid: Control 'Main' accessed from a thread other than the thread it was created on.
+   at System.Windows.Forms.Control.get_Handle()
+   at System.Windows.Forms.Form.FillInCreateParamsStartPosition(CreateParams cp)
+   at System.Windows.Forms.Form.get_CreateParams()
+   at System.Windows.Forms.Control.CreateHandle()
+   at System.Windows.Forms.Form.CreateHandle()
+   at System.Windows.Forms.Control.get_Handle()
+   at System.Windows.Forms.Control.SetVisibleCore(Boolean value)
+   at System.Windows.Forms.Form.SetVisibleCore(Boolean value)
+   at System.Windows.Forms.Control.Show()
+   at BatteryMonitor.Main.checkConnectDevices(Object sender, DoWorkEventArgs e) in C:\Users\IT_SOFTWARE\source\repos\BatteryMonitor-main\Main.cs:line 3397
+2024-09-18 15:20:05.5990|ERROR|BatteryMonitor.Main|code = Error (1), message = System.Data.SQLite.SQLiteException (0x87AF001F): SQL logic error
+near "SUM": syntax error
+   at System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader()
+   at BatteryMonitor.Main.tongtheophanloai() in C:\Users\IT_SOFTWARE\source\repos\BatteryMonitor-main\Main.cs:line 771
+   at BatteryMonitor.Main.Form1_Load(Object sender, EventArgs e) in C:\Users\IT_SOFTWARE\source\repos\BatteryMonitor-main\Main.cs:line 959
+2024-09-18 15:21:03.8454|ERROR|BatteryMonitor.Main|System.InvalidOperationException: No current row
+   at System.Data.SQLite.SQLiteDataReader.CheckValidRow()
+   at System.Data.SQLite.SQLiteDataReader.IsDBNull(Int32 i)
+   at BatteryMonitor.Main.tongtheophanloai() in C:\Users\IT_SOFTWARE\source\repos\BatteryMonitor-main\Main.cs:line 804
+   at BatteryMonitor.Main.Form1_Load(Object sender, EventArgs e) in C:\Users\IT_SOFTWARE\source\repos\BatteryMonitor-main\Main.cs:line 959

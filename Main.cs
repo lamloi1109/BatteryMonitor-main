@@ -43,6 +43,7 @@ using NPOI.SS.Formula.Functions;
 using System.ArrayExtensions;
 using Krypton.Toolkit;
 using System.Data.SQLite;
+using System.Xml;
 //using ActUtlTypeLib;
 
 namespace BatteryMonitor
@@ -142,6 +143,7 @@ namespace BatteryMonitor
         bool isExportDataFlag = false;
 
         public int isResetLamp = 0;
+        public bool isResetLight = false;
 
         // HIOKI SOCKET
 
@@ -169,7 +171,19 @@ namespace BatteryMonitor
 
         bool isConnectedToModbust = false;
 
+        bool isResetQueueBattery = false;
+
+        bool isResetChart = false;
+
+        int resetQueueBattery = 0;
+
+
+
         //string receivedData = "";
+
+        List<System.Drawing.Color> ColorList = new List<System.Drawing.Color> {  System.Drawing.Color.White, System.Drawing.Color.Blue,
+            System.Drawing.Color.Lime, System.Drawing.Color.Gold, System.Drawing.Color.Red };
+
 
         public Main()
         {
@@ -267,9 +281,9 @@ namespace BatteryMonitor
         int pinCountSetting = Properties.Settings.Default.CountPin + 1;
 
         // Tổng bình ca 1`
-        int totalBatteryShift1 = Properties.Settings.Default.totalPinShift1;
+        int totalBatteryShift1 = totalPinWorkShift(1);
         // Tổng bình ca 2
-        int totalBatteryShift2 = Properties.Settings.Default.totalPinShift2;
+        int totalBatteryShift2 = totalPinWorkShift(2);
         // Ca hiện tại
         int currentShift = 1;
         // Xóa Chart hay không
@@ -288,6 +302,12 @@ namespace BatteryMonitor
         double currentR = 0;
         // V của bình hiện tại
         double currentV = 0;
+
+        // R của bình hiện tại đang đo
+        double measureR = 0;
+        // V của bình hiện tại đang đo
+        double measureV = 0;
+
         // Rmax
         double rMax = Properties.Settings.Default.rMax_setting;
         // Rmin
@@ -321,6 +341,9 @@ namespace BatteryMonitor
         int vC_Ca1 = 0;
         int vD_Ca1 = 0;
         int vNG_Ca1 = 0;
+        int rOK_Ca1 = 0;
+        int rLOW_Ca1 = 0;
+        int rHIGH_Ca1 = 0;
 
         // Số bình cao V trong ca 2
         int totalHightVBatteryShift2 = 0;
@@ -334,6 +357,9 @@ namespace BatteryMonitor
         int vC_Ca2 = 0;
         int vD_Ca2 = 0;
         int vNG_Ca2 = 0;
+        int rOK_Ca2 = 0;
+        int rLOW_Ca2 = 0;
+        int rHIGH_Ca2 = 0;
 
         public static long deccc1;
         bool isShowedUIList = false;
@@ -725,9 +751,6 @@ namespace BatteryMonitor
                     Console.WriteLine(ex.Message);
                 }
             });
-
-
-
         }
 
         private void tongtheophanloai()
@@ -737,7 +760,7 @@ namespace BatteryMonitor
             {
                 conn.Open();
                 string max_timeCa1 = "";
-                string sqlite_string = "SELECT MAX(date)  "+
+                string sqlite_string = "SELECT MAX(date)  " +
                                         "FROM batteryList WHERE workShift=1 ;";
 
                 SQLiteCommand cmd_maxtime = new SQLiteCommand(sqlite_string, conn);
@@ -753,8 +776,11 @@ namespace BatteryMonitor
                                         " SUM(CASE WHEN type_V='B' THEN 1 ELSE 0 END ) AS B," +
                                         " SUM(CASE WHEN type_V='C' THEN 1 ELSE 0 END ) AS C," +
                                         " SUM(CASE WHEN type_V='D' THEN 1 ELSE 0 END ) AS D," +
-                                        " SUM(CASE WHEN type_V='NG' THEN 1 ELSE 0 END ) AS NG "+
-                                        "FROM batteryList WHERE date >= '"+DateTime.Now.ToString("yyyy/MM/dd 00:00:00")+ "' AND workShift = 1  ;";
+                                        " SUM(CASE WHEN type_V='NG' THEN 1 ELSE 0 END ) AS NG, " +
+                                        " SUM(CASE WHEN type_R='OK' THEN 1 ELSE 0 END ) AS OK, " +
+                                        " SUM(CASE WHEN type_R='LOW' THEN 1 ELSE 0 END ) AS LOW, " +
+                                        " SUM(CASE WHEN type_R='HIGH' THEN 1 ELSE 0 END ) AS HIGH " +
+                                        "FROM batteryList WHERE date >= '" + DateTime.Now.ToString("yyyy/MM/dd 00:00:00") + "' AND workShift = 1  ;";
 
                 SQLiteCommand cmdca1 = new SQLiteCommand(sqlite_string, conn);
                 SQLiteDataReader readerca1 = cmdca1.ExecuteReader();
@@ -765,13 +791,20 @@ namespace BatteryMonitor
                     vC_Ca1 = readerca1.IsDBNull(2) ? 0 : readerca1.GetInt32(2);
                     vD_Ca1 = readerca1.IsDBNull(3) ? 0 : readerca1.GetInt32(3);
                     vNG_Ca1 = readerca1.IsDBNull(4) ? 0 : readerca1.GetInt32(4);
+                    rOK_Ca1 = readerca1.IsDBNull(5) ? 0 : readerca1.GetInt32(5);
+                    rLOW_Ca1 = readerca1.IsDBNull(6) ? 0 : readerca1.GetInt32(6);
+                    rHIGH_Ca1 = readerca1.IsDBNull(7) ? 0 : readerca1.GetInt32(7);
+
 
                 }
                 sqlite_string = "SELECT SUM(CASE WHEN type_V='A' THEN 1 ELSE 0 END ) AS A," +
                                        " SUM(CASE WHEN type_V='B' THEN 1 ELSE 0 END ) AS B," +
                                        " SUM(CASE WHEN type_V='C' THEN 1 ELSE 0 END ) AS C," +
                                        " SUM(CASE WHEN type_V='D' THEN 1 ELSE 0 END ) AS D," +
-                                       " SUM(CASE WHEN type_V='NG' THEN 1 ELSE 0 END ) AS NG " +
+                                       " SUM(CASE WHEN type_V='NG' THEN 1 ELSE 0 END ) AS NG, " +
+                                        " SUM(CASE WHEN type_R='OK' THEN 1 ELSE 0 END ) AS OK, " +
+                                        " SUM(CASE WHEN type_R='LOW' THEN 1 ELSE 0 END ) AS LOW, " +
+                                        " SUM(CASE WHEN type_R='HIGH' THEN 1 ELSE 0 END ) AS HIGH " +
                                        "FROM batteryList WHERE date >= '" + max_timeCa1 + "' AND workShift = 2  ;";
 
                 SQLiteCommand cmd = new SQLiteCommand(sqlite_string, conn);
@@ -783,42 +816,86 @@ namespace BatteryMonitor
                     vC_Ca2 = reader.IsDBNull(2) ? 0 : reader.GetInt32(2);
                     vD_Ca2 = reader.IsDBNull(3) ? 0 : reader.GetInt32(3);
                     vNG_Ca2 = reader.IsDBNull(4) ? 0 : reader.GetInt32(4);
+                    rOK_Ca2 = reader.IsDBNull(5) ? 0 : reader.GetInt32(5);
+                    rLOW_Ca2 = reader.IsDBNull(6) ? 0 : reader.GetInt32(6);
+                    rHIGH_Ca2 = reader.IsDBNull(7) ? 0 : reader.GetInt32(7);
 
                 }
             }
             // Tổng Volt loai A
-            UpdateLabelText(V_ACa1, vA_Ca1.ToString());
+            UpdateTextBoxText(V_ACa1, vA_Ca1.ToString());
             //Ca 1
             // Tổng Volt loai B
-            UpdateLabelText(V_BCa1, vB_Ca1.ToString());
+            UpdateTextBoxText(V_BCa1, vB_Ca1.ToString());
 
             // Tổng Volt loai C
-            UpdateLabelText(V_CCa1, vC_Ca1.ToString());
+            UpdateTextBoxText(V_CCa1, vC_Ca1.ToString());
 
             // Tổng Volt loai D
-            UpdateLabelText(V_DCa1, vD_Ca1.ToString());
+            UpdateTextBoxText(V_DCa1, vD_Ca1.ToString());
 
             // Tổng Volt loai NG
-            UpdateLabelText(V_NGCa1, vNG_Ca1.ToString());
+            UpdateTextBoxText(V_NGCa1, vNG_Ca1.ToString());
+
+            //Dientro ca1
+            UpdateTextBoxText(r_OKCa1, rOK_Ca1.ToString());
+
+            UpdateTextBoxText(r_LOWCa1, rLOW_Ca1.ToString());
+
+            UpdateTextBoxText(r_HIGHCa1, rHIGH_Ca1.ToString());
 
 
             //Ca 2
             // Tổng Volt loai A
-            UpdateLabelText(V_ACa2, vA_Ca2.ToString());
+            UpdateTextBoxText(V_ACa2, vA_Ca2.ToString());
 
             // Tổng Volt loai B
-            UpdateLabelText(V_BCa2, vB_Ca2.ToString());
+            UpdateTextBoxText(V_BCa2, vB_Ca2.ToString());
 
             // Tổng Volt loai C
-            UpdateLabelText(V_CCa2, vC_Ca2.ToString());
+            UpdateTextBoxText(V_CCa2, vC_Ca2.ToString());
 
             // Tổng Volt loai D
-            UpdateLabelText(V_DCa2, vD_Ca2.ToString());
+            UpdateTextBoxText(V_DCa2, vD_Ca2.ToString());
 
             // Tổng Volt loai NG
-            UpdateLabelText(V_NGCa2, vNG_Ca2.ToString());
+            UpdateTextBoxText(V_NGCa2, vNG_Ca2.ToString());
+
+            //Dientro ca1
+            UpdateTextBoxText(r_OKCa2, rOK_Ca2.ToString());
+
+            UpdateTextBoxText(r_LOWCa2, rLOW_Ca2.ToString());
+
+            UpdateTextBoxText(r_HIGHCa2, rHIGH_Ca2.ToString());
 
         }
+
+        private static int totalPinWorkShift(int workShift)
+        {
+            int total = 0;
+            string connection = "Data Source=SCDB.db;Version=3;";
+            using (var conn = new SQLiteConnection(connection))
+            {
+                conn.Open();
+
+
+                string sqlite_string = "SELECT MAX(totalMeasureMent)" +
+                                        "FROM batteryList WHERE date >= '" + DateTime.Now.ToString("yyyy/MM/dd 00:00:00") + "' AND workShift = " + workShift + " ;";
+
+                SQLiteCommand cmdca1 = new SQLiteCommand(sqlite_string, conn);
+                SQLiteDataReader readerca1 = cmdca1.ExecuteReader();
+                while (readerca1.Read())
+                {
+                    total = readerca1.IsDBNull(0) ? 0 : readerca1.GetInt32(0);
+                }
+
+
+            }
+
+            return total;
+        }
+
+
 
 
         private void UpdateChart(LiveCharts.WinForms.CartesianChart chart, LineSeries maxSeries, LineSeries minSeries, double max, double min)
@@ -919,9 +996,9 @@ namespace BatteryMonitor
 
             try
             {
-               // ChartConfig(cartesianChart1);
-               // ChartConfig(cartesianChart2);
-                tongtheophanloai();
+                //ChartConfig(cartesianChart1);
+                //ChartConfig(cartesianChart2);
+                //tongtheophanloai();
                 var version = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString();
                 string productName = Application.ProductName;
                 this.Text = productName + " Chart " + version.ToString() + "Version: 24.05.22.01";
@@ -932,26 +1009,14 @@ namespace BatteryMonitor
                 {
                     for (int i = maxGroupPin + 4; i > 3; i--)
                     {
-                        if (i!=8)
+                        if (i != 8)
                         {
                             RemoveColumn(tableLayout_measure, i);
                             RemoveColumn(tableLayout_QR, i);
                         }
-                       
+
                     }
                 }
-
-
-                //TEST
-                //modbustReadValue.IPAddress = Properties.Settings.Default.modbustIP;
-                //modbustReadValue.Port = Properties.Settings.Default.modbustPort;
-                //modbustReadValue.Connect();
-
-                //modbustWriteTypePin.IPAddress = Properties.Settings.Default.modbustIP;
-                //modbustWriteTypePin.Port = Properties.Settings.Default.modbustPort;
-                //modbustWriteTypePin.Connect();
-
-
 
                 modbustMainForm.IPAddress = Properties.Settings.Default.modbustIP;
                 modbustMainForm.Port = Properties.Settings.Default.modbustPort;
@@ -1052,7 +1117,7 @@ namespace BatteryMonitor
                 bgwork_exportExcelTimer.DoWork += new DoWorkEventHandler(bgwork_exportExcelTimer_DoWork);
                 exportExcelTimer.Interval = 50;
                 exportExcelTimer.Elapsed += new System.Timers.ElapsedEventHandler(_exportExcelTimer_Elapsed);
-
+                exportExcelTimer.Start();
 
                 ////Timer đèn
                 _LightTimer.Interval = 1000;
@@ -1074,12 +1139,21 @@ namespace BatteryMonitor
             catch (Exception ex)
             {
                 logger.Error(ex);
-                //if (fnoti == null)
-                //{               
-                //    fnoti = new Nofitication("Kết nối thất bại!");
-                //    fnoti.Owner = this;              
-                //    fnoti.Show();
-                //}
+                if (fnoti == null)
+                {
+            
+
+                    this.Invoke((MethodInvoker)delegate
+                    {
+                        fnoti = new Nofitication("Kết nối thất bại!");
+                        fnoti.Owner = this;
+                        fnoti.Show();
+                    });
+                }
+
+
+
+
             }
         }
 
@@ -1164,6 +1238,22 @@ namespace BatteryMonitor
 
             try
             {
+
+                if(isDeleteChart == 1 && !isResetChart)
+                {
+                    isResetChart = true;
+                    isSetStandardRLine = false;
+                    isSetStandardVLine = false;
+
+                    ResetChart(cartesianChart1);
+                    ResetChart(cartesianChart2);
+                }
+                if (isDeleteChart == 0) {
+                    isResetChart = false;
+                    isSetStandardRLine = true;
+                    isSetStandardVLine = true;
+                }
+
                 if (endShift1 == 1 && !isEndShift1)
                 {
                     // reset chart 1
@@ -1260,10 +1350,22 @@ namespace BatteryMonitor
 
                     bool isError = false;
                     // Lấy ra 8 bình trong hàng đợi
+
+                   
+
                     for (int i = 0; i < maxGroupPin; i++)
                     {
                         if (queueUI.Count > 0)
                         {
+                            if (queueUI.Count == 4)
+                            {
+                                queueBattery.ToList().ForEach((item) =>
+                                {
+                                    queueBattery.Dequeue();
+                                });
+                             
+                            }
+
                             BatteryMonitor.Data.battery battery = queueUI.Dequeue();
 
                             uiList.Add(battery.BatteryCode);
@@ -1323,13 +1425,13 @@ namespace BatteryMonitor
                 // user
                 UpdateLabelText(userLabel, userString.ToString());
 
-                UpdateLabelText(rMaxLabel, rMax.ToString("0.000"));
-                UpdateLabelText(rMinLabel, rMin.ToString("0.000"));
-                UpdateLabelText(vMinLabel, vMin.ToString("0.000"));
-                UpdateLabelText(vMaxLabel, vMax.ToString("0.000"));
+                UpdateTextBoxText(rMaxLabel, rMax.ToString("0.000"));
+                UpdateTextBoxText(rMinLabel, rMin.ToString("0.000"));
+                UpdateTextBoxText(vMinLabel, vMin.ToString("0.000"));
+                UpdateTextBoxText(vMaxLabel, vMax.ToString("0.000"));
 
-                UpdateLabelText(currentRLabel, currentR.ToString("N3"));
-                UpdateLabelText(currentVLabel, currentV.ToString("N3"));
+                UpdateTextBoxText(currentRLabel, currentR.ToString("N3"));
+                UpdateTextBoxText(currentVLabel, currentV.ToString("N3"));
 
                 // Số ca
                 UpdateLabelText(currentWorkShift, currentShiftString);
@@ -1338,24 +1440,27 @@ namespace BatteryMonitor
 
                 UpdateLabelText(totalBatteryShift2Label, totalBatteryShift2.ToString());
 
-                // Tổng bình R đạt ca 1
+                UpdateLabelText(label13, queueBattery.Count.ToString());
+                UpdateLabelText(label21, queueUI.Count.ToString());
 
-                UpdateLabelText(rGoodShift1Label, totalGoodRBatteryShift1.ToString());
+                //// Tổng bình R đạt ca 1
 
-                // Tổng bình R thấp ca 1
-                UpdateLabelText(rLowShift1Label, totalLowRBatteryShift1.ToString());
+                //UpdateLabelText(r_OKCa1, totalGoodRBatteryShift1.ToString());
 
-                // Tổng bình R cao ca 1
-                UpdateLabelText(rHightShift1Label, totalHightRBatteryShift1.ToString());
+                //// Tổng bình R thấp ca 1
+                //UpdateLabelText(r_LOWCa1, totalLowRBatteryShift1.ToString());
 
-                // Tổng bình R đật ca 2
-                UpdateLabelText(rGoodShift2Label, totalGoodRBatteryShift2.ToString());
+                //// Tổng bình R cao ca 1
+                //UpdateLabelText(r_HIGHCa1, totalHightRBatteryShift1.ToString());
 
-                // Tổng bình R thấp ca 2  
-                UpdateLabelText(rLowShift2Label, totalLowRBatteryShift2.ToString());
+                //// Tổng bình R đật ca 2
+                //UpdateLabelText(r_OKCa2, totalGoodRBatteryShift2.ToString());
 
-                // Tổng bình R cao ca 2
-                UpdateLabelText(rHightShift2Label, totalHightRBatteryShift2.ToString());
+                //// Tổng bình R thấp ca 2  
+                //UpdateLabelText(r_LOWCa2, totalLowRBatteryShift2.ToString());
+
+                //// Tổng bình R cao ca 2
+                //UpdateLabelText(r_HIGHCa2, totalHightRBatteryShift2.ToString());
 
                 //// Tổng bình V Đạt ca 1
                 //UpdateLabelText(V_ACa1, totalGoodVBatteryShift1.ToString());
@@ -1404,7 +1509,7 @@ namespace BatteryMonitor
                     // Timer dùng để ghi nhận thông tin của modbus
 
                     int[] numArray = modbustMainForm.ReadHoldingRegisters(0, 122);
-                    int[] numArray2  = modbustMainForm.ReadHoldingRegisters(139, 1);
+                    int[] numArray2 = modbustMainForm.ReadHoldingRegisters(151, 3);
                     if (numArray[120] < 5 && numArray[120] > 0)
                     {
                         pinCountSetting = numArray[120];
@@ -1436,7 +1541,7 @@ namespace BatteryMonitor
                         }
                     }
 
-                     batchString = asciiString;
+                    batchString = asciiString;
 
                     // Người thao tác
                     asciiString = "";
@@ -1456,8 +1561,11 @@ namespace BatteryMonitor
                     // Nếu cần hoàn thành thì thêm dữ liệu vào đồ thị và tổng số lần cân trước nhỏ hơn số lần ca hiện tại
                     // Lấy tổng bình
 
-                    totalBatteryShift1 = numArray[47];
-                    totalBatteryShift2 = numArray[55];
+                    //totalBatteryShift1 = numArray[47];
+                    //totalBatteryShift2 = numArray[55];
+
+                    totalBatteryShift1 = totalPinWorkShift(1);
+                    totalBatteryShift2 = totalPinWorkShift(2);
 
                     MenuForm.endShift1 = numArray[71];
                     MenuForm.endShift2 = numArray[73];
@@ -1512,11 +1620,21 @@ namespace BatteryMonitor
 
                     //TEST demo mark
                     currentR = Twoint16ConverttoFloat(numArray[99], numArray[100]);
+                    measureR = Twoint16ConverttoFloat(numArray[39], numArray[40]);
                     currentR = Math.Round(currentR, 3);
+                    measureR = Math.Round(measureR, 3);
+
                     //// currentV demo mark
                     currentV = Twoint16ConverttoFloat(numArray[103], numArray[104]);
+                    measureV = Twoint16ConverttoFloat(numArray[45], numArray[46]);
                     currentV = Math.Round(currentV, 3);
+                    measureV = Math.Round(measureV, 3);
+
                     // label10.Text = currentR.ToString();
+
+                    //UpdateTextBoxText(currentRLabel, currentR.ToString());
+                    //UpdateTextBoxText(currentVLabel, currentV.ToString());
+
                     // Báo cáo
                     isExportDataReport = numArray[93];
 
@@ -1542,21 +1660,38 @@ namespace BatteryMonitor
                     isAddDataToChart = numArray[113];
                     //if (hiokiMeasureMentSuceed == 1 && !isMeasureMentSucceed && isShowedUIList && !isShowedChart && queueBattery.Count > 0)
                     isResetLamp = numArray2[0];
-                    //if (isResetLamp ==1)
-                    //{ 
-                    //   // modbustWrite.WriteSingleRegister(149, 0);
-                    //}
                     UpdateLabelText(lb_isResetLamp, isResetLamp.ToString());
+                    UpdateLabelText(bitVeDoThi, isAddDataToChart.ToString());
+
+                    //if (isAddDataToChart == 1 && !isMeasureMentSucceed && isShowedUIList && !isShowedChart && queueBattery.Count > 0)
+                    // queueUI.Count == 0
+                    resetQueueBattery = numArray2[2];
+
+                    if (isResetQueueBattery == false && resetQueueBattery == 0)
+                    {
+                        isResetQueueBattery = true;
+                        queueBattery.Clear();
+                        resetPinGroups();
+                        isShowedChart = true;
+                        isShowedUIList = false;
+                    }
+
+                    if (resetQueueBattery != 0)
+                    {
+                        isResetQueueBattery = false;
+                    }
+
+
 
                     if (isAddDataToChart == 1 && !isMeasureMentSucceed && isShowedUIList && !isShowedChart && queueBattery.Count > 0)
                     {
                         //modbustMainForm.WriteSingleRegister(106, 0);
                         //modbustMainForm.WriteSingleRegister(108, 0);
-                        var watch = new System.Diagnostics.Stopwatch();
-                        watch.Start();
-                        vMax = Math.Round(vMax,3);
-                        Properties.Settings.Default.totalPinShift1 = totalBatteryShift1 + 1;
-                        Properties.Settings.Default.totalPinShift2 = totalBatteryShift2 + 1;
+                        //var watch = new System.Diagnostics.Stopwatch();
+                        //watch.Start();
+                        vMax = Math.Round(vMax, 3);
+                        //Properties.Settings.Default.totalPinShift1 = totalBatteryShift1 + 1;
+                        //Properties.Settings.Default.totalPinShift2 = totalBatteryShift2 + 1;
                         Properties.Settings.Default.vMax_setting = vMax;
                         Properties.Settings.Default.vMin_setting = vMin;
                         Properties.Settings.Default.rMax_setting = rMax;
@@ -1565,7 +1700,8 @@ namespace BatteryMonitor
                         Properties.Settings.Default.Save();
 
                         string date = System.DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss");
-                        int totalMeasurement = currentShift == 1 ? totalBatteryShift1 : totalBatteryShift2;
+                        int totalMeasurement = currentShift == 1 ? totalBatteryShift1 + 1 : totalBatteryShift2 + 1;
+
 
                         BatteryMonitor.Data.battery battery = queueBattery.Dequeue();
                         batteryList.Add(battery);
@@ -1579,7 +1715,7 @@ namespace BatteryMonitor
                         // vMin <= D <= USR134
 
                         //cập nhật thông số đo cho các pin
-                        battery.ShipmentId = this.batchNumber.Text;
+                        battery.ShipmentId = this.batchNumber.Text.Trim();
                         battery.Specs = this.specs.Text;
                         battery.R = currentR;
                         battery.V = currentV;
@@ -1588,16 +1724,30 @@ namespace BatteryMonitor
                         battery.RMIN = rMin;
                         battery.VMIN = vMin;
                         battery.WorkShift = currentShift;
-                        battery.TotalMeasureMent = currentShift == 1 ? totalBatteryShift1 : totalBatteryShift2;
+
+
+                        // Thay đổi cơ chế tính số lương bình trong ca
+                        // Đọc từ modbust sang đọc từ sqlite
+                        //battery.TotalMeasureMent = currentShift == 1 ? totalBatteryShift1 : totalBatteryShift2 ;
+
+                        // Đọc từ modbust -> Tự tăng số lượng
+                        // Tăng số lượng lần đo => sqlite 
+                        // Dùng hàm totalPinWorkShift lấy lại
+                        // Có khả năng bị lệch
+
+                        battery.TotalMeasureMent = currentShift == 1 ? totalBatteryShift1 + 1 : totalBatteryShift2 + 1;
+
                         battery.Date = date;
                         battery.UserId = this.userLabel.Text;
-                        battery.MeasureMentStatus = numArray[39] == 0 && numArray[40] == 0 ? "WrongMeasurement" : "Measured";
+                        //battery.MeasureMentStatus = (numArray[39] == 0 && numArray[40] == 0) ? "WrongMeasurement" : "Measured";
+                        battery.MeasureMentStatus =  "Measured";
+
                         battery.QUALITY = "";
-                        battery.TYPE_R =  ClassifyR(battery.R, rMax, rMin);
+                        battery.TYPE_R = ClassifyR(battery.R, rMax, rMin);
 
                         battery.TYPE_V = ClassifyV(battery.V, vMax, vMin);
 
-                        if (battery.TYPE_R == "FAULT")
+                        if (currentV >= 1000000000 || currentR >= 1000000000)
                         {
                             currentR = 0;
                             currentV = 0;
@@ -1628,6 +1778,7 @@ namespace BatteryMonitor
 
                         sqlLite.updateBatteryList(battery, condition);
 
+
                         //// Nếu kết quả đo lỗi -> báo đèn đỏ => đá bình ra
                         if (numArray[39] == 0 && numArray[40] == 0)
                         {
@@ -1641,10 +1792,17 @@ namespace BatteryMonitor
                         isMeasureMentSucceed = true;
                         //modbustWrite.WriteSingleRegister(76, 0);
 
-                        watch.Stop();
+                        //watch.Stop();
                         //currentR = 0;
                         //currentV = 0;
-                       
+
+                        int batteryIndex = Math.Abs(pinCountSetting - (queueBattery.Count));
+
+                        //if (batteryIndex == 0)
+                        //{
+                        //    modbustWrite.WriteSingleRegister(149, 0);
+                        //}
+
                     }
 
                     // nếu việc cân đầu vào hoàn thành
@@ -1681,6 +1839,8 @@ namespace BatteryMonitor
         private string createForder(string shipmentId)
         {
             string filepath = Properties.Settings.Default.excelPath;
+            filepath = string.IsNullOrEmpty(filepath) ? "D:\\" : filepath;
+
             string fullPath = Path.GetFullPath(filepath);
             string path = Path.Combine(new string[] { fullPath, "EXCEL", "OhmVolt", "Report", shipmentId });
             if (!Directory.Exists(path)) Directory.CreateDirectory(path);
@@ -1825,7 +1985,7 @@ namespace BatteryMonitor
                         {
 
                             var labels = tableLayout.Controls.OfType<Label>();
-                          
+
                             //switch (pinCurrentColor)
                             //{
                             //    case 1:
@@ -1844,15 +2004,16 @@ namespace BatteryMonitor
                             //        pinGroupBoxes[groupIndex].BackColor = System.Drawing.Color.Red;
                             //        break;
                             //}
+                            int indexColor = pinCurrentColor > 0 ? pinCurrentColor - 1 : 0;
+                            setBackgroundColorForGroupBox(pinGroupBoxes[groupIndex], ColorList[indexColor]);
 
-                           
                             foreach (var label in labels)
                             {
                                 this.Invoke((MethodInvoker)delegate
                                 {
                                     string message = label.Name.Contains("V") ? "V: " + (Math.Round(currentV, 3).ToString()) : "mΩ: " + (Math.Round(currentR, 3).ToString());
                                     label.Text = message;
-                                   
+
                                 });
                             }
                         }
@@ -1905,7 +2066,9 @@ namespace BatteryMonitor
 
                 if (isAddDataToChart == 1 && (!isDrawedChartR) && queueBattery.Count >= 0 && !isShowedChart && isShowedUIList && isDeQueue)
                 {
-                    int totalBatteryShift = currentShift == 1 ? totalBatteryShift1 : totalBatteryShift2;
+                    //int totalBatteryShift = currentShift == 1 ? totalBatteryShift1 : totalBatteryShift2;
+                    int totalBatteryShift = currentShift == 1 ? totalBatteryShift1 + 1 : totalBatteryShift2 + 1;
+
                     RunMonitorTask(totalBatteryShift, currentR, ChartValuesR, cartesianChart1);
                     RunMonitorTask(totalBatteryShift, currentV, ChartValuesV, cartesianChart2);
                     isDrawedChartR = true;
@@ -2044,8 +2207,8 @@ namespace BatteryMonitor
                                     if (queueUI.Count > 0)
                                     {
                                         BatteryMonitor.Data.battery battery = queueUI.Dequeue();
-                                        string condition = "batteryCode = '" + battery.BatteryCode + "' ";
-                                        sqlLite.deleteBatterryList(condition);
+                                        //string condition = "batteryCode = '" + battery.BatteryCode + "' ";
+                                        //sqlLite.deleteBatterryList(condition);
                                     }
 
                                 }
@@ -2184,7 +2347,7 @@ namespace BatteryMonitor
         {
             double num = (double)ModbusClient.ConvertRegistersToInt(modbus.ReadHoldingRegisters(35, 2));
 
-            double rMax = Convert.ToDouble(string.Format("{0:0.00}", num / 1000));
+            double rMax = Convert.ToDouble(string.Format("{0:0.000}", num / 1000));
 
 
             return rMax;
@@ -2212,14 +2375,14 @@ namespace BatteryMonitor
         public double getVMaxFromModbus(ModbusClient modbus)
         {
             double num = (double)ModbusClient.ConvertRegistersToInt(modbus.ReadHoldingRegisters(41, 2));
-            double vMax = Convert.ToDouble(string.Format("{0:0.00}", num / 1000));
+            double vMax = Convert.ToDouble(string.Format("{0:0.000}", num / 1000));
             return vMax;
         }
 
         public double getVminFromModbus(ModbusClient modbus)
         {
             double num = (double)ModbusClient.ConvertRegistersToInt(modbus.ReadHoldingRegisters(43, 2));
-            double vMin = Convert.ToDouble(string.Format("{0:0.00}", num / 1000));
+            double vMin = Convert.ToDouble(string.Format("{0:0.000}", num / 1000));
             return vMin;
         }
 
@@ -2271,7 +2434,7 @@ namespace BatteryMonitor
                     ? ChartValuesR = new ChartValues<MeasureModel>()
                     : ChartValuesV = new ChartValues<MeasureModel>();
 
-                chart.BackColor = System.Drawing.Color.White;
+                chart.BackColor = System.Drawing.Color.Gainsboro;
                 chart.LegendLocation = LegendLocation.Right;
                 chart.DisableAnimations = true;
                 chart.Hoverable = false;
@@ -2281,14 +2444,23 @@ namespace BatteryMonitor
 
                 if (chart == cartesianChart1)
                 {
-                    rMaxSeries = CreateLimitLineSeries(rMax, vMax, "Giới hạn trên", 5, chart, "Max");
-                    rMinSeries = CreateLimitLineSeries(rMin, vMin, "Giới hạn dưới", 5, chart, "Min");
-
+                    rMaxSeries = CreateLimitLineSeries(rMax, vMax, "Giới hạn trên", 4, chart, "Max");
+                    rMinSeries = CreateLimitLineSeries(rMin, vMin, "Giới hạn dưới", 4, chart, "Min");
+                    //chart.Series = new SeriesCollection
+                    //{
+                    //    CreateLineSeries(chartValues, "times", chart == cartesianChart1 ? "Điện trở (R)" : "Điện áp (V)", 13, 4, true, 18),
+                    //    rMinSeries,
+                    //    rMaxSeries ,
+                    //    CreateStatLineSeries("STD: 0"),
+                    //    CreateStatLineSeries("AVE: 0"),
+                    //    CreateStatLineSeries("CPK: 0")
+                    //};
                     chart.Series = new SeriesCollection
                     {
-                        CreateLineSeries(chartValues, "times", chart == cartesianChart1 ? "Điện trở (R)" : "Điện áp (V)", 13, 4, true, 18),
                         rMinSeries,
                         rMaxSeries ,
+                        CreateLineSeries(chartValues, "times", "Điện trở (R)", 13, 4, true, 18),
+              
                         CreateStatLineSeries("STD: 0"),
                         CreateStatLineSeries("AVE: 0"),
                         CreateStatLineSeries("CPK: 0")
@@ -2298,20 +2470,41 @@ namespace BatteryMonitor
                 {
                     vMaxSeries = CreateLimitLineSeries(rMax, vMax, "Giới hạn trên", 5, chart, "Max");
                     vMinSeries = CreateLimitLineSeries(rMin, vMin, "Giới hạn dưới", 5, chart, "Min");
+
+                    //chart.Series = new SeriesCollection
+                    //{
+                    //    CreateLineSeries(chartValues, "times", chart == cartesianChart1 ? "Điện trở (R)" : "Điện áp (V)", 13, 4, true, 18),
+                    //    vMinSeries,
+                    //    vMaxSeries,
+                    //    CreateStatLineSeries("STD: 0"),
+                    //    CreateStatLineSeries("AVE: 0"),
+                    //    CreateStatLineSeries("CPK: 0")
+                    //};
+
                     chart.Series = new SeriesCollection
                     {
-                        CreateLineSeries(chartValues, "times", chart == cartesianChart1 ? "Điện trở (R)" : "Điện áp (V)", 13, 4, true, 18),
                         vMinSeries,
                         vMaxSeries,
+                        CreateLineSeries(chartValues, "times", "Điện áp (V)", 13, 4, true, 18),
                         CreateStatLineSeries("STD: 0"),
                         CreateStatLineSeries("AVE: 0"),
                         CreateStatLineSeries("CPK: 0")
                     };
                 }
 
+                //chart.AxisY.Add(new Axis
+                //{
+                //    LabelFormatter = value => (chart == cartesianChart1 ? value.ToString("N3") : value.ToString("N3")),
+                //    Separator = new Separator
+                //    {
+                //        Step = chart == cartesianChart1 ? stepR : stepV,
+                //    },
+                //    FontSize = 12
+                //});
+
                 chart.AxisY.Add(new Axis
                 {
-                    LabelFormatter = value => (chart == cartesianChart1 ? value.ToString("N2") : value.ToString("N3")),
+                    LabelFormatter = value => (value.ToString("N3")),
                     Separator = new Separator
                     {
                         Step = chart == cartesianChart1 ? stepR : stepV,
@@ -2331,7 +2524,9 @@ namespace BatteryMonitor
 
                 });
 
-                int totalBattery = currentShift == 1 ? totalBatteryShift1 : totalBatteryShift2;
+                //int totalBattery = currentShift == 1 ? totalBatteryShift1  : totalBatteryShift2 ;
+
+                int totalBattery = currentShift == 1 ? totalBatteryShift1 + 1 : totalBatteryShift2 + 1;
 
                 SetAxisLimits(chart, totalBattery);
             }
@@ -2386,7 +2581,6 @@ namespace BatteryMonitor
                 Title = title,
                 FontSize = 20,
                 Stroke = status == "Max" ? System.Windows.Media.Brushes.Yellow : System.Windows.Media.Brushes.Red,
-
             };
         }
 
@@ -2483,6 +2677,27 @@ namespace BatteryMonitor
                 Console.WriteLine(ex.Message);
             }
         }
+
+        public void UpdateTextBoxText(TextBox textbox, string text)
+        {
+            try
+            {
+                if (textbox.InvokeRequired)
+                {
+                    textbox.Invoke(new Action(() => textbox.Text = text));
+                }
+                else
+                {
+                    textbox.Text = text;
+                }
+                //label.Text = text;
+            }
+            catch (Exception ex)
+            {
+                logger.Error(ex);
+                Console.WriteLine(ex.Message);
+            }
+        }
         public void UpdateLabelColor(Label label, System.Drawing.Color color)
         {
             try
@@ -2494,6 +2709,27 @@ namespace BatteryMonitor
                 else
                 {
                     label.BackColor = color;
+                }
+                //label.Text = text;
+            }
+            catch (Exception ex)
+            {
+                logger.Error(ex);
+                Console.WriteLine(ex.Message);
+            }
+        }
+
+        public void UpdateTextBoxBackColor(TextBox textbox, System.Drawing.Color color)
+        {
+            try
+            {
+                if (textbox.InvokeRequired)
+                {
+                    textbox.Invoke(new Action(() => textbox.BackColor = color));
+                }
+                else
+                {
+                    textbox.BackColor = color;
                 }
                 //label.Text = text;
             }
@@ -3340,9 +3576,6 @@ namespace BatteryMonitor
         }
 
 
-
-
-
         private void checkConnectDevices(object sender, DoWorkEventArgs e)
         {
             try
@@ -3357,96 +3590,139 @@ namespace BatteryMonitor
                     // thông báo
                     if (fnoti == null)
                     {
-                        fnoti = new Nofitication("Mất kết nối với thiết bị quét scanner!!!");
-                        fnoti.Owner = this;
-                        fnoti.Show();
+                        this.Invoke((MethodInvoker)delegate {
+                            fnoti = new Nofitication("Mất kết nối với thiết bị quét scanner!!!");
+                            fnoti.Owner = this;
+                            fnoti.Show();
+                        });
                     }
                     modbustMainForm.WriteSingleRegister(97, 1);
                     modbustMainForm.WriteSingleRegister(95, 1);
                     checkKeygenceConnectTimer.Stop();
                     m_reader.Disconnect();
-                    Thread.Sleep(10000);
-                    setscanner();
+                    Thread.Sleep(5000);
+                    //setscanner();
+                    m_reader.Connect();
                     checkKeygenceConnectTimer.Start();
                     return;
                 }
-
-                onLineStatus = true;
-
-                if (modbustMainForm != null && !modbustMainForm.Connected)
+                else if (fnoti != null)
                 {
-                    isConnectedToModbust = false;
-                    modbustMainForm.WriteSingleRegister(97, 1);
-                    modbustMainForm.WriteSingleRegister(95, 1);
-                    // thông báo
-                    if (fnoti == null)
+                    this.Invoke((MethodInvoker)delegate
                     {
-                        fnoti = new Nofitication("Mất kết nối với HMI proface!!!");
-                        fnoti.Owner = this;
-                        fnoti.Show();
-                    }
-                    getMeasurementValueHiokiTimer.Stop();
-                    writeToModbustTimer.Stop();
-                    monitorModbusTimer.Stop();
-                    uiTimer.Stop();
-                    chartTimer.Stop();
-                    modbustMainForm.Disconnect();
-                    Thread.Sleep(10000);
-                    modbustMainForm.Connect();
-                    getMeasurementValueHiokiTimer.Start();
-                    writeToModbustTimer.Start();
-                    monitorModbusTimer.Start();
-                    uiTimer.Start();
-                    chartTimer.Start();
-                    return;
+
+                        fnoti.Close(); 
+                        fnoti = null;
+                    });
                 }
 
-                isConnectedToModbust = true;
+                //onLineStatus = true;
+
+                //if (modbustMainForm != null && !modbustMainForm.Connected)
+                //{
+                //    isConnectedToModbust = false;
+                //    modbustMainForm.WriteSingleRegister(97, 1);
+                //    modbustMainForm.WriteSingleRegister(95, 1);
+                //    // thông báo
+                //    if (fnoti == null)
+                //    {
+                //        this.Invoke((MethodInvoker)delegate {
+                //            fnoti = new Nofitication("Mất kết nối với HMI proface!!!");
+                //            fnoti.Owner = this;
+                //            fnoti.Show();
+                //        });
+                //    }
+
+                 
+                //    getMeasurementValueHiokiTimer.Stop();
+                //    writeToModbustTimer.Stop();
+                //    monitorModbusTimer.Stop();
+                //    uiTimer.Stop();
+                //    chartTimer.Stop();
+                //    modbustMainForm.Disconnect();
+                //    Thread.Sleep(5000);
+                //    modbustMainForm.Connect();
+                //    getMeasurementValueHiokiTimer.Start();
+                //    writeToModbustTimer.Start();
+                //    monitorModbusTimer.Start();
+                //    uiTimer.Start();
+                //    chartTimer.Start();
+                //    return;
+                //}
+                //else if (fnoti != null)
+                //{
+                //    this.Invoke((MethodInvoker)delegate
+                //    {
+
+                //        fnoti.Close();
+                //        fnoti = null;
+                //    });
+                //}
+
+                //isConnectedToModbust = true;
 
 
-                string hioikiIp = Properties.Settings.Default.hiokiIP;
-                reply = pingSender.Send(hiokiIp, 1000);
+                //string hioikiIp = Properties.Settings.Default.hiokiIP;
+                //reply = pingSender.Send(hiokiIp, 1000);
 
-                //if (hiokiSocket != null && !hiokiSocket.IsTcpSocketConnected())
+                ////if (hiokiSocket != null && !hiokiSocket.IsTcpSocketConnected())
 
 
-                if (reply.Status != IPStatus.Success)
-                {
-                    modbustMainForm.WriteSingleRegister(97, 1);
-                    modbustMainForm.WriteSingleRegister(95, 1);
-                    // thông báo                
-                    if (fnoti == null)
-                    {
-                        fnoti = new Nofitication("Mất kết nối với thiết bị đo hioki!!!");
-                        fnoti.Owner = this;
-                        fnoti.Show();
-                    }
-                    isConnectedToHioki = false;
-                    getMeasurementValueHiokiTimer.Stop();
-                    writeToModbustTimer.Stop();
-                    monitorModbusTimer.Stop();
-                    uiTimer.Stop();
-                    chartTimer.Stop();
-                    hiokiSocket.TryCloseConnectToTcpServer();
-                    Thread.Sleep(10000);
-                    hiokiSocket.TryConnectToTcpServer();
-                    getMeasurementValueHiokiTimer.Start();
-                    writeToModbustTimer.Start();
-                    monitorModbusTimer.Start();
-                    uiTimer.Start();
-                    chartTimer.Start();
-                    return;
-                } 
-                isConnectedToHioki = true;
+                //if (reply.Status != IPStatus.Success)
+                //{
+                //    modbustMainForm.WriteSingleRegister(97, 1);
+                //    modbustMainForm.WriteSingleRegister(95, 1);
+                //    // thông báo                
+                //    if (fnoti == null)
+                //    {
+                //        this.Invoke((MethodInvoker)delegate {
+                //            fnoti = new Nofitication("Mất kết nối với thiết bị đo hioki!!!");
+                //            fnoti.Owner = this;
+                //            fnoti.Show();
+                //        });
+                //    }
+
+                //    isConnectedToHioki = false;
+                //    getMeasurementValueHiokiTimer.Stop();
+                //    writeToModbustTimer.Stop();
+                //    monitorModbusTimer.Stop();
+                //    uiTimer.Stop();
+                //    chartTimer.Stop();
+                //    hiokiSocket.TryCloseConnectToTcpServer();
+                //    Thread.Sleep(5000);
+                //    hiokiSocket.TryConnectToTcpServer();
+                //    getMeasurementValueHiokiTimer.Start();
+                //    writeToModbustTimer.Start();
+                //    monitorModbusTimer.Start();
+                //    uiTimer.Start();
+                //    chartTimer.Start();
+                //    return;
+                //}
+                //else if (fnoti != null)
+                //{
+                //    this.Invoke((MethodInvoker)delegate
+                //    {
+
+                //        fnoti.Close();
+                //        fnoti = null;
+                //    });
+                //}
+                //isConnectedToHioki = true;
             }
             catch (Exception ex)
             {
                 logger.Error(ex);
                 if (fnoti == null)
-                {    
-                    fnoti = new Nofitication("Có lỗi xảy ra!!");
-                    fnoti.Owner = this;
-                    fnoti.Show();
+                {
+ 
+
+                    this.Invoke((MethodInvoker)delegate
+                    {
+                        fnoti = new Nofitication("Có lỗi xảy ra!!");
+                        fnoti.Owner = this;
+                        fnoti.Show();
+                    });
+
                 }
                 Console.WriteLine(ex.Message);
             }
@@ -3510,6 +3786,7 @@ namespace BatteryMonitor
         private void label2_Click(object sender, EventArgs e)
         {
             //sqlLite.deleteBatterryList(" 1=1");
+            isResetQueueBattery = true;
         }
 
         private void userLabel_Click(object sender, EventArgs e)
@@ -3568,35 +3845,35 @@ namespace BatteryMonitor
                 //float registerDisplay = Twoint16ConverttoFloat(registerValues[99], registerValues[100]);
 
                 // Classify register display value
-                if (registerDisplay <= 0f)
-                {
-                    modbustMainForm.WriteSingleRegister(106, 1);
-                    UpdateLabelText(rCompare, "FAULT");
-                    UpdateLabelColor(rCompare, System.Drawing.Color.Red);
-                    return "FAULT";
-                }
+                //if (registerDisplay <= 0f)
+                //{
+                //    modbustMainForm.WriteSingleRegister(106, 1);
+                //    UpdateLabelText(rCompare, "FAULT");
+                //    UpdateLabelColor(rCompare, System.Drawing.Color.Red);
+                //    return "FAULT";
+                //}
 
                 if (registerDisplay >= resistanceMin && registerDisplay <= resistanceMax)
                 {
                     modbustMainForm.WriteSingleRegister(106, 2);
-                    UpdateLabelText(rCompare, "OK");
-                    UpdateLabelColor(rCompare, System.Drawing.Color.Lime);
+                    UpdateTextBoxText(rCompare, "OK");
+                    UpdateTextBoxBackColor(rCompare, System.Drawing.Color.Lime);
                     return "OK";
                 }
 
                 if (registerDisplay < resistanceMin)
                 {
                     modbustMainForm.WriteSingleRegister(106, 3);
-                    UpdateLabelText(rCompare, "LOW");
-                    UpdateLabelColor(rCompare, System.Drawing.Color.Red);
+                    UpdateTextBoxText(rCompare, "LOW");
+                    UpdateTextBoxBackColor(rCompare, System.Drawing.Color.Red);
                     return "LOW";
                 }
 
                 if (registerDisplay > resistanceMax)
                 {
                     modbustMainForm.WriteSingleRegister(106, 4);
-                    UpdateLabelText(rCompare, "HIGH");
-                    UpdateLabelColor(rCompare, System.Drawing.Color.Red);
+                    UpdateTextBoxText(rCompare, "HIGH");
+                    UpdateTextBoxBackColor(rCompare, System.Drawing.Color.Red);
                     return "HIGH";
                 }
 
@@ -3639,8 +3916,9 @@ namespace BatteryMonitor
                     //  modbustMainForm.WriteSingleRegister(108, 1);
                     modbustMainForm.WriteSingleRegister(149, 5);
                     pinCurrentColor = 5;
-                    UpdateLabelText(vCompare, "NG");
-                    UpdateLabelColor(vCompare, System.Drawing.Color.Red);
+                    UpdateTextBoxText(vCompare, "NG");
+                    UpdateTextBoxBackColor(vCompare, System.Drawing.Color.Red);
+                    UpdateLabelText(labelValueLight, "5");
                     return "NG";
                 }
 
@@ -3671,26 +3949,25 @@ namespace BatteryMonitor
                     // 2 Xanh dương
                     // 3 Xanh lá cây
                     // 4 Cam
-                    //  modbustMainForm.WriteSingleRegister(150, 2);
-
+                    //  modbustMainForm.WriteSingleRegister(150, 2);                  
                     modbustMainForm.WriteSingleRegister(149, lightColor);
-                    switch ( lightColor)
+                    switch (lightColor)
                     {
                         case 1:
-                            UpdateLabelColor(vCompare, System.Drawing.Color.White);
+                            UpdateTextBoxBackColor(vCompare, System.Drawing.Color.White);
                             break;
                         case 2:
-                            UpdateLabelColor(vCompare, System.Drawing.Color.Blue);
+                            UpdateTextBoxBackColor(vCompare, System.Drawing.Color.Blue);
                             break;
                         case 3:
-                            UpdateLabelColor(vCompare, System.Drawing.Color.Lime);
+                            UpdateTextBoxBackColor(vCompare, System.Drawing.Color.Lime);
                             break;
                         case 4:
-                            UpdateLabelColor(vCompare, System.Drawing.Color.Gold);
+                            UpdateTextBoxBackColor(vCompare, System.Drawing.Color.Gold);
                             break;
-                    }    
-                        
-                    UpdateLabelText(vCompare, quality);
+                    }
+                    UpdateLabelText(labelValueLight, lightColor.ToString());
+                    UpdateTextBoxText(vCompare, quality);
                     return quality;
                 }
 
@@ -3698,8 +3975,10 @@ namespace BatteryMonitor
                 {
                     modbustMainForm.WriteSingleRegister(149, 5);
                     pinCurrentColor = 5;
-                    UpdateLabelText(vCompare, "NG");
-                    UpdateLabelColor(vCompare, System.Drawing.Color.Red);
+                    UpdateTextBoxText(vCompare, "NG");
+                    UpdateTextBoxBackColor(vCompare, System.Drawing.Color.Red);
+                    UpdateLabelText(labelValueLight, "5");
+
                     return "NG";
                 }
 
@@ -3707,8 +3986,10 @@ namespace BatteryMonitor
                 {
                     modbustMainForm.WriteSingleRegister(149, 5);
                     pinCurrentColor = 5;
-                    UpdateLabelText(vCompare, "NG");
-                    UpdateLabelColor(vCompare, System.Drawing.Color.Red);
+                    UpdateTextBoxText(vCompare, "NG");
+                    UpdateTextBoxBackColor(vCompare, System.Drawing.Color.Red);
+                    UpdateLabelText(labelValueLight, "5");
+
                     return "NG";
                 }
             }
@@ -3728,9 +4009,9 @@ namespace BatteryMonitor
             {
                 return "";
             }
-          //  if (Value >= USR124)
-                if (Value > USR124)
-                {
+            //  if (Value >= USR124)
+            if (Value > USR124)
+            {
                 return "A";
             }
             // B
@@ -3750,7 +4031,7 @@ namespace BatteryMonitor
             }
             return "";
         }
-        int i = 1;      
+        int i = 1;
         private void label13_Click(object sender, EventArgs e)
         {
             //Random rand = new Random();
@@ -3759,6 +4040,12 @@ namespace BatteryMonitor
             //cartesianChart2.AxisY[0].MinValue = 1;
             //cartesianChart2.AxisY[0].MaxValue = 3.3;
             //AddDataInChartAsync(data, data, cartesianChart2, i);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //  modbustWrite.WriteSingleRegister(149, 0); //Reset Den ve
+            UpdateLabelText(labelValueLight, "0");
         }
 
         private void currentWorkShift_Click(object sender, EventArgs e)
@@ -3794,9 +4081,9 @@ namespace BatteryMonitor
             string shipmentId = this.batchNumber.Text;
             string forder = createForder(shipmentId);
             // Xuất báo cáo
-            string dateCondition = System.DateTime.Now.ToString("yyyy/mm/dd");
+            string dateCondition = System.DateTime.Now.ToString("yyyy/MM/dd");
             string condition = " workShift = " + currentShift.ToString() + " AND shipmentId = '" + shipmentId + "' AND date LIKE '%" + dateCondition + "%' ;";
-            sqlLite.ExportSqliteDataToExcel(forder, condition);
+            sqlLite.ExportSqliteDataToExcel(forder.Trim(), condition);
             // reset flag
             isExportDataFlag = true;
 
@@ -3937,14 +4224,14 @@ namespace BatteryMonitor
                     single = 0; // Set giá trị mặc định nếu parse thất bại
                 }
 
-                float r = float.Parse(string.Format("{0:0.00}", single));
+                float r = float.Parse(string.Format("{0:0.000}", single));
                 if (!float.TryParse(convertToInt16List[1], out float single2))
                 {
                     // Xử lý lỗi ở đây nếu cần thiết
                     single2 = 0; // Set giá trị mặc định nếu parse thất bại
                 }
 
-                float v = float.Parse(string.Format("{0:0.00}", single2));
+                float v = float.Parse(string.Format("{0:0.000}", single2));
                 // Kiểm tra xem có giá trị R OK hay không
 
                 if ((double)r < 10000000000 || (double)r > 10000000000000)
@@ -3987,13 +4274,21 @@ namespace BatteryMonitor
                 ushort[] voltRegisters = FloatToModbusRegisters(v);
                 num1[0] = Convert.ToInt32(voltRegisters[0]);
                 num1[1] = Convert.ToInt32(voltRegisters[1]);
+
                 //TEST
                 modbustWrite.WriteSingleRegister(45, num1[0]);
                 modbustWrite.WriteSingleRegister(46, num1[1]);
-                if (isResetLamp != 0)
+
+                if (isResetLamp != 0 && !isResetLight)
                 {
                     modbustWrite.WriteSingleRegister(149, 0); //Reset Den ve
+                    modbustWrite.WriteSingleRegister(106, 0);
+                    //UpdateLabelText(labelValueLight, "0");
+                    isResetLight = true;
                 }
+                else if (isResetLamp == 0)
+                    isResetLight = false;
+
                 //numArray[45] = num1[0];
                 //numArray[46] = num1[1];
                 // Ngừng timer
@@ -4063,18 +4358,15 @@ namespace BatteryMonitor
         private void bgwork_exportExcelTimer_DoWork(object sender, DoWorkEventArgs e)
         {
             if (modbustMainForm.Connected)
-            {
-                int[] array = modbustMainForm.ReadHoldingRegisters(0, 124);
-                isExportDataReport = array[93];
-
+            {               
                 if (isExportDataReport == 1 && !isExportDataFlag)
                 {
                     string shipmentId = this.batchNumber.Text;
                     string forder = createForder(shipmentId);
                     // Xuất báo cáo
-                    string dateCondition = System.DateTime.Now.ToString("yyyy/mm/dd");
-                    string condition = " workShift = " + currentShift.ToString() + " AND shipmentId = '" + shipmentId + "' AND date LIKE '%" + dateCondition + "%' ;";
-                    sqlLite.ExportSqliteDataToExcel(forder, condition);
+                    string dateCondition = System.DateTime.Now.ToString("yyyy/MM/dd");
+                    string condition = " workShift = " + currentShift.ToString() + " AND shipmentId = '" + shipmentId.Trim() + "' AND date LIKE '%" + dateCondition + "%' ;";
+                    sqlLite.ExportSqliteDataToExcel(forder.Trim(), condition);
                     // reset flag
                     isExportDataFlag = true;
                 }
@@ -4087,7 +4379,7 @@ namespace BatteryMonitor
             }
         }
 
-       
+
 
 
         // Tạm thời chưa áp dụng
@@ -4108,7 +4400,7 @@ namespace BatteryMonitor
         {
             double num = (double)ModbusClient.ConvertRegistersToInt(modbus.ReadHoldingRegisters(startAddress, 2).Reverse().ToArray());
 
-            double usrValue = Convert.ToDouble(string.Format("{0:0.00}", num / 1000));
+            double usrValue = Convert.ToDouble(string.Format("{0:0.000}", num / 1000));
 
 
             return usrValue;
@@ -4122,6 +4414,17 @@ namespace BatteryMonitor
             return qualities.IndexOf(quality);
 
         }
+
+        public void setBackgroundColorForGroupBox(GroupBox box, System.Drawing.Color backGroudColor)
+        {
+            box.Invoke(new Action(() =>
+            {
+                box.BackColor = backGroudColor;
+            }));
+        }
+
+
+
 
     }
 }

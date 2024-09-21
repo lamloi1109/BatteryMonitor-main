@@ -389,7 +389,7 @@ namespace BatteryMonitor.SQLlite
                 }
 
                 return false;
-            }
+            } 
         }
 
         public void updateBatteryList(BatteryMonitor.Data.battery battery, string condition)
@@ -516,7 +516,7 @@ namespace BatteryMonitor.SQLlite
                 string excelFileName = System.DateTime.Now.ToString("yyyyMMddHH24miss") + "." + extension;
 
                 // Lưu workbook vào đường dẫn cụ thể
-                using (var fileData = new FileStream(excelForder + "\\" + excelFileName, FileMode.Create))
+                using (var fileData = new FileStream(excelForder.Trim() + "\\" + excelFileName, FileMode.Create))
                 {
                     workbook.Write(fileData);
                 }

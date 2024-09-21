@@ -1,0 +1,77 @@
+2024-09-17 14:46:49.8170|ERROR|BatteryMonitor.Main|System.IO.IOException: Unable to write data to the transport connection: An established connection was aborted by the software in your host machine. ---> System.Net.Sockets.SocketException: An established connection was aborted by the software in your host machine
+   at System.Net.Sockets.Socket.Send(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.NetworkStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at EasyModbus.ModbusClient.ReadHoldingRegisters(Int32 startingAddress, Int32 quantity)
+   at BatteryMonitor.Main.getRMaxFromModbus(ModbusClient modbus) in C:\Users\IT_SOFTWARE\source\repos\BatteryMonitor-main\Main.cs:line 2195
+   at BatteryMonitor.Main.MonitorModbusTimer_Tick(Object sender, EventArgs e) in C:\Users\IT_SOFTWARE\source\repos\BatteryMonitor-main\Main.cs:line 1509
+2024-09-17 14:46:49.9032|ERROR|BatteryMonitor.Main|System.IO.IOException: Unable to write data to the transport connection: An established connection was aborted by the software in your host machine. ---> System.Net.Sockets.SocketException: An established connection was aborted by the software in your host machine
+   at System.Net.Sockets.Socket.Send(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.NetworkStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at EasyModbus.ModbusClient.WriteSingleRegister(Int32 startingAddress, Int32 value)
+   at BatteryMonitor.Main.bgwork_writeToModbust_DoWork(Object sender, DoWorkEventArgs e) in C:\Users\IT_SOFTWARE\source\repos\BatteryMonitor-main\Main.cs:line 4014
+2024-09-17 14:46:51.2152|ERROR|BatteryMonitor.Main|System.InvalidOperationException: Cross-thread operation not valid: Control 'Main' accessed from a thread other than the thread it was created on.
+   at System.Windows.Forms.Control.get_Handle()
+   at System.Windows.Forms.Form.FillInCreateParamsStartPosition(CreateParams cp)
+   at System.Windows.Forms.Form.get_CreateParams()
+   at System.Windows.Forms.Control.CreateHandle()
+   at System.Windows.Forms.Form.CreateHandle()
+   at System.Windows.Forms.Control.get_Handle()
+   at System.Windows.Forms.Control.SetVisibleCore(Boolean value)
+   at System.Windows.Forms.Form.SetVisibleCore(Boolean value)
+   at System.Windows.Forms.Control.Show()
+   at BatteryMonitor.Main.checkConnectDevices(Object sender, DoWorkEventArgs e) in C:\Users\IT_SOFTWARE\source\repos\BatteryMonitor-main\Main.cs:line 3396
+2024-09-17 14:47:05.2079|ERROR|BatteryMonitor.Main|EasyModbus.Exceptions.ConnectionException: connection timed out
+   at EasyModbus.ModbusClient.Connect()
+   at BatteryMonitor.Main.checkConnectDevices(Object sender, DoWorkEventArgs e) in C:\Users\IT_SOFTWARE\source\repos\BatteryMonitor-main\Main.cs:line 3405
+2024-09-17 14:47:17.2106|ERROR|BatteryMonitor.Main|EasyModbus.Exceptions.ConnectionException: connection timed out
+   at EasyModbus.ModbusClient.Connect()
+   at BatteryMonitor.Main.checkConnectDevices(Object sender, DoWorkEventArgs e) in C:\Users\IT_SOFTWARE\source\repos\BatteryMonitor-main\Main.cs:line 3405
+2024-09-17 14:47:29.2136|ERROR|BatteryMonitor.Main|EasyModbus.Exceptions.ConnectionException: connection timed out
+   at EasyModbus.ModbusClient.Connect()
+   at BatteryMonitor.Main.checkConnectDevices(Object sender, DoWorkEventArgs e) in C:\Users\IT_SOFTWARE\source\repos\BatteryMonitor-main\Main.cs:line 3405
+2024-09-17 14:47:41.2155|ERROR|BatteryMonitor.Main|EasyModbus.Exceptions.ConnectionException: connection timed out
+   at EasyModbus.ModbusClient.Connect()
+   at BatteryMonitor.Main.checkConnectDevices(Object sender, DoWorkEventArgs e) in C:\Users\IT_SOFTWARE\source\repos\BatteryMonitor-main\Main.cs:line 3405
+2024-09-17 14:47:53.2188|ERROR|BatteryMonitor.Main|EasyModbus.Exceptions.ConnectionException: connection timed out
+   at EasyModbus.ModbusClient.Connect()
+   at BatteryMonitor.Main.checkConnectDevices(Object sender, DoWorkEventArgs e) in C:\Users\IT_SOFTWARE\source\repos\BatteryMonitor-main\Main.cs:line 3405
+2024-09-17 14:48:05.2236|ERROR|BatteryMonitor.Main|EasyModbus.Exceptions.ConnectionException: connection timed out
+   at EasyModbus.ModbusClient.Connect()
+   at BatteryMonitor.Main.checkConnectDevices(Object sender, DoWorkEventArgs e) in C:\Users\IT_SOFTWARE\source\repos\BatteryMonitor-main\Main.cs:line 3405
+2024-09-17 14:48:17.2267|ERROR|BatteryMonitor.Main|EasyModbus.Exceptions.ConnectionException: connection timed out
+   at EasyModbus.ModbusClient.Connect()
+   at BatteryMonitor.Main.checkConnectDevices(Object sender, DoWorkEventArgs e) in C:\Users\IT_SOFTWARE\source\repos\BatteryMonitor-main\Main.cs:line 3405
+2024-09-17 14:48:29.2296|ERROR|BatteryMonitor.Main|EasyModbus.Exceptions.ConnectionException: connection timed out
+   at EasyModbus.ModbusClient.Connect()
+   at BatteryMonitor.Main.checkConnectDevices(Object sender, DoWorkEventArgs e) in C:\Users\IT_SOFTWARE\source\repos\BatteryMonitor-main\Main.cs:line 3405
+2024-09-17 14:48:41.2311|ERROR|BatteryMonitor.Main|EasyModbus.Exceptions.ConnectionException: connection timed out
+   at EasyModbus.ModbusClient.Connect()
+   at BatteryMonitor.Main.checkConnectDevices(Object sender, DoWorkEventArgs e) in C:\Users\IT_SOFTWARE\source\repos\BatteryMonitor-main\Main.cs:line 3405
+2024-09-17 14:48:53.2374|ERROR|BatteryMonitor.Main|EasyModbus.Exceptions.ConnectionException: connection timed out
+   at EasyModbus.ModbusClient.Connect()
+   at BatteryMonitor.Main.checkConnectDevices(Object sender, DoWorkEventArgs e) in C:\Users\IT_SOFTWARE\source\repos\BatteryMonitor-main\Main.cs:line 3405
+2024-09-17 14:49:05.2401|ERROR|BatteryMonitor.Main|EasyModbus.Exceptions.ConnectionException: connection timed out
+   at EasyModbus.ModbusClient.Connect()
+   at BatteryMonitor.Main.checkConnectDevices(Object sender, DoWorkEventArgs e) in C:\Users\IT_SOFTWARE\source\repos\BatteryMonitor-main\Main.cs:line 3405
+2024-09-17 14:49:17.2424|ERROR|BatteryMonitor.Main|EasyModbus.Exceptions.ConnectionException: connection timed out
+   at EasyModbus.ModbusClient.Connect()
+   at BatteryMonitor.Main.checkConnectDevices(Object sender, DoWorkEventArgs e) in C:\Users\IT_SOFTWARE\source\repos\BatteryMonitor-main\Main.cs:line 3405
+2024-09-17 14:49:26.8193|ERROR|BatteryMonitor.Main|EasyModbus.Exceptions.ConnectionException: connection timed out
+   at EasyModbus.ModbusClient.Connect()
+   at BatteryMonitor.Main.Form1_Load(Object sender, EventArgs e) in C:\Users\IT_SOFTWARE\source\repos\BatteryMonitor-main\Main.cs:line 962
+2024-09-17 14:49:29.2517|ERROR|BatteryMonitor.Main|EasyModbus.Exceptions.ConnectionException: connection timed out
+   at EasyModbus.ModbusClient.Connect()
+   at BatteryMonitor.Main.checkConnectDevices(Object sender, DoWorkEventArgs e) in C:\Users\IT_SOFTWARE\source\repos\BatteryMonitor-main\Main.cs:line 3405
+2024-09-17 15:02:46.3971|ERROR|BatteryMonitor.Main|EasyModbus.Exceptions.ConnectionException: connection timed out
+   at EasyModbus.ModbusClient.Connect()
+   at BatteryMonitor.Main.Form1_Load(Object sender, EventArgs e) in C:\Users\IT_SOFTWARE\source\repos\BatteryMonitor-main\Main.cs:line 962
+2024-09-17 15:07:23.6653|ERROR|BatteryMonitor.Main|EasyModbus.Exceptions.ConnectionException: connection timed out
+   at EasyModbus.ModbusClient.Connect()
+   at BatteryMonitor.Main.Form1_Load(Object sender, EventArgs e) in C:\Users\IT_SOFTWARE\source\repos\BatteryMonitor-main\Main.cs:line 962
+2024-09-17 15:08:35.9490|ERROR|BatteryMonitor.Main|EasyModbus.Exceptions.ConnectionException: connection timed out
+   at EasyModbus.ModbusClient.Connect()
+   at BatteryMonitor.Main.Form1_Load(Object sender, EventArgs e) in C:\Users\IT_SOFTWARE\source\repos\BatteryMonitor-main\Main.cs:line 962

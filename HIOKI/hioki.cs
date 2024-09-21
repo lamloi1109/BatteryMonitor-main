@@ -81,6 +81,9 @@ namespace BatteryMonitor.HIOKI
                 catch (Exception ex)
                 {
                     //Console.WriteLine($"Không thể kết nối: {ex.Message}");
+
+                    
+
                     (new Nofitication("Kết nối tới hioki thất bại!")).ShowDialog();
 
                     // Ở đây bạn có thể xử lý hoặc log lỗi theo mong muốn

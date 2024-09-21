@@ -39,6 +39,7 @@ namespace BatteryMonitor
         string rStr = "";
         string vStr = "";
         bool isMeasured = false;
+        bool isResetQueueBattery = false;
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -84,7 +85,7 @@ namespace BatteryMonitor
                     return;
                 }
 
-                int[] numArray = modbustcp.ReadHoldingRegisters(0, 122);
+                int[] numArray = modbustcp.ReadHoldingRegisters(122, 122);
                 // convert number to string
                 //convert number to float
 
@@ -150,27 +151,36 @@ namespace BatteryMonitor
                 dataGridView1.Columns.Clear();
                 dataGridView1.Rows.Clear();
 
-                this.dataGridView1.ColumnCount = 3;
-                this.dataGridView1.Columns[0].Name = "Tên";
-                this.dataGridView1.Columns[1].Name = "Địa chỉ thanh ghi";
-                this.dataGridView1.Columns[2].Name = "Giá trị";
+                this.dataGridView2.ClearSelection();
 
-                
-                this.dataGridView1.Rows.Add(new object[] { "Điện trở", "(99 , 100)", regsisterdisplay });
-                this.dataGridView1.Rows.Add(new object[] { "Ve", 113, vedt });
-                this.dataGridView1.Rows.Add(new object[] { "Can hoan thanh", 75, vedt });
-                this.dataGridView1.Rows.Add(new object[] { "Dien tro pc", 75, regsisterdisplay });
-                this.dataGridView1.Rows.Add(new object[] { "Dien ap pc", 75, voltdisplay });
+                dataGridView2.Columns.Clear();
+                dataGridView2.Rows.Clear();
 
 
 
-                isMeasured = true;
-              
-                if (vedt == 0)
-                {
-                    isMeasured = false;
+                this.dataGridView3.ClearSelection();
 
-                }
+                dataGridView3.Columns.Clear();
+                dataGridView3.Rows.Clear();
+
+                this.dataGridView1.ColumnCount = 2;
+                this.dataGridView1.Columns[0].Name = "Địa chỉ thanh ghi";
+                this.dataGridView1.Columns[1].Name = "Giá trị";
+
+                //if (vedt == 1 )
+                //{
+                    //this.dataGridView1.Rows.Add(new object[] { "Điện trở", "(99 , 100)", regsisterdisplay });
+                    //this.dataGridView1.Rows.Add(new object[] { "Ve", 113, vedt });
+                    //this.dataGridView1.Rows.Add(new object[] { "Can hoan thanh", 75, Can_dau_vao_hoan_thanh });
+                    //this.dataGridView1.Rows.Add(new object[] { "Dien tro pc", 75, regsisterdisplay });
+                    //this.dataGridView1.Rows.Add(new object[] { "Dien ap pc", 75, voltdisplay });
+                //    isMeasured = true;
+                //}
+                //if (vedt == 0)
+                //{
+                //    isMeasured = false;
+
+                //}
                 //this.dataGridView1.Rows.Add(new object[] { "Điện trở Max", " (35 , 2) ", dientromax });
                 //this.dataGridView1.Rows.Add(new object[] { "Điện trở Min", " (37 , 2) ", dientromin });
                 //this.dataGridView1.Rows.Add(new object[] { "Điện áp", " 103, 104 ", voltdisplay });
@@ -216,12 +226,31 @@ namespace BatteryMonitor
                 //    Random R = new Random();
                 //int test = R.Next(0, 10);
                 // Initialize an empty string to hold the ASCII representation
+                int i = 0; 
+                this.dataGridView2.ColumnCount = 2;
+                this.dataGridView2.Columns[0].Name = "Địa chỉ thanh ghi";
+                this.dataGridView2.Columns[1].Name = "Giá trị";
+                
+                this.dataGridView3.ColumnCount = 2;
+
+                this.dataGridView3.Columns[0].Name = "Địa chỉ thanh ghi";
+                this.dataGridView3.Columns[1].Name = "Giá trị";
+
+                for (i = 0; i < 41; i++)
+                {
+                    this.dataGridView1.Rows.Add(new object[] {i + 122, numArray[i] });
+                }
 
 
+                for (i = 41; i < 81; i++)
+                {
+                    this.dataGridView2.Rows.Add(new object[] {i + 122, numArray[i] });
+                }
 
-
-
-
+                for (i = 81; i < numArray.Length; i++)
+                {
+                    this.dataGridView3.Rows.Add(new object[] {i + 122, numArray[i] });
+                }
             }
             catch (Exception ex)
             {

@@ -85,13 +85,14 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
+            this.bitVeDoThi = new System.Windows.Forms.Label();
             this.totalBatteryShift1Label = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.totalBatteryShift2Label = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.lb_isResetLamp = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
+            this.labelValueLight = new System.Windows.Forms.Label();
             this.currentWorkShift = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -99,66 +100,67 @@
             this.cartesianChart2 = new LiveCharts.WinForms.CartesianChart();
             this.tableLayoutPanel27 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel19 = new System.Windows.Forms.TableLayoutPanel();
+            this.vCompare = new System.Windows.Forms.TextBox();
+            this.currentVLabel = new System.Windows.Forms.TextBox();
+            this.vMinLabel = new System.Windows.Forms.TextBox();
+            this.vMaxLabel = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.vMaxLabel = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
             this.label34 = new System.Windows.Forms.Label();
-            this.vMinLabel = new System.Windows.Forms.Label();
-            this.currentVLabel = new System.Windows.Forms.Label();
             this.label51 = new System.Windows.Forms.Label();
-            this.vCompare = new System.Windows.Forms.Label();
             this.tableLayoutPanel28 = new System.Windows.Forms.TableLayoutPanel();
-            this.V_CCa2 = new System.Windows.Forms.Label();
-            this.V_BCa2 = new System.Windows.Forms.Label();
-            this.V_CCa1 = new System.Windows.Forms.Label();
-            this.V_ACa2 = new System.Windows.Forms.Label();
-            this.V_BCa1 = new System.Windows.Forms.Label();
+            this.V_NGCa2 = new System.Windows.Forms.TextBox();
+            this.V_DCa2 = new System.Windows.Forms.TextBox();
+            this.V_CCa2 = new System.Windows.Forms.TextBox();
+            this.V_BCa2 = new System.Windows.Forms.TextBox();
+            this.V_ACa2 = new System.Windows.Forms.TextBox();
+            this.V_NGCa1 = new System.Windows.Forms.TextBox();
+            this.V_DCa1 = new System.Windows.Forms.TextBox();
+            this.V_CCa1 = new System.Windows.Forms.TextBox();
+            this.V_BCa1 = new System.Windows.Forms.TextBox();
+            this.V_ACa1 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.V_ACa1 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.V_DCa1 = new System.Windows.Forms.Label();
-            this.V_DCa2 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
-            this.V_NGCa1 = new System.Windows.Forms.Label();
-            this.V_NGCa2 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.tableLayoutPanel35 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
-            this.cartesianChart1 = new LiveCharts.WinForms.CartesianChart();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel17 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
+            this.rCompare = new System.Windows.Forms.TextBox();
+            this.rMaxLabel = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
-            this.currentRLabel = new System.Windows.Forms.Label();
             this.label45 = new System.Windows.Forms.Label();
-            this.rMinLabel = new System.Windows.Forms.Label();
-            this.rMaxLabel = new System.Windows.Forms.Label();
-            this.rCompare = new System.Windows.Forms.Label();
+            this.rMinLabel = new System.Windows.Forms.TextBox();
+            this.currentRLabel = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel26 = new System.Windows.Forms.TableLayoutPanel();
+            this.r_HIGHCa2 = new System.Windows.Forms.TextBox();
+            this.r_LOWCa2 = new System.Windows.Forms.TextBox();
+            this.r_OKCa2 = new System.Windows.Forms.TextBox();
+            this.r_HIGHCa1 = new System.Windows.Forms.TextBox();
+            this.r_LOWCa1 = new System.Windows.Forms.TextBox();
             this.label42 = new System.Windows.Forms.Label();
             this.label43 = new System.Windows.Forms.Label();
-            this.rHightShift2Label = new System.Windows.Forms.Label();
-            this.rLowShift2Label = new System.Windows.Forms.Label();
-            this.rGoodShift2Label = new System.Windows.Forms.Label();
-            this.rGoodShift1Label = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
-            this.rLowShift1Label = new System.Windows.Forms.Label();
-            this.rHightShift1Label = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
+            this.r_OKCa1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.cartesianChart1 = new LiveCharts.WinForms.CartesianChart();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tableLayout_QR.SuspendLayout();
@@ -190,7 +192,6 @@
             this.tableLayoutPanel35.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.tableLayoutPanel17.SuspendLayout();
             this.tableLayoutPanel9.SuspendLayout();
             this.tableLayoutPanel26.SuspendLayout();
@@ -321,7 +322,7 @@
             // 
             // pinGroupQR4
             // 
-            this.pinGroupQR4.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pinGroupQR4.BackColor = System.Drawing.Color.Silver;
             this.pinGroupQR4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pinGroupQR4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pinGroupQR4.Location = new System.Drawing.Point(915, 0);
@@ -335,7 +336,7 @@
             // 
             // pinGroupQR3
             // 
-            this.pinGroupQR3.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pinGroupQR3.BackColor = System.Drawing.Color.Silver;
             this.pinGroupQR3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pinGroupQR3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pinGroupQR3.Location = new System.Drawing.Point(1142, 0);
@@ -350,7 +351,7 @@
             // 
             // pinGroupQR2
             // 
-            this.pinGroupQR2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pinGroupQR2.BackColor = System.Drawing.Color.Silver;
             this.pinGroupQR2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pinGroupQR2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pinGroupQR2.Location = new System.Drawing.Point(1369, 0);
@@ -365,7 +366,7 @@
             // 
             // pinGroupQR1
             // 
-            this.pinGroupQR1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pinGroupQR1.BackColor = System.Drawing.Color.Silver;
             this.pinGroupQR1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pinGroupQR1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pinGroupQR1.Location = new System.Drawing.Point(1595, 0);
@@ -660,7 +661,7 @@
             // 
             // pinGroup4
             // 
-            this.pinGroup4.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pinGroup4.BackColor = System.Drawing.Color.Silver;
             this.pinGroup4.Controls.Add(this.tableLayoutPanel14);
             this.pinGroup4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pinGroup4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -717,7 +718,7 @@
             // 
             // pinGroup3
             // 
-            this.pinGroup3.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pinGroup3.BackColor = System.Drawing.Color.Silver;
             this.pinGroup3.Controls.Add(this.tableLayoutPanel13);
             this.pinGroup3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pinGroup3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -776,7 +777,7 @@
             // 
             // pinGroup2
             // 
-            this.pinGroup2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.pinGroup2.BackColor = System.Drawing.Color.Silver;
             this.pinGroup2.Controls.Add(this.tableLayoutPanel12);
             this.pinGroup2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pinGroup2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -833,7 +834,7 @@
             // 
             // pinGroup1
             // 
-            this.pinGroup1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pinGroup1.BackColor = System.Drawing.Color.Silver;
             this.pinGroup1.Controls.Add(this.tableLayoutPanel3);
             this.pinGroup1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pinGroup1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -922,7 +923,7 @@
             // batchNumber
             // 
             this.batchNumber.AutoSize = true;
-            this.batchNumber.BackColor = System.Drawing.Color.White;
+            this.batchNumber.BackColor = System.Drawing.Color.LightGray;
             this.batchNumber.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.batchNumber.Dock = System.Windows.Forms.DockStyle.Fill;
             this.batchNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -937,7 +938,7 @@
             // specs
             // 
             this.specs.AutoSize = true;
-            this.specs.BackColor = System.Drawing.Color.White;
+            this.specs.BackColor = System.Drawing.Color.LightGray;
             this.specs.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.specs.Dock = System.Windows.Forms.DockStyle.Fill;
             this.specs.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -997,6 +998,7 @@
             // numPin
             // 
             this.numPin.AutoSize = true;
+            this.numPin.BackColor = System.Drawing.Color.LightGray;
             this.numPin.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.numPin.Dock = System.Windows.Forms.DockStyle.Fill;
             this.numPin.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1011,7 +1013,7 @@
             // userLabel
             // 
             this.userLabel.AutoSize = true;
-            this.userLabel.BackColor = System.Drawing.Color.White;
+            this.userLabel.BackColor = System.Drawing.Color.LightGray;
             this.userLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.userLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.userLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1056,18 +1058,23 @@
             // 
             // tableLayoutPanel8
             // 
-            this.tableLayoutPanel8.ColumnCount = 4;
+            this.tableLayoutPanel8.ColumnCount = 6;
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.72915F));
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34.01693F));
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.25391F));
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.25392F));
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 0F));
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 1F));
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 73F));
+            this.tableLayoutPanel8.Controls.Add(this.bitVeDoThi, 4, 1);
             this.tableLayoutPanel8.Controls.Add(this.totalBatteryShift1Label, 0, 1);
             this.tableLayoutPanel8.Controls.Add(this.label2, 0, 0);
             this.tableLayoutPanel8.Controls.Add(this.label9, 1, 0);
             this.tableLayoutPanel8.Controls.Add(this.totalBatteryShift2Label, 2, 1);
             this.tableLayoutPanel8.Controls.Add(this.label6, 2, 0);
             this.tableLayoutPanel8.Controls.Add(this.lb_isResetLamp, 3, 0);
-            this.tableLayoutPanel8.Controls.Add(this.label13, 3, 1);
+            this.tableLayoutPanel8.Controls.Add(this.labelValueLight, 3, 1);
+            this.tableLayoutPanel8.Controls.Add(this.label13, 5, 0);
+            this.tableLayoutPanel8.Controls.Add(this.label21, 5, 1);
             this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel8.Location = new System.Drawing.Point(1328, 0);
             this.tableLayoutPanel8.Margin = new System.Windows.Forms.Padding(0);
@@ -1076,21 +1083,33 @@
             this.tableLayoutPanel7.SetRowSpan(this.tableLayoutPanel8, 2);
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 44.70588F));
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 55.29412F));
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel8.Size = new System.Drawing.Size(491, 68);
             this.tableLayoutPanel8.TabIndex = 613;
             // 
+            // bitVeDoThi
+            // 
+            this.bitVeDoThi.AutoSize = true;
+            this.bitVeDoThi.BackColor = System.Drawing.Color.Yellow;
+            this.bitVeDoThi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bitVeDoThi.Location = new System.Drawing.Point(420, 30);
+            this.bitVeDoThi.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.bitVeDoThi.Name = "bitVeDoThi";
+            this.bitVeDoThi.Size = new System.Drawing.Size(1, 25);
+            this.bitVeDoThi.TabIndex = 622;
+            this.bitVeDoThi.Text = "label13";
+            // 
             // totalBatteryShift1Label
             // 
-            this.totalBatteryShift1Label.BackColor = System.Drawing.Color.White;
+            this.totalBatteryShift1Label.BackColor = System.Drawing.Color.LightGray;
             this.totalBatteryShift1Label.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.totalBatteryShift1Label.Dock = System.Windows.Forms.DockStyle.Fill;
             this.totalBatteryShift1Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.totalBatteryShift1Label.ForeColor = System.Drawing.Color.Black;
-            this.totalBatteryShift1Label.Location = new System.Drawing.Point(114, 30);
+            this.totalBatteryShift1Label.Location = new System.Drawing.Point(128, 30);
             this.totalBatteryShift1Label.Margin = new System.Windows.Forms.Padding(0);
             this.totalBatteryShift1Label.Name = "totalBatteryShift1Label";
-            this.totalBatteryShift1Label.Size = new System.Drawing.Size(126, 38);
+            this.totalBatteryShift1Label.Size = new System.Drawing.Size(141, 38);
             this.totalBatteryShift1Label.TabIndex = 619;
             this.totalBatteryShift1Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.totalBatteryShift1Label.Click += new System.EventHandler(this.totalBatteryShift1Label_Click);
@@ -1100,13 +1119,13 @@
             this.label2.BackColor = System.Drawing.Color.PowderBlue;
             this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(0, 0);
             this.label2.Margin = new System.Windows.Forms.Padding(0);
             this.label2.Name = "label2";
             this.tableLayoutPanel8.SetRowSpan(this.label2, 2);
-            this.label2.Size = new System.Drawing.Size(114, 68);
+            this.label2.Size = new System.Drawing.Size(128, 68);
             this.label2.TabIndex = 612;
             this.label2.Text = "Tổng SL đã đo \r\n电池已测量";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1119,25 +1138,25 @@
             this.label9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label9.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(114, 0);
+            this.label9.Location = new System.Drawing.Point(128, 0);
             this.label9.Margin = new System.Windows.Forms.Padding(0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(126, 30);
+            this.label9.Size = new System.Drawing.Size(141, 30);
             this.label9.TabIndex = 617;
             this.label9.Text = "Ca 1 工作班次1";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // totalBatteryShift2Label
             // 
-            this.totalBatteryShift2Label.BackColor = System.Drawing.Color.White;
+            this.totalBatteryShift2Label.BackColor = System.Drawing.Color.LightGray;
             this.totalBatteryShift2Label.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.totalBatteryShift2Label.Dock = System.Windows.Forms.DockStyle.Fill;
             this.totalBatteryShift2Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.totalBatteryShift2Label.ForeColor = System.Drawing.Color.Black;
-            this.totalBatteryShift2Label.Location = new System.Drawing.Point(240, 30);
+            this.totalBatteryShift2Label.Location = new System.Drawing.Point(269, 30);
             this.totalBatteryShift2Label.Margin = new System.Windows.Forms.Padding(0);
             this.totalBatteryShift2Label.Name = "totalBatteryShift2Label";
-            this.totalBatteryShift2Label.Size = new System.Drawing.Size(130, 38);
+            this.totalBatteryShift2Label.Size = new System.Drawing.Size(147, 38);
             this.totalBatteryShift2Label.TabIndex = 615;
             this.totalBatteryShift2Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -1148,10 +1167,10 @@
             this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(240, 0);
+            this.label6.Location = new System.Drawing.Point(269, 0);
             this.label6.Margin = new System.Windows.Forms.Padding(0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(130, 30);
+            this.label6.Size = new System.Drawing.Size(147, 30);
             this.label6.TabIndex = 614;
             this.label6.Text = "Ca 2  工作班次2";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1159,31 +1178,32 @@
             // lb_isResetLamp
             // 
             this.lb_isResetLamp.AutoSize = true;
-            this.lb_isResetLamp.BackColor = System.Drawing.Color.RosyBrown;
+            this.lb_isResetLamp.BackColor = System.Drawing.Color.Red;
             this.lb_isResetLamp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_isResetLamp.Location = new System.Drawing.Point(374, 0);
+            this.lb_isResetLamp.Location = new System.Drawing.Point(420, 0);
             this.lb_isResetLamp.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lb_isResetLamp.Name = "lb_isResetLamp";
-            this.lb_isResetLamp.Size = new System.Drawing.Size(75, 25);
+            this.lb_isResetLamp.Size = new System.Drawing.Size(1, 25);
             this.lb_isResetLamp.TabIndex = 620;
             this.lb_isResetLamp.Text = "label11";
             // 
-            // label13
+            // labelValueLight
             // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.Green;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(374, 30);
-            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(75, 25);
-            this.label13.TabIndex = 621;
-            this.label13.Text = "label13";
-            this.label13.Click += new System.EventHandler(this.label13_Click);
+            this.labelValueLight.AutoSize = true;
+            this.labelValueLight.BackColor = System.Drawing.Color.Green;
+            this.labelValueLight.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelValueLight.Location = new System.Drawing.Point(420, 30);
+            this.labelValueLight.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelValueLight.Name = "labelValueLight";
+            this.labelValueLight.Size = new System.Drawing.Size(1, 25);
+            this.labelValueLight.TabIndex = 621;
+            this.labelValueLight.Text = "label13";
+            this.labelValueLight.Click += new System.EventHandler(this.label13_Click);
             // 
             // currentWorkShift
             // 
             this.currentWorkShift.AutoSize = true;
+            this.currentWorkShift.BackColor = System.Drawing.Color.LightGray;
             this.currentWorkShift.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.currentWorkShift.Dock = System.Windows.Forms.DockStyle.Fill;
             this.currentWorkShift.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1229,9 +1249,10 @@
             // 
             // tableLayoutPanel5
             // 
+            this.tableLayoutPanel5.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Outset;
             this.tableLayoutPanel5.ColumnCount = 2;
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 667F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 668F));
             this.tableLayoutPanel5.Controls.Add(this.cartesianChart2, 0, 0);
             this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel27, 1, 0);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -1245,12 +1266,13 @@
             // 
             // cartesianChart2
             // 
+            this.cartesianChart2.BackColor = System.Drawing.Color.Gainsboro;
             this.cartesianChart2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cartesianChart2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cartesianChart2.Location = new System.Drawing.Point(0, 0);
+            this.cartesianChart2.Location = new System.Drawing.Point(2, 2);
             this.cartesianChart2.Margin = new System.Windows.Forms.Padding(0);
             this.cartesianChart2.Name = "cartesianChart2";
-            this.cartesianChart2.Size = new System.Drawing.Size(1152, 297);
+            this.cartesianChart2.Size = new System.Drawing.Size(1145, 293);
             this.cartesianChart2.TabIndex = 4;
             this.cartesianChart2.Text = "Biểu đồ điện áp";
             // 
@@ -1264,14 +1286,14 @@
             this.tableLayoutPanel27.Controls.Add(this.tableLayoutPanel28, 0, 2);
             this.tableLayoutPanel27.Controls.Add(this.label8, 0, 0);
             this.tableLayoutPanel27.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel27.Location = new System.Drawing.Point(1152, 0);
+            this.tableLayoutPanel27.Location = new System.Drawing.Point(1149, 2);
             this.tableLayoutPanel27.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel27.Name = "tableLayoutPanel27";
             this.tableLayoutPanel27.RowCount = 3;
             this.tableLayoutPanel27.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.tableLayoutPanel27.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 96F));
             this.tableLayoutPanel27.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel27.Size = new System.Drawing.Size(667, 297);
+            this.tableLayoutPanel27.Size = new System.Drawing.Size(668, 293);
             this.tableLayoutPanel27.TabIndex = 5;
             // 
             // tableLayoutPanel19
@@ -1281,15 +1303,15 @@
             this.tableLayoutPanel19.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 48.05195F));
             this.tableLayoutPanel19.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 51.94805F));
             this.tableLayoutPanel19.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 192F));
-            this.tableLayoutPanel19.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 171F));
-            this.tableLayoutPanel19.Controls.Add(this.label14, 3, 0);
+            this.tableLayoutPanel19.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 180F));
+            this.tableLayoutPanel19.Controls.Add(this.vCompare, 3, 1);
+            this.tableLayoutPanel19.Controls.Add(this.currentVLabel, 2, 1);
+            this.tableLayoutPanel19.Controls.Add(this.vMinLabel, 1, 1);
             this.tableLayoutPanel19.Controls.Add(this.vMaxLabel, 0, 1);
+            this.tableLayoutPanel19.Controls.Add(this.label14, 3, 0);
             this.tableLayoutPanel19.Controls.Add(this.label33, 0, 0);
             this.tableLayoutPanel19.Controls.Add(this.label34, 1, 0);
-            this.tableLayoutPanel19.Controls.Add(this.vMinLabel, 1, 1);
-            this.tableLayoutPanel19.Controls.Add(this.currentVLabel, 2, 1);
             this.tableLayoutPanel19.Controls.Add(this.label51, 2, 0);
-            this.tableLayoutPanel19.Controls.Add(this.vCompare, 3, 1);
             this.tableLayoutPanel19.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel19.Location = new System.Drawing.Point(2, 29);
             this.tableLayoutPanel19.Margin = new System.Windows.Forms.Padding(0);
@@ -1298,8 +1320,60 @@
             this.tableLayoutPanel19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 46.80851F));
             this.tableLayoutPanel19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 53.19149F));
             this.tableLayoutPanel19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel19.Size = new System.Drawing.Size(663, 96);
+            this.tableLayoutPanel19.Size = new System.Drawing.Size(664, 96);
             this.tableLayoutPanel19.TabIndex = 3;
+            // 
+            // vCompare
+            // 
+            this.vCompare.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.vCompare.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.vCompare.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold);
+            this.vCompare.Location = new System.Drawing.Point(481, 52);
+            this.vCompare.Margin = new System.Windows.Forms.Padding(0);
+            this.vCompare.Name = "vCompare";
+            this.vCompare.Size = new System.Drawing.Size(181, 35);
+            this.vCompare.TabIndex = 624;
+            this.vCompare.Text = "A";
+            this.vCompare.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // currentVLabel
+            // 
+            this.currentVLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.currentVLabel.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.currentVLabel.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold);
+            this.currentVLabel.Location = new System.Drawing.Point(287, 52);
+            this.currentVLabel.Margin = new System.Windows.Forms.Padding(0);
+            this.currentVLabel.Name = "currentVLabel";
+            this.currentVLabel.Size = new System.Drawing.Size(192, 35);
+            this.currentVLabel.TabIndex = 623;
+            this.currentVLabel.Text = "0";
+            this.currentVLabel.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // vMinLabel
+            // 
+            this.vMinLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.vMinLabel.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.vMinLabel.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold);
+            this.vMinLabel.Location = new System.Drawing.Point(139, 52);
+            this.vMinLabel.Margin = new System.Windows.Forms.Padding(0);
+            this.vMinLabel.Name = "vMinLabel";
+            this.vMinLabel.Size = new System.Drawing.Size(146, 35);
+            this.vMinLabel.TabIndex = 622;
+            this.vMinLabel.Text = "0";
+            this.vMinLabel.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // vMaxLabel
+            // 
+            this.vMaxLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.vMaxLabel.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.vMaxLabel.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold);
+            this.vMaxLabel.Location = new System.Drawing.Point(2, 52);
+            this.vMaxLabel.Margin = new System.Windows.Forms.Padding(0);
+            this.vMaxLabel.Name = "vMaxLabel";
+            this.vMaxLabel.Size = new System.Drawing.Size(135, 35);
+            this.vMaxLabel.TabIndex = 621;
+            this.vMaxLabel.Text = "0";
+            this.vMaxLabel.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label14
             // 
@@ -1308,40 +1382,25 @@
             this.label14.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label14.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.Black;
-            this.label14.Location = new System.Drawing.Point(489, 2);
+            this.label14.Location = new System.Drawing.Point(481, 2);
             this.label14.Margin = new System.Windows.Forms.Padding(0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(172, 42);
+            this.label14.Size = new System.Drawing.Size(181, 42);
             this.label14.TabIndex = 617;
             this.label14.Text = "Phân Loại 分类";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // vMaxLabel
-            // 
-            this.vMaxLabel.BackColor = System.Drawing.Color.Transparent;
-            this.vMaxLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.vMaxLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.vMaxLabel.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.vMaxLabel.ForeColor = System.Drawing.Color.Black;
-            this.vMaxLabel.Location = new System.Drawing.Point(2, 46);
-            this.vMaxLabel.Margin = new System.Windows.Forms.Padding(0);
-            this.vMaxLabel.Name = "vMaxLabel";
-            this.vMaxLabel.Size = new System.Drawing.Size(139, 48);
-            this.vMaxLabel.TabIndex = 606;
-            this.vMaxLabel.Text = "0";
-            this.vMaxLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label33
             // 
             this.label33.BackColor = System.Drawing.Color.Tan;
             this.label33.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label33.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label33.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label33.ForeColor = System.Drawing.Color.Black;
             this.label33.Location = new System.Drawing.Point(2, 2);
             this.label33.Margin = new System.Windows.Forms.Padding(0);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(139, 42);
+            this.label33.Size = new System.Drawing.Size(135, 42);
             this.label33.TabIndex = 603;
             this.label33.Text = "Điện áp (電壓)\r\nMAX";
             this.label33.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1351,47 +1410,15 @@
             this.label34.BackColor = System.Drawing.Color.Tan;
             this.label34.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label34.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label34.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label34.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label34.ForeColor = System.Drawing.Color.Black;
-            this.label34.Location = new System.Drawing.Point(143, 2);
+            this.label34.Location = new System.Drawing.Point(139, 2);
             this.label34.Margin = new System.Windows.Forms.Padding(0);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(150, 42);
+            this.label34.Size = new System.Drawing.Size(146, 42);
             this.label34.TabIndex = 604;
             this.label34.Text = "Điện áp (電壓) \r\nMIN";
             this.label34.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // vMinLabel
-            // 
-            this.vMinLabel.BackColor = System.Drawing.Color.Transparent;
-            this.vMinLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.vMinLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.vMinLabel.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.vMinLabel.ForeColor = System.Drawing.Color.Black;
-            this.vMinLabel.Location = new System.Drawing.Point(143, 46);
-            this.vMinLabel.Margin = new System.Windows.Forms.Padding(0);
-            this.vMinLabel.Name = "vMinLabel";
-            this.vMinLabel.Size = new System.Drawing.Size(150, 48);
-            this.vMinLabel.TabIndex = 607;
-            this.vMinLabel.Text = "0";
-            this.vMinLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.vMinLabel.Click += new System.EventHandler(this.vMinLabel_Click);
-            // 
-            // currentVLabel
-            // 
-            this.currentVLabel.BackColor = System.Drawing.Color.Transparent;
-            this.currentVLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.currentVLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.currentVLabel.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.currentVLabel.ForeColor = System.Drawing.Color.Black;
-            this.currentVLabel.Location = new System.Drawing.Point(295, 46);
-            this.currentVLabel.Margin = new System.Windows.Forms.Padding(0);
-            this.currentVLabel.Name = "currentVLabel";
-            this.currentVLabel.Size = new System.Drawing.Size(192, 48);
-            this.currentVLabel.TabIndex = 609;
-            this.currentVLabel.Text = "0";
-            this.currentVLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.currentVLabel.Click += new System.EventHandler(this.currentVLabel_Click);
             // 
             // label51
             // 
@@ -1400,28 +1427,13 @@
             this.label51.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label51.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label51.ForeColor = System.Drawing.Color.Black;
-            this.label51.Location = new System.Drawing.Point(295, 2);
+            this.label51.Location = new System.Drawing.Point(287, 2);
             this.label51.Margin = new System.Windows.Forms.Padding(0);
             this.label51.Name = "label51";
             this.label51.Size = new System.Drawing.Size(192, 42);
             this.label51.TabIndex = 608;
             this.label51.Text = "Điện áp (電壓)";
             this.label51.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // vCompare
-            // 
-            this.vCompare.BackColor = System.Drawing.Color.White;
-            this.vCompare.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.vCompare.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.vCompare.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.vCompare.ForeColor = System.Drawing.Color.Black;
-            this.vCompare.Location = new System.Drawing.Point(489, 46);
-            this.vCompare.Margin = new System.Windows.Forms.Padding(0);
-            this.vCompare.Name = "vCompare";
-            this.vCompare.Size = new System.Drawing.Size(172, 48);
-            this.vCompare.TabIndex = 616;
-            this.vCompare.Text = "A";
-            this.vCompare.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tableLayoutPanel28
             // 
@@ -1433,24 +1445,24 @@
             this.tableLayoutPanel28.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.60403F));
             this.tableLayoutPanel28.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.10738F));
             this.tableLayoutPanel28.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.43624F));
+            this.tableLayoutPanel28.Controls.Add(this.V_NGCa2, 5, 3);
+            this.tableLayoutPanel28.Controls.Add(this.V_DCa2, 4, 3);
             this.tableLayoutPanel28.Controls.Add(this.V_CCa2, 3, 3);
             this.tableLayoutPanel28.Controls.Add(this.V_BCa2, 2, 3);
-            this.tableLayoutPanel28.Controls.Add(this.V_CCa1, 3, 2);
             this.tableLayoutPanel28.Controls.Add(this.V_ACa2, 1, 3);
+            this.tableLayoutPanel28.Controls.Add(this.V_NGCa1, 5, 2);
+            this.tableLayoutPanel28.Controls.Add(this.V_DCa1, 4, 2);
+            this.tableLayoutPanel28.Controls.Add(this.V_CCa1, 3, 2);
             this.tableLayoutPanel28.Controls.Add(this.V_BCa1, 2, 2);
-            this.tableLayoutPanel28.Controls.Add(this.label4, 0, 3);
             this.tableLayoutPanel28.Controls.Add(this.V_ACa1, 1, 2);
+            this.tableLayoutPanel28.Controls.Add(this.label4, 0, 3);
             this.tableLayoutPanel28.Controls.Add(this.label7, 0, 2);
             this.tableLayoutPanel28.Controls.Add(this.label20, 1, 1);
             this.tableLayoutPanel28.Controls.Add(this.label28, 3, 1);
             this.tableLayoutPanel28.Controls.Add(this.label29, 2, 1);
             this.tableLayoutPanel28.Controls.Add(this.label17, 1, 0);
             this.tableLayoutPanel28.Controls.Add(this.label11, 4, 1);
-            this.tableLayoutPanel28.Controls.Add(this.V_DCa1, 4, 2);
-            this.tableLayoutPanel28.Controls.Add(this.V_DCa2, 4, 3);
             this.tableLayoutPanel28.Controls.Add(this.label18, 5, 1);
-            this.tableLayoutPanel28.Controls.Add(this.V_NGCa1, 5, 2);
-            this.tableLayoutPanel28.Controls.Add(this.V_NGCa2, 5, 3);
             this.tableLayoutPanel28.Controls.Add(this.label15, 0, 0);
             this.tableLayoutPanel28.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel28.Location = new System.Drawing.Point(2, 127);
@@ -1461,83 +1473,138 @@
             this.tableLayoutPanel28.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 46F));
             this.tableLayoutPanel28.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 51.16279F));
             this.tableLayoutPanel28.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 48.83721F));
-            this.tableLayoutPanel28.Size = new System.Drawing.Size(663, 168);
+            this.tableLayoutPanel28.Size = new System.Drawing.Size(664, 164);
             this.tableLayoutPanel28.TabIndex = 612;
+            // 
+            // V_NGCa2
+            // 
+            this.V_NGCa2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.V_NGCa2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.V_NGCa2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold);
+            this.V_NGCa2.Location = new System.Drawing.Point(546, 129);
+            this.V_NGCa2.Margin = new System.Windows.Forms.Padding(0);
+            this.V_NGCa2.Name = "V_NGCa2";
+            this.V_NGCa2.Size = new System.Drawing.Size(116, 28);
+            this.V_NGCa2.TabIndex = 627;
+            this.V_NGCa2.Text = "0";
+            this.V_NGCa2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // V_DCa2
+            // 
+            this.V_DCa2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.V_DCa2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.V_DCa2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold);
+            this.V_DCa2.Location = new System.Drawing.Point(426, 129);
+            this.V_DCa2.Margin = new System.Windows.Forms.Padding(0);
+            this.V_DCa2.Name = "V_DCa2";
+            this.V_DCa2.Size = new System.Drawing.Size(118, 28);
+            this.V_DCa2.TabIndex = 626;
+            this.V_DCa2.Text = "0";
+            this.V_DCa2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // V_CCa2
             // 
-            this.V_CCa2.BackColor = System.Drawing.Color.Transparent;
-            this.V_CCa2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.V_CCa2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.V_CCa2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.V_CCa2.ForeColor = System.Drawing.Color.Black;
-            this.V_CCa2.Location = new System.Drawing.Point(310, 127);
+            this.V_CCa2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.V_CCa2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.V_CCa2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold);
+            this.V_CCa2.Location = new System.Drawing.Point(310, 129);
             this.V_CCa2.Margin = new System.Windows.Forms.Padding(0);
             this.V_CCa2.Name = "V_CCa2";
-            this.V_CCa2.Size = new System.Drawing.Size(114, 39);
-            this.V_CCa2.TabIndex = 613;
+            this.V_CCa2.Size = new System.Drawing.Size(114, 28);
+            this.V_CCa2.TabIndex = 625;
             this.V_CCa2.Text = "0";
-            this.V_CCa2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.V_CCa2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // V_BCa2
             // 
-            this.V_BCa2.BackColor = System.Drawing.Color.Transparent;
-            this.V_BCa2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.V_BCa2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.V_BCa2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.V_BCa2.ForeColor = System.Drawing.Color.Black;
-            this.V_BCa2.Location = new System.Drawing.Point(191, 127);
+            this.V_BCa2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.V_BCa2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.V_BCa2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold);
+            this.V_BCa2.Location = new System.Drawing.Point(191, 129);
             this.V_BCa2.Margin = new System.Windows.Forms.Padding(0);
             this.V_BCa2.Name = "V_BCa2";
-            this.V_BCa2.Size = new System.Drawing.Size(117, 39);
-            this.V_BCa2.TabIndex = 613;
+            this.V_BCa2.Size = new System.Drawing.Size(117, 28);
+            this.V_BCa2.TabIndex = 624;
             this.V_BCa2.Text = "0";
-            this.V_BCa2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // V_CCa1
-            // 
-            this.V_CCa1.BackColor = System.Drawing.Color.Transparent;
-            this.V_CCa1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.V_CCa1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.V_CCa1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.V_CCa1.ForeColor = System.Drawing.Color.Black;
-            this.V_CCa1.Location = new System.Drawing.Point(310, 85);
-            this.V_CCa1.Margin = new System.Windows.Forms.Padding(0);
-            this.V_CCa1.Name = "V_CCa1";
-            this.V_CCa1.Size = new System.Drawing.Size(114, 40);
-            this.V_CCa1.TabIndex = 612;
-            this.V_CCa1.Text = "99999";
-            this.V_CCa1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.V_BCa2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // V_ACa2
             // 
-            this.V_ACa2.BackColor = System.Drawing.Color.Transparent;
-            this.V_ACa2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.V_ACa2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.V_ACa2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.V_ACa2.ForeColor = System.Drawing.Color.Black;
-            this.V_ACa2.Location = new System.Drawing.Point(69, 127);
+            this.V_ACa2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.V_ACa2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.V_ACa2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold);
+            this.V_ACa2.Location = new System.Drawing.Point(69, 129);
             this.V_ACa2.Margin = new System.Windows.Forms.Padding(0);
             this.V_ACa2.Name = "V_ACa2";
-            this.V_ACa2.Size = new System.Drawing.Size(120, 39);
-            this.V_ACa2.TabIndex = 613;
+            this.V_ACa2.Size = new System.Drawing.Size(120, 28);
+            this.V_ACa2.TabIndex = 623;
             this.V_ACa2.Text = "0";
-            this.V_ACa2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.V_ACa2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // V_NGCa1
+            // 
+            this.V_NGCa1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.V_NGCa1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.V_NGCa1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold);
+            this.V_NGCa1.Location = new System.Drawing.Point(546, 90);
+            this.V_NGCa1.Margin = new System.Windows.Forms.Padding(0);
+            this.V_NGCa1.Name = "V_NGCa1";
+            this.V_NGCa1.Size = new System.Drawing.Size(116, 28);
+            this.V_NGCa1.TabIndex = 622;
+            this.V_NGCa1.Text = "0";
+            this.V_NGCa1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // V_DCa1
+            // 
+            this.V_DCa1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.V_DCa1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.V_DCa1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold);
+            this.V_DCa1.Location = new System.Drawing.Point(426, 90);
+            this.V_DCa1.Margin = new System.Windows.Forms.Padding(0);
+            this.V_DCa1.Name = "V_DCa1";
+            this.V_DCa1.Size = new System.Drawing.Size(118, 28);
+            this.V_DCa1.TabIndex = 621;
+            this.V_DCa1.Text = "0";
+            this.V_DCa1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // V_CCa1
+            // 
+            this.V_CCa1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.V_CCa1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.V_CCa1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold);
+            this.V_CCa1.Location = new System.Drawing.Point(310, 90);
+            this.V_CCa1.Margin = new System.Windows.Forms.Padding(0);
+            this.V_CCa1.Name = "V_CCa1";
+            this.V_CCa1.Size = new System.Drawing.Size(114, 28);
+            this.V_CCa1.TabIndex = 620;
+            this.V_CCa1.Text = "0";
+            this.V_CCa1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // V_BCa1
             // 
-            this.V_BCa1.BackColor = System.Drawing.Color.Transparent;
-            this.V_BCa1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.V_BCa1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.V_BCa1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.V_BCa1.ForeColor = System.Drawing.Color.Black;
-            this.V_BCa1.Location = new System.Drawing.Point(191, 85);
+            this.V_BCa1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.V_BCa1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.V_BCa1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold);
+            this.V_BCa1.Location = new System.Drawing.Point(191, 90);
             this.V_BCa1.Margin = new System.Windows.Forms.Padding(0);
             this.V_BCa1.Name = "V_BCa1";
-            this.V_BCa1.Size = new System.Drawing.Size(117, 40);
-            this.V_BCa1.TabIndex = 612;
-            this.V_BCa1.Text = "99999";
-            this.V_BCa1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.V_BCa1.Size = new System.Drawing.Size(117, 28);
+            this.V_BCa1.TabIndex = 619;
+            this.V_BCa1.Text = "0";
+            this.V_BCa1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // V_ACa1
+            // 
+            this.V_ACa1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.V_ACa1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.V_ACa1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold);
+            this.V_ACa1.Location = new System.Drawing.Point(69, 90);
+            this.V_ACa1.Margin = new System.Windows.Forms.Padding(0);
+            this.V_ACa1.Name = "V_ACa1";
+            this.V_ACa1.Size = new System.Drawing.Size(120, 28);
+            this.V_ACa1.TabIndex = 618;
+            this.V_ACa1.Text = "0";
+            this.V_ACa1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label4
             // 
@@ -1546,28 +1613,13 @@
             this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(2, 127);
+            this.label4.Location = new System.Drawing.Point(2, 125);
             this.label4.Margin = new System.Windows.Forms.Padding(0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(65, 39);
+            this.label4.Size = new System.Drawing.Size(65, 37);
             this.label4.TabIndex = 612;
             this.label4.Text = "2";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // V_ACa1
-            // 
-            this.V_ACa1.BackColor = System.Drawing.Color.Transparent;
-            this.V_ACa1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.V_ACa1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.V_ACa1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.V_ACa1.ForeColor = System.Drawing.Color.Black;
-            this.V_ACa1.Location = new System.Drawing.Point(69, 85);
-            this.V_ACa1.Margin = new System.Windows.Forms.Padding(0);
-            this.V_ACa1.Name = "V_ACa1";
-            this.V_ACa1.Size = new System.Drawing.Size(120, 40);
-            this.V_ACa1.TabIndex = 612;
-            this.V_ACa1.Text = "99999";
-            this.V_ACa1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label7
             // 
@@ -1579,7 +1631,7 @@
             this.label7.Location = new System.Drawing.Point(2, 85);
             this.label7.Margin = new System.Windows.Forms.Padding(0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(65, 40);
+            this.label7.Size = new System.Drawing.Size(65, 38);
             this.label7.TabIndex = 611;
             this.label7.Text = "1";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1640,7 +1692,7 @@
             this.label17.Location = new System.Drawing.Point(69, 2);
             this.label17.Margin = new System.Windows.Forms.Padding(0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(592, 33);
+            this.label17.Size = new System.Drawing.Size(593, 33);
             this.label17.TabIndex = 612;
             this.label17.Text = "Tổng số lượng phân loại";
             this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1661,36 +1713,6 @@
             this.label11.Text = "D";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // V_DCa1
-            // 
-            this.V_DCa1.AutoSize = true;
-            this.V_DCa1.BackColor = System.Drawing.Color.Transparent;
-            this.V_DCa1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.V_DCa1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.V_DCa1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.V_DCa1.Location = new System.Drawing.Point(426, 85);
-            this.V_DCa1.Margin = new System.Windows.Forms.Padding(0);
-            this.V_DCa1.Name = "V_DCa1";
-            this.V_DCa1.Size = new System.Drawing.Size(118, 40);
-            this.V_DCa1.TabIndex = 617;
-            this.V_DCa1.Text = "99999";
-            this.V_DCa1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // V_DCa2
-            // 
-            this.V_DCa2.AutoSize = true;
-            this.V_DCa2.BackColor = System.Drawing.Color.Transparent;
-            this.V_DCa2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.V_DCa2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.V_DCa2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.V_DCa2.Location = new System.Drawing.Point(426, 127);
-            this.V_DCa2.Margin = new System.Windows.Forms.Padding(0);
-            this.V_DCa2.Name = "V_DCa2";
-            this.V_DCa2.Size = new System.Drawing.Size(118, 39);
-            this.V_DCa2.TabIndex = 617;
-            this.V_DCa2.Text = "0";
-            this.V_DCa2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // label18
             // 
             this.label18.AutoSize = true;
@@ -1702,40 +1724,10 @@
             this.label18.Location = new System.Drawing.Point(546, 37);
             this.label18.Margin = new System.Windows.Forms.Padding(0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(115, 46);
+            this.label18.Size = new System.Drawing.Size(116, 46);
             this.label18.TabIndex = 617;
             this.label18.Text = "NG";
             this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // V_NGCa1
-            // 
-            this.V_NGCa1.AutoSize = true;
-            this.V_NGCa1.BackColor = System.Drawing.Color.Transparent;
-            this.V_NGCa1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.V_NGCa1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.V_NGCa1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.V_NGCa1.Location = new System.Drawing.Point(546, 85);
-            this.V_NGCa1.Margin = new System.Windows.Forms.Padding(0);
-            this.V_NGCa1.Name = "V_NGCa1";
-            this.V_NGCa1.Size = new System.Drawing.Size(115, 40);
-            this.V_NGCa1.TabIndex = 617;
-            this.V_NGCa1.Text = "99999";
-            this.V_NGCa1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // V_NGCa2
-            // 
-            this.V_NGCa2.AutoSize = true;
-            this.V_NGCa2.BackColor = System.Drawing.Color.Transparent;
-            this.V_NGCa2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.V_NGCa2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.V_NGCa2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.V_NGCa2.Location = new System.Drawing.Point(546, 127);
-            this.V_NGCa2.Margin = new System.Windows.Forms.Padding(0);
-            this.V_NGCa2.Name = "V_NGCa2";
-            this.V_NGCa2.Size = new System.Drawing.Size(115, 39);
-            this.V_NGCa2.TabIndex = 617;
-            this.V_NGCa2.Text = "0";
-            this.V_NGCa2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label15
             // 
@@ -1762,7 +1754,7 @@
             this.label8.Location = new System.Drawing.Point(6, 2);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(655, 25);
+            this.label8.Size = new System.Drawing.Size(656, 25);
             this.label8.TabIndex = 613;
             this.label8.Text = "BIỂU ĐỒ ĐIỆN ÁP 電壓圖表 (V)";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1797,9 +1789,9 @@
             this.tableLayoutPanel6.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Outset;
             this.tableLayoutPanel6.ColumnCount = 2;
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 673F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 667F));
+            this.tableLayoutPanel6.Controls.Add(this.tableLayoutPanel17, 1, 0);
             this.tableLayoutPanel6.Controls.Add(this.cartesianChart1, 0, 0);
-            this.tableLayoutPanel6.Controls.Add(this.panel2, 1, 0);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel6.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(0);
@@ -1808,27 +1800,6 @@
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel6.Size = new System.Drawing.Size(1819, 318);
             this.tableLayoutPanel6.TabIndex = 0;
-            // 
-            // cartesianChart1
-            // 
-            this.cartesianChart1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cartesianChart1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cartesianChart1.Location = new System.Drawing.Point(2, 2);
-            this.cartesianChart1.Margin = new System.Windows.Forms.Padding(0);
-            this.cartesianChart1.Name = "cartesianChart1";
-            this.cartesianChart1.Size = new System.Drawing.Size(1140, 314);
-            this.cartesianChart1.TabIndex = 5;
-            this.cartesianChart1.Text = "Biểu đồ điện áp";
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.tableLayoutPanel17);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(1148, 6);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(665, 306);
-            this.panel2.TabIndex = 6;
             // 
             // tableLayoutPanel17
             // 
@@ -1839,14 +1810,14 @@
             this.tableLayoutPanel17.Controls.Add(this.tableLayoutPanel26, 0, 2);
             this.tableLayoutPanel17.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel17.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel17.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel17.Margin = new System.Windows.Forms.Padding(4);
+            this.tableLayoutPanel17.Location = new System.Drawing.Point(1150, 2);
+            this.tableLayoutPanel17.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel17.Name = "tableLayoutPanel17";
             this.tableLayoutPanel17.RowCount = 3;
             this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 106F));
             this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel17.Size = new System.Drawing.Size(665, 306);
+            this.tableLayoutPanel17.Size = new System.Drawing.Size(667, 314);
             this.tableLayoutPanel17.TabIndex = 0;
             // 
             // tableLayoutPanel9
@@ -1854,18 +1825,18 @@
             this.tableLayoutPanel9.BackColor = System.Drawing.Color.White;
             this.tableLayoutPanel9.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Outset;
             this.tableLayoutPanel9.ColumnCount = 4;
-            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 48.86731F));
-            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 51.13269F));
-            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 189F));
-            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 169F));
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.68027F));
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.31973F));
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 172F));
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 178F));
+            this.tableLayoutPanel9.Controls.Add(this.rCompare, 3, 1);
+            this.tableLayoutPanel9.Controls.Add(this.rMaxLabel, 0, 1);
             this.tableLayoutPanel9.Controls.Add(this.label16, 3, 0);
             this.tableLayoutPanel9.Controls.Add(this.label12, 0, 0);
             this.tableLayoutPanel9.Controls.Add(this.label19, 1, 0);
-            this.tableLayoutPanel9.Controls.Add(this.currentRLabel, 2, 1);
             this.tableLayoutPanel9.Controls.Add(this.label45, 2, 0);
             this.tableLayoutPanel9.Controls.Add(this.rMinLabel, 1, 1);
-            this.tableLayoutPanel9.Controls.Add(this.rMaxLabel, 0, 1);
-            this.tableLayoutPanel9.Controls.Add(this.rCompare, 3, 1);
+            this.tableLayoutPanel9.Controls.Add(this.currentRLabel, 2, 1);
             this.tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel9.Location = new System.Drawing.Point(0, 25);
             this.tableLayoutPanel9.Margin = new System.Windows.Forms.Padding(0);
@@ -1874,8 +1845,34 @@
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 52F));
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel9.Size = new System.Drawing.Size(665, 106);
+            this.tableLayoutPanel9.Size = new System.Drawing.Size(667, 106);
             this.tableLayoutPanel9.TabIndex = 3;
+            // 
+            // rCompare
+            // 
+            this.rCompare.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.rCompare.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.rCompare.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold);
+            this.rCompare.Location = new System.Drawing.Point(486, 62);
+            this.rCompare.Margin = new System.Windows.Forms.Padding(0);
+            this.rCompare.Name = "rCompare";
+            this.rCompare.Size = new System.Drawing.Size(179, 35);
+            this.rCompare.TabIndex = 622;
+            this.rCompare.Text = "OK";
+            this.rCompare.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // rMaxLabel
+            // 
+            this.rMaxLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.rMaxLabel.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.rMaxLabel.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold);
+            this.rMaxLabel.Location = new System.Drawing.Point(2, 62);
+            this.rMaxLabel.Margin = new System.Windows.Forms.Padding(0);
+            this.rMaxLabel.Name = "rMaxLabel";
+            this.rMaxLabel.Size = new System.Drawing.Size(155, 35);
+            this.rMaxLabel.TabIndex = 620;
+            this.rMaxLabel.Text = "0";
+            this.rMaxLabel.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label16
             // 
@@ -1884,10 +1881,10 @@
             this.label16.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label16.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label16.Location = new System.Drawing.Point(493, 2);
+            this.label16.Location = new System.Drawing.Point(486, 2);
             this.label16.Margin = new System.Windows.Forms.Padding(0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(170, 52);
+            this.label16.Size = new System.Drawing.Size(179, 52);
             this.label16.TabIndex = 618;
             this.label16.Text = "Phân Loại 分类";
             this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1897,12 +1894,12 @@
             this.label12.BackColor = System.Drawing.Color.Tan;
             this.label12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label12.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label12.Location = new System.Drawing.Point(2, 2);
             this.label12.Margin = new System.Windows.Forms.Padding(0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(145, 52);
+            this.label12.Size = new System.Drawing.Size(155, 52);
             this.label12.TabIndex = 603;
             this.label12.Text = "Điện trở (電阻) \r\nMAX";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1914,28 +1911,13 @@
             this.label19.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label19.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label19.Location = new System.Drawing.Point(149, 2);
+            this.label19.Location = new System.Drawing.Point(159, 2);
             this.label19.Margin = new System.Windows.Forms.Padding(0);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(151, 52);
             this.label19.TabIndex = 604;
             this.label19.Text = "Điện trở (電阻) \r\nMIN";
             this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // currentRLabel
-            // 
-            this.currentRLabel.BackColor = System.Drawing.Color.Snow;
-            this.currentRLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.currentRLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.currentRLabel.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.currentRLabel.ForeColor = System.Drawing.Color.Black;
-            this.currentRLabel.Location = new System.Drawing.Point(302, 56);
-            this.currentRLabel.Margin = new System.Windows.Forms.Padding(0);
-            this.currentRLabel.Name = "currentRLabel";
-            this.currentRLabel.Size = new System.Drawing.Size(189, 48);
-            this.currentRLabel.TabIndex = 609;
-            this.currentRLabel.Text = "0";
-            this.currentRLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label45
             // 
@@ -1944,79 +1926,62 @@
             this.label45.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label45.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label45.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label45.Location = new System.Drawing.Point(302, 2);
+            this.label45.Location = new System.Drawing.Point(312, 2);
             this.label45.Margin = new System.Windows.Forms.Padding(0);
             this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(189, 52);
+            this.label45.Size = new System.Drawing.Size(172, 52);
             this.label45.TabIndex = 608;
             this.label45.Text = "Điện trở \r\n(電阻)";
             this.label45.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // rMinLabel
             // 
-            this.rMinLabel.BackColor = System.Drawing.Color.Snow;
-            this.rMinLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.rMinLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rMinLabel.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rMinLabel.Location = new System.Drawing.Point(149, 56);
+            this.rMinLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.rMinLabel.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.rMinLabel.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold);
+            this.rMinLabel.Location = new System.Drawing.Point(159, 62);
             this.rMinLabel.Margin = new System.Windows.Forms.Padding(0);
             this.rMinLabel.Name = "rMinLabel";
-            this.rMinLabel.Size = new System.Drawing.Size(151, 48);
-            this.rMinLabel.TabIndex = 612;
+            this.rMinLabel.Size = new System.Drawing.Size(151, 35);
+            this.rMinLabel.TabIndex = 621;
             this.rMinLabel.Text = "0";
-            this.rMinLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rMinLabel.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // rMaxLabel
+            // currentRLabel
             // 
-            this.rMaxLabel.AutoSize = true;
-            this.rMaxLabel.BackColor = System.Drawing.Color.Snow;
-            this.rMaxLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.rMaxLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rMaxLabel.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rMaxLabel.Location = new System.Drawing.Point(2, 56);
-            this.rMaxLabel.Margin = new System.Windows.Forms.Padding(0);
-            this.rMaxLabel.Name = "rMaxLabel";
-            this.rMaxLabel.Size = new System.Drawing.Size(145, 48);
-            this.rMaxLabel.TabIndex = 613;
-            this.rMaxLabel.Text = "0";
-            this.rMaxLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // rCompare
-            // 
-            this.rCompare.BackColor = System.Drawing.Color.White;
-            this.rCompare.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.rCompare.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rCompare.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rCompare.ForeColor = System.Drawing.Color.Black;
-            this.rCompare.Location = new System.Drawing.Point(493, 56);
-            this.rCompare.Margin = new System.Windows.Forms.Padding(0);
-            this.rCompare.Name = "rCompare";
-            this.rCompare.Size = new System.Drawing.Size(170, 48);
-            this.rCompare.TabIndex = 616;
-            this.rCompare.Text = "OK";
-            this.rCompare.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.currentRLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.currentRLabel.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.currentRLabel.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold);
+            this.currentRLabel.Location = new System.Drawing.Point(312, 62);
+            this.currentRLabel.Margin = new System.Windows.Forms.Padding(0);
+            this.currentRLabel.Name = "currentRLabel";
+            this.currentRLabel.Size = new System.Drawing.Size(172, 35);
+            this.currentRLabel.TabIndex = 619;
+            this.currentRLabel.Text = "0";
+            this.currentRLabel.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // tableLayoutPanel26
             // 
+            this.tableLayoutPanel26.BackColor = System.Drawing.Color.White;
             this.tableLayoutPanel26.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Outset;
             this.tableLayoutPanel26.ColumnCount = 4;
             this.tableLayoutPanel26.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 64F));
             this.tableLayoutPanel26.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel26.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel26.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 27.7027F));
+            this.tableLayoutPanel26.Controls.Add(this.r_HIGHCa2, 3, 3);
+            this.tableLayoutPanel26.Controls.Add(this.r_LOWCa2, 2, 3);
+            this.tableLayoutPanel26.Controls.Add(this.r_OKCa2, 1, 3);
+            this.tableLayoutPanel26.Controls.Add(this.r_HIGHCa1, 3, 2);
+            this.tableLayoutPanel26.Controls.Add(this.r_LOWCa1, 2, 2);
             this.tableLayoutPanel26.Controls.Add(this.label42, 0, 3);
             this.tableLayoutPanel26.Controls.Add(this.label43, 0, 2);
-            this.tableLayoutPanel26.Controls.Add(this.rHightShift2Label, 3, 3);
-            this.tableLayoutPanel26.Controls.Add(this.rLowShift2Label, 2, 3);
-            this.tableLayoutPanel26.Controls.Add(this.rGoodShift2Label, 1, 3);
-            this.tableLayoutPanel26.Controls.Add(this.rGoodShift1Label, 1, 2);
             this.tableLayoutPanel26.Controls.Add(this.label26, 1, 1);
-            this.tableLayoutPanel26.Controls.Add(this.rLowShift1Label, 2, 2);
-            this.tableLayoutPanel26.Controls.Add(this.rHightShift1Label, 3, 2);
             this.tableLayoutPanel26.Controls.Add(this.label22, 3, 1);
             this.tableLayoutPanel26.Controls.Add(this.label24, 2, 1);
             this.tableLayoutPanel26.Controls.Add(this.label23, 1, 0);
             this.tableLayoutPanel26.Controls.Add(this.label25, 0, 0);
+            this.tableLayoutPanel26.Controls.Add(this.r_OKCa1, 1, 2);
             this.tableLayoutPanel26.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel26.Location = new System.Drawing.Point(0, 131);
             this.tableLayoutPanel26.Margin = new System.Windows.Forms.Padding(0);
@@ -2026,8 +1991,73 @@
             this.tableLayoutPanel26.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 55F));
             this.tableLayoutPanel26.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 51.16279F));
             this.tableLayoutPanel26.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 48.83721F));
-            this.tableLayoutPanel26.Size = new System.Drawing.Size(665, 175);
+            this.tableLayoutPanel26.Size = new System.Drawing.Size(667, 183);
             this.tableLayoutPanel26.TabIndex = 611;
+            // 
+            // r_HIGHCa2
+            // 
+            this.r_HIGHCa2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.r_HIGHCa2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.r_HIGHCa2.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold);
+            this.r_HIGHCa2.Location = new System.Drawing.Point(452, 144);
+            this.r_HIGHCa2.Margin = new System.Windows.Forms.Padding(0);
+            this.r_HIGHCa2.Name = "r_HIGHCa2";
+            this.r_HIGHCa2.Size = new System.Drawing.Size(213, 31);
+            this.r_HIGHCa2.TabIndex = 619;
+            this.r_HIGHCa2.Text = "0";
+            this.r_HIGHCa2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // r_LOWCa2
+            // 
+            this.r_LOWCa2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.r_LOWCa2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.r_LOWCa2.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold);
+            this.r_LOWCa2.Location = new System.Drawing.Point(260, 144);
+            this.r_LOWCa2.Margin = new System.Windows.Forms.Padding(0);
+            this.r_LOWCa2.Name = "r_LOWCa2";
+            this.r_LOWCa2.Size = new System.Drawing.Size(190, 31);
+            this.r_LOWCa2.TabIndex = 618;
+            this.r_LOWCa2.Text = "0";
+            this.r_LOWCa2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // r_OKCa2
+            // 
+            this.r_OKCa2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.r_OKCa2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.r_OKCa2.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold);
+            this.r_OKCa2.Location = new System.Drawing.Point(68, 144);
+            this.r_OKCa2.Margin = new System.Windows.Forms.Padding(0);
+            this.r_OKCa2.Name = "r_OKCa2";
+            this.r_OKCa2.Size = new System.Drawing.Size(190, 31);
+            this.r_OKCa2.TabIndex = 617;
+            this.r_OKCa2.Text = "0";
+            this.r_OKCa2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // r_HIGHCa1
+            // 
+            this.r_HIGHCa1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.r_HIGHCa1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.r_HIGHCa1.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold);
+            this.r_HIGHCa1.Location = new System.Drawing.Point(452, 100);
+            this.r_HIGHCa1.Margin = new System.Windows.Forms.Padding(0);
+            this.r_HIGHCa1.Name = "r_HIGHCa1";
+            this.r_HIGHCa1.Size = new System.Drawing.Size(213, 31);
+            this.r_HIGHCa1.TabIndex = 616;
+            this.r_HIGHCa1.Text = "0";
+            this.r_HIGHCa1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // r_LOWCa1
+            // 
+            this.r_LOWCa1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.r_LOWCa1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.r_LOWCa1.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold);
+            this.r_LOWCa1.Location = new System.Drawing.Point(260, 100);
+            this.r_LOWCa1.Margin = new System.Windows.Forms.Padding(0);
+            this.r_LOWCa1.Name = "r_LOWCa1";
+            this.r_LOWCa1.Size = new System.Drawing.Size(190, 31);
+            this.r_LOWCa1.TabIndex = 615;
+            this.r_LOWCa1.Text = "0";
+            this.r_LOWCa1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label42
             // 
@@ -2036,10 +2066,10 @@
             this.label42.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label42.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label42.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label42.Location = new System.Drawing.Point(2, 135);
+            this.label42.Location = new System.Drawing.Point(2, 139);
             this.label42.Margin = new System.Windows.Forms.Padding(0);
             this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(64, 38);
+            this.label42.Size = new System.Drawing.Size(64, 42);
             this.label42.TabIndex = 612;
             this.label42.Text = "2";
             this.label42.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2054,70 +2084,10 @@
             this.label43.Location = new System.Drawing.Point(2, 94);
             this.label43.Margin = new System.Windows.Forms.Padding(0);
             this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(64, 39);
+            this.label43.Size = new System.Drawing.Size(64, 43);
             this.label43.TabIndex = 611;
             this.label43.Text = "1";
             this.label43.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // rHightShift2Label
-            // 
-            this.rHightShift2Label.BackColor = System.Drawing.Color.Snow;
-            this.rHightShift2Label.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.rHightShift2Label.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rHightShift2Label.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rHightShift2Label.ForeColor = System.Drawing.Color.Black;
-            this.rHightShift2Label.Location = new System.Drawing.Point(452, 135);
-            this.rHightShift2Label.Margin = new System.Windows.Forms.Padding(0);
-            this.rHightShift2Label.Name = "rHightShift2Label";
-            this.rHightShift2Label.Size = new System.Drawing.Size(211, 38);
-            this.rHightShift2Label.TabIndex = 613;
-            this.rHightShift2Label.Text = "0";
-            this.rHightShift2Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // rLowShift2Label
-            // 
-            this.rLowShift2Label.BackColor = System.Drawing.Color.Snow;
-            this.rLowShift2Label.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.rLowShift2Label.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rLowShift2Label.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rLowShift2Label.ForeColor = System.Drawing.Color.Black;
-            this.rLowShift2Label.Location = new System.Drawing.Point(260, 135);
-            this.rLowShift2Label.Margin = new System.Windows.Forms.Padding(0);
-            this.rLowShift2Label.Name = "rLowShift2Label";
-            this.rLowShift2Label.Size = new System.Drawing.Size(190, 38);
-            this.rLowShift2Label.TabIndex = 613;
-            this.rLowShift2Label.Text = "0";
-            this.rLowShift2Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // rGoodShift2Label
-            // 
-            this.rGoodShift2Label.BackColor = System.Drawing.Color.Snow;
-            this.rGoodShift2Label.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.rGoodShift2Label.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rGoodShift2Label.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rGoodShift2Label.ForeColor = System.Drawing.Color.Black;
-            this.rGoodShift2Label.Location = new System.Drawing.Point(68, 135);
-            this.rGoodShift2Label.Margin = new System.Windows.Forms.Padding(0);
-            this.rGoodShift2Label.Name = "rGoodShift2Label";
-            this.rGoodShift2Label.Size = new System.Drawing.Size(190, 38);
-            this.rGoodShift2Label.TabIndex = 613;
-            this.rGoodShift2Label.Text = "0";
-            this.rGoodShift2Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // rGoodShift1Label
-            // 
-            this.rGoodShift1Label.BackColor = System.Drawing.Color.Snow;
-            this.rGoodShift1Label.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.rGoodShift1Label.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rGoodShift1Label.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rGoodShift1Label.ForeColor = System.Drawing.Color.Black;
-            this.rGoodShift1Label.Location = new System.Drawing.Point(68, 94);
-            this.rGoodShift1Label.Margin = new System.Windows.Forms.Padding(0);
-            this.rGoodShift1Label.Name = "rGoodShift1Label";
-            this.rGoodShift1Label.Size = new System.Drawing.Size(190, 39);
-            this.rGoodShift1Label.TabIndex = 612;
-            this.rGoodShift1Label.Text = "0";
-            this.rGoodShift1Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label26
             // 
@@ -2125,7 +2095,7 @@
             this.label26.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label26.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label26.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label26.ForeColor = System.Drawing.Color.ForestGreen;
             this.label26.Location = new System.Drawing.Point(68, 37);
             this.label26.Margin = new System.Windows.Forms.Padding(0);
             this.label26.Name = "label26";
@@ -2134,47 +2104,17 @@
             this.label26.Text = "SP Đạt \r\n达到求";
             this.label26.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // rLowShift1Label
-            // 
-            this.rLowShift1Label.BackColor = System.Drawing.Color.Snow;
-            this.rLowShift1Label.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.rLowShift1Label.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rLowShift1Label.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rLowShift1Label.ForeColor = System.Drawing.Color.Black;
-            this.rLowShift1Label.Location = new System.Drawing.Point(260, 94);
-            this.rLowShift1Label.Margin = new System.Windows.Forms.Padding(0);
-            this.rLowShift1Label.Name = "rLowShift1Label";
-            this.rLowShift1Label.Size = new System.Drawing.Size(190, 39);
-            this.rLowShift1Label.TabIndex = 612;
-            this.rLowShift1Label.Text = "0";
-            this.rLowShift1Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // rHightShift1Label
-            // 
-            this.rHightShift1Label.BackColor = System.Drawing.Color.Snow;
-            this.rHightShift1Label.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.rHightShift1Label.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rHightShift1Label.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rHightShift1Label.ForeColor = System.Drawing.Color.Black;
-            this.rHightShift1Label.Location = new System.Drawing.Point(452, 94);
-            this.rHightShift1Label.Margin = new System.Windows.Forms.Padding(0);
-            this.rHightShift1Label.Name = "rHightShift1Label";
-            this.rHightShift1Label.Size = new System.Drawing.Size(211, 39);
-            this.rHightShift1Label.TabIndex = 612;
-            this.rHightShift1Label.Text = "0";
-            this.rHightShift1Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // label22
             // 
             this.label22.BackColor = System.Drawing.Color.Tan;
             this.label22.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label22.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label22.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label22.ForeColor = System.Drawing.Color.Yellow;
             this.label22.Location = new System.Drawing.Point(452, 37);
             this.label22.Margin = new System.Windows.Forms.Padding(0);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(211, 55);
+            this.label22.Size = new System.Drawing.Size(213, 55);
             this.label22.TabIndex = 613;
             this.label22.Text = "SP Cao \r\n高";
             this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2185,7 +2125,7 @@
             this.label24.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label24.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label24.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label24.ForeColor = System.Drawing.Color.Red;
             this.label24.Location = new System.Drawing.Point(260, 37);
             this.label24.Margin = new System.Windows.Forms.Padding(0);
             this.label24.Name = "label24";
@@ -2205,7 +2145,7 @@
             this.label23.Location = new System.Drawing.Point(68, 2);
             this.label23.Margin = new System.Windows.Forms.Padding(0);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(595, 33);
+            this.label23.Size = new System.Drawing.Size(597, 33);
             this.label23.TabIndex = 612;
             this.label23.Text = "Phân Loại 分类";
             this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2226,6 +2166,19 @@
             this.label25.Text = "Ca\r\nlàm việc\r\n";
             this.label25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // r_OKCa1
+            // 
+            this.r_OKCa1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.r_OKCa1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.r_OKCa1.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold);
+            this.r_OKCa1.Location = new System.Drawing.Point(68, 100);
+            this.r_OKCa1.Margin = new System.Windows.Forms.Padding(0);
+            this.r_OKCa1.Name = "r_OKCa1";
+            this.r_OKCa1.Size = new System.Drawing.Size(190, 31);
+            this.r_OKCa1.TabIndex = 614;
+            this.r_OKCa1.Text = "0";
+            this.r_OKCa1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -2235,10 +2188,22 @@
             this.label1.Location = new System.Drawing.Point(4, 0);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(657, 25);
+            this.label1.Size = new System.Drawing.Size(659, 25);
             this.label1.TabIndex = 612;
             this.label1.Text = "BIỂU ĐỒ ĐIỆN TRỞ 電阻圖表 (Ω) ";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // cartesianChart1
+            // 
+            this.cartesianChart1.BackColor = System.Drawing.Color.Gainsboro;
+            this.cartesianChart1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cartesianChart1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cartesianChart1.Location = new System.Drawing.Point(2, 2);
+            this.cartesianChart1.Margin = new System.Windows.Forms.Padding(0);
+            this.cartesianChart1.Name = "cartesianChart1";
+            this.cartesianChart1.Size = new System.Drawing.Size(1146, 314);
+            this.cartesianChart1.TabIndex = 5;
+            this.cartesianChart1.Text = "Biểu đồ điện áp";
             // 
             // panel3
             // 
@@ -2250,11 +2215,38 @@
             this.panel3.Size = new System.Drawing.Size(1819, 4);
             this.panel3.TabIndex = 4;
             // 
+            // label13
+            // 
+            this.label13.BackColor = System.Drawing.Color.LightGray;
+            this.label13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label13.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.Black;
+            this.label13.Location = new System.Drawing.Point(417, 0);
+            this.label13.Margin = new System.Windows.Forms.Padding(0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(74, 30);
+            this.label13.TabIndex = 623;
+            this.label13.Text = "SADSADSA";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
+            this.label21.Location = new System.Drawing.Point(420, 30);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(68, 38);
+            this.label21.TabIndex = 624;
+            this.label21.Text = "label21dsadsa";
+            this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.DarkGray;
             this.ClientSize = new System.Drawing.Size(1827, 922);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -2303,17 +2295,18 @@
             this.tableLayoutPanel27.ResumeLayout(false);
             this.tableLayoutPanel27.PerformLayout();
             this.tableLayoutPanel19.ResumeLayout(false);
+            this.tableLayoutPanel19.PerformLayout();
             this.tableLayoutPanel28.ResumeLayout(false);
             this.tableLayoutPanel28.PerformLayout();
             this.tableLayoutPanel35.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.tableLayoutPanel6.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
             this.tableLayoutPanel17.ResumeLayout(false);
             this.tableLayoutPanel17.PerformLayout();
             this.tableLayoutPanel9.ResumeLayout(false);
             this.tableLayoutPanel9.PerformLayout();
             this.tableLayoutPanel26.ResumeLayout(false);
+            this.tableLayoutPanel26.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -2376,28 +2369,17 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
         private LiveCharts.WinForms.CartesianChart cartesianChart1;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel17;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel9;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label currentRLabel;
         private System.Windows.Forms.Label label45;
-        private System.Windows.Forms.Label rMinLabel;
-        private System.Windows.Forms.Label rMaxLabel;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel26;
         private System.Windows.Forms.Label label42;
         private System.Windows.Forms.Label label43;
-        private System.Windows.Forms.Label rHightShift2Label;
-        private System.Windows.Forms.Label rLowShift2Label;
-        private System.Windows.Forms.Label rGoodShift2Label;
         private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Label rGoodShift1Label;
         private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label rCompare;
         private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Label rLowShift1Label;
-        private System.Windows.Forms.Label rHightShift1Label;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label1;
@@ -2405,21 +2387,11 @@
         private LiveCharts.WinForms.CartesianChart cartesianChart2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel27;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel19;
-        private System.Windows.Forms.Label vMaxLabel;
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.Label vMinLabel;
-        private System.Windows.Forms.Label currentVLabel;
         private System.Windows.Forms.Label label51;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel28;
-        private System.Windows.Forms.Label V_CCa2;
-        private System.Windows.Forms.Label V_BCa2;
-        private System.Windows.Forms.Label V_CCa1;
-        private System.Windows.Forms.Label V_ACa2;
-        private System.Windows.Forms.Label vCompare;
-        private System.Windows.Forms.Label V_BCa1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label V_ACa1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label17;
@@ -2440,15 +2412,38 @@
         private System.Windows.Forms.Label totalBatteryShift2Label;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label lb_isResetLamp;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label labelValueLight;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label V_DCa1;
-        private System.Windows.Forms.Label V_DCa2;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label V_NGCa1;
-        private System.Windows.Forms.Label V_NGCa2;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label bitVeDoThi;
+        private System.Windows.Forms.TextBox r_OKCa1;
+        private System.Windows.Forms.TextBox r_HIGHCa1;
+        private System.Windows.Forms.TextBox r_LOWCa1;
+        private System.Windows.Forms.TextBox r_HIGHCa2;
+        private System.Windows.Forms.TextBox r_LOWCa2;
+        private System.Windows.Forms.TextBox r_OKCa2;
+        private System.Windows.Forms.TextBox currentRLabel;
+        private System.Windows.Forms.TextBox rMinLabel;
+        private System.Windows.Forms.TextBox rMaxLabel;
+        private System.Windows.Forms.TextBox rCompare;
+        private System.Windows.Forms.TextBox V_ACa1;
+        private System.Windows.Forms.TextBox V_NGCa1;
+        private System.Windows.Forms.TextBox V_DCa1;
+        private System.Windows.Forms.TextBox V_CCa1;
+        private System.Windows.Forms.TextBox V_BCa1;
+        private System.Windows.Forms.TextBox V_NGCa2;
+        private System.Windows.Forms.TextBox V_DCa2;
+        private System.Windows.Forms.TextBox V_CCa2;
+        private System.Windows.Forms.TextBox V_BCa2;
+        private System.Windows.Forms.TextBox V_ACa2;
+        private System.Windows.Forms.TextBox vCompare;
+        private System.Windows.Forms.TextBox currentVLabel;
+        private System.Windows.Forms.TextBox vMinLabel;
+        private System.Windows.Forms.TextBox vMaxLabel;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label21;
     }
 }
