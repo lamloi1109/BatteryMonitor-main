@@ -44,17 +44,20 @@ using System.ArrayExtensions;
 using Krypton.Toolkit;
 using System.Data.SQLite;
 using System.Xml;
+using Org.BouncyCastle.Utilities.Net;
+using System.ServiceModel.Channels;
 //using ActUtlTypeLib;
 
 namespace BatteryMonitor
 {
 
-    public partial class Main : Form
+    public partial class FMain : Form
     {
 
+        Panel panelmsg = new Panel();
+        Label labelmsg = new Label();
 
-
-        private ReaderAccessor m_reader = new ReaderAccessor();
+        //private ReaderAccessor MenuForm.m_reader = new ReaderAccessor();
 
         // NLog
         private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
@@ -175,9 +178,15 @@ namespace BatteryMonitor
 
         bool isResetChart = false;
 
+        bool isShowMessageError = false;
+
+        bool isHandleDisconnectModbust = false;
+        bool isHandleDisconnectScanner = false;
+
+        bool isHandleConnectModbust = false;
+        bool isHandleConnectScanner = false;
+
         int resetQueueBattery = 0;
-
-
 
         //string receivedData = "";
 
@@ -185,9 +194,10 @@ namespace BatteryMonitor
             System.Drawing.Color.Lime, System.Drawing.Color.Gold, System.Drawing.Color.Red };
 
 
-        public Main()
+        public FMain()
         {
             InitializeComponent();
+
         }
         public static ChartValues<MeasureModel> ChartValuesR { get; set; } = new ChartValues<MeasureModel>();
         public static ChartValues<MeasureModel> ChartValuesV { get; set; } = new ChartValues<MeasureModel>();
@@ -278,7 +288,10 @@ namespace BatteryMonitor
         // Số bình tối đa trong một cụm bình 
         int maxGroupPin = 4;
 
-        int pinCountSetting = Properties.Settings.Default.CountPin + 1;
+        //int pinCountSetting = Properties.Settings.Default.CountPin + 1;
+        int pinCountSetting = 4;
+
+
 
         // Tổng bình ca 1`
         int totalBatteryShift1 = totalPinWorkShift(1);
@@ -396,6 +409,8 @@ namespace BatteryMonitor
         double ZI_V = 0.0;
         // isDequeue
         bool isDeQueue = false;
+
+        int TryReconnect = 5;
 
         // Danh sách chứa các biến dùng để chuyển thành int16 và ghi lên modbust
         List<string> convertToInt16List = new List<string>();
@@ -996,9 +1011,24 @@ namespace BatteryMonitor
 
             try
             {
-                //ChartConfig(cartesianChart1);
-                //ChartConfig(cartesianChart2);
-                //tongtheophanloai();
+
+                panelmsg.Size = new Size(1100, 600);
+
+                int fMainHeight = this.Height;
+                int fMainWidth = this.Width;
+
+                panelmsg.Location = new Point((fMainWidth / 2) - (panelmsg.Width / 2), (fMainHeight / 2) - (panelmsg.Height / 2));
+                panelmsg.BackColor = System.Drawing.Color.Orange;
+
+                panelmsg.Controls.Add(labelmsg);
+                labelmsg.Dock = DockStyle.Fill;
+                labelmsg.Text = "LOADING...";
+                labelmsg.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+                labelmsg.Font = new Font("Times New Roman", 30, FontStyle.Bold);
+                this.Controls.Add(panelmsg);
+                panelmsg.BringToFront();
+                panelmsg.Hide();
+
                 var version = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString();
                 string productName = Application.ProductName;
                 this.Text = productName + " Chart " + version.ToString() + "Version: 24.05.22.01";
@@ -1018,35 +1048,24 @@ namespace BatteryMonitor
                     }
                 }
 
-                modbustMainForm.IPAddress = Properties.Settings.Default.modbustIP;
-                modbustMainForm.Port = Properties.Settings.Default.modbustPort;
-                modbustMainForm.Connect();
 
-                modbustWrite.IPAddress = Properties.Settings.Default.modbustIP;
-                modbustWrite.Port = Properties.Settings.Default.modbustPort;
-                modbustWrite.Connect();
+                //if (!modbustMainForm.Connected)
+                //{
+                //    modbustMainForm.IPAddress = Properties.Settings.Default.modbustIP;
+                //    modbustMainForm.Port = Properties.Settings.Default.modbustPort;
+                //    modbustMainForm.Connect();
+                //}
 
-                //TEST
-                if (!modbustMainForm.Connected || !modbustWrite.Connected)
-                {
-                    modbustWrite.WriteSingleRegister(97, 1);
+                //if (!modbustWrite.Connected)
+                //{
+                //    modbustWrite.IPAddress = Properties.Settings.Default.modbustIP;
+                //    modbustWrite.Port = Properties.Settings.Default.modbustPort;
+                //    modbustWrite.Connect();
+                //}
 
-                    (new Nofitication("Kết nối tới proface thất bại!")).ShowDialog();
-                    return;
-                }
-
-                // Kết nối đến HIOKI               
                 isConnectedToHioki = hiokiSocket.TryConnectToTcpServer();
-
-                // Kết nối đến HIOKI
-                if (!isConnectedToHioki)
-                {
-                    modbustWrite.WriteSingleRegister(95, 1);
-
-                    (new Nofitication("Kết nối tới thiết bị đo thất bại!")).ShowDialog();
-
-                    return;
-                }
+                isConnectedToHioki = true;
+                setscanner();
 
                 // Timer nhận giá trị từ HIOKI
                 bgwork_getMeasurementValueHioki = new BackgroundWorker();
@@ -1058,28 +1077,19 @@ namespace BatteryMonitor
                 // Timer ghi giá tri lên modbust
                 bgwork_writeToModbust = new BackgroundWorker();
                 bgwork_writeToModbust.DoWork += new DoWorkEventHandler(bgwork_writeToModbust_DoWork);
+
                 writeToModbustTimer.Interval = 50;
                 writeToModbustTimer.Elapsed += new System.Timers.ElapsedEventHandler(_writeToModbust_Elapsed);
-
-                // Timer ghi giá tri lên modbust
-                //bgwork_writeTypePin = new BackgroundWorker();
-                //bgwork_writeTypePin.DoWork += new DoWorkEventHandler(bgwork_writeTypePin_DoWork);
-                //writeTypePinTimer.Interval = 10;
-                //writeTypePinTimer.Elapsed += new System.Timers.ElapsedEventHandler(_writeTypePin_Elapsed);
-                //writeTypePinTimer.Start();
-
-
                 // Thiết lập kết nối máy quét
                 //TEST
-                setscanner();
                 //TEST
                 //if (maxGroupPin == 4)
                 //{
-                //    m_reader.ExecCommand("WP,250,4");
+                //    MenuForm.m_reader.ExecCommand("WP,250,4");
                 //}
                 //else
                 //{
-                //    m_reader.ExecCommand("WP,250,8");
+                //    MenuForm.m_reader.ExecCommand("WP,250,8");
                 //}
 
                 uiTimer.Interval = 50;
@@ -1115,6 +1125,7 @@ namespace BatteryMonitor
                 // Timer Export Excel
                 bgwork_exportExcelTimer = new BackgroundWorker();
                 bgwork_exportExcelTimer.DoWork += new DoWorkEventHandler(bgwork_exportExcelTimer_DoWork);
+
                 exportExcelTimer.Interval = 50;
                 exportExcelTimer.Elapsed += new System.Timers.ElapsedEventHandler(_exportExcelTimer_Elapsed);
                 exportExcelTimer.Start();
@@ -1122,6 +1133,10 @@ namespace BatteryMonitor
                 ////Timer đèn
                 _LightTimer.Interval = 1000;
                 _LightTimer.Elapsed += new System.Timers.ElapsedEventHandler(_LightTimer_Elapsed);
+
+                resetChartTimer.Interval = 50;
+                resetChartTimer.Tick += ResetChartTimer_Tick;
+                resetChartTimer.Start();
 
                 // Ping tới keygence để kiểm tra kết nối
                 bgwork_check_keygence_connect = new BackgroundWorker();
@@ -1132,28 +1147,439 @@ namespace BatteryMonitor
                 checkKeygenceConnectTimer.Elapsed += new System.Timers.ElapsedEventHandler(_check_keygence_connect_DoWork_Elapsed);
                 checkKeygenceConnectTimer.Start();
 
-                resetChartTimer.Interval = 50;
-                resetChartTimer.Tick += ResetChartTimer_Tick;
-                resetChartTimer.Start();
+                isHandleConnectModbust = true;
+                //isHandleDisconnectModbust = false;
+
+                //isHandleConnectScanner = true;
+                //isHandleDisconnectScanner = false;
+
+                //while (true)
+                //{
+                //    if (SetScannerStatus && isConnectedToModbust) break;
+
+                //    if (!connectToSCanner()) continue;
+
+                //    if (!connectToModbust()) continue;
+
+                //}
+
+                //// Timer nhận giá trị từ HIOKI
+                //bgwork_getMeasurementValueHioki = new BackgroundWorker();
+                //bgwork_getMeasurementValueHioki.DoWork += new DoWorkEventHandler(bgwork_getMeasurementValueHioki_DoWork);
+                //getMeasurementValueHiokiTimer.Interval = 50;
+                //getMeasurementValueHiokiTimer.Elapsed += new System.Timers.ElapsedEventHandler(RetrieveHiokiMeasurement);
+                //getMeasurementValueHiokiTimer.Start();
+
+                //// Timer ghi giá tri lên modbust
+                //bgwork_writeToModbust = new BackgroundWorker();
+                //bgwork_writeToModbust.DoWork += new DoWorkEventHandler(bgwork_writeToModbust_DoWork);
+                //writeToModbustTimer.Interval = 50;
+                //writeToModbustTimer.Elapsed += new System.Timers.ElapsedEventHandler(_writeToModbust_Elapsed);
+
+                //// Thiết lập kết nối máy quét
+                ////TEST
+                ////setscanner();
+                ////TEST
+                ////if (maxGroupPin == 4)
+                ////{
+                ////    MenuForm.m_reader.ExecCommand("WP,250,4");
+                ////}
+                ////else
+                ////{
+                ////    MenuForm.m_reader.ExecCommand("WP,250,8");
+                ////}
+
+                //uiTimer.Interval = 50;
+                //uiTimer.Tick += uiTimer_Tick;
+                //uiTimer.Start();
+
+                //monitorModbusTimer.Interval = 50;
+                //monitorModbusTimer.Tick += MonitorModbusTimer_Tick;
+                //monitorModbusTimer.Start();
+
+                //timerShowText.Interval = 50;
+                //timerShowText.Tick += timerShowText_Tick;
+                //timerShowText.Start();
+
+                //timerShowphanloaiV.Interval = 1000;
+                //timerShowphanloaiV.Tick += timerShowphanloaiV_Tick;
+                //timerShowphanloaiV.Start();
+
+                //ChartConfig(cartesianChart1);
+                //ChartConfig(cartesianChart2);
+
+                //chartTimer.Interval = 50;
+                //chartTimer.Tick += ChartTimer_Tick;
+                //chartTimer.Start();
+
+                //pinGroupUITimer.Interval = 50;
+                //pinGroupUITimer.Tick += pinGroupUI_Tick;
+                //pinGroupUITimer.Start();
+
+                //bgwork_light = new BackgroundWorker();
+                //bgwork_light.DoWork += new DoWorkEventHandler(bgwork_light_DoWork);
+
+                //// Timer Export Excel
+                //bgwork_exportExcelTimer = new BackgroundWorker();
+                //bgwork_exportExcelTimer.DoWork += new DoWorkEventHandler(bgwork_exportExcelTimer_DoWork);
+
+                //exportExcelTimer.Interval = 50;
+                //exportExcelTimer.Elapsed += new System.Timers.ElapsedEventHandler(_exportExcelTimer_Elapsed);
+                //exportExcelTimer.Start();
+
+                //////Timer đèn
+                //_LightTimer.Interval = 1000;
+                //_LightTimer.Elapsed += new System.Timers.ElapsedEventHandler(_LightTimer_Elapsed);
+
+                //resetChartTimer.Interval = 50;
+                //resetChartTimer.Tick += ResetChartTimer_Tick;
+                //resetChartTimer.Start();
+
+                //// Ping tới keygence để kiểm tra kết nối
+                //bgwork_check_keygence_connect = new BackgroundWorker();
+                //bgwork_check_keygence_connect.DoWork += new DoWorkEventHandler(checkConnectDevices);
+
+                //// Timer kiểm tra mắt quét
+                //checkKeygenceConnectTimer.Interval = 3000;
+                //checkKeygenceConnectTimer.Elapsed += new System.Timers.ElapsedEventHandler(_check_keygence_connect_DoWork_Elapsed);
+                //checkKeygenceConnectTimer.Start();
+
             }
             catch (Exception ex)
             {
                 logger.Error(ex);
-                if (fnoti == null)
-                {
-            
+                showNofitication("");
+            }
+        }
 
-                    this.Invoke((MethodInvoker)delegate
+        private bool connectToModbust()
+        {
+            try
+            {
+                string IpAddress = Properties.Settings.Default.modbustIP;
+                if (!checkConnectByPing(IpAddress))
+                {
+
+                    isConnectedToModbust = false;
+                    // Kiểm tra xem đã show message rồi hay chưa
+                    if (!isShowMessageError)
                     {
-                        fnoti = new Nofitication("Kết nối thất bại!");
-                        fnoti.Owner = this;
-                        fnoti.Show();
-                    });
+                        string message = getNofiticationMessage("modbust");
+                        showNofitication(message);
+                        isShowMessageError = true;
+                    }
+
+                    if (modbustMainForm == null || modbustWrite == null)
+                    {
+                        return false;
+                    }
+
+                    if (!isHandleDisconnectModbust)
+                    {
+                        isHandleDisconnectModbust = true;
+                        // Kiểm tra xem đã ngắt kết nối rồi hay chưa
+                        // Xử lý các dịch vụ khi ngắt kết nối
+                        // Ngắt kết nối với modbust mainform (đọc dữ liệu là chính)
+                        modbustMainForm.Disconnect();
+
+                        // Ngắt kết nối với modbust Write (Ghi dữ liệu là chính)
+                        modbustWrite.Disconnect();
+                        //// Timer nhận giá trị từ HIOKI -> Ghi lên modbust giá trị R, V
+                        //getMeasurementValueHiokiTimer.Stop();
+                        //// Timer ghi dữ liệu lên HIOIKI (Thiết bị đo)
+                        //writeToModbustTimer.Stop();
+                        ////ChartConfig(cartesianChart1);
+                        ////ChartConfig(cartesianChart2);
+                        //// Hiển thị lên UI các bình -> isShowedUIList false
+                        //// Đồ thị hiển thị đủ 8 điểm (Hàng đợi đo bình rỗng) isShowedChart -> true
+                        //// Đảm bảo rằng QR đã quét
+                        //// Và đã đo bình đầu tiên
+                        //uiTimer.Stop();
+                        //// Timer nhận dữ liệu từ modbust
+                        //monitorModbusTimer.Stop();
+                        //// Timer Show dữ liêu từ modbust
+                        //timerShowText.Stop();
+                        //// Timer hiển thị số lượng phân loại V
+                        //timerShowphanloaiV.Stop();
+                        //// Timer xử lý chart: Thêm các điểm vào đồ thị, vẽ CPK, min max ...
+                        //chartTimer.Stop();
+                        //// Timer xử lý các group trên UI
+                        //pinGroupUITimer.Stop();
+                        //// Timer Xuất báo cáo
+                        //exportExcelTimer.Stop();
+                        //// Timer reset lại chart
+                        //resetChartTimer.Stop();
+                        //// Timer kiểm tra kết nối
+                        //checkKeygenceConnectTimer.Stop();
+                    }
+
+                    return false;
                 }
 
 
+                if (!isConnectedToModbust)
+                {
+                    if (!modbustMainForm.Connected)
+                    {
+                        modbustMainForm.IPAddress = Properties.Settings.Default.modbustIP;
+                        modbustMainForm.Port = Properties.Settings.Default.modbustPort;
+                        modbustMainForm.Connect();
+                    }
+
+                    if (!modbustWrite.Connected)
+                    {
+                        modbustWrite.IPAddress = Properties.Settings.Default.modbustIP;
+                        modbustWrite.Port = Properties.Settings.Default.modbustPort;
+                        modbustWrite.Connect();
+                    }
+
+                    if (modbustMainForm.Connected && modbustWrite.Connected)
+                    {
+                        isConnectedToModbust = true;
+                    }
+
+                }
 
 
+                // Xử lý dịch vụ khi két nối thành công tương ưng với loại thiết bị
+                if (isConnectedToModbust && !isHandleConnectModbust)
+                {
+                    //// Timer nhận giá trị từ HIOKI -> Ghi lên modbust giá trị R, V
+                    //getMeasurementValueHiokiTimer.Start();
+                    //// Timer ghi dữ liệu lên HIOIKI (Thiết bị đo)
+                    //writeToModbustTimer.Start();
+
+                    //ResetChart(cartesianChart1);
+                    //ResetChart(cartesianChart2);
+
+                    ////ResetChart(cartesianChart1);
+                    ////ResetChart(cartesianChart2);
+
+                    ////ChartConfig(cartesianChart1);
+                    ////ChartConfig(cartesianChart2);
+
+                    //// Hiển thị lên UI các bình -> isShowedUIList false
+                    //// Đồ thị hiển thị đủ 8 điểm (Hàng đợi đo bình rỗng) isShowedChart -> true
+                    //// Đảm bảo rằng QR đã quét
+                    //// Và đã đo bình đầu tiên
+                    //uiTimer.Start();
+                    //// Timer nhận dữ liệu từ modbust
+                    //monitorModbusTimer.Start();
+                    //// Timer Show dữ liêu từ modbust
+                    //timerShowText.Start();
+                    //// Timer hiển thị số lượng phân loại V
+                    //timerShowphanloaiV.Start();
+                    //// Timer xử lý chart: Thêm các điểm vào đồ thị, vẽ CPK, min max ...
+                    //chartTimer.Start();
+                    //// Timer xử lý các group trên UI
+                    //pinGroupUITimer.Start();
+                    //// Timer Xuất báo cáo
+                    //exportExcelTimer.Start();
+                    //// Timer reset lại chart
+                    //resetChartTimer.Start();
+                    //// Timer kiểm tra kết nối
+                    //checkKeygenceConnectTimer.Start();
+                    isHandleConnectModbust = true;
+                }
+
+                if (isConnectedToModbust && isShowMessageError || isConnectedToModbust)
+                {
+                    //hideNofitication();
+                    isShowMessageError = false;
+                    //isHandleConnectModbust = false;
+                    //isHandleDisconnectScanner = false;
+                    return true;
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.ToString());
+                return false;
+            }
+            return false;
+        }
+
+
+        private bool connectToSCanner()
+        {
+            try
+            {
+                string IpAddress = Properties.Settings.Default.keyGenceIP;
+                if (!checkConnectByPing(IpAddress))
+                {
+                    if (!isShowMessageError)
+                    {
+                        isShowMessageError = true;
+                        string message = getNofiticationMessage("scanner");
+                        showNofitication(message);
+                    }
+
+                    if (!isHandleDisconnectScanner)
+                    {
+                        MenuForm.m_reader.ExecCommand("ALLOFF");
+                        MenuForm.m_reader.Disconnect();
+
+                        MenuForm.m_reader = null;
+                        SetScannerStatus = false;
+                        isHandleDisconnectScanner = true;
+                        Thread.Sleep(1000);
+                    }
+
+                    //Application.Restart();
+
+                    //FMain newMainForm = new FMain();
+                    //newMainForm.Show();
+                    //this.Close();
+                    RestartCurrentForm();
+
+                    return false;
+                }
+
+                // Xử lý dịch vụ khi két nối thành công tương ưng với loại thiết bị
+                if (SetScannerStatus == false)
+                {
+                    Console.WriteLine("SetScanner");
+                    //MenuForm.m_reader.Disconnect();
+                    //MenuForm.m_reader.Dispose();
+                    //Thread.Sleep(1000);
+                    //MenuForm.m_reader = null;
+                    //UpdateLabelText(labelmsg, message);
+
+                    setscanner();
+                    //SetScannerStatus = true;
+
+                    if (SetScannerStatus == false)
+                    {
+                        //if (this.InvokeRequired)
+                        //{
+                        //    // If called from a different thread, invoke this method on the UI thread
+                        //    this.Invoke(new Action(() =>
+                        //    {
+                        //                  FMain newMainForm = new FMain();
+                        //newMainForm.Show();
+                        //this.Close();
+                        //    }));
+                        //    return false;
+                        //}
+
+
+                        RestartCurrentForm();
+                    }
+
+
+                    isHandleConnectScanner = true;
+                }
+
+                if ((SetScannerStatus && isShowMessageError) || SetScannerStatus)
+                {
+                    hideNofitication();
+                    isShowMessageError = false;
+                    isHandleConnectScanner = false;
+                    isHandleDisconnectScanner = false;
+                    return true;
+                }
+
+                return false;
+            }
+            catch (Exception e)
+            {
+                logger.Warn(e.ToString());
+                Console.WriteLine(e.ToString());
+                MenuForm.m_reader.Disconnect();
+                MenuForm.m_reader.Dispose();
+                Thread.Sleep(1000);
+                MenuForm.m_reader = null;
+                return false;
+            }
+        }
+
+
+        private void RestartCurrentForm()
+        {
+            //if (this.InvokeRequired)
+            //{
+            //    // If called from a different thread, invoke this method on the UI thread
+            //    this.Invoke(new Action(RestartCurrentForm));
+            //    return;
+            //}
+
+            //// Create a new instance of the current form
+            //FMain newForm = new FMain();
+
+            //// Show the new form
+            //newForm.Show();
+
+            // Hide the current form
+            this.Dispose();
+            this.InitializeComponent();
+
+
+        }
+
+
+        private bool checkConnectByPing(string ipAddress)
+        {
+            try
+            {
+                if (string.IsNullOrEmpty(ipAddress)) return false;
+                Ping pingSender = new Ping();
+                PingReply reply = pingSender.Send(ipAddress, 1000);
+                if (reply.Status != IPStatus.Success) return false;
+                return true;
+
+            }
+            catch (Exception e)
+            {
+                logger.Warn(e.ToString());
+                return false;
+            }
+        }
+
+        private string getNofiticationMessage(string trigger)
+        {
+            try
+            {
+                if (trigger.Equals("modbust")) return "Mất kết nối với HMI proface!!!";
+                if (trigger.Equals("scanner")) return "Mất kết nối với thiết bị quét scanner!!!";
+                if (trigger.Equals("hioki")) return "Mất kết nối với thiết bị đo hioki!!!";
+                return "Kết nối thất bại vui lòng mở lại màn hình chính";
+            }
+            catch (Exception e)
+            {
+                logger.Error(e.ToString());
+                return e.ToString();
+            }
+        }
+
+        private void showNofitication(string message)
+        {
+            try
+            {
+                if (string.IsNullOrEmpty(message)) return;
+                UpdateLabelText(labelmsg, message);
+                panelmsg.BeginInvoke((MethodInvoker)delegate
+                {
+                    panelmsg.Show();
+                });
+
+            }
+            catch (Exception e)
+            {
+                logger.Error(e.ToString());
+            }
+        }
+        private void hideNofitication()
+        {
+            try
+            {
+                panelmsg.BeginInvoke((MethodInvoker)delegate
+                {
+                    panelmsg.Hide();
+                });
+            }
+            catch (Exception e)
+            {
+                logger.Error(e.ToString());
             }
         }
 
@@ -1239,7 +1665,7 @@ namespace BatteryMonitor
             try
             {
 
-                if(isDeleteChart == 1 && !isResetChart)
+                if (isDeleteChart == 1 && !isResetChart)
                 {
                     isResetChart = true;
                     isSetStandardRLine = false;
@@ -1248,7 +1674,8 @@ namespace BatteryMonitor
                     ResetChart(cartesianChart1);
                     ResetChart(cartesianChart2);
                 }
-                if (isDeleteChart == 0) {
+                if (isDeleteChart == 0)
+                {
                     isResetChart = false;
                     isSetStandardRLine = true;
                     isSetStandardVLine = true;
@@ -1301,7 +1728,7 @@ namespace BatteryMonitor
                 chart.Series.Clear();
                 chart.AxisY.Clear();
                 chart.AxisX.Clear();
-                Thread.Sleep(5000);
+                Thread.Sleep(2000);
 
                 if (chart == cartesianChart1)
                 {
@@ -1351,7 +1778,7 @@ namespace BatteryMonitor
                     bool isError = false;
                     // Lấy ra 8 bình trong hàng đợi
 
-                   
+
 
                     for (int i = 0; i < maxGroupPin; i++)
                     {
@@ -1363,7 +1790,7 @@ namespace BatteryMonitor
                                 {
                                     queueBattery.Dequeue();
                                 });
-                             
+
                             }
 
                             BatteryMonitor.Data.battery battery = queueUI.Dequeue();
@@ -1497,15 +1924,6 @@ namespace BatteryMonitor
                 if (modbustMainForm.Connected)
                 {
                     string asciiString = "";
-
-                    //// Kiểm tra kết nối tới modbus
-                    if (!modbustMainForm.Connected)
-                    {
-                        monitorModbusTimer.Stop();
-                        //chartTimer.Stop();
-                        return;
-                    }
-
                     // Timer dùng để ghi nhận thông tin của modbus
 
                     int[] numArray = modbustMainForm.ReadHoldingRegisters(0, 122);
@@ -1740,7 +2158,7 @@ namespace BatteryMonitor
                         battery.Date = date;
                         battery.UserId = this.userLabel.Text;
                         //battery.MeasureMentStatus = (numArray[39] == 0 && numArray[40] == 0) ? "WrongMeasurement" : "Measured";
-                        battery.MeasureMentStatus =  "Measured";
+                        battery.MeasureMentStatus = "Measured";
 
                         battery.QUALITY = "";
                         battery.TYPE_R = ClassifyR(battery.R, rMax, rMin);
@@ -1782,9 +2200,9 @@ namespace BatteryMonitor
                         //// Nếu kết quả đo lỗi -> báo đèn đỏ => đá bình ra
                         if (numArray[39] == 0 && numArray[40] == 0)
                         {
-                            m_reader.ExecCommand("OUTOFF,1");
-                            m_reader.ExecCommand("OUTOFF,3");
-                            m_reader.ExecCommand("OUTON,2");
+                            MenuForm.m_reader.ExecCommand("OUTOFF,1");
+                            MenuForm.m_reader.ExecCommand("OUTOFF,3");
+                            MenuForm.m_reader.ExecCommand("OUTON,2");
                             _LightTimer.Start();
                         }
 
@@ -1829,10 +2247,11 @@ namespace BatteryMonitor
             {
                 logger.Error(ex);
                 Console.WriteLine(ex.Message);
-                modbustMainForm.Disconnect();
-                monitorModbusTimer.Stop();
                 Thread.Sleep(5000);
-                monitorModbusTimer.Start();
+                //modbustMainForm.Disconnect();
+                //modbustWrite.Disconnect();
+                //monitorModbusTimer.Stop();
+                //monitorModbusTimer.Start();
             }
         }
 
@@ -2374,6 +2793,8 @@ namespace BatteryMonitor
 
         public double getVMaxFromModbus(ModbusClient modbus)
         {
+            if (!modbus.Connected) return -1;
+
             double num = (double)ModbusClient.ConvertRegistersToInt(modbus.ReadHoldingRegisters(41, 2));
             double vMax = Convert.ToDouble(string.Format("{0:0.000}", num / 1000));
             return vMax;
@@ -2381,6 +2802,8 @@ namespace BatteryMonitor
 
         public double getVminFromModbus(ModbusClient modbus)
         {
+            if (!modbus.Connected) return -1;
+
             double num = (double)ModbusClient.ConvertRegistersToInt(modbus.ReadHoldingRegisters(43, 2));
             double vMin = Convert.ToDouble(string.Format("{0:0.000}", num / 1000));
             return vMin;
@@ -2460,7 +2883,7 @@ namespace BatteryMonitor
                         rMinSeries,
                         rMaxSeries ,
                         CreateLineSeries(chartValues, "times", "Điện trở (R)", 13, 4, true, 18),
-              
+
                         CreateStatLineSeries("STD: 0"),
                         CreateStatLineSeries("AVE: 0"),
                         CreateStatLineSeries("CPK: 0")
@@ -2600,8 +3023,8 @@ namespace BatteryMonitor
             // Tẳt hết các đèn
             if (SetScannerStatus)
             {
-                m_reader.ExecCommand("ALLOFF");
-                m_reader.Disconnect();
+                MenuForm.m_reader.ExecCommand("ALLOFF");
+                MenuForm.m_reader.Disconnect();
             }
 
             // Clear các timer
@@ -2614,15 +3037,6 @@ namespace BatteryMonitor
             writeToModbustTimer.Stop();
             exportExcelTimer.Stop();
             timerShowText.Stop();
-
-            if (nofiticationForm.InvokeRequired)
-            {
-                nofiticationForm.Invoke(new MethodInvoker(delegate
-                {
-                    nofiticationForm.Close();
-                }));
-            }
-
         }
 
 
@@ -3063,14 +3477,36 @@ namespace BatteryMonitor
         {
             try
             {
-                m_reader.IpAddress = Properties.Settings.Default.keyGenceIP;
-                m_reader.Connect((data) =>
+                if (MenuForm.m_reader == null)
+                {
+                    MenuForm.m_reader = new ReaderAccessor();
+                    MenuForm.m_reader.ExecCommand("ALLOFF");
+                }
+
+
+                MenuForm.m_reader.IpAddress = Properties.Settings.Default.keyGenceIP;
+                MenuForm.m_reader.Connect((data) =>
                 {
                     BeginInvoke(new delegateUserControl(ReceivedDataWrite), Encoding.ASCII.GetString(data));
                 });
+
+                if (MenuForm.m_reader.LastErrorInfo.ToString() == "OpenFailed")
+                {
+                    //UpdateLabelText(labelmsg, MenuForm.m_reader.Last)
+                    //                   LastCommandError = {
+                    //                       機器との接続に失敗しました。(3)
+                    //・ケーブルが抜けていないかご確認ください。
+                    //・1分程度待ってから再度接続を試してください。
+                    //・アプリケーションを起動し直して、再度接続を試してください。}
+
+                    SetScannerStatus = false;
+                    return;
+                }
+
                 // Bật đèn vàng
-                m_reader.ExecCommand("OUTON,3");
+                MenuForm.m_reader.ExecCommand("OUTON,3");
                 SetScannerStatus = true;
+                logger.Info("SetScanner");
             }
             catch (Exception ex)
             {
@@ -3128,9 +3564,9 @@ namespace BatteryMonitor
                         {
                             if (!qrcodeList[index - 1].Equals("ERROR"))
                             {
-                                m_reader.ExecCommand("OUTOFF,1");
-                                m_reader.ExecCommand("OUTOFF,3");
-                                m_reader.ExecCommand("OUTON,2");
+                                MenuForm.m_reader.ExecCommand("OUTOFF,1");
+                                MenuForm.m_reader.ExecCommand("OUTOFF,3");
+                                MenuForm.m_reader.ExecCommand("OUTON,2");
                                 _LightTimer.Start();
                                 logger.Info(receivedData + "Số lượng pin quét được không đúng với số lượng cài đặt!");
                                 MessageBox.Show("Số lượng pin quét được không đúng với số lượng cài đặt!");
@@ -3155,9 +3591,9 @@ namespace BatteryMonitor
                         {
                             if (!qrcodeList[index - 1].Equals("ERROR"))
                             {
-                                m_reader.ExecCommand("OUTOFF,1");
-                                m_reader.ExecCommand("OUTOFF,3");
-                                m_reader.ExecCommand("OUTON,2");
+                                MenuForm.m_reader.ExecCommand("OUTOFF,1");
+                                MenuForm.m_reader.ExecCommand("OUTOFF,3");
+                                MenuForm.m_reader.ExecCommand("OUTON,2");
                                 _LightTimer.Start();
                                 logger.Info(receivedData + "Số lượng pin quét được không đúng với số lượng cài đặt!");
                                 MessageBox.Show("Số lượng pin quét được không đúng với số lượng cài đặt!");
@@ -3299,9 +3735,9 @@ namespace BatteryMonitor
                         // Hiển thị danh sách bình lỗi
                         scanError = true;
                         sqlLite.insertErrorScanQrList(errorScanQrList, date);
-                        m_reader.ExecCommand("OUTOFF,1");
-                        m_reader.ExecCommand("OUTOFF,3");
-                        m_reader.ExecCommand("OUTON,2");
+                        MenuForm.m_reader.ExecCommand("OUTOFF,1");
+                        MenuForm.m_reader.ExecCommand("OUTOFF,3");
+                        MenuForm.m_reader.ExecCommand("OUTON,2");
                         _LightTimer.Start();
                         Thread.Sleep(1000);
                         return;
@@ -3309,9 +3745,9 @@ namespace BatteryMonitor
 
                     isScannedQrcode = true;
 
-                    m_reader.ExecCommand("OUTOFF,2");
-                    m_reader.ExecCommand("OUTOFF,3");
-                    m_reader.ExecCommand("OUTON,1");
+                    MenuForm.m_reader.ExecCommand("OUTOFF,2");
+                    MenuForm.m_reader.ExecCommand("OUTOFF,3");
+                    MenuForm.m_reader.ExecCommand("OUTON,1");
                     _LightTimer.Start();
                 }
             }
@@ -3319,9 +3755,9 @@ namespace BatteryMonitor
             {
                 logger.Error(ex);
                 Console.WriteLine(ex.Message);
-                m_reader.ExecCommand("OUTOFF,1");
-                m_reader.ExecCommand("OUTOFF,3");
-                m_reader.ExecCommand("OUTON,2");
+                MenuForm.m_reader.ExecCommand("OUTOFF,1");
+                MenuForm.m_reader.ExecCommand("OUTOFF,3");
+                MenuForm.m_reader.ExecCommand("OUTON,2");
                 _LightTimer.Start();
             }
 
@@ -3407,9 +3843,9 @@ namespace BatteryMonitor
             // Bật đèn đỏ
             //if (receivedData.Contains("ERROR"))
             //{
-            //m_reader.ExecCommand("OUTOFF,1");
-            //m_reader.ExecCommand("OUTOFF,3");
-            //m_reader.ExecCommand("OUTON,2");
+            //MenuForm.m_reader.ExecCommand("OUTOFF,1");
+            //MenuForm.m_reader.ExecCommand("OUTOFF,3");
+            //MenuForm.m_reader.ExecCommand("OUTON,2");
 
             // Trả cụm bình ra khỏi truyền
 
@@ -3425,9 +3861,9 @@ namespace BatteryMonitor
             //}
 
             // Bật đèn xanh
-            //m_reader.ExecCommand("OUTOFF,2");
-            //m_reader.ExecCommand("OUTOFF,3");
-            //m_reader.ExecCommand("OUTON,1");
+            //MenuForm.m_reader.ExecCommand("OUTOFF,2");
+            //MenuForm.m_reader.ExecCommand("OUTOFF,3");
+            //MenuForm.m_reader.ExecCommand("OUTON,1");
 
             //    }
             //}
@@ -3439,10 +3875,10 @@ namespace BatteryMonitor
         }
 
         // Hàm xử lý tín hiệu đèn
-        // m_reader.ExecCommand("ALLOFF"); Tắt hết đèn
-        // m_reader.ExecCommand("OUTON,1"); Đèn xanh
-        // m_reader.ExecCommand("OUTON,2"); Đèn đỏ
-        // m_reader.ExecCommand("OUTON,3"); Đèn vàng
+        // MenuForm.m_reader.ExecCommand("ALLOFF"); Tắt hết đèn
+        // MenuForm.m_reader.ExecCommand("OUTON,1"); Đèn xanh
+        // MenuForm.m_reader.ExecCommand("OUTON,2"); Đèn đỏ
+        // MenuForm.m_reader.ExecCommand("OUTON,3"); Đèn vàng
 
         void _TimersTimer_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
         {
@@ -3539,9 +3975,9 @@ namespace BatteryMonitor
         {
             try
             {
-                m_reader.ExecCommand("OUTOFF,1");
-                m_reader.ExecCommand("OUTOFF,2");
-                m_reader.ExecCommand("OUTON,3");
+                MenuForm.m_reader.ExecCommand("OUTOFF,1");
+                MenuForm.m_reader.ExecCommand("OUTOFF,2");
+                MenuForm.m_reader.ExecCommand("OUTON,3");
                 _LightTimer.Close();
             }
             catch (Exception ex)
@@ -3580,43 +4016,61 @@ namespace BatteryMonitor
         {
             try
             {
-                Ping pingSender = new Ping();
-                string keyGenceIp = Properties.Settings.Default.keyGenceIP;
-                PingReply reply = pingSender.Send(keyGenceIp, 1000);
-
-                if (reply.Status != IPStatus.Success)
+                if (!connectToSCanner())
                 {
-                    onLineStatus = false;
-                    // thông báo
-                    if (fnoti == null)
-                    {
-                        this.Invoke((MethodInvoker)delegate {
-                            fnoti = new Nofitication("Mất kết nối với thiết bị quét scanner!!!");
-                            fnoti.Owner = this;
-                            fnoti.Show();
-                        });
-                    }
-                    modbustMainForm.WriteSingleRegister(97, 1);
-                    modbustMainForm.WriteSingleRegister(95, 1);
-                    checkKeygenceConnectTimer.Stop();
-                    m_reader.Disconnect();
-                    Thread.Sleep(5000);
-                    //setscanner();
-                    m_reader.Connect();
-                    checkKeygenceConnectTimer.Start();
+                    logger.Warn("Disconnect To Scanner");
                     return;
                 }
-                else if (fnoti != null)
-                {
-                    this.Invoke((MethodInvoker)delegate
-                    {
 
-                        fnoti.Close(); 
-                        fnoti = null;
-                    });
+                if (!connectToModbust())
+                {
+                    logger.Warn("Disconnect To Modbust");
+                    return;
                 }
 
-                //onLineStatus = true;
+                //Ping pingSender = new Ping();
+                //string keyGenceIp = Properties.Settings.Default.keyGenceIP;
+                //PingReply reply = pingSender.Send(keyGenceIp, 1000);
+
+                //if (reply.Status != IPStatus.Success)
+                //{
+                //    // thông báo
+                //    if (fnoti == null)
+                //    {
+                //        this.BeginInvoke((MethodInvoker)delegate
+                //        {
+                //            fnoti = new Nofitication("Mất kết nối với thiết bị quét scanner!!!");
+                //            fnoti.Owner = this;
+                //            fnoti.Show();
+                //        });
+                //    }
+                //    modbustMainForm.WriteSingleRegister(97, 1);
+                //    modbustMainForm.WriteSingleRegister(95, 1);
+                //    //MenuForm.m_reader.Disconnect();
+                //    //MenuForm.m_reader.Dispose();
+                //    MenuForm.m_reader = null;
+                //    //MenuForm.m_reader.Dispose();
+                //    SetScannerStatus = false;
+                //    return;
+                //}
+                //else
+                //{
+                //    if (fnoti != null)
+                //    {
+                //        this.BeginInvoke((MethodInvoker)delegate
+                //        {
+
+                //            fnoti.Close();
+                //            fnoti = null;
+                //        });
+                //    }
+
+                //    if (!SetScannerStatus)
+                //    {
+                //        setscanner();
+                //    }
+
+                //}
 
                 //if (modbustMainForm != null && !modbustMainForm.Connected)
                 //{
@@ -3626,41 +4080,53 @@ namespace BatteryMonitor
                 //    // thông báo
                 //    if (fnoti == null)
                 //    {
-                //        this.Invoke((MethodInvoker)delegate {
+                //        this.Invoke((MethodInvoker)delegate
+                //        {
                 //            fnoti = new Nofitication("Mất kết nối với HMI proface!!!");
                 //            fnoti.Owner = this;
                 //            fnoti.Show();
                 //        });
                 //    }
-
-                 
                 //    getMeasurementValueHiokiTimer.Stop();
                 //    writeToModbustTimer.Stop();
                 //    monitorModbusTimer.Stop();
                 //    uiTimer.Stop();
                 //    chartTimer.Stop();
                 //    modbustMainForm.Disconnect();
-                //    Thread.Sleep(5000);
-                //    modbustMainForm.Connect();
-                //    getMeasurementValueHiokiTimer.Start();
-                //    writeToModbustTimer.Start();
-                //    monitorModbusTimer.Start();
-                //    uiTimer.Start();
-                //    chartTimer.Start();
+                //    modbustWrite.Disconnect();
                 //    return;
                 //}
-                //else if (fnoti != null)
+                //else
                 //{
-                //    this.Invoke((MethodInvoker)delegate
+                //    if (fnoti != null)
                 //    {
+                //        this.Invoke((MethodInvoker)delegate
+                //        {
 
-                //        fnoti.Close();
-                //        fnoti = null;
-                //    });
+                //            fnoti.Close();
+                //            fnoti = null;
+                //        });
+                //    }
+
+                //    if (!isConnectedToModbust)
+                //    {
+                //        isConnectedToModbust = true;
+
+                //        modbustMainForm.IPAddress = Properties.Settings.Default.modbustIP;
+                //        modbustMainForm.Port = Properties.Settings.Default.modbustPort;
+                //        modbustMainForm.Connect();
+
+                //        modbustWrite.IPAddress = Properties.Settings.Default.modbustIP;
+                //        modbustWrite.Port = Properties.Settings.Default.modbustPort;
+                //        modbustWrite.Connect();
+
+                //        getMeasurementValueHiokiTimer.Start();
+                //        writeToModbustTimer.Start();
+                //        monitorModbusTimer.Start();
+                //        uiTimer.Start();
+                //        chartTimer.Start();
+                //    }
                 //}
-
-                //isConnectedToModbust = true;
-
 
                 //string hioikiIp = Properties.Settings.Default.hiokiIP;
                 //reply = pingSender.Send(hiokiIp, 1000);
@@ -3712,18 +4178,20 @@ namespace BatteryMonitor
             catch (Exception ex)
             {
                 logger.Error(ex);
-                if (fnoti == null)
-                {
- 
+                //if (fnoti == null)
+                //{
 
-                    this.Invoke((MethodInvoker)delegate
-                    {
-                        fnoti = new Nofitication("Có lỗi xảy ra!!");
-                        fnoti.Owner = this;
-                        fnoti.Show();
-                    });
+                //    this.Invoke((MethodInvoker)delegate
+                //    {
+                //        fnoti = new Nofitication("Có lỗi xảy ra!!");
+                //        fnoti.Owner = this;
+                //        fnoti.Show();
+                //    });
 
-                }
+                //}
+                panelmsg.Show();
+                UpdateLabelText(labelmsg, "Có lỗi xảy ra!!");
+
                 Console.WriteLine(ex.Message);
             }
         }
@@ -3786,7 +4254,9 @@ namespace BatteryMonitor
         private void label2_Click(object sender, EventArgs e)
         {
             //sqlLite.deleteBatterryList(" 1=1");
-            isResetQueueBattery = true;
+            // isResetQueueBattery = true;
+
+
         }
 
         private void userLabel_Click(object sender, EventArgs e)
@@ -3845,13 +4315,13 @@ namespace BatteryMonitor
                 //float registerDisplay = Twoint16ConverttoFloat(registerValues[99], registerValues[100]);
 
                 // Classify register display value
-                //if (registerDisplay <= 0f)
-                //{
-                //    modbustMainForm.WriteSingleRegister(106, 1);
-                //    UpdateLabelText(rCompare, "FAULT");
-                //    UpdateLabelColor(rCompare, System.Drawing.Color.Red);
-                //    return "FAULT";
-                //}
+                if (registerDisplay <= 0f)
+                {
+                    //modbustMainForm.WriteSingleRegister(106, 1);
+                    //UpdateLabelText(rCompare, "FAULT");
+                    //UpdateLabelColor(rCompare, System.Drawing.Color.Red);
+                    return "FAULT";
+                }
 
                 if (registerDisplay >= resistanceMin && registerDisplay <= resistanceMax)
                 {
@@ -4048,8 +4518,16 @@ namespace BatteryMonitor
             UpdateLabelText(labelValueLight, "0");
         }
 
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void currentWorkShift_Click(object sender, EventArgs e)
         {
+            panelmsg.Hide();
+
+
             //Random R = new Random();
 
             //double random1 = rMin + (rMax + 3 - (rMin - 3)) * R.NextDouble();
@@ -4177,9 +4655,9 @@ namespace BatteryMonitor
             //    //// Nếu kết quả đo lỗi -> báo đèn đỏ => đá bình ra
             //    //if (numArray[39] == 0 && numArray[40] == 0)
             //    //{
-            //    //    m_reader.ExecCommand("OUTOFF,1");
-            //    //    m_reader.ExecCommand("OUTOFF,3");
-            //    //    m_reader.ExecCommand("OUTON,2");
+            //    //    MenuForm.m_reader.ExecCommand("OUTOFF,1");
+            //    //    MenuForm.m_reader.ExecCommand("OUTOFF,3");
+            //    //    MenuForm.m_reader.ExecCommand("OUTON,2");
             //    //    _LightTimer.Start();
             //    //}
 
@@ -4292,16 +4770,18 @@ namespace BatteryMonitor
                 //numArray[45] = num1[0];
                 //numArray[46] = num1[1];
                 // Ngừng timer
+
+
                 writeToModbustTimer.Stop();
 
             }
             catch (Exception ex)
             {
                 logger.Error(ex);
-                writeToModbustTimer.Stop();
+                //writeToModbustTimer.Stop();
 
-                Thread.Sleep(10000);
-                writeToModbustTimer.Start();
+                //Thread.Sleep(10000);
+                //writeToModbustTimer.Start();
             }
         }
 
@@ -4312,12 +4792,12 @@ namespace BatteryMonitor
                 List<string> results = new List<string>();
 
                 // Kiểm tra kết nối tới HIOKI 192.168.1.1:23
-                if (!isConnectedToHioki)
-                {
-                    // Xử lý lỗi
-                    // ...
-                    return;
-                }
+                //if (!isConnectedToHioki)
+                //{
+                //    // Xử lý lỗi
+                //    // ...
+                //    return;
+                //}
 
                 // SendMsg
                 string hiokiCommand = ":FETCH?";
@@ -4358,7 +4838,7 @@ namespace BatteryMonitor
         private void bgwork_exportExcelTimer_DoWork(object sender, DoWorkEventArgs e)
         {
             if (modbustMainForm.Connected)
-            {               
+            {
                 if (isExportDataReport == 1 && !isExportDataFlag)
                 {
                     string shipmentId = this.batchNumber.Text;

@@ -65,10 +65,10 @@
             // button6
             // 
             this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button6.Location = new System.Drawing.Point(224, 283);
+            this.button6.Location = new System.Drawing.Point(313, 381);
             this.button6.Name = "button6";
             this.button6.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.button6.Size = new System.Drawing.Size(234, 66);
+            this.button6.Size = new System.Drawing.Size(294, 66);
             this.button6.StateCommon.Back.Color1 = System.Drawing.Color.Aqua;
             this.button6.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | Krypton.Toolkit.PaletteDrawBorders.Left) 
@@ -117,10 +117,10 @@
             // kryptonButton1
             // 
             this.kryptonButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.kryptonButton1.Location = new System.Drawing.Point(12, 283);
+            this.kryptonButton1.Location = new System.Drawing.Point(26, 381);
             this.kryptonButton1.Name = "kryptonButton1";
             this.kryptonButton1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.kryptonButton1.Size = new System.Drawing.Size(206, 66);
+            this.kryptonButton1.Size = new System.Drawing.Size(247, 66);
             this.kryptonButton1.StateCommon.Back.Color1 = System.Drawing.Color.Red;
             this.kryptonButton1.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.kryptonButton1.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -156,10 +156,10 @@
             // 
             // kryptonButton2
             // 
-            this.kryptonButton2.Location = new System.Drawing.Point(464, 294);
+            this.kryptonButton2.Location = new System.Drawing.Point(635, 381);
             this.kryptonButton2.Name = "kryptonButton2";
             this.kryptonButton2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.kryptonButton2.Size = new System.Drawing.Size(197, 55);
+            this.kryptonButton2.Size = new System.Drawing.Size(205, 66);
             this.kryptonButton2.StateCommon.Back.Color1 = System.Drawing.Color.Aqua;
             this.kryptonButton2.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | Krypton.Toolkit.PaletteDrawBorders.Left) 
@@ -175,7 +175,7 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Silver;
             this.pictureBox2.Image = global::BatteryMonitor.Properties.Resources.Untitled_removebg_preview;
-            this.pictureBox2.Location = new System.Drawing.Point(590, 54);
+            this.pictureBox2.Location = new System.Drawing.Point(589, 69);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(302, 286);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -203,7 +203,7 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(904, 357);
+            this.ClientSize = new System.Drawing.Size(1002, 459);
             this.Controls.Add(this.kryptonButton3);
             this.Controls.Add(this.kryptonButton2);
             this.Controls.Add(this.panel1);

@@ -1,5 +1,6 @@
 ﻿using BatteryMonitor.HIOKI;
 using EasyModbus;
+using Keyence.AutoID.SDK;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,37 +9,20 @@ using System.Drawing;
 using System.Linq;
 using System.Net.NetworkInformation;
 using System.Net.Sockets;
+using System.ServiceModel.Channels;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
 using TimersTimer = System.Timers.Timer;
 namespace BatteryMonitor
 {
     public partial class MenuForm : Form
     {
         static public ModbusClient modbustcp = new ModbusClient();
-        //static string hiokiIp = Properties.Settings.Default.hiokiIP;
-        //static string hiokiPort = Properties.Settings.Default.hiokiPort;
-        //static public TcpClient LanSocket;
 
-        // Tạo đối tương tcp socket
-        //static public hioki hiokiSocket = new hioki(hiokiIp, hiokiPort, LanSocket);
-
-        // Timer kiểm tra kết nối mắt quét
-        TimersTimer checkKeygenceConnectTimer = new TimersTimer();
-
-        // Timer kiểm tra kết nối tới modbust
-        TimersTimer checkModbustConnectTimer = new TimersTimer();
-
-        // Timer kiểm tra kết nối tới HIOKI
-        TimersTimer checkHiokiConnectTimer = new TimersTimer();
-
-        // Timer nhận giá trị từ HIOKI
-        TimersTimer getMeasurementValueHiokiTimer = new TimersTimer();
-
-        // Timer ghi giá trị lên modbust
-        TimersTimer writeToModbustTimer = new TimersTimer();
+        public static ReaderAccessor m_reader = new ReaderAccessor();
 
         // Timer quản lý trạng thái
         TimersTimer statusManagermentTimer = new TimersTimer();
@@ -47,8 +31,9 @@ namespace BatteryMonitor
         // BackgroundWorker
         BackgroundWorker bgwork_check_keygence_connect, bgwork_check_modbust_connect, bgwork_check_hioki_connect, bgwork_getMeasurementValueHioki, bgwork_writeToModbust;
         BackgroundWorker bgwork_status_managerment;
+        
+       
 
-        //List<string> convertToInt16List = new List<string>();
 
         // status 
         Boolean onLineStatus, SetScannerStatus, chkprtconnted;
@@ -103,7 +88,7 @@ namespace BatteryMonitor
             try
             {
                 // chuyển sang form main
-                Main main = new Main();
+                FMain main = new FMain();
                 //main.FormClosed += new FormClosedEventHandler(MenuFormClosed); // Đăng ký sự kiện FormClosed
                 //this.Hide();
                 main.Show();
@@ -117,6 +102,7 @@ namespace BatteryMonitor
             //    MessageBox.Show("Mất kết nối với HIOKI!");
             //    return;
             //}
+
             //if (!isConnectedToModbust)
             //{
             //    MessageBox.Show("Mất kết nối với MODBUST!");
@@ -155,68 +141,14 @@ namespace BatteryMonitor
                 this.Text = productName + " Menu " + version.ToString();
                 this.userLabel.Text = Properties.Settings.Default.userId;
                 this.userLabel.ForeColor = Color.White;
-                //modbustcp.IPAddress = Properties.Settings.Default.modbustIP;
-                //modbustcp.Port = Properties.Settings.Default.modbustPort;
-                //modbustcp.Connect();
 
-                //Kiểm tra kết nối tới modbust
-                //if (!modbustcp.Connected)
-                //{
-                //    //Nofitication nofiForm = new Nofitication("Kết nối tới modubust thất bại!");
-                //    //nofiForm.Show();
-                //    return;
-                //}
-
-                // Kết nối đến HIOKI
-                //bool isConnectHioki = hiokiSocket.TryConnectToTcpServer();
-
-                //// Kết nối đến HIOKI
-                //if (!isConnectHioki)
-                //{
-                //    //Nofitication nofiForm = new Nofitication("Kết nối tới Hioki thất bại!");
-                //    //nofiForm.Show();
-                //    return;
-                //}
-
-                //// Timer nhận giá trị từ HIOKI
-                //bgwork_getMeasurementValueHioki = new BackgroundWorker();
-                //bgwork_getMeasurementValueHioki.DoWork += new DoWorkEventHandler(bgwork_getMeasurementValueHioki_DoWork);
-                //getMeasurementValueHiokiTimer.Interval = 50;
-                //getMeasurementValueHiokiTimer.Elapsed += new System.Timers.ElapsedEventHandler(_getMeasurementValueHioki_Elapsed);
-                //getMeasurementValueHiokiTimer.Start();
-
-                //// Timer ghi giá tri lên modbust
-                //bgwork_writeToModbust = new BackgroundWorker();
-                //bgwork_writeToModbust.DoWork += new DoWorkEventHandler(bgwork_writeToModbust_DoWork);
-                //writeToModbustTimer.Interval = 50;
-                //writeToModbustTimer.Elapsed += new System.Timers.ElapsedEventHandler(_writeToModbust_Elapsed);
-
-                //// Timer kiểm tra mắt quét
-                // Ping tới keygence để kiểm tra kết nối
-                //bgwork_check_keygence_connect = new BackgroundWorker();
-                //bgwork_check_keygence_connect.DoWork += new DoWorkEventHandler(bgwork_check_keygence_connect_DoWork);
-                //checkKeygenceConnectTimer.Interval = 50;
-                //checkKeygenceConnectTimer.Elapsed += new System.Timers.ElapsedEventHandler(_check_keygence_connect_DoWork_Elapsed);
-                //checkKeygenceConnectTimer.Start();
-
-                //// Timer kiểm tra kết nối tới modbust
-                //bgwork_check_modbust_connect = new BackgroundWorker();
-                //bgwork_check_modbust_connect.DoWork += new DoWorkEventHandler(bgwork_check_modbust_connect_DoWork);
-                //checkKeygenceConnectTimer.Interval = 50;
-                //checkKeygenceConnectTimer.Elapsed += new System.Timers.ElapsedEventHandler(_check_modbust_connect_DoWork_Elapsed);
-                //checkKeygenceConnectTimer.Start();
-                //// Timer kiểm tra kết nối đến HIOKI
-                //bgwork_check_hioki_connect = new BackgroundWorker();
-                //bgwork_check_hioki_connect.DoWork += new DoWorkEventHandler(bgwork_check_hioki_connect_DoWork);
-                //checkHiokiConnectTimer.Interval = 50;
-                //checkHiokiConnectTimer.Elapsed += new System.Timers.ElapsedEventHandler(_check_hioki_connect_DoWork_Elapsed);
-                //checkHiokiConnectTimer.Start();
                 //// Timer quản lý trạng thái cho các chức năng trong ứng dụng
                 //bgwork_status_managerment = new BackgroundWorker();
                 //bgwork_status_managerment.DoWork += new DoWorkEventHandler(bgwork_status_managerment_DoWork);
-                //statusManagermentTimer.Interval = 100;
+                //statusManagermentTimer.Interval = 3000;
                 //statusManagermentTimer.Elapsed += new System.Timers.ElapsedEventHandler(_status_managerment_DoWork_Elapsed);
                 //statusManagermentTimer.Start();
+
             }
             catch (Exception ex)
             {
@@ -252,20 +184,20 @@ namespace BatteryMonitor
             }
         }
 
-        void _status_managerment_DoWork_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
-        {
-            if (!bgwork_check_hioki_connect.IsBusy)
-            {
-                bgwork_status_managerment.RunWorkerAsync();
-            }
-        }
+        //void _status_managerment_DoWork_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
+        //{
+        //    if (!bgwork_check_hioki_connect.IsBusy)
+        //    {
+        //        bgwork_status_managerment.RunWorkerAsync();
+        //    }
+        //}
 
         private void comboBox1_SelectedValueChanged(object sender, EventArgs e)
         {
 
         }
 
-      
+
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -300,7 +232,7 @@ namespace BatteryMonitor
 
         private void Datalistqry_FormClosed(object sender, FormClosedEventArgs e)
         {
-           this.Show();
+            this.Show();
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -412,73 +344,73 @@ namespace BatteryMonitor
 
         private void bgwork_writeToModbust_DoWork(object sender, DoWorkEventArgs e)
         {
-            try
-            {
+            //try
+            //{
 
-                // Xử lý giá trị nhận về từ hioki
+            //    // Xử lý giá trị nhận về từ hioki
 
-                if (convertToInt16List.Count == 0)
-                {
-                    return;
-                }
+            //    if (convertToInt16List.Count == 0)
+            //    {
+            //        return;
+            //    }
 
-                if (!float.TryParse(convertToInt16List[0], out float single))
-                {
-                    // Xử lý lỗi ở đây nếu cần thiết
-                    single = 0; // Set giá trị mặc định nếu parse thất bại
-                }
+            //    if (!float.TryParse(convertToInt16List[0], out float single))
+            //    {
+            //        // Xử lý lỗi ở đây nếu cần thiết
+            //        single = 0; // Set giá trị mặc định nếu parse thất bại
+            //    }
 
-                float r = float.Parse(string.Format("{0:0.00}", single * 1000f));
+            //    float r = float.Parse(string.Format("{0:0.00}", single * 1000f));
 
 
-                if (!float.TryParse(convertToInt16List[1], out float single2))
-                {
-                    // Xử lý lỗi ở đây nếu cần thiết
-                    single2 = 0; // Set giá trị mặc định nếu parse thất bại
-                }
+            //    if (!float.TryParse(convertToInt16List[1], out float single2))
+            //    {
+            //        // Xử lý lỗi ở đây nếu cần thiết
+            //        single2 = 0; // Set giá trị mặc định nếu parse thất bại
+            //    }
 
-                float v = float.Parse(string.Format("{0:0.00}", single2));
-                // Kiểm tra xem có giá trị R OK hay không
+            //    float v = float.Parse(string.Format("{0:0.00}", single2));
+            //    // Kiểm tra xem có giá trị R OK hay không
 
-                if ((double)r < 10000000000 || (double)r > 10000000000000)
-                {
-                    ushort[] registers = FloatToModbusRegisters(r);
-                    int[] num = new int[2];
-                    num[0] = Convert.ToInt32(registers[0]);
-                    num[1] = Convert.ToInt32(registers[1]);
-                    modbustcp.WriteSingleRegister(39, num[0]);
-                    modbustcp.WriteSingleRegister(40, num[1]);
+            //    if ((double)r < 10000000000 || (double)r > 10000000000000)
+            //    {
+            //        ushort[] registers = FloatToModbusRegisters(r);
+            //        int[] num = new int[2];
+            //        num[0] = Convert.ToInt32(registers[0]);
+            //        num[1] = Convert.ToInt32(registers[1]);
+            //        modbustcp.WriteSingleRegister(39, num[0]);
+            //        modbustcp.WriteSingleRegister(40, num[1]);
 
-                }
-                else
-                {
-                    // Nếu là giá trị R không hợp lệ thì write 0
+            //    }
+            //    else
+            //    {
+            //        // Nếu là giá trị R không hợp lệ thì write 0
 
-                    modbustcp.WriteSingleRegister(39, 0);
-                    modbustcp.WriteSingleRegister(40, 0);
-                }
+            //        modbustcp.WriteSingleRegister(39, 0);
+            //        modbustcp.WriteSingleRegister(40, 0);
+            //    }
 
-                // Xử lý giá trị V nhận về từ hioki
-                // Các bước xử lý số khi chuyển lên modbust
-                // Do modbust proface sử dụng 2 thanh ghi 16 bit để biểu diễn số thực
+            //    // Xử lý giá trị V nhận về từ hioki
+            //    // Các bước xử lý số khi chuyển lên modbust
+            //    // Do modbust proface sử dụng 2 thanh ghi 16 bit để biểu diễn số thực
 
-                int[] num1 = new int[2];
-                ushort[] voltRegisters = FloatToModbusRegisters(v);
-                num1[0] = Convert.ToInt32(voltRegisters[0]);
-                num1[1] = Convert.ToInt32(voltRegisters[1]);
-                modbustcp.WriteSingleRegister(45, num1[0]);
-                modbustcp.WriteSingleRegister(46, num1[1]);
+            //    int[] num1 = new int[2];
+            //    ushort[] voltRegisters = FloatToModbusRegisters(v);
+            //    num1[0] = Convert.ToInt32(voltRegisters[0]);
+            //    num1[1] = Convert.ToInt32(voltRegisters[1]);
+            //    modbustcp.WriteSingleRegister(45, num1[0]);
+            //    modbustcp.WriteSingleRegister(46, num1[1]);
 
-                // Ngừng timer
-                writeToModbustTimer.Stop();
+            //    // Ngừng timer
+            //    writeToModbustTimer.Stop();
 
-            }
-            catch (Exception ex)
-            {
-                logger.Error(ex);
-                Thread.Sleep(10000);
-                writeToModbustTimer.Stop();
-            }
+            //}
+            //catch (Exception ex)
+            //{
+            //    logger.Error(ex);
+            //    Thread.Sleep(10000);
+            //    writeToModbustTimer.Stop();
+            //}
         }
 
         private ushort[] FloatToModbusRegisters(float value)
@@ -576,53 +508,11 @@ namespace BatteryMonitor
         //{
         //    try
         //    {
-        //        // Kiểm tra kết nối đến hioki
-        //        // Nếu như thất bại thì
-        //        // Ngừng timer
-        //        // Ngắt kết nối
-        //        // Thử kết nối lại
-
-        //        if (!isConnectedToHioki)
+        //        if (!connectToSCanner())
         //        {
-        //            statusManagermentTimer.Stop();
-        //            hiokiSocket.TryCloseConnectToTcpServer();
-        //            Thread.Sleep(10);
-        //            hiokiSocket.TryConnectToTcpServer();
+        //            logger.Warn("Disconnect To Scanner");
+        //            return;
         //        }
-        //        else
-        //        {
-        //            // Nhận các biến liên quan đến trạng thái từ modbust
-        //            int[] numArray = modbustcp.ReadHoldingRegisters(0, 122);
-
-        //            // Báo cáo
-        //            isExportDataReport = numArray[93];
-
-        //            // Số ca
-        //            currentShift = numArray[33];
-
-        //            // Xóa CPK
-        //            isDeleteCPK = numArray[69];
-
-        //            // Xóa đồ thị
-        //            isDeleteChart = numArray[67];
-
-        //            // Hết ca 1
-        //            endShift1 = numArray[71];
-
-        //            // Hết ca 2
-        //            endShift2 = numArray[73];
-
-        //            // Cân đầu vào hoàn thành
-        //            hiokiMeasureMentSuceed = numArray[75];
-        //            modbustcp.WriteSingleRegister(97, 1);
-        //            if (isConnectedToHioki)
-        //            {
-        //                modbustcp.WriteSingleRegister(95, 1);
-        //            }
-        //        }
-
-
-
         //    }
         //    catch (Exception ex)
         //    {
@@ -631,5 +521,47 @@ namespace BatteryMonitor
         //    }
         //}
 
-    }
+
+        //private bool connectToSCanner()
+        //{
+        //    try
+        //    {
+        //        string IpAddress = Properties.Settings.Default.keyGenceIP;
+        //        if (!checkConnectByPing(IpAddress))
+        //        {
+
+        //            return false;
+        //        }
+
+        //        return true;
+        //    }
+        //    catch (Exception e)
+        //    {
+        //        logger.Warn(e.ToString());
+        //        Console.WriteLine(e.ToString());
+        //        return false;
+        //    }
+        //}
+
+
+        //private bool checkConnectByPing(string ipAddress)
+        //{
+        //    try
+        //    {
+        //        if (string.IsNullOrEmpty(ipAddress)) return false;
+        //        Ping pingSender = new Ping();
+        //        PingReply reply = pingSender.Send(ipAddress, 1000);
+        //        if (reply.Status != IPStatus.Success) return false;
+        //        return true;
+
+        //    }
+        //    catch (Exception e)
+        //    {
+        //        logger.Warn(e.ToString());
+        //        return false;
+        //    }
+        //}
+
+    } 
 }
+

@@ -73,3 +73,142 @@
    at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
    at EasyModbus.ModbusClient.ReadHoldingRegisters(Int32 startingAddress, Int32 quantity)
    at BatteryMonitor.Main.MonitorModbusTimer_Tick(Object sender, EventArgs e) in C:\Users\IT_SOFTWARE\source\repos\BatteryMonitor-main\Main.cs:line 1512
+2024-09-21 15:21:36.7157|ERROR|BatteryMonitor.HIOKI.hioki|Unable to read data from the transport connection: An established connection was aborted by the software in your host machine.
+2024-09-21 15:21:36.7017|ERROR|BatteryMonitor.HIOKI.hioki|Unable to read data from the transport connection: An established connection was aborted by the software in your host machine.
+2024-09-21 15:21:36.7017|ERROR|BatteryMonitor.HIOKI.hioki|Unable to read data from the transport connection: An established connection was aborted by the software in your host machine.
+2024-09-21 15:21:36.7017|ERROR|BatteryMonitor.HIOKI.hioki|Unable to read data from the transport connection: An established connection was aborted by the software in your host machine.
+2024-09-21 15:21:36.7157|ERROR|BatteryMonitor.HIOKI.hioki|Unable to read data from the transport connection: An established connection was aborted by the software in your host machine.
+2024-09-21 15:21:36.7017|ERROR|BatteryMonitor.Main|System.IO.IOException: Unable to read data from the transport connection: An established connection was aborted by the software in your host machine. ---> System.Net.Sockets.SocketException: An established connection was aborted by the software in your host machine
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   at EasyModbus.ModbusClient.ReadHoldingRegisters(Int32 startingAddress, Int32 quantity)
+   at BatteryMonitor.Main.getVminFromModbus(ModbusClient modbus) in C:\Users\IT_SOFTWARE\source\repos\BatteryMonitor-main\Main.cs:line 2384
+   at BatteryMonitor.Main.MonitorModbusTimer_Tick(Object sender, EventArgs e) in C:\Users\IT_SOFTWARE\source\repos\BatteryMonitor-main\Main.cs:line 1617
+2024-09-21 15:21:36.7017|ERROR|BatteryMonitor.Main|System.IO.IOException: Unable to read data from the transport connection: An established connection was aborted by the software in your host machine. ---> System.Net.Sockets.SocketException: An established connection was aborted by the software in your host machine
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   at EasyModbus.ModbusClient.WriteSingleRegister(Int32 startingAddress, Int32 value)
+   at BatteryMonitor.Main.bgwork_writeToModbust_DoWork(Object sender, DoWorkEventArgs e) in C:\Users\IT_SOFTWARE\source\repos\BatteryMonitor-main\Main.cs:line 4263
+2024-09-21 15:24:34.3841|ERROR|BatteryMonitor.HIOKI.hioki|Unable to read data from the transport connection: An established connection was aborted by the software in your host machine.
+2024-09-21 15:24:34.3841|ERROR|BatteryMonitor.HIOKI.hioki|Unable to read data from the transport connection: An established connection was aborted by the software in your host machine.
+2024-09-21 15:24:34.3741|ERROR|BatteryMonitor.HIOKI.hioki|Unable to read data from the transport connection: An established connection was aborted by the software in your host machine.
+2024-09-21 15:24:34.3841|ERROR|BatteryMonitor.HIOKI.hioki|Unable to read data from the transport connection: An established connection was aborted by the software in your host machine.
+2024-09-21 15:24:34.4311|ERROR|BatteryMonitor.HIOKI.hioki|Unable to read data from the transport connection: An established connection was aborted by the software in your host machine.
+2024-09-21 15:24:34.4311|ERROR|BatteryMonitor.HIOKI.hioki|Unable to read data from the transport connection: An established connection was aborted by the software in your host machine.
+2024-09-21 15:24:34.3671|ERROR|BatteryMonitor.HIOKI.hioki|Unable to read data from the transport connection: An established connection was aborted by the software in your host machine.
+2024-09-21 15:24:34.4501|ERROR|BatteryMonitor.HIOKI.hioki|Unable to read data from the transport connection: An established connection was aborted by the software in your host machine.
+2024-09-21 15:24:34.4311|ERROR|BatteryMonitor.HIOKI.hioki|Unable to read data from the transport connection: An established connection was aborted by the software in your host machine.
+2024-09-21 15:24:34.4311|ERROR|BatteryMonitor.HIOKI.hioki|Unable to read data from the transport connection: An established connection was aborted by the software in your host machine.
+2024-09-21 15:24:34.3431|ERROR|BatteryMonitor.Main|System.IO.IOException: Unable to read data from the transport connection: An established connection was aborted by the software in your host machine. ---> System.Net.Sockets.SocketException: An established connection was aborted by the software in your host machine
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   at EasyModbus.ModbusClient.WriteSingleRegister(Int32 startingAddress, Int32 value)
+   at BatteryMonitor.Main.bgwork_writeToModbust_DoWork(Object sender, DoWorkEventArgs e) in C:\Users\IT_SOFTWARE\source\repos\BatteryMonitor-main\Main.cs:line 4263
+2024-09-21 15:24:34.3271|ERROR|BatteryMonitor.Main|System.IO.IOException: Unable to read data from the transport connection: An established connection was aborted by the software in your host machine. ---> System.Net.Sockets.SocketException: An established connection was aborted by the software in your host machine
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   at EasyModbus.ModbusClient.ReadHoldingRegisters(Int32 startingAddress, Int32 quantity)
+   at BatteryMonitor.Main.getVMaxFromModbus(ModbusClient modbus) in C:\Users\IT_SOFTWARE\source\repos\BatteryMonitor-main\Main.cs:line 2377
+   at BatteryMonitor.Main.MonitorModbusTimer_Tick(Object sender, EventArgs e) in C:\Users\IT_SOFTWARE\source\repos\BatteryMonitor-main\Main.cs:line 1619
+2024-09-21 15:26:48.8865|ERROR|BatteryMonitor.HIOKI.hioki|Unable to read data from the transport connection: An established connection was aborted by the software in your host machine.
+2024-09-21 15:26:48.9025|ERROR|BatteryMonitor.HIOKI.hioki|Unable to read data from the transport connection: An established connection was aborted by the software in your host machine.
+2024-09-21 15:26:48.8715|ERROR|BatteryMonitor.HIOKI.hioki|Unable to read data from the transport connection: An established connection was aborted by the software in your host machine.
+2024-09-21 15:26:48.8715|ERROR|BatteryMonitor.HIOKI.hioki|Unable to read data from the transport connection: An established connection was aborted by the software in your host machine.
+2024-09-21 15:26:48.9305|ERROR|BatteryMonitor.HIOKI.hioki|Unable to read data from the transport connection: An established connection was aborted by the software in your host machine.
+2024-09-21 15:26:48.9365|ERROR|BatteryMonitor.HIOKI.hioki|Unable to read data from the transport connection: An established connection was aborted by the software in your host machine.
+2024-09-21 15:26:48.9365|ERROR|BatteryMonitor.HIOKI.hioki|Unable to read data from the transport connection: An established connection was aborted by the software in your host machine.
+2024-09-21 15:26:48.8715|ERROR|BatteryMonitor.Main|System.IO.IOException: Unable to read data from the transport connection: An established connection was aborted by the software in your host machine. ---> System.Net.Sockets.SocketException: An established connection was aborted by the software in your host machine
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   at EasyModbus.ModbusClient.WriteSingleRegister(Int32 startingAddress, Int32 value)
+   at BatteryMonitor.Main.bgwork_writeToModbust_DoWork(Object sender, DoWorkEventArgs e) in C:\Users\IT_SOFTWARE\source\repos\BatteryMonitor-main\Main.cs:line 4266
+2024-09-21 15:26:48.8715|ERROR|BatteryMonitor.Main|System.IO.IOException: Unable to read data from the transport connection: An established connection was aborted by the software in your host machine. ---> System.Net.Sockets.SocketException: An established connection was aborted by the software in your host machine
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   at EasyModbus.ModbusClient.ReadHoldingRegisters(Int32 startingAddress, Int32 quantity)
+   at BatteryMonitor.Main.MonitorModbusTimer_Tick(Object sender, EventArgs e) in C:\Users\IT_SOFTWARE\source\repos\BatteryMonitor-main\Main.cs:line 1512
+2024-09-21 15:34:08.4511|ERROR|BatteryMonitor.HIOKI.hioki|Unable to read data from the transport connection: An established connection was aborted by the software in your host machine.
+2024-09-21 15:34:08.4201|ERROR|BatteryMonitor.HIOKI.hioki|Unable to read data from the transport connection: An established connection was aborted by the software in your host machine.
+2024-09-21 15:34:08.4391|ERROR|BatteryMonitor.HIOKI.hioki|Unable to read data from the transport connection: An established connection was aborted by the software in your host machine.
+2024-09-21 15:34:08.4511|ERROR|BatteryMonitor.HIOKI.hioki|Unable to read data from the transport connection: An established connection was aborted by the software in your host machine.
+2024-09-21 15:34:08.4391|ERROR|BatteryMonitor.HIOKI.hioki|Unable to read data from the transport connection: An established connection was aborted by the software in your host machine.
+2024-09-21 15:34:08.4881|ERROR|BatteryMonitor.HIOKI.hioki|Unable to read data from the transport connection: An established connection was aborted by the software in your host machine.
+2024-09-21 15:34:08.4091|ERROR|BatteryMonitor.HIOKI.hioki|Unable to read data from the transport connection: An established connection was aborted by the software in your host machine.
+2024-09-21 15:34:08.4951|ERROR|BatteryMonitor.HIOKI.hioki|Unable to read data from the transport connection: An established connection was aborted by the software in your host machine.
+2024-09-21 15:34:08.4201|ERROR|BatteryMonitor.HIOKI.hioki|Unable to read data from the transport connection: An established connection was aborted by the software in your host machine.
+2024-09-21 15:34:08.4201|ERROR|BatteryMonitor.Main|System.IO.IOException: Unable to read data from the transport connection: An established connection was aborted by the software in your host machine. ---> System.Net.Sockets.SocketException: An established connection was aborted by the software in your host machine
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   at EasyModbus.ModbusClient.WriteSingleRegister(Int32 startingAddress, Int32 value)
+   at BatteryMonitor.Main.bgwork_writeToModbust_DoWork(Object sender, DoWorkEventArgs e) in C:\Users\IT_SOFTWARE\source\repos\BatteryMonitor-main\Main.cs:line 4288
+2024-09-21 15:34:08.4201|ERROR|BatteryMonitor.Main|System.IO.IOException: Unable to read data from the transport connection: An established connection was aborted by the software in your host machine. ---> System.Net.Sockets.SocketException: An established connection was aborted by the software in your host machine
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   at EasyModbus.ModbusClient.ReadHoldingRegisters(Int32 startingAddress, Int32 quantity)
+   at BatteryMonitor.Main.getRMinFromModbus(ModbusClient modbus) in C:\Users\IT_SOFTWARE\source\repos\BatteryMonitor-main\Main.cs:line 2360
+2024-09-21 15:34:08.5181|ERROR|BatteryMonitor.Main|System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at EasyModbus.ModbusClient.ReadHoldingRegisters(Int32 startingAddress, Int32 quantity)
+   at BatteryMonitor.Main.MonitorModbusTimer_Tick(Object sender, EventArgs e) in C:\Users\IT_SOFTWARE\source\repos\BatteryMonitor-main\Main.cs:line 1511
+2024-09-21 15:34:43.4870|ERROR|BatteryMonitor.Main|EasyModbus.Exceptions.ConnectionException: connection timed out
+   at EasyModbus.ModbusClient.Connect()
+   at BatteryMonitor.Main.Form1_Load(Object sender, EventArgs e) in C:\Users\IT_SOFTWARE\source\repos\BatteryMonitor-main\Main.cs:line 1023
+2024-09-21 15:35:01.6388|ERROR|BatteryMonitor.Main|System.IO.IOException: Unable to read data from the transport connection: An established connection was aborted by the software in your host machine. ---> System.Net.Sockets.SocketException: An established connection was aborted by the software in your host machine
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   at EasyModbus.ModbusClient.ReadHoldingRegisters(Int32 startingAddress, Int32 quantity)
+   at BatteryMonitor.Main.getRMinFromModbus(ModbusClient modbus) in C:\Users\IT_SOFTWARE\source\repos\BatteryMonitor-main\Main.cs:line 2360
+2024-09-21 15:35:01.6688|ERROR|BatteryMonitor.Main|System.IO.IOException: Unable to read data from the transport connection: An established connection was aborted by the software in your host machine. ---> System.Net.Sockets.SocketException: An established connection was aborted by the software in your host machine
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   at EasyModbus.ModbusClient.WriteSingleRegister(Int32 startingAddress, Int32 value)
+   at BatteryMonitor.Main.bgwork_writeToModbust_DoWork(Object sender, DoWorkEventArgs e) in C:\Users\IT_SOFTWARE\source\repos\BatteryMonitor-main\Main.cs:line 4272
+2024-09-21 15:35:01.7018|ERROR|BatteryMonitor.HIOKI.hioki|Unable to read data from the transport connection: An established connection was aborted by the software in your host machine.
+2024-09-21 15:35:01.7018|ERROR|BatteryMonitor.HIOKI.hioki|Unable to read data from the transport connection: An established connection was aborted by the software in your host machine.
+2024-09-21 15:35:01.7018|ERROR|BatteryMonitor.Main|System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at EasyModbus.ModbusClient.ReadHoldingRegisters(Int32 startingAddress, Int32 quantity)
+   at BatteryMonitor.Main.MonitorModbusTimer_Tick(Object sender, EventArgs e) in C:\Users\IT_SOFTWARE\source\repos\BatteryMonitor-main\Main.cs:line 1511
+2024-09-21 15:40:13.3125|ERROR|BatteryMonitor.HIOKI.hioki|Unable to read data from the transport connection: An established connection was aborted by the software in your host machine.
+2024-09-21 15:40:13.3265|ERROR|BatteryMonitor.HIOKI.hioki|Unable to read data from the transport connection: An established connection was aborted by the software in your host machine.
+2024-09-21 15:40:13.3125|ERROR|BatteryMonitor.HIOKI.hioki|Unable to read data from the transport connection: An established connection was aborted by the software in your host machine.
+2024-09-21 15:40:13.3585|ERROR|BatteryMonitor.HIOKI.hioki|Unable to read data from the transport connection: An established connection was aborted by the software in your host machine.
+2024-09-21 15:40:13.3125|ERROR|BatteryMonitor.HIOKI.hioki|Unable to read data from the transport connection: An established connection was aborted by the software in your host machine.
+2024-09-21 15:40:13.3125|ERROR|BatteryMonitor.Main|System.IO.IOException: Unable to read data from the transport connection: An established connection was aborted by the software in your host machine. ---> System.Net.Sockets.SocketException: An established connection was aborted by the software in your host machine
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   at EasyModbus.ModbusClient.WriteSingleRegister(Int32 startingAddress, Int32 value)
+   at BatteryMonitor.Main.bgwork_writeToModbust_DoWork(Object sender, DoWorkEventArgs e) in C:\Users\IT_SOFTWARE\source\repos\BatteryMonitor-main\Main.cs:line 4271
+2024-09-21 15:40:13.3125|ERROR|BatteryMonitor.Main|System.IO.IOException: Unable to read data from the transport connection: An established connection was aborted by the software in your host machine. ---> System.Net.Sockets.SocketException: An established connection was aborted by the software in your host machine
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   at EasyModbus.ModbusClient.ReadHoldingRegisters(Int32 startingAddress, Int32 quantity)
+   at BatteryMonitor.Main.getRMinFromModbus(ModbusClient modbus) in C:\Users\IT_SOFTWARE\source\repos\BatteryMonitor-main\Main.cs:line 2360
+2024-09-21 15:40:13.3855|ERROR|BatteryMonitor.Main|System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at EasyModbus.ModbusClient.ReadHoldingRegisters(Int32 startingAddress, Int32 quantity)
+   at BatteryMonitor.Main.MonitorModbusTimer_Tick(Object sender, EventArgs e) in C:\Users\IT_SOFTWARE\source\repos\BatteryMonitor-main\Main.cs:line 1511
+2024-09-21 15:47:09.7653|ERROR|BatteryMonitor.Main|EasyModbus.Exceptions.ConnectionException: connection timed out
+   at EasyModbus.ModbusClient.Connect()
+   at BatteryMonitor.Main.Form1_Load(Object sender, EventArgs e) in C:\Users\IT_SOFTWARE\source\repos\BatteryMonitor-main\Main.cs:line 1032

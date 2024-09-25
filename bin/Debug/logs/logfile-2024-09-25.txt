@@ -1,0 +1,393 @@
+2024-09-25 11:49:24.5515|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 11:49:24.6347|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 11:49:24.6852|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 11:49:24.7511|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 11:49:24.7991|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 11:49:24.8251|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 11:49:24.9371|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 11:49:24.9899|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 11:49:28.6446|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:28.6546|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:28.6756|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:28.6756|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 11:49:28.6756|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:28.7046|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:28.7746|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:28.8436|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:28.8686|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:28.8686|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:28.8686|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:28.8686|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:28.8686|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:28.8686|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:28.8686|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:28.8916|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:28.8916|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:28.9236|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:28.9516|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:28.9516|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:28.9516|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:28.9516|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:28.9516|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:28.9956|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:28.9956|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:29.0166|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:29.0166|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:29.0166|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:29.0466|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:29.0466|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:29.0606|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:29.0606|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:29.0877|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:29.0877|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:29.0877|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:29.1057|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:29.1057|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:29.1327|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:29.1327|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:29.1327|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:29.1417|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:29.1327|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:29.1797|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:29.2027|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:29.2027|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:29.2027|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:29.2027|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:29.2027|WARN|BatteryMonitor.FMain|Disconnect To Scanner
+2024-09-25 11:49:29.2027|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:29.2027|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:29.2217|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:29.2217|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:29.2217|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:29.2217|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:29.2367|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:29.2367|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:29.2367|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:29.2597|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:29.2707|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:29.2707|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:29.2707|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:29.2707|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:29.2887|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:29.2997|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:29.3507|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:29.4127|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:29.4761|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:29.5381|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:29.6021|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:29.6661|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:29.7271|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:29.7886|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:29.8503|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:29.9126|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:29.9798|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:30.0410|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:30.1032|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:30.1642|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:30.2272|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:30.2897|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:30.3517|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:30.4188|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:30.4759|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:30.5397|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:30.6023|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:30.6641|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:30.7302|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:30.7886|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:30.8522|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:30.9162|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:30.9787|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:31.0428|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:31.1018|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:31.1648|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:31.1958|WARN|BatteryMonitor.FMain|Disconnect To Scanner
+2024-09-25 11:49:31.2288|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:31.2894|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:31.3534|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:31.4134|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:31.4764|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:31.5404|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:31.6034|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:31.6615|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:31.7254|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:31.7895|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:31.8515|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:31.9146|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:31.9777|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:32.0403|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:32.1053|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:32.1680|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:32.2260|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:32.2890|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:32.3510|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:32.4140|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:32.4771|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:32.5361|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:32.6001|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:32.6631|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:32.7271|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:32.7901|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:32.8531|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:32.9122|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:32.9752|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:33.0392|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:33.1012|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:33.1652|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:33.2262|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:33.2892|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:33.3522|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:33.4112|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:36.2828|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:36.3389|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:36.4049|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:36.4589|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:36.5219|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:36.5849|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:36.6489|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:36.7119|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:36.7750|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:36.8360|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:36.9000|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:36.9590|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:37.0210|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:37.0850|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:37.1490|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:38.3354|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:39.5358|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:42.1936|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:42.3920|WARN|BatteryMonitor.FMain|Disconnect To Scanner
+2024-09-25 11:49:42.5938|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:42.7626|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:43.9030|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:44.5072|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:45.5798|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:45.6008|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:49.5589|WARN|BatteryMonitor.FMain|Disconnect To Scanner
+2024-09-25 11:49:49.5769|ERROR|BatteryMonitor.HIOKI.hioki|Unable to write data to the transport connection: An established connection was aborted by the software in your host machine.
+2024-09-25 11:49:49.6259|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 11:49:49.6259|ERROR|BatteryMonitor.FMain|An error occurred while attempting to retrieve Hioki measurement: This BackgroundWorker is currently busy and cannot run multiple tasks concurrently.
+2024-09-25 11:56:06.7330|WARN|BatteryMonitor.FMain|Disconnect To Scanner
+2024-09-25 13:10:17.9928|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:10:18.0423|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:10:18.1422|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:10:18.1937|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:10:18.2262|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:10:18.2762|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:10:18.3424|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:10:18.4576|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:10:18.7692|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:10:18.8346|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:10:18.8888|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:10:18.9554|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:10:19.0070|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:10:19.0308|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:10:19.0984|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:10:19.2091|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:10:19.2570|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:10:19.2887|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:10:19.3903|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:10:19.4423|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:10:19.4683|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:10:19.6442|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:10:19.7029|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:10:19.7698|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:10:19.8249|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:10:19.9590|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:10:20.0095|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:10:20.0865|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:10:20.1337|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:10:20.1587|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:10:20.2190|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:10:20.2898|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:10:20.3504|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:10:20.4104|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:10:20.5222|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:10:20.5765|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:10:20.6297|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:10:20.7666|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:10:20.8106|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:10:20.9006|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:10:20.9516|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:10:21.1087|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:10:21.1487|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:10:21.1997|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:10:21.2557|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:10:21.3267|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:10:21.3957|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:10:21.4537|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:10:21.5168|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:10:21.5838|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:10:21.6418|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:10:21.7118|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:10:22.0168|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:10:22.1479|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:10:22.1709|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:10:22.1709|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 13:10:22.2159|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 13:10:22.2509|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 13:10:22.2699|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 13:10:22.2929|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 13:10:22.3089|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 13:10:22.3139|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 13:10:22.3139|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 13:10:22.3279|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 13:10:22.3279|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 13:10:22.3279|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 13:10:22.3279|ERROR|BatteryMonitor.HIOKI.hioki|Unable to write data to the transport connection: An established connection was aborted by the software in your host machine.
+2024-09-25 13:10:22.3449|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 13:10:22.3449|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 13:19:00.5305|WARN|BatteryMonitor.FMain|Disconnect To Scanner
+2024-09-25 13:22:49.0120|WARN|BatteryMonitor.FMain|Disconnect To Scanner
+2024-09-25 13:22:50.9869|WARN|BatteryMonitor.FMain|Disconnect To Scanner
+2024-09-25 13:22:53.9795|WARN|BatteryMonitor.FMain|Disconnect To Scanner
+2024-09-25 13:22:56.9897|WARN|BatteryMonitor.FMain|Disconnect To Scanner
+2024-09-25 13:23:00.1931|WARN|BatteryMonitor.FMain|Disconnect To Scanner
+2024-09-25 13:29:07.4306|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:29:07.5054|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:29:07.5550|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:29:07.6101|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:29:07.6302|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:29:07.7606|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:29:07.8101|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:29:07.8646|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:29:07.9383|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:29:07.9820|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:29:08.0159|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:29:08.1296|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:29:08.1846|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:29:08.2336|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:29:08.3196|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:29:08.3731|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:29:08.4259|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:29:08.4587|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:29:08.5155|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:29:08.6323|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:29:08.6833|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:29:08.7335|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:29:08.7672|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:29:08.8508|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:29:08.8877|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:29:09.0070|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:29:09.0495|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:29:09.0754|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:29:09.1456|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:29:09.2518|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:29:09.2984|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:29:09.3257|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:29:09.3981|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:29:09.5066|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:29:09.6276|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:29:09.6687|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:29:09.7550|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:29:09.8089|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:29:09.8694|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:29:09.9455|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:29:09.9983|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:29:10.0459|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:29:10.0760|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:29:10.1367|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:29:10.2542|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:29:10.3050|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:29:14.3830|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:29:14.4011|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:29:14.4131|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 13:29:14.4351|ERROR|BatteryMonitor.HIOKI.hioki|Unable to write data to the transport connection: An established connection was aborted by the software in your host machine.
+2024-09-25 13:29:53.5065|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:29:53.5545|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:29:53.6147|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:29:53.6972|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:29:53.7541|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:29:53.8628|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:29:53.9169|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:29:53.9796|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:29:54.0362|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:29:54.0648|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:29:54.1241|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:29:54.1961|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:29:54.2533|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:29:54.3157|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:29:54.4205|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:29:54.4735|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:29:54.5052|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:29:54.6159|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:29:54.6691|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:29:54.7322|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:29:54.8012|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:29:54.8269|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:29:55.1277|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:29:55.1805|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:29:55.2315|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:29:55.2876|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:29:55.3133|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:29:55.4265|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:29:55.4825|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:29:55.5296|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:29:55.5639|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:29:55.6150|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:29:55.6761|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:29:55.7310|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:29:55.7880|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:29:55.8153|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:29:55.8737|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:29:55.9446|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:29:56.2428|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:29:56.2998|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:29:56.3544|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:29:58.5552|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 13:29:58.5632|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 13:29:58.7774|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 13:29:58.7904|ERROR|BatteryMonitor.HIOKI.hioki|Insufficient data received.
+2024-09-25 13:29:58.8004|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 13:29:58.8004|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 13:29:58.8194|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 13:29:58.8194|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 13:29:58.8867|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 13:29:58.9458|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 13:29:59.0108|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 13:29:59.0719|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 13:29:59.1327|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 13:29:59.1980|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 13:29:59.2603|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 13:29:59.3283|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 13:29:59.3831|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 13:29:59.4452|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 13:29:59.5089|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 13:29:59.5784|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 13:29:59.6351|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 13:29:59.6958|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 13:29:59.7613|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 13:29:59.8223|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 13:29:59.8834|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 13:29:59.9494|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 13:30:00.0069|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 13:30:00.0695|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 13:30:00.1332|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 13:30:00.1998|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 13:30:00.2595|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 13:30:00.3238|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 13:30:00.3850|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 13:30:00.4474|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 13:30:00.5126|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 13:30:00.5712|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 13:30:00.6361|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 13:30:00.6998|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 13:30:04.6990|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 13:30:04.7080|ERROR|BatteryMonitor.HIOKI.hioki|No bytes read from network stream; connection may be lost.
+2024-09-25 13:34:06.3255|ERROR|BatteryMonitor.FMain|System.InvalidOperationException: Cross-thread operation not valid: Control '' accessed from a thread other than the thread it was created on.
+   at System.Windows.Forms.Control.get_Handle()
+   at System.Windows.Forms.Control.get_CreateThreadId()
+   at System.Windows.Forms.Control.ControlCollection.Add(Control value)
+   at BatteryMonitor.FMain.Form1_Load(Object sender, EventArgs e) in C:\Users\IT_SOFTWARE\source\repos\BatteryMonitor-main\FMain.cs:line 1023
+2024-09-25 13:34:08.3838|WARN|BatteryMonitor.FMain|Disconnect To Scanner
+2024-09-25 13:34:15.2128|ERROR|BatteryMonitor.FMain|System.InvalidOperationException: Cross-thread operation not valid: Control '' accessed from a thread other than the thread it was created on.
+   at System.Windows.Forms.Control.get_Handle()
+   at System.Windows.Forms.Control.get_CreateThreadId()
+   at System.Windows.Forms.Control.ControlCollection.Add(Control value)
+   at BatteryMonitor.FMain.Form1_Load(Object sender, EventArgs e) in C:\Users\IT_SOFTWARE\source\repos\BatteryMonitor-main\FMain.cs:line 1023
+2024-09-25 13:34:15.2128|WARN|BatteryMonitor.FMain|Disconnect To Scanner
+2024-09-25 13:34:18.2030|ERROR|BatteryMonitor.FMain|System.InvalidOperationException: Cross-thread operation not valid: Control '' accessed from a thread other than the thread it was created on.
+   at System.Windows.Forms.Control.get_Handle()
+   at System.Windows.Forms.Control.get_CreateThreadId()
+   at System.Windows.Forms.Control.ControlCollection.Add(Control value)
+   at BatteryMonitor.FMain.Form1_Load(Object sender, EventArgs e) in C:\Users\IT_SOFTWARE\source\repos\BatteryMonitor-main\FMain.cs:line 1023
+2024-09-25 13:34:18.2030|WARN|BatteryMonitor.FMain|Disconnect To Scanner

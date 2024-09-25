@@ -1,0 +1,693 @@
+2024-09-23 14:50:03.0951|WARN|BatteryMonitor.Main|Disconnect To Scanner
+2024-09-23 14:50:06.0824|WARN|BatteryMonitor.Main|Disconnect To Scanner
+2024-09-23 14:50:09.0715|WARN|BatteryMonitor.Main|Disconnect To Scanner
+2024-09-23 14:50:11.1369|WARN|BatteryMonitor.Main|Disconnect To Scanner
+2024-09-23 14:50:14.1356|WARN|BatteryMonitor.Main|Disconnect To Scanner
+2024-09-23 14:50:17.1376|WARN|BatteryMonitor.Main|Disconnect To Scanner
+2024-09-23 14:50:20.1525|WARN|BatteryMonitor.Main|Disconnect To Scanner
+2024-09-23 14:50:23.1538|WARN|BatteryMonitor.Main|Disconnect To Scanner
+2024-09-23 14:50:26.1529|WARN|BatteryMonitor.Main|Disconnect To Scanner
+2024-09-23 14:50:29.1533|WARN|BatteryMonitor.Main|Disconnect To Scanner
+2024-09-23 14:50:32.1674|WARN|BatteryMonitor.Main|Disconnect To Scanner
+2024-09-23 14:50:35.1679|WARN|BatteryMonitor.Main|Disconnect To Scanner
+2024-09-23 14:50:38.1679|WARN|BatteryMonitor.Main|Disconnect To Scanner
+2024-09-23 14:54:37.1274|WARN|BatteryMonitor.Main|Disconnect To Scanner
+2024-09-23 14:54:41.0832|WARN|BatteryMonitor.Main|Disconnect To Scanner
+2024-09-23 14:54:44.0853|WARN|BatteryMonitor.Main|Disconnect To Scanner
+2024-09-23 14:56:04.9738|WARN|BatteryMonitor.Main|Disconnect To Scanner
+2024-09-23 14:59:44.6609|WARN|BatteryMonitor.Main|Disconnect To Scanner
+2024-09-23 14:59:48.5812|WARN|BatteryMonitor.Main|Disconnect To Scanner
+2024-09-23 14:59:51.5784|WARN|BatteryMonitor.Main|Disconnect To Scanner
+2024-09-23 15:00:11.4676|WARN|BatteryMonitor.Main|Disconnect To Scanner
+2024-09-23 15:00:15.0772|WARN|BatteryMonitor.Main|Disconnect To Scanner
+2024-09-23 15:00:18.0719|WARN|BatteryMonitor.Main|Disconnect To Scanner
+2024-09-23 15:00:21.0844|WARN|BatteryMonitor.Main|Disconnect To Scanner
+2024-09-23 15:00:24.0753|WARN|BatteryMonitor.Main|Disconnect To Scanner
+2024-09-23 15:00:27.0787|WARN|BatteryMonitor.Main|Disconnect To Scanner
+2024-09-23 15:00:30.0735|WARN|BatteryMonitor.Main|Disconnect To Scanner
+2024-09-23 15:00:33.0813|WARN|BatteryMonitor.Main|Disconnect To Scanner
+2024-09-23 15:00:57.0894|WARN|BatteryMonitor.Main|Disconnect To Scanner
+2024-09-23 15:01:00.0859|WARN|BatteryMonitor.Main|Disconnect To Scanner
+2024-09-23 15:01:09.0771|WARN|BatteryMonitor.Main|Disconnect To Scanner
+2024-09-23 15:01:12.0861|WARN|BatteryMonitor.Main|Disconnect To Scanner
+2024-09-23 15:01:15.0789|WARN|BatteryMonitor.Main|Disconnect To Scanner
+2024-09-23 15:01:18.0799|WARN|BatteryMonitor.Main|Disconnect To Scanner
+2024-09-23 15:01:21.0732|WARN|BatteryMonitor.Main|Disconnect To Scanner
+2024-09-23 15:01:24.0833|WARN|BatteryMonitor.Main|Disconnect To Scanner
+2024-09-23 15:01:27.0743|WARN|BatteryMonitor.Main|Disconnect To Scanner
+2024-09-23 15:02:03.3314|WARN|BatteryMonitor.Main|Disconnect To Scanner
+2024-09-23 15:02:07.0811|WARN|BatteryMonitor.Main|Disconnect To Scanner
+2024-09-23 15:02:10.0756|WARN|BatteryMonitor.Main|Disconnect To Scanner
+2024-09-23 15:02:13.0722|WARN|BatteryMonitor.Main|Disconnect To Scanner
+2024-09-23 15:04:57.5902|WARN|BatteryMonitor.Main|Disconnect To Scanner
+2024-09-23 15:05:00.5737|WARN|BatteryMonitor.Main|Disconnect To Scanner
+2024-09-23 15:05:09.5883|ERROR|BatteryMonitor.Main|System.ObjectDisposedException: Cannot access a disposed object.
+Object name: 'Nofitication'.
+   at System.Windows.Forms.Control.CreateHandle()
+   at System.Windows.Forms.Form.CreateHandle()
+   at System.Windows.Forms.Control.get_Handle()
+   at System.Windows.Forms.Control.SetVisibleCore(Boolean value)
+   at System.Windows.Forms.Form.SetVisibleCore(Boolean value)
+   at System.Windows.Forms.Control.Show()
+   at BatteryMonitor.Main.showNofitication(String nofiticationMessage) in C:\Users\IT_SOFTWARE\source\repos\BatteryMonitor-main\Main.cs:line 1465
+2024-09-23 15:05:09.5883|WARN|BatteryMonitor.Main|Disconnect To Scanner
+2024-09-23 15:05:12.5862|WARN|BatteryMonitor.Main|Disconnect To Scanner
+2024-09-23 15:05:15.5732|WARN|BatteryMonitor.Main|Disconnect To Scanner
+2024-09-23 15:05:18.5714|WARN|BatteryMonitor.Main|Disconnect To Scanner
+2024-09-23 15:05:21.5862|WARN|BatteryMonitor.Main|Disconnect To Scanner
+2024-09-23 15:06:31.1025|WARN|BatteryMonitor.Main|Disconnect To Scanner
+2024-09-23 15:06:37.0896|WARN|BatteryMonitor.Main|Disconnect To Scanner
+2024-09-23 15:06:40.0846|WARN|BatteryMonitor.Main|Disconnect To Scanner
+2024-09-23 15:06:49.1004|WARN|BatteryMonitor.Main|Disconnect To Scanner
+2024-09-23 15:06:52.0806|WARN|BatteryMonitor.Main|Disconnect To Scanner
+2024-09-23 15:06:58.1015|WARN|BatteryMonitor.Main|Disconnect To Scanner
+2024-09-23 15:09:43.5810|ERROR|BatteryMonitor.Main|System.ObjectDisposedException: Cannot access a disposed object.
+Object name: 'Main'.
+   at System.Windows.Forms.Control.MarshaledInvoke(Control caller, Delegate method, Object[] args, Boolean synchronous)
+   at System.Windows.Forms.Control.Invoke(Delegate method, Object[] args)
+   at System.Windows.Forms.Control.Invoke(Delegate method)
+   at BatteryMonitor.Main.hideNofitication(Nofitication fnoti) in C:\Users\IT_SOFTWARE\source\repos\BatteryMonitor-main\Main.cs:line 1472
+2024-09-23 15:19:44.2313|INFO|BatteryMonitor.Main|002CB70740740MDANA004147,002CB70743744MDAPA003463,002CB70742743MDAPA001939,002CB70742743MDAPA001388Số lượng pin quét được không đúng với số lượng cài đặt!
+2024-09-23 15:22:45.2612|INFO|BatteryMonitor.Main|002CB70740740MDANA004147,002CB70743744MDAPA003463,002CB70742743MDAPA001939,002CB70742743MDAPA001388Số lượng pin quét được không đúng với số lượng cài đặt!
+2024-09-23 15:29:01.6105|ERROR|BatteryMonitor.Main|System.InvalidOperationException: This BackgroundWorker is currently busy and cannot run multiple tasks concurrently.
+   at System.ComponentModel.BackgroundWorker.RunWorkerAsync(Object argument)
+   at System.ComponentModel.BackgroundWorker.RunWorkerAsync()
+   at BatteryMonitor.Main._writeToModbust_Elapsed(Object sender, ElapsedEventArgs e) in C:\Users\IT_SOFTWARE\source\repos\BatteryMonitor-main\Main.cs:line 3832
+2024-09-23 15:29:02.3709|ERROR|BatteryMonitor.Main|System.InvalidOperationException: This BackgroundWorker is currently busy and cannot run multiple tasks concurrently.
+   at System.ComponentModel.BackgroundWorker.RunWorkerAsync(Object argument)
+   at System.ComponentModel.BackgroundWorker.RunWorkerAsync()
+   at BatteryMonitor.Main._writeToModbust_Elapsed(Object sender, ElapsedEventArgs e) in C:\Users\IT_SOFTWARE\source\repos\BatteryMonitor-main\Main.cs:line 3832
+2024-09-23 15:29:18.7811|ERROR|BatteryMonitor.Main|System.InvalidOperationException: This BackgroundWorker is currently busy and cannot run multiple tasks concurrently.
+   at System.ComponentModel.BackgroundWorker.RunWorkerAsync(Object argument)
+   at System.ComponentModel.BackgroundWorker.RunWorkerAsync()
+   at BatteryMonitor.Main._exportExcelTimer_Elapsed(Object sender, ElapsedEventArgs e) in C:\Users\IT_SOFTWARE\source\repos\BatteryMonitor-main\Main.cs:line 3815
+2024-09-23 15:29:41.3317|ERROR|BatteryMonitor.Main|System.InvalidOperationException: This BackgroundWorker is currently busy and cannot run multiple tasks concurrently.
+   at System.ComponentModel.BackgroundWorker.RunWorkerAsync(Object argument)
+   at System.ComponentModel.BackgroundWorker.RunWorkerAsync()
+   at BatteryMonitor.Main._exportExcelTimer_Elapsed(Object sender, ElapsedEventArgs e) in C:\Users\IT_SOFTWARE\source\repos\BatteryMonitor-main\Main.cs:line 3815
+2024-09-23 15:29:17.3213|ERROR|BatteryMonitor.Main|System.InvalidOperationException: This BackgroundWorker is currently busy and cannot run multiple tasks concurrently.
+   at System.ComponentModel.BackgroundWorker.RunWorkerAsync(Object argument)
+   at System.ComponentModel.BackgroundWorker.RunWorkerAsync()
+   at BatteryMonitor.Main._exportExcelTimer_Elapsed(Object sender, ElapsedEventArgs e) in C:\Users\IT_SOFTWARE\source\repos\BatteryMonitor-main\Main.cs:line 3815
+2024-09-23 15:29:42.5645|ERROR|BatteryMonitor.Main|System.InvalidOperationException: This BackgroundWorker is currently busy and cannot run multiple tasks concurrently.
+   at System.ComponentModel.BackgroundWorker.RunWorkerAsync(Object argument)
+   at System.ComponentModel.BackgroundWorker.RunWorkerAsync()
+   at BatteryMonitor.Main._exportExcelTimer_Elapsed(Object sender, ElapsedEventArgs e) in C:\Users\IT_SOFTWARE\source\repos\BatteryMonitor-main\Main.cs:line 3815
+2024-09-23 15:35:59.5173|ERROR|BatteryMonitor.Main|System.IO.IOException: Unable to read data from the transport connection: An established connection was aborted by the software in your host machine. ---> System.Net.Sockets.SocketException: An established connection was aborted by the software in your host machine
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   at EasyModbus.ModbusClient.ReadHoldingRegisters(Int32 startingAddress, Int32 quantity)
+   at BatteryMonitor.Main.MonitorModbusTimer_Tick(Object sender, EventArgs e) in C:\Users\IT_SOFTWARE\source\repos\BatteryMonitor-main\Main.cs:line 1849
+2024-09-23 15:36:04.5728|WARN|BatteryMonitor.Main|Disconnect To Scanner
+2024-09-23 15:36:08.0818|WARN|BatteryMonitor.Main|Disconnect To Scanner
+2024-09-23 15:36:11.0839|WARN|BatteryMonitor.Main|Disconnect To Scanner
+2024-09-23 15:37:36.8733|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:37:39.8874|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:37:42.8887|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:37:45.9014|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:37:48.6679|ERROR|BatteryMonitor.Main|System.IO.IOException: Unable to read data from the transport connection: An established connection was aborted by the software in your host machine. ---> System.Net.Sockets.SocketException: An established connection was aborted by the software in your host machine
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   at EasyModbus.ModbusClient.ReadHoldingRegisters(Int32 startingAddress, Int32 quantity)
+   at BatteryMonitor.Main.getRMinFromModbus(ModbusClient modbus) in C:\Users\IT_SOFTWARE\source\repos\BatteryMonitor-main\Main.cs:line 2698
+2024-09-23 15:37:48.6979|ERROR|BatteryMonitor.Main|System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at EasyModbus.ModbusClient.ReadHoldingRegisters(Int32 startingAddress, Int32 quantity)
+   at BatteryMonitor.Main.MonitorModbusTimer_Tick(Object sender, EventArgs e) in C:\Users\IT_SOFTWARE\source\repos\BatteryMonitor-main\Main.cs:line 1849
+2024-09-23 15:37:53.7180|WARN|BatteryMonitor.Main|Disconnect To Scanner
+2024-09-23 15:37:55.5781|WARN|BatteryMonitor.Main|Disconnect To Scanner
+2024-09-23 15:37:58.5721|WARN|BatteryMonitor.Main|Disconnect To Scanner
+2024-09-23 15:38:01.9366|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:38:03.9175|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:38:06.9169|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:38:09.9178|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:38:12.9184|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:38:16.5870|WARN|BatteryMonitor.Main|Disconnect To Scanner
+2024-09-23 15:38:19.5785|WARN|BatteryMonitor.Main|Disconnect To Scanner
+2024-09-23 15:38:22.9428|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:38:24.9335|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:38:27.9341|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:38:30.9334|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:38:33.9344|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:38:36.9336|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:38:39.9480|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:38:42.9511|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:38:45.9640|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:38:53.2600|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:38:56.2610|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:38:58.6529|ERROR|BatteryMonitor.Main|System.IO.IOException: Unable to read data from the transport connection: An established connection was aborted by the software in your host machine. ---> System.Net.Sockets.SocketException: An established connection was aborted by the software in your host machine
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   at EasyModbus.ModbusClient.ReadHoldingRegisters(Int32 startingAddress, Int32 quantity)
+   at BatteryMonitor.Main.MonitorModbusTimer_Tick(Object sender, EventArgs e) in C:\Users\IT_SOFTWARE\source\repos\BatteryMonitor-main\Main.cs:line 1849
+2024-09-23 15:39:03.6703|WARN|BatteryMonitor.Main|Disconnect To Scanner
+2024-09-23 15:39:06.0825|WARN|BatteryMonitor.Main|Disconnect To Scanner
+2024-09-23 15:39:09.2855|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:39:11.2792|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:39:14.2915|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:39:17.2918|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:39:20.2934|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:39:23.3068|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:39:26.3074|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:39:29.3073|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:39:32.3078|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:39:35.3088|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:39:38.3223|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:39:41.3353|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:39:44.3453|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:39:47.3587|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:39:51.0985|WARN|BatteryMonitor.Main|Disconnect To Scanner
+2024-09-23 15:39:54.0749|WARN|BatteryMonitor.Main|Disconnect To Scanner
+2024-09-23 15:39:57.0830|WARN|BatteryMonitor.Main|Disconnect To Scanner
+2024-09-23 15:40:00.0752|WARN|BatteryMonitor.Main|Disconnect To Scanner
+2024-09-23 15:40:03.0867|WARN|BatteryMonitor.Main|Disconnect To Scanner
+2024-09-23 15:40:06.0836|WARN|BatteryMonitor.Main|Disconnect To Scanner
+2024-09-23 15:40:08.4513|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:40:11.4352|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:40:14.4363|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:40:17.4487|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:40:20.4490|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:40:23.4509|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:40:26.4637|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:40:52.2024|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:40:55.2146|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:41:13.0785|WARN|BatteryMonitor.Main|Disconnect To Scanner
+2024-09-23 15:41:20.4927|WARN|BatteryMonitor.Main|Disconnect To Scanner
+2024-09-23 15:41:27.1382|WARN|BatteryMonitor.Main|Disconnect To Scanner
+2024-09-23 15:41:30.1553|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:41:33.1389|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:41:36.1536|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:41:39.1536|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:41:42.1669|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:41:45.1671|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:41:48.1666|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:41:51.1675|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:41:54.1674|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:42:05.3814|WARN|BatteryMonitor.Main|Disconnect To Scanner
+2024-09-23 15:42:27.2927|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:42:32.6662|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:42:33.1887|ERROR|BatteryMonitor.Main|An error occurred while attempting to retrieve Hioki measurement: This BackgroundWorker is currently busy and cannot run multiple tasks concurrently.
+2024-09-23 15:42:35.8843|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:42:38.8858|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:42:41.8855|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:42:44.8853|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:42:47.8857|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:42:50.8874|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:42:53.8874|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:42:56.8877|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:42:59.9003|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:43:02.9005|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:43:05.9142|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:43:08.9191|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:43:11.9335|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:43:14.9337|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:43:17.9491|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:43:20.9506|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:43:23.9510|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:43:26.9517|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:43:29.9640|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:43:32.9789|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:43:35.9802|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:43:38.9799|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:45:35.7981|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:45:38.8082|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:45:41.8085|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:45:44.8079|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:45:47.8233|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:45:54.3222|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:45:54.3503|INFO|BatteryMonitor.Main|002CB70740740MDANA004147,002CB70743744MDAPA003463,002CB70742743MDAPA001939,002CB70742743MDAPA001388Số lượng pin quét được không đúng với số lượng cài đặt!
+2024-09-23 15:45:57.3316|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:46:00.3382|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:46:03.3391|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:46:06.3547|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:46:09.3546|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:46:12.3549|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:46:15.3552|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:46:23.4174|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:46:26.4174|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:46:29.4176|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:46:32.4178|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:46:35.4322|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:46:38.4325|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:49:19.6264|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:49:22.6367|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:49:25.6364|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:49:28.6369|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:49:31.6519|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:49:34.6526|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:49:37.6523|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:49:40.6674|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:49:43.6673|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:49:46.6681|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:49:49.6676|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:50:46.4442|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:50:49.4524|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:50:52.4655|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:50:55.4791|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:50:58.4928|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:51:01.4966|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:51:04.5118|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:51:07.5127|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:51:10.5272|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:51:13.5287|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:51:16.5286|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:51:19.5302|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:51:22.5301|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:51:25.5449|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:51:28.5590|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:51:31.5586|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:51:34.5730|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:51:37.5738|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:51:40.5737|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:51:43.5753|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:51:53.4298|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:51:56.4331|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:51:59.4335|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:52:02.4337|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:52:05.4339|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:52:08.4346|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:52:11.4488|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:52:14.4511|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:52:17.4637|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:52:20.4801|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:52:23.4948|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:52:26.4964|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:52:29.4958|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:52:32.4957|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:52:35.4978|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:52:38.5114|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:52:48.6306|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:53:14.2487|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:53:17.2459|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:53:20.2607|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:53:23.2612|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:53:26.2619|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:53:29.2628|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:53:32.2641|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:53:35.2776|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:53:38.2778|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:53:41.2780|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:53:44.2921|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:53:47.2928|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:53:50.2927|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:53:53.2935|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:53:56.2937|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:53:59.3071|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:54:02.3086|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:54:05.3089|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:54:08.3091|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:54:11.3096|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:54:14.3107|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:54:17.3119|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:54:20.3254|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:54:29.6697|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:54:32.6679|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:54:35.6689|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:54:38.6687|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:54:41.6831|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:54:44.6837|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:54:47.6832|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:54:50.6988|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:54:53.7138|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:54:56.7144|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:54:59.7143|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:55:02.7295|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:55:05.7301|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:55:08.7307|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:55:11.7312|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:55:14.7323|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:55:17.7321|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:55:20.7452|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:55:23.7476|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:55:26.7478|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:55:29.7614|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:55:32.7619|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:55:35.7764|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:55:38.7768|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:55:41.7771|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:55:44.7777|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:55:47.7777|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:55:50.7790|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:55:53.7794|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:55:56.7925|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:55:59.7927|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:56:02.7937|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:56:05.7950|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:56:08.8097|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:56:11.8103|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:56:14.8103|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:56:20.1107|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:56:26.4897|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:56:39.5811|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:56:47.5207|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:59:15.6916|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:59:18.7011|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:59:21.7144|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:59:24.7157|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:59:27.7156|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:59:30.7157|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:59:33.7301|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:59:36.7458|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:59:39.7452|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:59:42.7471|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:59:45.7613|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:59:48.7642|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:59:51.7781|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:59:54.7917|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 15:59:57.7923|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:00:00.7927|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:00:03.8075|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:00:06.8080|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:00:09.8082|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:00:12.8087|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:00:15.8080|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:00:18.8084|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:00:19.7304|ERROR|BatteryMonitor.HIOKI.hioki|Unable to read data from the transport connection: An established connection was aborted by the software in your host machine.
+2024-09-23 16:00:19.7434|ERROR|BatteryMonitor.HIOKI.hioki|Unable to read data from the transport connection: An established connection was aborted by the software in your host machine.
+2024-09-23 16:00:19.7434|ERROR|BatteryMonitor.HIOKI.hioki|Unable to read data from the transport connection: An established connection was aborted by the software in your host machine.
+2024-09-23 16:00:19.7604|ERROR|BatteryMonitor.HIOKI.hioki|Unable to read data from the transport connection: An established connection was aborted by the software in your host machine.
+2024-09-23 16:00:19.7604|ERROR|BatteryMonitor.HIOKI.hioki|Unable to read data from the transport connection: An established connection was aborted by the software in your host machine.
+2024-09-23 16:00:19.7604|ERROR|BatteryMonitor.HIOKI.hioki|Unable to read data from the transport connection: An established connection was aborted by the software in your host machine.
+2024-09-23 16:00:19.7264|ERROR|BatteryMonitor.Main|System.IO.IOException: Unable to read data from the transport connection: An established connection was aborted by the software in your host machine. ---> System.Net.Sockets.SocketException: An established connection was aborted by the software in your host machine
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   at EasyModbus.ModbusClient.WriteSingleRegister(Int32 startingAddress, Int32 value)
+   at BatteryMonitor.Main.bgwork_writeToModbust_DoWork(Object sender, DoWorkEventArgs e) in C:\Users\IT_SOFTWARE\source\repos\BatteryMonitor-main\Main.cs:line 4647
+2024-09-23 16:00:19.7304|ERROR|BatteryMonitor.Main|System.IO.IOException: Unable to read data from the transport connection: An established connection was aborted by the software in your host machine. ---> System.Net.Sockets.SocketException: An established connection was aborted by the software in your host machine
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   at EasyModbus.ModbusClient.ReadHoldingRegisters(Int32 startingAddress, Int32 quantity)
+   at BatteryMonitor.Main.MonitorModbusTimer_Tick(Object sender, EventArgs e) in C:\Users\IT_SOFTWARE\source\repos\BatteryMonitor-main\Main.cs:line 1865
+2024-09-23 16:00:24.8111|WARN|BatteryMonitor.Main|Disconnect To Scanner
+2024-09-23 16:00:28.8431|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:00:30.8245|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:00:33.8241|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:00:36.8241|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:00:39.8397|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:00:42.8396|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:00:45.8417|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:00:48.8548|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:00:51.8554|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:00:54.8554|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:00:57.8552|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:01:00.8557|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:01:03.8574|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:01:06.8706|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:01:09.8861|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:01:12.8860|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:01:17.3346|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:01:36.0052|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:01:36.0052|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:01:39.0176|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:01:42.0319|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:01:45.0438|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:01:48.0585|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:01:51.0588|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:01:54.0735|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:03:12.9366|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:03:15.9486|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:03:18.9483|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:03:21.9509|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:03:24.9505|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:03:27.9633|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:03:30.9636|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:03:33.9790|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:03:36.9797|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:03:39.9810|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:03:42.9808|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:03:45.9829|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:03:48.9985|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:03:51.5053|ERROR|BatteryMonitor.HIOKI.hioki|Unable to read data from the transport connection: An established connection was aborted by the software in your host machine.
+2024-09-23 16:03:51.5163|ERROR|BatteryMonitor.HIOKI.hioki|Unable to read data from the transport connection: An established connection was aborted by the software in your host machine.
+2024-09-23 16:03:51.5163|ERROR|BatteryMonitor.HIOKI.hioki|Unable to read data from the transport connection: An established connection was aborted by the software in your host machine.
+2024-09-23 16:03:51.5333|ERROR|BatteryMonitor.HIOKI.hioki|Unable to read data from the transport connection: An established connection was aborted by the software in your host machine.
+2024-09-23 16:03:51.5523|ERROR|BatteryMonitor.HIOKI.hioki|Unable to read data from the transport connection: An established connection was aborted by the software in your host machine.
+2024-09-23 16:03:51.5663|ERROR|BatteryMonitor.HIOKI.hioki|Unable to read data from the transport connection: An established connection was aborted by the software in your host machine.
+2024-09-23 16:03:51.5663|ERROR|BatteryMonitor.HIOKI.hioki|Unable to read data from the transport connection: An established connection was aborted by the software in your host machine.
+2024-09-23 16:03:51.5663|ERROR|BatteryMonitor.HIOKI.hioki|Unable to read data from the transport connection: An established connection was aborted by the software in your host machine.
+2024-09-23 16:03:51.5723|ERROR|BatteryMonitor.HIOKI.hioki|Unable to read data from the transport connection: An established connection was aborted by the software in your host machine.
+2024-09-23 16:03:51.5723|ERROR|BatteryMonitor.HIOKI.hioki|Unable to read data from the transport connection: An established connection was aborted by the software in your host machine.
+2024-09-23 16:03:51.5053|ERROR|BatteryMonitor.Main|System.IO.IOException: Unable to read data from the transport connection: An established connection was aborted by the software in your host machine. ---> System.Net.Sockets.SocketException: An established connection was aborted by the software in your host machine
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   at EasyModbus.ModbusClient.ReadHoldingRegisters(Int32 startingAddress, Int32 quantity)
+   at BatteryMonitor.Main.getRMaxFromModbus(ModbusClient modbus) in C:\Users\IT_SOFTWARE\source\repos\BatteryMonitor-main\Main.cs:line 2702
+   at BatteryMonitor.Main.MonitorModbusTimer_Tick(Object sender, EventArgs e) in C:\Users\IT_SOFTWARE\source\repos\BatteryMonitor-main\Main.cs:line 1967
+2024-09-23 16:03:51.5053|ERROR|BatteryMonitor.Main|System.IO.IOException: Unable to read data from the transport connection: An established connection was aborted by the software in your host machine. ---> System.Net.Sockets.SocketException: An established connection was aborted by the software in your host machine
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   at EasyModbus.ModbusClient.WriteSingleRegister(Int32 startingAddress, Int32 value)
+   at BatteryMonitor.Main.bgwork_writeToModbust_DoWork(Object sender, DoWorkEventArgs e) in C:\Users\IT_SOFTWARE\source\repos\BatteryMonitor-main\Main.cs:line 4648
+2024-09-23 16:03:56.6089|WARN|BatteryMonitor.Main|Disconnect To Scanner
+2024-09-23 16:03:58.5775|WARN|BatteryMonitor.Main|Disconnect To Scanner
+2024-09-23 16:04:01.5840|WARN|BatteryMonitor.Main|Disconnect To Scanner
+2024-09-23 16:04:05.0334|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:04:07.0275|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:04:10.0286|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:04:13.0290|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:04:16.0418|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:04:19.0428|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:04:22.0442|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:04:25.0595|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:04:28.0752|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:04:31.0900|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:04:34.1057|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:04:37.1197|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:04:40.1205|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:04:43.1222|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:04:46.1226|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:04:49.1227|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:05:51.9610|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:06:03.7961|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:06:03.7961|ERROR|BatteryMonitor.HIOKI.hioki|Unable to write data to the transport connection: An existing connection was forcibly closed by the remote host.
+2024-09-23 16:06:03.8151|ERROR|BatteryMonitor.Main|System.IO.IOException: Unable to write data to the transport connection: An existing connection was forcibly closed by the remote host. ---> System.Net.Sockets.SocketException: An existing connection was forcibly closed by the remote host
+   at System.Net.Sockets.Socket.Send(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.NetworkStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at EasyModbus.ModbusClient.ReadHoldingRegisters(Int32 startingAddress, Int32 quantity)
+   at BatteryMonitor.Main.MonitorModbusTimer_Tick(Object sender, EventArgs e) in C:\Users\IT_SOFTWARE\source\repos\BatteryMonitor-main\Main.cs:line 1866
+2024-09-23 16:06:03.8151|ERROR|BatteryMonitor.Main|System.IO.IOException: Unable to write data to the transport connection: An existing connection was forcibly closed by the remote host. ---> System.Net.Sockets.SocketException: An existing connection was forcibly closed by the remote host
+   at System.Net.Sockets.Socket.Send(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.NetworkStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at EasyModbus.ModbusClient.WriteSingleRegister(Int32 startingAddress, Int32 value)
+   at BatteryMonitor.Main.bgwork_writeToModbust_DoWork(Object sender, DoWorkEventArgs e) in C:\Users\IT_SOFTWARE\source\repos\BatteryMonitor-main\Main.cs:line 4648
+2024-09-23 16:07:24.1881|ERROR|BatteryMonitor.Main|EasyModbus.Exceptions.ConnectionException: connection timed out
+   at EasyModbus.ModbusClient.Connect()
+   at BatteryMonitor.Main.Form1_Load(Object sender, EventArgs e) in C:\Users\IT_SOFTWARE\source\repos\BatteryMonitor-main\Main.cs:line 1031
+2024-09-23 16:07:58.8929|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:08:01.9018|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:08:02.7558|ERROR|BatteryMonitor.HIOKI.hioki|Unable to read data from the transport connection: An established connection was aborted by the software in your host machine.
+2024-09-23 16:08:02.7858|ERROR|BatteryMonitor.HIOKI.hioki|Unable to read data from the transport connection: An established connection was aborted by the software in your host machine.
+2024-09-23 16:08:02.7858|ERROR|BatteryMonitor.HIOKI.hioki|Unable to read data from the transport connection: An established connection was aborted by the software in your host machine.
+2024-09-23 16:08:02.7948|ERROR|BatteryMonitor.HIOKI.hioki|Unable to read data from the transport connection: An established connection was aborted by the software in your host machine.
+2024-09-23 16:08:02.7948|ERROR|BatteryMonitor.HIOKI.hioki|Unable to read data from the transport connection: An established connection was aborted by the software in your host machine.
+2024-09-23 16:08:02.8088|ERROR|BatteryMonitor.HIOKI.hioki|Unable to read data from the transport connection: An established connection was aborted by the software in your host machine.
+2024-09-23 16:08:02.8088|ERROR|BatteryMonitor.HIOKI.hioki|Unable to read data from the transport connection: An established connection was aborted by the software in your host machine.
+2024-09-23 16:08:02.7278|ERROR|BatteryMonitor.Main|System.IO.IOException: Unable to read data from the transport connection: An established connection was aborted by the software in your host machine. ---> System.Net.Sockets.SocketException: An established connection was aborted by the software in your host machine
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   at EasyModbus.ModbusClient.WriteSingleRegister(Int32 startingAddress, Int32 value)
+   at BatteryMonitor.Main.bgwork_writeToModbust_DoWork(Object sender, DoWorkEventArgs e) in C:\Users\IT_SOFTWARE\source\repos\BatteryMonitor-main\Main.cs:line 4650
+2024-09-23 16:08:02.7278|ERROR|BatteryMonitor.Main|System.IO.IOException: Unable to read data from the transport connection: An established connection was aborted by the software in your host machine. ---> System.Net.Sockets.SocketException: An established connection was aborted by the software in your host machine
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   at EasyModbus.ModbusClient.ReadHoldingRegisters(Int32 startingAddress, Int32 quantity)
+   at BatteryMonitor.Main.MonitorModbusTimer_Tick(Object sender, EventArgs e) in C:\Users\IT_SOFTWARE\source\repos\BatteryMonitor-main\Main.cs:line 1867
+2024-09-23 16:08:02.8488|ERROR|BatteryMonitor.HIOKI.hioki|Unable to read data from the transport connection: An established connection was aborted by the software in your host machine.
+2024-09-23 16:08:02.8488|ERROR|BatteryMonitor.HIOKI.hioki|Unable to read data from the transport connection: An established connection was aborted by the software in your host machine.
+2024-09-23 16:08:02.8218|ERROR|BatteryMonitor.HIOKI.hioki|Unable to read data from the transport connection: An established connection was aborted by the software in your host machine.
+2024-09-23 16:08:19.4872|WARN|BatteryMonitor.Main|Disconnect To Scanner
+2024-09-23 16:08:24.5795|WARN|BatteryMonitor.Main|Disconnect To Scanner
+2024-09-23 16:08:27.5823|WARN|BatteryMonitor.Main|Disconnect To Scanner
+2024-09-23 16:08:30.5861|WARN|BatteryMonitor.Main|Disconnect To Scanner
+2024-09-23 16:08:33.5782|WARN|BatteryMonitor.Main|Disconnect To Scanner
+2024-09-23 16:08:52.9141|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:08:55.9383|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:08:58.8062|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:08:59.2442|ERROR|BatteryMonitor.Main|System.InvalidOperationException: This BackgroundWorker is currently busy and cannot run multiple tasks concurrently.
+   at System.ComponentModel.BackgroundWorker.RunWorkerAsync(Object argument)
+   at System.ComponentModel.BackgroundWorker.RunWorkerAsync()
+   at BatteryMonitor.Main._writeToModbust_Elapsed(Object sender, ElapsedEventArgs e) in C:\Users\IT_SOFTWARE\source\repos\BatteryMonitor-main\Main.cs:line 3865
+2024-09-23 16:09:09.8288|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:09:12.3871|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:09:15.3876|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:09:18.4027|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:09:21.4166|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:09:24.4166|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:10:19.5134|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:10:22.5126|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:10:25.5270|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:10:28.5274|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:10:31.5293|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:10:34.5300|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:10:37.5438|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:10:40.5569|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:10:43.5581|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:10:45.5754|ERROR|BatteryMonitor.HIOKI.hioki|Unable to read data from the transport connection: An established connection was aborted by the software in your host machine.
+2024-09-23 16:10:45.5754|ERROR|BatteryMonitor.HIOKI.hioki|Unable to read data from the transport connection: An established connection was aborted by the software in your host machine.
+2024-09-23 16:10:45.6104|ERROR|BatteryMonitor.HIOKI.hioki|Unable to read data from the transport connection: An established connection was aborted by the software in your host machine.
+2024-09-23 16:10:45.6254|ERROR|BatteryMonitor.HIOKI.hioki|Unable to read data from the transport connection: An established connection was aborted by the software in your host machine.
+2024-09-23 16:10:45.6254|ERROR|BatteryMonitor.HIOKI.hioki|Unable to read data from the transport connection: An established connection was aborted by the software in your host machine.
+2024-09-23 16:10:45.6254|ERROR|BatteryMonitor.HIOKI.hioki|Unable to read data from the transport connection: An established connection was aborted by the software in your host machine.
+2024-09-23 16:10:45.6254|ERROR|BatteryMonitor.HIOKI.hioki|Unable to read data from the transport connection: An established connection was aborted by the software in your host machine.
+2024-09-23 16:10:45.6354|ERROR|BatteryMonitor.HIOKI.hioki|Unable to read data from the transport connection: An established connection was aborted by the software in your host machine.
+2024-09-23 16:10:45.6354|ERROR|BatteryMonitor.HIOKI.hioki|Unable to read data from the transport connection: An established connection was aborted by the software in your host machine.
+2024-09-23 16:10:45.6494|ERROR|BatteryMonitor.HIOKI.hioki|Unable to read data from the transport connection: An established connection was aborted by the software in your host machine.
+2024-09-23 16:10:45.5504|ERROR|BatteryMonitor.Main|System.IO.IOException: Unable to read data from the transport connection: An established connection was aborted by the software in your host machine. ---> System.Net.Sockets.SocketException: An established connection was aborted by the software in your host machine
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   at EasyModbus.ModbusClient.ReadHoldingRegisters(Int32 startingAddress, Int32 quantity)
+   at BatteryMonitor.Main.MonitorModbusTimer_Tick(Object sender, EventArgs e) in C:\Users\IT_SOFTWARE\source\repos\BatteryMonitor-main\Main.cs:line 1867
+2024-09-23 16:10:45.5504|ERROR|BatteryMonitor.Main|System.IO.IOException: Unable to read data from the transport connection: An established connection was aborted by the software in your host machine. ---> System.Net.Sockets.SocketException: An established connection was aborted by the software in your host machine
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   at EasyModbus.ModbusClient.WriteSingleRegister(Int32 startingAddress, Int32 value)
+   at BatteryMonitor.Main.bgwork_writeToModbust_DoWork(Object sender, DoWorkEventArgs e) in C:\Users\IT_SOFTWARE\source\repos\BatteryMonitor-main\Main.cs:line 4650
+2024-09-23 16:10:47.5927|WARN|BatteryMonitor.Main|Disconnect To Scanner
+2024-09-23 16:10:50.5835|WARN|BatteryMonitor.Main|Disconnect To Scanner
+2024-09-23 16:10:53.5872|WARN|BatteryMonitor.Main|Disconnect To Scanner
+2024-09-23 16:10:56.5863|WARN|BatteryMonitor.Main|Disconnect To Scanner
+2024-09-23 16:10:59.5793|WARN|BatteryMonitor.Main|Disconnect To Scanner
+2024-09-23 16:11:02.5816|WARN|BatteryMonitor.Main|Disconnect To Scanner
+2024-09-23 16:11:05.5862|WARN|BatteryMonitor.Main|Disconnect To Scanner
+2024-09-23 16:11:08.5760|WARN|BatteryMonitor.Main|Disconnect To Scanner
+2024-09-23 16:11:11.5845|WARN|BatteryMonitor.Main|Disconnect To Scanner
+2024-09-23 16:11:31.6543|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:11:42.5768|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:11:47.5184|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:11:47.5184|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:11:50.5290|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:11:53.5421|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:11:56.5428|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:11:59.5421|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:12:02.5428|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:12:05.5439|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:12:08.5442|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:12:11.5570|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:12:14.5568|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:12:17.5591|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:12:20.5593|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:12:23.5741|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:12:26.5730|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:12:29.5738|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:12:32.5892|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:12:35.5897|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:12:38.5898|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:12:41.5900|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:12:44.5903|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:12:47.5904|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:12:50.6042|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:12:53.6038|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:12:56.6053|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:12:59.6052|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:13:02.6050|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:13:05.6050|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:13:08.6192|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:13:11.6199|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:13:14.6359|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:13:17.6358|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:13:20.6388|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:13:23.6510|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:13:26.6507|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:13:29.6521|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:13:32.6524|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:13:35.6524|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:13:38.6522|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:13:41.6533|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:13:44.6671|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:13:47.6680|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:13:50.6680|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:13:53.6696|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:13:56.6824|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:13:59.6817|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:14:02.6818|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:14:05.6829|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:14:08.6979|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:14:11.6988|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:14:14.6997|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:14:17.7006|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:14:20.7131|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:14:23.7304|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:14:52.9972|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:15:03.2447|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:15:09.0265|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:15:09.2603|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:15:12.2614|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:15:13.0114|ERROR|BatteryMonitor.HIOKI.hioki|Unable to read data from the transport connection: An established connection was aborted by the software in your host machine.
+2024-09-23 16:15:13.0114|ERROR|BatteryMonitor.HIOKI.hioki|Unable to read data from the transport connection: An established connection was aborted by the software in your host machine.
+2024-09-23 16:15:13.0444|ERROR|BatteryMonitor.HIOKI.hioki|Unable to read data from the transport connection: An established connection was aborted by the software in your host machine.
+2024-09-23 16:15:13.0584|ERROR|BatteryMonitor.HIOKI.hioki|Unable to read data from the transport connection: An established connection was aborted by the software in your host machine.
+2024-09-23 16:15:13.0584|ERROR|BatteryMonitor.HIOKI.hioki|Unable to read data from the transport connection: An established connection was aborted by the software in your host machine.
+2024-09-23 16:15:13.0584|ERROR|BatteryMonitor.HIOKI.hioki|Unable to read data from the transport connection: An established connection was aborted by the software in your host machine.
+2024-09-23 16:15:13.0724|ERROR|BatteryMonitor.HIOKI.hioki|Unable to read data from the transport connection: An established connection was aborted by the software in your host machine.
+2024-09-23 16:15:13.0724|ERROR|BatteryMonitor.HIOKI.hioki|Unable to read data from the transport connection: An established connection was aborted by the software in your host machine.
+2024-09-23 16:15:13.0444|ERROR|BatteryMonitor.Main|System.IO.IOException: Unable to read data from the transport connection: An established connection was aborted by the software in your host machine. ---> System.Net.Sockets.SocketException: An established connection was aborted by the software in your host machine
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   at EasyModbus.ModbusClient.ReadHoldingRegisters(Int32 startingAddress, Int32 quantity)
+   at BatteryMonitor.Main.MonitorModbusTimer_Tick(Object sender, EventArgs e) in C:\Users\IT_SOFTWARE\source\repos\BatteryMonitor-main\Main.cs:line 1868
+2024-09-23 16:15:13.0584|ERROR|BatteryMonitor.Main|System.IO.IOException: Unable to read data from the transport connection: An established connection was aborted by the software in your host machine. ---> System.Net.Sockets.SocketException: An established connection was aborted by the software in your host machine
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   at EasyModbus.ModbusClient.WriteSingleRegister(Int32 startingAddress, Int32 value)
+   at BatteryMonitor.Main.bgwork_writeToModbust_DoWork(Object sender, DoWorkEventArgs e) in C:\Users\IT_SOFTWARE\source\repos\BatteryMonitor-main\Main.cs:line 4651
+2024-09-23 16:15:16.5176|WARN|BatteryMonitor.Main|Disconnect To Scanner
+2024-09-23 16:15:19.0844|WARN|BatteryMonitor.Main|Disconnect To Scanner
+2024-09-23 16:15:26.8434|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:15:28.8239|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:15:31.8244|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:15:34.8247|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:15:37.8257|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:15:40.8379|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:15:43.8413|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:15:56.6404|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:15:58.5005|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:15:59.6527|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:16:02.6532|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:16:05.6548|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:16:08.6681|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:16:11.6826|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:16:14.6856|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:16:17.6991|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:16:20.6992|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:16:23.7000|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:16:26.7130|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:16:29.7141|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:16:32.7155|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:16:35.7291|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:16:38.7299|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:16:41.7303|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:16:44.7312|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:16:47.7455|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:16:50.7461|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:16:53.7610|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:16:56.7605|WARN|BatteryMonitor.Main|Connect To Scanner
+2024-09-23 16:16:59.7612|WARN|BatteryMonitor.Main|Connect To Scanner

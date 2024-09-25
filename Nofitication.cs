@@ -91,7 +91,7 @@ namespace BatteryMonitor
             //this.Hide();
             //cfg.Show();
 
-            this.Close();
+            //this.Close();
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
